@@ -759,7 +759,8 @@ function normalizeRuntimeDays(days = []) {
       summary: day.summary || day.note || "",
       wake_location_id: day.wake_location_id || null,
       sleep_location_id: day.sleep_location_id || null,
-      locked: Boolean(day.locked),
+      booked: Boolean(day.booked),
+      locked: Boolean(day.locked || day.booked),
       base: day.base
         ? {
             anchor: ["wake", "sleep", "custom"].includes(day.base.anchor) ? day.base.anchor : "sleep",
@@ -821,7 +822,7 @@ function deriveStaysFromDays(days = []) {
       start_date: day.date || "",
       nights: 1,
       status: "active",
-      locked: Boolean(day.locked),
+      locked: Boolean(day.locked || day.booked),
       nearby_location_ids: (day.nearby_suggestions || [])
         .map((suggestion) => suggestion.location_id)
         .filter(Boolean),

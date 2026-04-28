@@ -30,6 +30,10 @@
     "note": {
       "type": ["string", "null"]
     },
+    "booked": {
+      "type": "boolean",
+      "description": "True when the overnight/base accommodation for this day is booked and should be treated as fixed."
+    },
     "base": {
       "$ref": "#/$defs/base"
     },

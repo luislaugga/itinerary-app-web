@@ -442,6 +442,7 @@ function writePlanningDraft(versionId = state.activeVersionId || "v1") {
     saved_at: new Date().toISOString(),
     working_itinerary: serializeWorkingItineraryForLocalDraft(),
     itinerary_versions: state.itineraryVersions || [],
+    route_waypoints: serializeRouteWaypointDraft(),
     location_feedback: getOrderedDecisions().map((decision) => ({
       location_id: decision.target_id,
       vote: formatDecisionVoteForExport(decision.vote),
@@ -1046,6 +1047,7 @@ function hydrateLocalPlanningDraft() {
     ? draft.itinerary_versions
     : state.itineraryVersions;
   recalculateWorkingItinerary({ preserveSelectedDay: false });
+  applyRouteWaypointDraft(draft.route_waypoints);
 }
 
 function hydrateLocalFeedback() {
@@ -1453,6 +1455,7 @@ function renderStayPlanningEditor(day) {
 
   const stayLocation = getItineraryLocation(stay.overnight_location_id);
   const canRemove = getActiveWorkingStays().length > 1 && stay.locked !== true;
+  const isBooked = stay.locked === true;
   const versionOptions = state.itineraryVersions.length
     ? `
       <label class="planning-editor-select">
@@ -1480,39 +1483,50 @@ function renderStayPlanningEditor(day) {
           <strong>Planning draft</strong>
           <span>${escapeHtml(stayLocation?.name || "Select a stay")}</span>
         </div>
-        <label class="planning-lock-toggle">
-          <input type="checkbox" data-stay-lock-toggle ${stay.locked ? "checked" : ""} />
-          <span>Locked</span>
-        </label>
+        ${
+          isBooked
+            ? `<span class="planning-booked-pill">Booked</span>`
+            : `
+              <label class="planning-lock-toggle">
+                <input type="checkbox" data-stay-lock-toggle />
+                <span>Booked</span>
+              </label>
+            `
+        }
       </div>
 
-      <div class="planning-editor-grid">
-        <label class="planning-editor-select">
-          <span>Stay</span>
-          <select data-stay-location-select ${stay.locked ? "disabled" : ""}>
-            ${renderStayLocationOptions(stay.overnight_location_id)}
-          </select>
-        </label>
+      ${
+        isBooked
+          ? `<p class="planning-booked-note">This stay is booked, so the location and number of nights are fixed.</p>`
+          : `
+            <div class="planning-editor-grid">
+              <label class="planning-editor-select">
+                <span>Stay</span>
+                <select data-stay-location-select>
+                  ${renderStayLocationOptions(stay.overnight_location_id)}
+                </select>
+              </label>
 
-        <label class="planning-editor-nights">
-          <span>Nights</span>
-          <input
-            type="number"
-            min="1"
-            max="14"
-            value="${escapeAttribute(String(stay.nights || 1))}"
-            data-stay-nights-input
-            ${stay.locked ? "disabled" : ""}
-          />
-        </label>
-      </div>
+              <label class="planning-editor-nights">
+                <span>Nights</span>
+                <input
+                  type="number"
+                  min="1"
+                  max="14"
+                  value="${escapeAttribute(String(stay.nights || 1))}"
+                  data-stay-nights-input
+                />
+              </label>
+            </div>
 
-      <div class="planning-editor-actions">
-        <button class="mini-button" type="button" data-add-stay-after>Add stay</button>
-        <button class="mini-button" type="button" data-remove-stay ${canRemove ? "" : "disabled"}>Remove stay</button>
-        <button class="mini-button" type="button" data-save-itinerary-version>Save version</button>
-        ${versionOptions}
-      </div>
+            <div class="planning-editor-actions">
+              <button class="mini-button" type="button" data-add-stay-after>Add stay</button>
+              <button class="mini-button" type="button" data-remove-stay ${canRemove ? "" : "disabled"}>Remove stay</button>
+              <button class="mini-button" type="button" data-save-itinerary-version>Save version</button>
+              ${versionOptions}
+            </div>
+          `
+      }
       ${renderPlanningVersionComparison()}
     </section>
   `;
@@ -2210,20 +2224,45 @@ function getFilteredExplorerLocations() {
 
 function renderNearbySection(day) {
   const suggestions = getDayNearbySuggestionStops(day);
-  if (!suggestions.length) {
+  const nearbyBaseSuggestions = getBaseNearbyLocationSuggestions(day);
+  const baseLocation = getDayBaseLocation(day);
+
+  if (!suggestions.length && !nearbyBaseSuggestions.length) {
     return "";
   }
 
   return `
+    ${
+      suggestions.length
+        ? `
+          <section class="itinerary-section">
+            <div class="itinerary-stop-section-heading">
+              <div>
+                <strong>Nearby and suggestions</strong>
+                <span>${escapeHtml(formatStopCountLabel(suggestions.length))}</span>
+              </div>
+            </div>
+            <div class="itinerary-stop-list">
+              ${renderNearbySuggestionCards(suggestions, { allowBaseRemoval: true })}
+            </div>
+          </section>
+        `
+        : ""
+    }
+
     <section class="itinerary-section">
       <div class="itinerary-stop-section-heading">
         <div>
-          <strong>Nearby and suggestions</strong>
-          <span>${escapeHtml(formatStopCountLabel(suggestions.length))}</span>
+          <strong>Near this base</strong>
+          <span>${escapeHtml(formatStopCountLabel(nearbyBaseSuggestions.length))} within 2 km${baseLocation ? ` of ${getLocationAreaLabel(baseLocation)}` : ""}</span>
         </div>
       </div>
       <div class="itinerary-stop-list">
-        ${renderNearbySuggestionCards(suggestions)}
+        ${
+          nearbyBaseSuggestions.length
+            ? renderBaseSuggestionCards(nearbyBaseSuggestions)
+            : emptyState("No extra itinerary locations found within 2 km of this base yet.")
+        }
       </div>
     </section>
   `;
@@ -2415,6 +2454,54 @@ function removeLocationFromSelectedRoute(movementId, locationId) {
   focusMovementOnMap(movement);
 }
 
+function addLocationToBaseNearby(locationId) {
+  const day = getSelectedItineraryDay();
+  const stay = getStayForDay(day);
+  if (!day || !stay || !locationId) {
+    return;
+  }
+
+  const baseLocation = getDayBaseLocation(day);
+  if ([day.wake_location_id, day.sleep_location_id, baseLocation?.id].filter(Boolean).includes(locationId)) {
+    return;
+  }
+
+  const nearbyLocationIds = normalizeIdList(stay.nearby_location_ids);
+  if (nearbyLocationIds.includes(locationId)) {
+    return;
+  }
+
+  stay.nearby_location_ids = [...nearbyLocationIds, locationId];
+  state.selectedDayDetailMode = "stay";
+  state.selectedPlaceId = locationId;
+  state.activeTooltipPlaceId = locationId;
+  recalculateWorkingItinerary();
+  scheduleAutosave();
+  renderSchedule();
+  renderMap();
+  panMapToSelectedLocation({ preserveTooltip: true });
+}
+
+function removeLocationFromBaseNearby(locationId) {
+  const day = getSelectedItineraryDay();
+  const stay = getStayForDay(day);
+  if (!day || !stay || !locationId) {
+    return;
+  }
+
+  const nearbyLocationIds = normalizeIdList(stay.nearby_location_ids);
+  if (!nearbyLocationIds.includes(locationId)) {
+    return;
+  }
+
+  stay.nearby_location_ids = nearbyLocationIds.filter((entry) => entry !== locationId);
+  state.selectedDayDetailMode = "stay";
+  recalculateWorkingItinerary();
+  scheduleAutosave();
+  renderSchedule();
+  renderMap();
+}
+
 function resetRouteOptionMetrics(movement, option) {
   if (!movement || !option) {
     return;
@@ -2550,8 +2637,7 @@ function getRenderableRouteOptions(
 
   return rawOptions.map((option, index) => {
     const isSelected = Boolean(option.is_selected);
-    const optionWaypoints =
-      Array.isArray(option.waypoints) && option.waypoints.length ? option.waypoints : baseWaypoints;
+    const optionWaypoints = Array.isArray(option.waypoints) ? option.waypoints : [];
     const fallbackOptionLine = buildFallbackMovementLine(movement, optionWaypoints);
     const shouldFetchGoogle = isSelected ? fetchSelectedGoogle : fetchUnselectedGoogle;
     const googleRouteLine = shouldFetchGoogle
@@ -2565,12 +2651,7 @@ function getRenderableRouteOptions(
           : isSelected
             ? baseLine
             : buildSyntheticRouteOptionLine(baseLine, index + 1);
-    const waypoints =
-      Array.isArray(option.waypoints) && option.waypoints.length
-        ? option.waypoints
-        : isSelected
-          ? baseWaypoints
-          : [];
+    const waypoints = optionWaypoints;
 
     return {
       ...option,
@@ -2998,29 +3079,29 @@ function renderDayStopCards(stops, options = {}) {
         return "";
       }
       const summary = getLocationSummaryText(location, stop.note || "");
-      const canRemoveWaypoint =
+      const canEditWaypoint =
         options.allowWaypointRemoval === true &&
         options.movementId &&
-        !["wake", "sleep"].includes(stop.role) &&
-        isSelectedRouteWaypoint(options.movementId, location.id);
+        !["wake", "sleep"].includes(stop.role);
+      const isRouteWaypoint = canEditWaypoint && isSelectedRouteWaypoint(options.movementId, location.id);
 
       return `
         <article class="itinerary-stop-entry">
           <div class="itinerary-stop-row">
             ${renderLocationStopButton(location, summary)}
             ${
-              canRemoveWaypoint
+              canEditWaypoint
                 ? `
                   <button
                     class="mini-button itinerary-stop-action itinerary-stop-action-icon"
                     type="button"
-                    data-remove-route-waypoint
+                    ${isRouteWaypoint ? "data-remove-route-waypoint" : "data-add-route-waypoint"}
                     data-route-option-movement-id="${escapeHtml(options.movementId)}"
                     data-route-location-id="${escapeHtml(location.id)}"
-                    aria-label="Remove waypoint"
-                    title="Remove waypoint"
+                    aria-label="${isRouteWaypoint ? "Remove waypoint" : "Add waypoint"}"
+                    title="${isRouteWaypoint ? "Remove waypoint" : "Add waypoint"}"
                   >
-                    −
+                    ${isRouteWaypoint ? "−" : "+"}
                   </button>
                 `
                 : ""
@@ -3078,7 +3159,7 @@ function renderRouteSuggestionCards(suggestions, movementId) {
     .join("");
 }
 
-function renderNearbySuggestionCards(suggestions) {
+function renderNearbySuggestionCards(suggestions, options = {}) {
   return suggestions
     .map((suggestion) => {
       const location = getItineraryLocation(suggestion.location_id);
@@ -3086,22 +3167,55 @@ function renderNearbySuggestionCards(suggestions) {
         return "";
       }
       const summary = getLocationSummaryText(location, suggestion.note || "");
+      const canRemove = options.allowBaseRemoval === true;
 
       return `
         <article class="itinerary-stop-entry">
-          <button
-            class="itinerary-stop-card ${state.selectedPlaceId === location.id ? "active" : ""}"
-            type="button"
-            data-place-id="${escapeHtml(location.id)}"
-          >
-            <div class="itinerary-stop-media">
-              <img src="${escapeAttribute(location.photo_url)}" alt="${escapeAttribute(location.photo_alt || location.name)}" loading="lazy" />
-            </div>
-            <div class="itinerary-stop-copy">
-              <p class="itinerary-stop-title">${escapeHtml(location.name)}</p>
-              ${summary ? `<p class="itinerary-stop-description">${escapeHtml(summary)}</p>` : ""}
-            </div>
-          </button>
+          <div class="itinerary-stop-row">
+            ${renderLocationStopButton(location, summary)}
+            ${
+              canRemove
+                ? `
+                  <button
+                    class="mini-button itinerary-stop-action itinerary-stop-action-icon"
+                    type="button"
+                    data-remove-base-nearby
+                    data-base-location-id="${escapeHtml(location.id)}"
+                    aria-label="Remove nearby location"
+                    title="Remove nearby location"
+                  >
+                    −
+                  </button>
+                `
+                : ""
+            }
+          </div>
+        </article>
+      `;
+    })
+    .join("");
+}
+
+function renderBaseSuggestionCards(suggestions) {
+  return suggestions
+    .map(({ location, distance_km }) => {
+      const summary = getLocationSummaryText(location, `${formatDistance(distance_km)} from base`);
+
+      return `
+        <article class="itinerary-stop-entry">
+          <div class="itinerary-stop-row">
+            ${renderLocationStopButton(location, summary)}
+            <button
+              class="mini-button itinerary-stop-action itinerary-stop-action-icon"
+              type="button"
+              data-add-base-nearby
+              data-base-location-id="${escapeHtml(location.id)}"
+              aria-label="Add nearby location"
+              title="Add nearby location"
+            >
+              +
+            </button>
+          </div>
         </article>
       `;
     })
@@ -3124,16 +3238,6 @@ function getDayDriveStops(day, movement = getDayDriveMovement(day)) {
     stops.push(stop);
   };
 
-  if (day.wake_location_id) {
-    pushStop({
-      id: `${day.id}_wake_render`,
-      location_id: day.wake_location_id,
-      role: "wake",
-      category: "wake",
-      note: "Wake up here",
-    });
-  }
-
   (
     getSelectedRouteOption(driveMovement, {
       fetchSelectedGoogle: false,
@@ -3152,16 +3256,6 @@ function getDayDriveStops(day, movement = getDayDriveMovement(day)) {
     });
     }
   );
-
-  if (day.sleep_location_id) {
-    pushStop({
-      id: `${day.id}_sleep_render`,
-      location_id: day.sleep_location_id,
-      role: "sleep",
-      category: "sleep",
-      note: "Sleep here",
-    });
-  }
 
   return stops;
 }
@@ -3223,6 +3317,62 @@ function getRouteNearbyLocationSuggestions(movement, radiusKm = 20, limit = 12) 
     .filter((entry) => Number.isFinite(entry.distance_km) && entry.distance_km <= radiusKm)
     .sort((left, right) => left.distance_km - right.distance_km)
     .slice(0, limit);
+}
+
+function getBaseNearbyLocationSuggestions(day, radiusKm = 2, limit = 12) {
+  const baseLocation = getDayBaseLocation(day);
+  if (
+    !day ||
+    !baseLocation ||
+    !Number.isFinite(baseLocation.coordinates?.lat) ||
+    !Number.isFinite(baseLocation.coordinates?.lng)
+  ) {
+    return [];
+  }
+
+  const excludedLocationIds = new Set([
+    day.wake_location_id,
+    day.sleep_location_id,
+    baseLocation.id,
+    ...getDayNearbySuggestions(day).map((suggestion) => suggestion.location_id),
+  ].filter(Boolean));
+  const basePoint = {
+    lat: baseLocation.coordinates.lat,
+    lng: baseLocation.coordinates.lng,
+  };
+
+  return getAllExplorerLocations()
+    .filter((location) => {
+      if (!location?.id || excludedLocationIds.has(location.id)) {
+        return false;
+      }
+      return Number.isFinite(location.coordinates?.lat) && Number.isFinite(location.coordinates?.lng);
+    })
+    .map((location) => ({
+      location,
+      distance_km: haversineDistanceKm(basePoint, {
+        lat: location.coordinates.lat,
+        lng: location.coordinates.lng,
+      }),
+    }))
+    .filter((entry) => Number.isFinite(entry.distance_km) && entry.distance_km <= radiusKm)
+    .sort((left, right) => left.distance_km - right.distance_km)
+    .slice(0, limit);
+}
+
+function getDayBaseLocation(day) {
+  if (!day) {
+    return null;
+  }
+
+  const anchor = day.base?.anchor || "sleep";
+  if (anchor === "wake") {
+    return getItineraryLocation(day.wake_location_id);
+  }
+  if (anchor === "custom") {
+    return getItineraryLocation(day.base?.anchor_location_id);
+  }
+  return getItineraryLocation(day.sleep_location_id);
 }
 
 function distanceLocationToRouteKm(location, routeLine = []) {
@@ -3428,7 +3578,7 @@ function deriveWorkingStaysFromDays(days = []) {
       start_date: day.date || "",
       nights: 1,
       status: "active",
-      locked: Boolean(day.locked),
+      locked: Boolean(day.locked || day.booked),
       nearby_location_ids: getDayNearbySuggestions(day)
         .map((suggestion) => suggestion.location_id)
         .filter(Boolean),
@@ -3480,9 +3630,10 @@ function recalculateWorkingItinerary(options = {}) {
         sleep_location_id: sleepLocationId,
         note: stay.notes || template.note || template.summary || "",
         summary: stay.notes || template.summary || template.note || "",
+        booked: Boolean(stay.locked || template.booked),
         base: buildDayBase(stay, wakeLocationId, sleepLocationId),
         movements,
-        locked: Boolean(stay.locked),
+        locked: Boolean(stay.locked || template.booked),
       });
 
       previousSleepLocationId = sleepLocationId;
@@ -3508,6 +3659,7 @@ function recalculateWorkingItinerary(options = {}) {
       sleep_location_id: originalEndLocationId,
       note: template.note || template.summary || "Return to trip endpoint.",
       summary: template.summary || template.note || "Return to trip endpoint.",
+      booked: Boolean(template.booked),
       base: {
         anchor: "sleep",
         nearby_locations: [],
@@ -4151,6 +4303,9 @@ function renderItineraryMap() {
   if (state.selectedDayDetailMode === "drive" && driveMovement) {
     renderRouteSuggestionMarkers(getRouteNearbyLocationSuggestions(driveMovement));
   }
+  if (state.selectedDayDetailMode === "stay") {
+    renderRouteSuggestionMarkers(getBaseNearbyLocationSuggestions(selectedDay));
+  }
 
   renderLocationOverlayMarkers();
 
@@ -4743,6 +4898,61 @@ function serializeWorkingItineraryForLocalDraft() {
   });
 }
 
+function serializeRouteWaypointDraft() {
+  const entries = [];
+  (getWorkingItinerary()?.days || []).forEach((day) => {
+    (day.movements || [])
+      .filter((movement) => movement.mode === "car")
+      .forEach((movement) => {
+        (movement.route_options || []).forEach((option) => {
+          const waypointLocationIds = (option.waypoints || [])
+            .map((waypoint) => waypoint.location_id)
+            .filter(Boolean);
+          entries.push({
+            day_id: day.id,
+            movement_id: movement.id,
+            route_option_id: option.id,
+            waypoint_location_ids: waypointLocationIds,
+          });
+        });
+      });
+  });
+  return entries;
+}
+
+function applyRouteWaypointDraft(entries) {
+  if (!Array.isArray(entries) || !entries.length) {
+    return;
+  }
+
+  const byMovementAndRoute = new Map(
+    entries
+      .filter((entry) => entry?.movement_id && entry?.route_option_id)
+      .map((entry) => [`${entry.movement_id}:${entry.route_option_id}`, entry])
+  );
+
+  (getWorkingItinerary()?.days || []).forEach((day) => {
+    (day.movements || [])
+      .filter((movement) => movement.mode === "car")
+      .forEach((movement) => {
+        (movement.route_options || []).forEach((option) => {
+          const entry = byMovementAndRoute.get(`${movement.id}:${option.id}`);
+          if (!entry) {
+            return;
+          }
+          option.waypoints = normalizeIdList(entry.waypoint_location_ids).map((locationId, index) => ({
+            id: `${option.id || movement.id}_wp_${index + 1}`,
+            order: index + 1,
+            location_id: locationId,
+            role: "waypoint",
+            notes: "Restored from local planning draft",
+          }));
+          resetRouteOptionMetrics(movement, option);
+        });
+      });
+  });
+}
+
 function formatDecisionVoteForExport(vote) {
   const normalized = normalizeDecisionVote(vote);
   if (normalized === "love") {
@@ -4762,6 +4972,7 @@ function buildRefineTripOverview() {
     wake_location_id: day.wake_location_id || "",
     sleep_location_id: day.sleep_location_id || "",
     note: normalizeOptionalText(day.note || day.summary),
+    booked: Boolean(day.booked),
     locked: Boolean(day.locked),
   }));
 }
@@ -4779,6 +4990,7 @@ function appendTripOverviewYaml(lines, days) {
     lines.push(`    date: ${yamlString(day.date)}`);
     lines.push(`    wake_location_id: ${yamlString(day.wake_location_id)}`);
     lines.push(`    sleep_location_id: ${yamlString(day.sleep_location_id)}`);
+    lines.push(`    booked: ${day.booked}`);
     lines.push(`    locked: ${day.locked}`);
     if (day.note) {
       lines.push(`    note: ${yamlString(day.note)}`);
@@ -4802,6 +5014,7 @@ function serializePlanningDays(days) {
     wake_location_id: day.wake_location_id || null,
     sleep_location_id: day.sleep_location_id || null,
     note: day.note || day.summary || "",
+    booked: Boolean(day.booked),
     base: day.base || {
       anchor: "sleep",
       nearby_locations: getDayNearbySuggestions(day).map((suggestion) => suggestion.location_id),
@@ -5207,6 +5420,20 @@ function bindRouteWaypointActions(scope) {
     button.addEventListener("click", (event) => {
       event.stopPropagation();
       removeLocationFromSelectedRoute(button.dataset.routeOptionMovementId, button.dataset.routeLocationId);
+    });
+  });
+
+  scope.querySelectorAll("[data-add-base-nearby]").forEach((button) => {
+    button.addEventListener("click", (event) => {
+      event.stopPropagation();
+      addLocationToBaseNearby(button.dataset.baseLocationId);
+    });
+  });
+
+  scope.querySelectorAll("[data-remove-base-nearby]").forEach((button) => {
+    button.addEventListener("click", (event) => {
+      event.stopPropagation();
+      removeLocationFromBaseNearby(button.dataset.baseLocationId);
     });
   });
 }
