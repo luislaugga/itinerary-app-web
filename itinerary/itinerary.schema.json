@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/schemas/itinerary.schema.json",
+  "title": "Itinerary",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "version_id",
+    "locations",
+    "days"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Version of the itinerary schema format"
+    },
+    "version_id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Identifier for this specific itinerary version"
+    },
+    "locations": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "location.schema.json"
+      }
+    },
+    "days": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "day.schema.json"
+      }
+    },
+    "note": {
+      "type": ["string", "null"]
+    }
+  }
+}

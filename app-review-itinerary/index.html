@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Itinerary Review</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <div class="floating-toolbar toolbar-left">
+        <div class="toolbar-pill toolbar-brand">
+          <span class="brand-dot"></span>
+          <span class="brand-label">Road Trip Review</span>
+        </div>
+
+        <div class="toolbar-pill toolbar-version">
+          <select id="version-select" class="version-select" aria-label="Itinerary version"></select>
+        </div>
+      </div>
+
+      <div class="floating-toolbar toolbar-center">
+        <div id="location-overlay-toolbar" class="toolbar-inline-group" hidden></div>
+      </div>
+
+      <div class="floating-toolbar toolbar-right">
+        <div class="toolbar-pill status-chip">
+          <span class="chip-label">Save</span>
+          <strong id="save-status-pill">Idle</strong>
+        </div>
+        <button
+          id="export-refine-request-button"
+          class="toolbar-button toolbar-action-button"
+          type="button"
+        >
+          Export refine request
+        </button>
+        <button id="reload-version-button" class="toolbar-pill toolbar-button" type="button">
+          Reload base
+        </button>
+      </div>
+
+      <div id="status-banner" class="floating-toast" data-tone="neutral" hidden>
+        Loading itinerary versions from the local workspace…
+      </div>
+
+      <main class="board-stage">
+        <section class="canvas-panel">
+          <section id="schedule-view" class="view-panel active"></section>
+
+          <section id="map-view" class="view-panel">
+            <div class="map-shell">
+              <div id="leaflet-map" class="leaflet-map"></div>
+            </div>
+          </section>
+        </section>
+      </main>
+
+      <div class="floating-dock">
+        <div class="view-switcher" role="tablist" aria-label="Itinerary views">
+          <button class="tab-button active" data-view="schedule" type="button">Schedule</button>
+          <button class="tab-button" data-view="map" type="button">Map</button>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script src="./app.js"></script>
+  </body>
+</html>

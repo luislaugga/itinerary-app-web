@@ -1,0 +1,161 @@
+schema_name: BaselineRoute
+description: Route-only handoff from step 1 to step 2.
+file_format: JSON
+required:
+  - route_id
+  - source
+  - generated_at
+  - route_summary
+  - anchors
+  - legs
+properties:
+  route_id: { type: string }
+  source: { type: string }
+  generated_at: { type: string }
+  notes: { type: string }
+  route_summary:
+    type: object
+    required:
+      - route_shape
+      - start_anchor_id
+      - end_anchor_id
+      - ordered_anchor_ids
+    properties:
+      route_shape:
+        type: string
+        enum: [loop, one_way, open_jaw, out_and_back, custom]
+      start_anchor_id: { type: string }
+      end_anchor_id: { type: string }
+      ordered_anchor_ids:
+        type: array
+        items: { type: string }
+      ordered_anchor_labels:
+        type: array
+        items: { type: string }
+      outbound_anchor_ids:
+        type: array
+        items: { type: string }
+      return_anchor_ids:
+        type: array
+        items: { type: string }
+      total_distance_km: { type: [number, "null"] }
+      total_duration_minutes: { type: [integer, "null"] }
+      maps_url: { type: [string, "null"] }
+      route_strategy_summary: { type: string }
+  anchors:
+    type: array
+    items:
+      type: object
+      required:
+        - id
+        - label
+        - anchor_type
+        - sequence
+        - anchor_query
+        - geolocation
+      properties:
+        id: { type: string }
+        label: { type: string }
+        anchor_type:
+          type: string
+          enum: [home, required_region, fixed_anchor, family_visit, return_region, flexible_anchor, custom]
+        sequence: { type: integer }
+        anchor_query: { type: string }
+        geolocation:
+          type: object
+          required: [query, latitude, longitude]
+          properties:
+            query: { type: string }
+            formatted_address: { type: [string, "null"] }
+            latitude: { type: [number, "null"] }
+            longitude: { type: [number, "null"] }
+            google_place_id: { type: [string, "null"] }
+        notes: { type: string }
+  legs:
+    type: array
+    items:
+      type: object
+      required:
+        - id
+        - sequence
+        - from_anchor_id
+        - to_anchor_id
+        - from_label
+        - to_label
+        - route_options
+        - corridor_search_hints
+      properties:
+        id: { type: string }
+        sequence: { type: integer }
+        leg_group:
+          type: string
+          enum: [main, outbound, return, connector, custom]
+        from_anchor_id: { type: string }
+        to_anchor_id: { type: string }
+        from_label: { type: string }
+        to_label: { type: string }
+        from_query: { type: string }
+        to_query: { type: string }
+        selected_option_id: { type: [string, "null"] }
+        route_options:
+          type: array
+          items:
+            type: object
+            required:
+              - id
+              - style
+              - maps_url
+              - total_km
+              - duration_minutes
+              - major_roads
+              - steps
+            properties:
+              id: { type: string }
+              style:
+                type: string
+                enum: [fast, scenic, no_highways, balanced, custom]
+              maps_url: { type: [string, "null"] }
+              total_km: { type: [number, "null"] }
+              duration_minutes: { type: [integer, "null"] }
+              major_roads:
+                type: array
+                items: { type: string }
+              steps:
+                type: array
+                items:
+                  type: object
+                  required: [sequence, road, instruction]
+                  properties:
+                    sequence: { type: integer }
+                    road: { type: string }
+                    instruction: { type: string }
+                    direction_sign: { type: string }
+                    km: { type: [number, "null"] }
+                    notes: { type: string }
+              route_character: { type: string }
+              corridor_waypoint_labels:
+                type: array
+                items: { type: string }
+              notes: { type: string }
+        corridor_search_hints:
+          type: array
+          items:
+            type: object
+            required: [label, hint_type, position]
+            properties:
+              label: { type: string }
+              hint_type:
+                type: string
+                enum: [town, region, coast, inland_area, arrival_area, split_candidate, market_town, nature_area, custom]
+              position:
+                type: string
+                enum: [start, en_route, arrival, split_overnight, detour_optional]
+              reason: { type: string }
+              search_priority:
+                type: string
+                enum: [high, medium, low]
+cross_file_rules:
+  - route_summary.start_anchor_id and route_summary.end_anchor_id must exist in anchors.
+  - route_summary.ordered_anchor_ids must reference anchors in travel order.
+  - Every leg must have at least fast and scenic route options.
+  - route_options maps_url values must be real Google Maps links when Google-grounded.

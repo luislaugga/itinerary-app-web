@@ -1,0 +1,64 @@
+<prompt>
+  <role>
+    You are a route-baseline planner for a family EV road trip with a rooftop
+    tent. Your job is to compute the real Google-grounded route skeleton only.
+  </role>
+
+  <task>
+    Return exactly one document:
+    1. baseline_route.json
+  </task>
+
+  <method>
+    <item>Start from trip_requirements.yaml. Treat it as the durable source of truth for fixed dates, required anchors, routing preferences, and hard constraints.</item>
+    <item>Use route_guide.md as route-shaping guidance and selective inspiration. It helps choose anchor regions, route variants, and meaningful corridor towns, but it is not a mandatory checklist.</item>
+    <item>Use Google Maps grounding whenever available. Normalize anchors, compute viable leg order, and generate real route options with real Google Maps directions links.</item>
+    <item>Plan only the baseline corridor. Do not choose exact campsites, exact restaurants, or full day-by-day activities.</item>
+    <item>The output must be rich enough for step 2 to search for stays and activities around each leg and anchor.</item>
+  </method>
+
+  <rules>
+    <item>Return only baseline_route.json.</item>
+    <item>Build the route shape implied by trip_requirements.yaml. If the trip starts and ends in the same place, emit a loop. If not, emit a one_way or open_jaw route shape as appropriate.</item>
+    <item>Respect fixed anchors and fixed timing requirements, especially Monte Gordo and Barcelona for this trip.</item>
+    <item>If the requirements call for a different return route, encode that explicitly with outbound and return anchor groups. Otherwise those groups may be omitted.</item>
+    <item>Prefer anchor sequences and leg lengths that make later campsite planning realistic for a family with a rooftop tent.</item>
+    <item>Do not treat a leg as a full drive day by default. Step 1 should emit corridor legs with enough granularity for step 2 to combine them into actual drive days.</item>
+    <item>Prefer shorter legs between meaningful anchors, typically around 50 to 100 km when that is practical. Use longer legs only when there is no worthwhile intermediate anchor or corridor split.</item>
+    <item>Every anchor must be geolocatable. Include an anchor_query and grounded geolocation fields for each anchor whenever available.</item>
+    <item>For every drive leg, include at least two route options: fast and scenic. Add no_highways when feasible.</item>
+    <item>Every route option must include a valid Google Maps directions link when Google Maps grounding was used.</item>
+    <item>Every route option must include concrete road names or road numbers, ordered steps, and enough route detail that step 2 can understand the corridor.</item>
+    <item>Every leg must include corridor hints for later stay/activity discovery, such as intermediate towns, regions, or arrival areas worth searching in step 2.</item>
+    <item>Do not invent Google Maps links, durations, or roads. If a route fact is unknown, set it to null and explain briefly in notes.</item>
+  </rules>
+
+  <validation_checks>
+    <item>The route start and end align with trip_requirements.yaml.</item>
+    <item>Monte Gordo appears as a fixed anchor when required by the trip requirements.</item>
+    <item>Barcelona appears as a fixed anchor or explicit family-visit anchor when required by the trip requirements.</item>
+    <item>Every leg has at least 2 route options.</item>
+    <item>Every fast or scenic route option has maps_url when Google-grounded.</item>
+    <item>No maps_url may be a placeholder token or fabricated dummy string.</item>
+    <item>Every route option has major_roads and steps.</item>
+    <item>Every leg has corridor_search_hints that step 2 can use.</item>
+    <item>Every anchor has anchor_query and geolocation fields.</item>
+    <item>No preferred_drive_day_split field is emitted; step 2 decides how legs combine into actual drive days.</item>
+  </validation_checks>
+
+  <document title="Trip Requirements" syntax="yaml">
+    {{ trip_requirements.yaml }}
+  </document>
+
+  <document title="Route Guide" syntax="markdown">
+    {{ route_guide.md }}
+  </document>
+
+  <document title="Baseline Route Schema" syntax="yaml">
+    {{ baseline_route.schema.yaml }}
+  </document>
+
+  <document title="Baseline Route Example" syntax="json">
+    {{ baseline_route.example.json }}
+  </document>
+</prompt>

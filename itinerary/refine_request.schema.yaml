@@ -1,0 +1,57 @@
+schema_name: Refine Request
+description: >
+  Lean YAML payload exported from the planning app. It keeps location feedback
+  separate from the base itinerary and includes a day-by-day trip overview for
+  the edited draft.
+file_format: YAML
+lifecycle: exported_feedback
+required:
+  - schema_version
+  - itinerary
+  - location_feedback
+  - trip_overview
+properties:
+  schema_version:
+    type: string
+  itinerary:
+    type: object
+    required:
+      - version_id
+      - file
+    properties:
+      version_id: { type: string }
+      file: { type: string }
+  location_feedback:
+    type: array
+    description: User reactions and optional notes for specific locations.
+    items:
+      type: object
+      required:
+        - location_id
+        - vote
+      properties:
+        location_id: { type: string }
+        vote:
+          type: string
+          enum: [like, upvote, unvote, remove]
+        note: { type: string }
+  trip_overview:
+    type: array
+    description: Full edited day-by-day overview, primarily where each day sleeps.
+    items:
+      type: object
+      required:
+        - day_id
+        - day_number
+        - date
+        - wake_location_id
+        - sleep_location_id
+        - locked
+      properties:
+        day_id: { type: string }
+        day_number: { type: integer }
+        date: { type: string }
+        wake_location_id: { type: string }
+        sleep_location_id: { type: string }
+        locked: { type: boolean }
+        note: { type: string }

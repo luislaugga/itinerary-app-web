@@ -1,0 +1,5379 @@
+{
+  "locations": [
+    {
+      "id": "location_ChIJ69XZySDEXQ0R2Fz1W2-yO6c",
+      "name": "Albarracín",
+      "description": "Very beautiful walled mountain town that is often labeled a gem, though by now it is well known among road-trippers. (Includes the wider Sierra de Albarracín / Uña landscape: rock scenery, caves, nature walks in the mountains around the town.)",
+      "geo": {
+        "main": {
+          "lat": 40.4075581,
+          "lng": -1.443876
+        }
+      },
+      "location": {
+        "address": "Albarracín, Spain",
+        "formatted_address": "Albarracín, Spain",
+        "locality": "Albarracín",
+        "region": null,
+        "postcode": null,
+        "country": "Spain"
+      },
+      "types": [
+        "town"
+      ],
+      "editorial": {
+        "popularity": "known_place",
+        "summary": "Restaurants / food stops | historic hill town / scenic stop"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJ69XZySDEXQ0R2Fz1W2-yO6c",
+          "url": "https://www.google.com/maps/search/?api=1&query=Albarrac%C3%ADn&query_place_id=ChIJ69XZySDEXQ0R2Fz1W2-yO6c"
+        }
+      }
+    },
+    {
+      "id": "location_ChIJV3-7w5oTUQ0R0VhsTVTTkkE",
+      "name": "Hétéroclito",
+      "description": "Stylish food stop in Guéthary that strongly matches the surf, design, and hospitality angle you like. It belongs on the map not just as a meal stop, but also as a taste marker for the region.",
+      "geo": {
+        "main": {
+          "lat": 43.4261967,
+          "lng": -1.6088241
+        }
+      },
+      "location": {
+        "address": "Hétéroclito Guéthary France",
+        "formatted_address": "Hétéroclito Guéthary France",
+        "locality": null,
+        "region": null,
+        "postcode": null,
+        "country": "France"
+      },
+      "types": [
+        "restaurant"
+      ],
+      "editorial": {
+        "popularity": "hidden_gem",
+        "summary": "Restaurants / food stops | Restaurant / Café"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJV3-7w5oTUQ0R0VhsTVTTkkE",
+          "url": "https://www.google.com/maps/search/?api=1&query=H%C3%A9t%C3%A9roclito&query_place_id=ChIJV3-7w5oTUQ0R0VhsTVTTkkE",
+          "rating": 4.3
+        }
+      }
+    },
+    {
+      "id": "location_ChIJkZ5Fx2alUQ0RiDCpS_8ltbo",
+      "name": "Lukas Gourmet Shop",
+      "description": "San Sebastián gourmet food, wine and coffee stop recommended by Monocle as worth a small detour. Best deli in the city: conservas, txakoli, aged cheeses.",
+      "geo": {
+        "main": {
+          "lat": 43.3216228,
+          "lng": -1.9799119
+        }
+      },
+      "location": {
+        "address": "San Sebastián — Lukas Gourmet Shop — San Sebastián, Spain",
+        "formatted_address": "San Sebastián, Spain",
+        "locality": "San Sebastián",
+        "region": null,
+        "postcode": null,
+        "country": "Spain"
+      },
+      "types": [
+        "store"
+      ],
+      "editorial": {
+        "popularity": "known_place",
+        "summary": "Restaurants / food stops | Gourmet Store"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJkZ5Fx2alUQ0RiDCpS_8ltbo",
+          "url": "https://www.google.com/maps/search/?api=1&query=Lukas%20Gourmet%20Shop&query_place_id=ChIJkZ5Fx2alUQ0RiDCpS_8ltbo",
+          "rating": 5.0
+        }
+      }
+    },
+    {
+      "id": "location_ChIJ-VSD1KAcEA0RxQAOn8jldBo",
+      "name": "Noélia",
+      "description": "Seafood-focused restaurant in Cabanas, eastern Algarve. A strong food reference for simple but high-quality regional cooking and a good marker for the kind of authentic coastal food culture preferred on the trip. Seafood",
+      "geo": {
+        "main": {
+          "lat": 37.1371451,
+          "lng": -7.5949658
+        }
+      },
+      "location": {
+        "address": ">-",
+        "formatted_address": ">-",
+        "locality": null,
+        "region": null,
+        "postcode": null,
+        "country": "Portugal"
+      },
+      "types": [
+        "restaurant"
+      ],
+      "editorial": {
+        "popularity": "known_place",
+        "summary": "Restaurants / food stops | Restaurant"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJ-VSD1KAcEA0RxQAOn8jldBo",
+          "url": "https://www.google.com/maps/search/?api=1&query=No%C3%A9lia&query_place_id=ChIJ-VSD1KAcEA0RxQAOn8jldBo",
+          "rating": 4.2
+        }
+      }
+    },
+    {
+      "id": "location_ChIJ3X0pb8wxGw0R_FbaLMAAads",
+      "name": "Orta",
+      "description": "Beyond Ordinary Guides highlights Orta, Casa Mãe's restaurant, for organic fruits and vegetables from the on-site garden, grilled meats, and artisan coffee.",
+      "geo": {
+        "main": {
+          "lat": 37.1029524,
+          "lng": -8.6752765
+        }
+      },
+      "location": {
+        "address": "Lagos (Casa Mãe's restaurant) — Orta — Lagos (Casa Mãe's restaurant), Portugal",
+        "formatted_address": "Lagos (Casa Mãe's restaurant), Portugal",
+        "locality": "Lagos (Casa Mãe's restaurant)",
+        "region": null,
+        "postcode": null,
+        "country": "Portugal"
+      },
+      "types": [
+        "restaurant"
+      ],
+      "editorial": {
+        "popularity": "hidden_gem",
+        "summary": "Restaurants / food stops | Restaurant"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJ3X0pb8wxGw0R_FbaLMAAads",
+          "url": "https://www.google.com/maps/search/?api=1&query=Orta&query_place_id=ChIJ3X0pb8wxGw0R_FbaLMAAads",
+          "rating": 4.6
+        }
+      }
+    },
+    {
+      "id": "location_ChIJQwgPtGQVGw0RPBZehIg9MXE",
+      "name": "Pont'a Pé, Carrapateira",
+      "description": "Local food stop on the Costa Vicentina.",
+      "geo": {
+        "main": {
+          "lat": 37.317194,
+          "lng": -8.803466
+        }
+      },
+      "location": {
+        "address": "Portugal / Algarve",
+        "formatted_address": "Portugal / Algarve",
+        "locality": null,
+        "region": "Portugal / Algarve",
+        "postcode": null,
+        "country": "Portugal"
+      },
+      "types": [
+        "restaurant"
+      ],
+      "editorial": {
+        "popularity": "hidden_gem",
+        "summary": "Restaurants / food stops | food, hidden_gem"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJQwgPtGQVGw0RPBZehIg9MXE",
+          "url": "https://www.google.com/maps/search/?api=1&query=Pont%27a%20P%C3%A9%2C%20Carrapateira&query_place_id=ChIJQwgPtGQVGw0RPBZehIg9MXE",
+          "rating": 4.4
+        }
+      }
+    },
+    {
+      "id": "location_ChIJvyuSAi_OGg0RYjO4lydSwms",
+      "name": "Restaurante Praia da Galé",
+      "description": "Beachfront restaurant reference from your notes around the Algarve coast. It is worth keeping as a functional food marker when you want an easy stop paired with a beach area.",
+      "geo": {
+        "main": {
+          "lat": 37.0819507,
+          "lng": -8.3171987
+        }
+      },
+      "location": {
+        "address": "Restaurante Praia da Galé Portugal",
+        "formatted_address": "Restaurante Praia da Galé Portugal",
+        "locality": null,
+        "region": null,
+        "postcode": null,
+        "country": "Portugal"
+      },
+      "types": [
+        "restaurant"
+      ],
+      "editorial": {
+        "popularity": "known_place",
+        "summary": "Restaurants / food stops | Restaurant"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJvyuSAi_OGg0RYjO4lydSwms",
+          "url": "https://www.google.com/maps/search/?api=1&query=Restaurante%20Praia%20da%20Gal%C3%A9&query_place_id=ChIJvyuSAi_OGg0RYjO4lydSwms",
+          "rating": 4.3
+        }
+      }
+    },
+    {
+      "id": "location_ChIJLTqgYOk0Fw0RcaHHT0YZOeM",
+      "name": "Sabores de Monsaraz Restaurant",
+      "description": "Beyond Ordinary Guides specifically recommends this restaurant, describing an evening where owner Mrs. Isabel hosted a family gathering alongside guests: \"no exchange of words was necessary to understand the love shared",
+      "geo": {
+        "main": {
+          "lat": 38.4455646,
+          "lng": -7.3787842
+        }
+      },
+      "location": {
+        "address": "Monsaraz — Sabores de Monsaraz Restaurant — Monsaraz, Portugal",
+        "formatted_address": "Monsaraz, Portugal",
+        "locality": "Monsaraz",
+        "region": null,
+        "postcode": null,
+        "country": "Portugal"
+      },
+      "types": [
+        "restaurant"
+      ],
+      "editorial": {
+        "popularity": "hidden_gem",
+        "summary": "Restaurants / food stops | Restaurant"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJLTqgYOk0Fw0RcaHHT0YZOeM",
+          "url": "https://www.google.com/maps/search/?api=1&query=Sabores%20de%20Monsaraz%20Restaurant&query_place_id=ChIJLTqgYOk0Fw0RcaHHT0YZOeM",
+          "rating": 4.1
+        }
+      }
+    },
+    {
+      "id": "location_ChIJGyt7KrjAyRIRyC0XCfX9iro",
+      "name": "Station Uvale du Palais",
+      "description": "A historic grape-juice kiosk near the Vieux Port that Monocle highlights as the last surviving grape-juice bar in Marseille, revived by Yannis Amokreze.",
+      "geo": {
+        "main": {
+          "lat": 43.2901839,
+          "lng": 5.3755902
+        }
+      },
+      "location": {
+        "address": "Station Uvale du Palais, France",
+        "formatted_address": "Station Uvale du Palais, France",
+        "locality": "Station Uvale du Palais",
+        "region": null,
+        "postcode": null,
+        "country": "France"
+      },
+      "types": [
+        "bar"
+      ],
+      "editorial": {
+        "popularity": "hidden_gem",
+        "summary": "Restaurants / food stops | Food kiosk / local landmark"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJGyt7KrjAyRIRyC0XCfX9iro",
+          "url": "https://www.google.com/maps/search/?api=1&query=Station%20Uvale%20du%20Palais&query_place_id=ChIJGyt7KrjAyRIRyC0XCfX9iro",
+          "rating": 4.7
+        }
+      }
+    },
+    {
+      "id": "location_ChIJI7tgmmdGGw0RWEVteGMileE",
+      "name": "Sítio do Forno",
+      "description": "Food stop in the west Algarve area that seems worth keeping on the map as a scenic or destination meal. It fits your preference for places that feel rooted in landscape rather than generic.",
+      "geo": {
+        "main": {
+          "lat": 37.1744375,
+          "lng": -8.9066875
+        }
+      },
+      "location": {
+        "address": "Sítio do Forno Portugal",
+        "formatted_address": "Sítio do Forno Portugal",
+        "locality": null,
+        "region": null,
+        "postcode": null,
+        "country": "Portugal"
+      },
+      "types": [
+        "restaurant"
+      ],
+      "editorial": {
+        "popularity": "known_place",
+        "summary": "Restaurants / food stops | Restaurant / Food Stop"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJI7tgmmdGGw0RWEVteGMileE",
+          "url": "https://www.google.com/maps/search/?api=1&query=S%C3%ADtio%20do%20Forno&query_place_id=ChIJI7tgmmdGGw0RWEVteGMileE",
+          "rating": 4.4
+        }
+      }
+    },
+    {
+      "id": "location_ChIJGVE4VntvFw0RY6KJF3Bb0s0",
+      "name": "Adega do Monte Branco",
+      "description": "Small biodynamic producer using traditional Alentejo clay amphora (talha) technique for winemaking — an ancient Roman method producing distinctive orange wines. The Alentejo talha wine tradition is one of the world's old",
+      "geo": {
+        "main": {
+          "lat": 38.8551494,
+          "lng": -7.6059047
+        }
+      },
+      "location": {
+        "address": "Mértola area — Adega do Monte Branco — Mértola area, Portugal",
+        "formatted_address": "Mértola area, Portugal",
+        "locality": "Mértola area",
+        "region": null,
+        "postcode": null,
+        "country": "Portugal"
+      },
+      "types": [
+        "store"
+      ],
+      "editorial": {
+        "popularity": "hidden_gem",
+        "summary": "Markets / local producers / shops | Vineyard"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJGVE4VntvFw0RY6KJF3Bb0s0",
+          "url": "https://www.google.com/maps/search/?api=1&query=Adega%20do%20Monte%20Branco&query_place_id=ChIJGVE4VntvFw0RY6KJF3Bb0s0",
+          "rating": 4.9
+        }
+      }
+    },
+    {
+      "id": "location_ChIJ23LZ5D4xDQ0RwSEheFWywtc",
+      "name": "Finca Descalzos Viejos",
+      "description": "Winery in a former monastic setting where you can taste Spanish wine under preserved frescoes; especially good for a wine-and-character brief.",
+      "geo": {
+        "main": {
+          "lat": 36.7509537,
+          "lng": -5.179605
+        }
+      },
+      "location": {
+        "address": "Ronda area — Finca Descalzos Viejos — Ronda area, Spain",
+        "formatted_address": "Ronda area, Spain",
+        "locality": "Ronda area",
+        "region": null,
+        "postcode": null,
+        "country": "Spain"
+      },
+      "types": [
+        "store"
+      ],
+      "editorial": {
+        "popularity": "known_place",
+        "summary": "Markets / local producers / shops | Winery"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJ23LZ5D4xDQ0RwSEheFWywtc",
+          "url": "https://www.google.com/maps/search/?api=1&query=Finca%20Descalzos%20Viejos&query_place_id=ChIJ23LZ5D4xDQ0RwSEheFWywtc",
+          "rating": 4.7
+        }
+      }
+    },
+    {
+      "id": "location_ChIJbfzpdONkGg0RZITScMc_mgI",
+      "name": "Herdade da Malhadinha Nova",
+      "description": "A boutique wine estate and organic farm near Albernoa — one of Portugal's most beautiful rural hotel estates. Families with children are genuinely welcome (donkeys, horses, vineyard walks, organic kitchen garden). The re",
+      "geo": {
+        "main": {
+          "lat": 37.8213733,
+          "lng": -7.9783449
+        }
+      },
+      "location": {
+        "address": "Albernoa — Herdade da Malhadinha Nova — Albernoa, Portugal",
+        "formatted_address": "Albernoa, Portugal",
+        "locality": "Albernoa",
+        "region": null,
+        "postcode": null,
+        "country": "Portugal"
+      },
+      "types": [
+        "store"
+      ],
+      "editorial": {
+        "popularity": "known_place",
+        "summary": "Markets / local producers / shops | Farm / Vineyard"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJbfzpdONkGg0RZITScMc_mgI",
+          "url": "https://www.google.com/maps/search/?api=1&query=Herdade%20da%20Malhadinha%20Nova&query_place_id=ChIJbfzpdONkGg0RZITScMc_mgI",
+          "rating": 4.6
+        }
+      }
+    },
+    {
+      "id": "location_ChIJW57sdT_atRIRsx2kTurmBt0",
+      "name": "Mas des Tourelles",
+      "description": "A winery built directly on the site of a Gallo-Roman estate that uses historical tools and ancient methods to recreate the wines of Roman antiquity — including defrutum (grape must reduction) and mulsum (honey wine). Atl",
+      "geo": {
+        "main": {
+          "lat": 43.7939973,
+          "lng": 4.5851468
+        }
+      },
+      "location": {
+        "address": "Beaucaire — Mas des Tourelles — Beaucaire, France",
+        "formatted_address": "Beaucaire, France",
+        "locality": "Beaucaire",
+        "region": null,
+        "postcode": null,
+        "country": "France"
+      },
+      "types": [
+        "store"
+      ],
+      "editorial": {
+        "popularity": "hidden_gem",
+        "summary": "Markets / local producers / shops | Winery / Landmark"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJW57sdT_atRIRsx2kTurmBt0",
+          "url": "https://www.google.com/maps/search/?api=1&query=Mas%20des%20Tourelles&query_place_id=ChIJW57sdT_atRIRsx2kTurmBt0",
+          "rating": 4.4
+        }
+      }
+    },
+    {
+      "id": "location_ChIJQ30Cl1T4Tw0RvbE2o9FbsM0",
+      "name": "Rioja Alavesa",
+      "description": "The wine heartland of Spain — the Rioja Alavesa sub-region is the most dramatic, with ancient walled villages like Laguardia perched above vine-covered slopes. Natural and biodynamic wine producers flourish here: Bodegas",
+      "geo": {
+        "main": {
+          "lat": 42.5688228,
+          "lng": -2.5907558
+        }
+      },
+      "location": {
+        "address": ">-",
+        "formatted_address": ">-",
+        "locality": null,
+        "region": null,
+        "postcode": null,
+        "country": "Spain"
+      },
+      "types": [
+        "store"
+      ],
+      "editorial": {
+        "popularity": "known_place",
+        "summary": "Markets / local producers / shops | Region / Vineyard | REVIEW NEEDED: Query 'Rioja Alavesa' (wine region) returned a specific winery 'Bodegas Ysios' within that region. The place_id points to a single winery, not the whole region."
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJQ30Cl1T4Tw0RvbE2o9FbsM0",
+          "url": "https://www.google.com/maps/search/?api=1&query=Rioja%20Alavesa&query_place_id=ChIJQ30Cl1T4Tw0RvbE2o9FbsM0",
+          "rating": 4.6
+        }
+      }
+    },
+    {
+      "id": "location_ChIJyRl6si5OVQ0RgLndbaX66VQ",
+      "name": "Saint-Émilion",
+      "description": "A medieval wine village built into limestone cliffs — the entire village and its underground quarry-carved church are UNESCO World Heritage. Grand Cru Classé châteaux line the surrounding hillsides. Excellent boulangerie",
+      "geo": {
+        "main": {
+          "lat": 44.894387,
+          "lng": -0.155729
+        }
+      },
+      "location": {
+        "address": "Saint-Émilion, France",
+        "formatted_address": "Saint-Émilion, France",
+        "locality": "Saint-Émilion",
+        "region": null,
+        "postcode": null,
+        "country": "France"
+      },
+      "types": [
+        "store"
+      ],
+      "editorial": {
+        "popularity": "touristic",
+        "summary": "Markets / local producers / shops | Small Town / Vineyard"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJyRl6si5OVQ0RgLndbaX66VQ",
+          "url": "https://www.google.com/maps/search/?api=1&query=Saint-%C3%89milion&query_place_id=ChIJyRl6si5OVQ0RgLndbaX66VQ"
+        }
+      }
+    },
+    {
+      "id": "location_ChIJldzcIBR7pRIRcehiCR4Yh_E",
+      "name": "Basecamps Cerdanya",
+      "description": "A mountain base with minimalist timber cabins, floor-to-ceiling glass, and a cleaner design language than most family outdoor stays. This is one of the strongest matches to your architecture-and-materials brief if you wa",
+      "geo": {
+        "main": {
+          "lat": 42.3916204,
+          "lng": 1.9142947
+        }
+      },
+      "location": {
+        "address": "Carrer del Cadí, 17538, Girona, Spain",
+        "formatted_address": "Carrer del Cadí, 17538, Girona, Spain",
+        "locality": "Carrer del Cadí, 17538, Girona",
+        "region": "1",
+        "postcode": null,
+        "country": "Spain"
+      },
+      "types": [
+        "campground"
+      ],
+      "editorial": {
+        "popularity": "hidden_gem",
+        "summary": "Campgrounds / campsite stays | Cabins / Campground, Closest Snow Peak equivalent in Europe, campground"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJldzcIBR7pRIRcehiCR4Yh_E",
+          "url": "https://www.google.com/maps/search/?api=1&query=Basecamps%20Cerdanya&query_place_id=ChIJldzcIBR7pRIRcehiCR4Yh_E",
+          "rating": 4.5
+        }
+      }
+    },
+    {
+      "id": "location_ChIJa-ALr_F7pRIRw3cH9T79gL8",
+      "name": "Basecamps Fire Kitchen",
+      "description": "The food anchor inside Basecamps Cerdanya, useful if you want a design-conscious mountain stop with a proper restaurant rather than only self-catering cabins. It fits the brief best as a wood-and-fire meal stop paired wi",
+      "geo": {
+        "main": {
+          "lat": 42.3920748,
+          "lng": 1.9154226
+        }
+      },
+      "location": {
+        "address": "Carrer del Cadí, S/N, 17538 Queixans, Girona, Spain",
+        "formatted_address": "Carrer del Cadí, S/N, 17538 Queixans, Girona, Spain",
+        "locality": "Carrer del Cadí, S/N, 17538 Queixans, Girona",
+        "region": null,
+        "postcode": null,
+        "country": "Spain"
+      },
+      "types": [
+        "campground"
+      ],
+      "editorial": {
+        "popularity": "known_place",
+        "summary": "Campgrounds / campsite stays | Restaurant"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJa-ALr_F7pRIRw3cH9T79gL8",
+          "url": "https://www.google.com/maps/search/?api=1&query=Basecamps%20Fire%20Kitchen&query_place_id=ChIJa-ALr_F7pRIRw3cH9T79gL8",
+          "rating": 4.7
+        }
+      }
+    },
+    {
+      "id": "location_ChIJkQhz3EMFuxIRDeAJl_xGMfk",
+      "name": "Cala Pola & Cala Giverola (near Tossa de Mar)",
+      "description": "Three small coves — Cala Bona, Cala Pola, and Cala Giverola — accessed just north of Tossa de Mar via hiking trails that connect them along the cliff. Spain with Emily specifically recommends these: \"Cala Pola is part of",
+      "geo": {
+        "main": {
+          "lat": 41.7373253,
+          "lng": 2.9540982
+        }
+      },
+      "location": {
+        "address": "Cala Pola & Cala Giverola (near Tossa de Mar), Spain",
+        "formatted_address": "Cala Pola & Cala Giverola (near Tossa de Mar), Spain",
+        "locality": "Cala Pola & Cala Giverola (near Tossa de Mar)",
+        "region": null,
+        "postcode": null,
+        "country": "Spain"
+      },
+      "types": [
+        "campground"
+      ],
+      "editorial": {
+        "popularity": "hidden_gem",
+        "summary": "Campgrounds / campsite stays | Coves / Beach / Campsite"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJkQhz3EMFuxIRDeAJl_xGMfk",
+          "url": "https://www.google.com/maps/search/?api=1&query=Cala%20Pola%20%26%20Cala%20Giverola%20%28near%20Tossa%20de%20Mar%29&query_place_id=ChIJkQhz3EMFuxIRDeAJl_xGMfk",
+          "rating": 4.4
+        }
+      }
+    },
+    {
+      "id": "location_ChIJ61Rfqm_QUQ0R8Syz4JbxGRo",
+      "name": "Camping & Bungalows Itxaspe",
+      "description": "Basque Coast, ES",
+      "geo": {
+        "main": {
+          "lat": 43.29384,
+          "lng": -2.329713
+        }
+      },
+      "location": {
+        "address": "5",
+        "formatted_address": "5",
+        "locality": null,
+        "region": "5",
+        "postcode": null,
+        "country": "Spain"
+      },
+      "types": [
+        "campground"
+      ],
+      "editorial": {
+        "summary": "Campgrounds / campsite stays | Best Basque discovery; closer to your brief than the larger coast parks, campground"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJ61Rfqm_QUQ0R8Syz4JbxGRo",
+          "url": "https://www.google.com/maps/search/?api=1&query=Camping%20%26%20Bungalows%20Itxaspe&query_place_id=ChIJ61Rfqm_QUQ0R8Syz4JbxGRo",
+          "rating": 4.7
+        }
+      }
+    },
+    {
+      "id": "location_ChIJXUlGs83teg0R1LUpKMExxro",
+      "name": "Camping & Bungalows Los Escullos",
+      "description": null,
+      "geo": {
+        "main": {
+          "lat": 36.803305,
+          "lng": -2.078733
+        }
+      },
+      "location": {
+        "address": "Camping & Bungalows Los Escullos",
+        "formatted_address": "Camping & Bungalows Los Escullos",
+        "locality": null,
+        "region": null,
+        "postcode": null,
+        "country": "Spain"
+      },
+      "types": [
+        "campground"
+      ],
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJXUlGs83teg0R1LUpKMExxro",
+          "url": "https://www.google.com/maps/search/?api=1&query=Camping%20%26%20Bungalows%20Los%20Escullos&query_place_id=ChIJXUlGs83teg0R1LUpKMExxro",
+          "rating": 4.3
+        }
+      }
+    },
+    {
+      "id": "location_ChIJtZtxXLIPPA0RdJVQD7WhI24",
+      "name": "Camping Arribes del Duero",
+      "description": null,
+      "geo": {
+        "main": {
+          "lat": 40.9581257,
+          "lng": -6.6531722
+        }
+      },
+      "location": {
+        "address": "Camping Arribes del Duero",
+        "formatted_address": "Camping Arribes del Duero",
+        "locality": null,
+        "region": null,
+        "postcode": null,
+        "country": "Spain"
+      },
+      "types": [
+        "campground"
+      ],
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJtZtxXLIPPA0RdJVQD7WhI24",
+          "url": "https://www.google.com/maps/search/?api=1&query=Camping%20Arribes%20del%20Duero&query_place_id=ChIJtZtxXLIPPA0RdJVQD7WhI24",
+          "rating": 4.9
+        }
+      }
+    },
+    {
+      "id": "location_ChIJKWC3f67UVg0RSL7N4gNFFdM",
+      "name": "Camping Bachoc à la Ferme Pays Basque",
+      "description": "Basque Country, ES",
+      "geo": {
+        "main": {
+          "lat": 43.2387062,
+          "lng": -1.2061337
+        }
+      },
+      "location": {
+        "address": "8",
+        "formatted_address": "8",
+        "locality": null,
+        "region": "8",
+        "postcode": null,
+        "country": "Spain"
+      },
+      "types": [
+        "campground"
+      ],
+      "editorial": {
+        "summary": "Campgrounds / campsite stays | Hidden-gem farm energy, campground"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJKWC3f67UVg0RSL7N4gNFFdM",
+          "url": "https://www.google.com/maps/search/?api=1&query=Camping%20Bachoc%20%C3%A0%20la%20Ferme%20Pays%20Basque&query_place_id=ChIJKWC3f67UVg0RSL7N4gNFFdM",
+          "rating": 4.8
+        }
+      }
+    },
+    {
+      "id": "location_ChIJN6-YAkUFuxIRhke3T-HKhgA",
+      "name": "Camping Cala Pola",
+      "description": "Scenic campsite near Tossa de Mar with a strong coastal setting. It is attractive, but also clearly one of the better-known and more touristed Costa Brava camping choices.",
+      "geo": {
+        "main": {
+          "lat": 41.73371,
+          "lng": 2.9506771
+        }
+      },
+      "location": {
+        "address": "Camping Cala Pola Tossa de Mar Spain",
+        "formatted_address": "Camping Cala Pola Tossa de Mar Spain",
+        "locality": null,
+        "region": null,
+        "postcode": null,
+        "country": "Spain"
+      },
+      "types": [
+        "campground"
+      ],
+      "editorial": {
+        "popularity": "touristic",
+        "summary": "Campgrounds / campsite stays | Campground"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJN6-YAkUFuxIRhke3T-HKhgA",
+          "url": "https://www.google.com/maps/search/?api=1&query=Camping%20Cala%20Pola&query_place_id=ChIJN6-YAkUFuxIRhke3T-HKhgA",
+          "rating": 4.0
+        }
+      }
+    },
+    {
+      "id": "location_ChIJIdU0MPf1Pg0Rteaa76CIKGY",
+      "name": "Camping El Burro Blanco",
+      "description": "Sierra de Francia, ES",
+      "geo": {
+        "main": {
+          "lat": 40.4749847,
+          "lng": -5.9987226
+        }
+      },
+      "location": {
+        "address": "12",
+        "formatted_address": "12",
+        "locality": null,
+        "region": "12",
+        "postcode": null,
+        "country": "Spain"
+      },
+      "types": [
+        "campground"
+      ],
+      "editorial": {
+        "summary": "Campgrounds / campsite stays | Best inland Spain find, campground"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJIdU0MPf1Pg0Rteaa76CIKGY",
+          "url": "https://www.google.com/maps/search/?api=1&query=Camping%20El%20Burro%20Blanco&query_place_id=ChIJIdU0MPf1Pg0Rteaa76CIKGY",
+          "rating": 4.8
+        }
+      }
+    },
+    {
+      "id": "location_ChIJ4R5TRMPfA0gRTZsTO_k9j_k",
+      "name": "Camping Huttopia Oléron Les Chênes Verts",
+      "description": "Attractive family-friendly campsite on Île d’Oléron that fits your broader camping taste, even though it is more of a detour or inspiration stop than a direct route priority. It is worth keeping as a reference for campsi",
+      "geo": {
+        "main": {
+          "lat": 45.8862939,
+          "lng": -1.2735711
+        }
+      },
+      "location": {
+        "address": "Camping Huttopia Oléron Les Chênes Verts France",
+        "formatted_address": "Camping Huttopia Oléron Les Chênes Verts France",
+        "locality": null,
+        "region": null,
+        "postcode": null,
+        "country": "France"
+      },
+      "types": [
+        "campground"
+      ],
+      "editorial": {
+        "popularity": "known_place",
+        "summary": "Campgrounds / campsite stays | Campground"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJ4R5TRMPfA0gRTZsTO_k9j_k",
+          "url": "https://www.google.com/maps/search/?api=1&query=Camping%20Huttopia%20Ol%C3%A9ron%20Les%20Ch%C3%AAnes%20Verts&query_place_id=ChIJ4R5TRMPfA0gRTZsTO_k9j_k",
+          "rating": 4.2
+        }
+      }
+    },
+    {
+      "id": "location_ChIJ0QKwjo0YyhIRvb1lYeX8sWQ",
+      "name": "Camping Les Hautes Prairies - Campasun – Camping Lourmarin – Luberon",
+      "description": "Four-star family campground in the Luberon Regional Natural Park, about 800 metres from central Lourmarin. The official campsite material highlights shaded pitches for tents, caravans and motorhomes, a heated pool complex with slides and jacuzzi, a playground, and easy access to village bakeries, markets and Provençal day trips.",
+      "geo": {
+        "main": {
+          "lat": 43.76807,
+          "lng": 5.372392
+        }
+      },
+      "location": {
+        "address": "28 Rte de Vaugines, 84160 Lourmarin, France",
+        "formatted_address": "28 Rte de Vaugines, 84160 Lourmarin, France",
+        "locality": "Lourmarin",
+        "region": "Vaucluse",
+        "postcode": "84160",
+        "country": "France"
+      },
+      "types": [
+        "campground"
+      ],
+      "editorial": {
+        "popularity": "known_place",
+        "summary": "Campgrounds / campsite stays | Luberon family campground with shaded pitches, pool complex and easy village access"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJ0QKwjo0YyhIRvb1lYeX8sWQ",
+          "url": "https://www.google.com/maps/search/?api=1&query=Camping%20Les%20Hautes%20Prairies%20Lourmarin&query_place_id=ChIJ0QKwjo0YyhIRvb1lYeX8sWQ",
+          "rating": 4.4
+        }
+      }
+    },
+    {
+      "id": "location_ChIJ4Zt9x_BGUQ0Ro9s-m9VUvr0",
+      "name": "Camping Lou P'tit Poun",
+      "description": "Human-scale, green, family-oriented campsite near Bayonne and the Landes / Basque transition. One of the most route-relevant camping references thanks to its calm setting, family fit, and good position for the Atlantic c",
+      "geo": {
+        "main": {
+          "lat": 43.5242044,
+          "lng": -1.4121694
+        }
+      },
+      "location": {
+        "address": "Camping Lou P'tit Poun 110 Avenue du Quartier Neuf 40390 Saint-Martin-de-Seignanx France",
+        "formatted_address": "Camping Lou P'tit Poun 110 Avenue du Quartier Neuf 40390 Saint-Martin-de-Seignanx France",
+        "locality": null,
+        "region": "10",
+        "postcode": null,
+        "country": "France"
+      },
+      "types": [
+        "campground"
+      ],
+      "editorial": {
+        "popularity": "known_place",
+        "summary": "Campgrounds / campsite stays | Campground, Intimate forest classic, campground"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJ4Zt9x_BGUQ0Ro9s-m9VUvr0",
+          "url": "https://www.google.com/maps/search/?api=1&query=Camping%20Lou%20P%27tit%20Poun&query_place_id=ChIJ4Zt9x_BGUQ0Ro9s-m9VUvr0",
+          "rating": 4.2
+        }
+      }
+    },
+    {
+      "id": "location_ChIJ42_DJI8AuxIRg7Qf6P0LGBM",
+      "name": "Camping Pla de la Torre",
+      "description": "A more comfort-oriented version of the Pla de la Torre stay concept, useful if you want an easier family setup without losing the outdoor feel entirely. It sits between campsite practicality and resort comfort. Camping o",
+      "geo": {
+        "main": {
+          "lat": 41.8503217,
+          "lng": 3.0877803
+        }
+      },
+      "location": {
+        "address": "Camping Pla de la Torre Sant Antoni de Calonge Spain",
+        "formatted_address": "Camping Pla de la Torre Sant Antoni de Calonge Spain",
+        "locality": null,
+        "region": null,
+        "postcode": null,
+        "country": "Spain"
+      },
+      "types": [
+        "campground"
+      ],
+      "editorial": {
+        "popularity": "known_place",
+        "summary": "Campgrounds / campsite stays | Campground"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJ42_DJI8AuxIRg7Qf6P0LGBM",
+          "url": "https://www.google.com/maps/search/?api=1&query=Camping%20Pla%20de%20la%20Torre&query_place_id=ChIJ42_DJI8AuxIRg7Qf6P0LGBM",
+          "rating": 4.5
+        }
+      }
+    },
+    {
+      "id": "location_ChIJL6apZdxQuhIRjhkeP2OEtNU",
+      "name": "Camping Playa Brava (Albatross)",
+      "description": "Mainstream family camping option near Pals and the coastal dune area. It seems useful and established, but more conventional and tourist-oriented than your more design-led references.",
+      "geo": {
+        "main": {
+          "lat": 42.0011045,
+          "lng": 3.1939721
+        }
+      },
+      "location": {
+        "address": "Camping Playa Brava Pals Spain",
+        "formatted_address": "Camping Playa Brava Pals Spain",
+        "locality": null,
+        "region": null,
+        "postcode": null,
+        "country": "Spain"
+      },
+      "types": [
+        "campground"
+      ],
+      "editorial": {
+        "popularity": "touristic",
+        "summary": "Campgrounds / campsite stays | Campground"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJL6apZdxQuhIRjhkeP2OEtNU",
+          "url": "https://www.google.com/maps/search/?api=1&query=Camping%20Playa%20Brava%20%28Albatross%29&query_place_id=ChIJL6apZdxQuhIRjhkeP2OEtNU",
+          "rating": 4.3
+        }
+      }
+    },
+    {
+      "id": "location_ChIJ2VBt29EPFw0RifbxGruAaCI",
+      "name": "Camping Puro Alentejo",
+      "description": null,
+      "geo": {
+        "main": {
+          "lat": 38.9770149,
+          "lng": -7.3238619
+        }
+      },
+      "location": {
+        "address": "Camping Puro Alentejo",
+        "formatted_address": "Camping Puro Alentejo",
+        "locality": null,
+        "region": null,
+        "postcode": null,
+        "country": "Portugal"
+      },
+      "types": [
+        "campground"
+      ],
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJ2VBt29EPFw0RifbxGruAaCI",
+          "url": "https://www.google.com/maps/search/?api=1&query=Camping%20Puro%20Alentejo&query_place_id=ChIJ2VBt29EPFw0RifbxGruAaCI",
+          "rating": 4.9
+        }
+      }
+    },
+    {
+      "id": "location_ChIJPSAdNeRePg0RnGd9TV7WxFU",
+      "name": "Camping Vega de Francia",
+      "description": null,
+      "geo": {
+        "main": {
+          "lat": 40.4343094,
+          "lng": -6.0304148
+        }
+      },
+      "location": {
+        "address": "Camping Vega de Francia",
+        "formatted_address": "Camping Vega de Francia",
+        "locality": null,
+        "region": null,
+        "postcode": null,
+        "country": "Spain"
+      },
+      "types": [
+        "campground"
+      ],
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJPSAdNeRePg0RnGd9TV7WxFU",
+          "url": "https://www.google.com/maps/search/?api=1&query=Camping%20Vega%20de%20Francia&query_place_id=ChIJPSAdNeRePg0RnGd9TV7WxFU",
+          "rating": 4.5
+        }
+      }
+    },
+    {
+      "id": "location_ChIJvfYWRbMNGw0RnGqC3uI2oz0",
+      "name": "Camping Villa Park Zambujeira do Mar",
+      "description": null,
+      "geo": {
+        "main": {
+          "lat": 37.5255689,
+          "lng": -8.7758221
+        }
+      },
+      "location": {
+        "address": "Camping Villa Park Zambujeira do Mar",
+        "formatted_address": "Camping Villa Park Zambujeira do Mar",
+        "locality": null,
+        "region": null,
+        "postcode": null,
+        "country": "Portugal"
+      },
+      "types": [
+        "campground"
+      ],
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJvfYWRbMNGw0RnGqC3uI2oz0",
+          "url": "https://www.google.com/maps/search/?api=1&query=Camping%20Villa%20Park%20Zambujeira%20do%20Mar&query_place_id=ChIJvfYWRbMNGw0RnGqC3uI2oz0",
+          "rating": 4.5
+        }
+      }
+    },
+    {
+      "id": "location_ChIJV9UoA6wKpRIRzTLt0H-gbIY",
+      "name": "Huttopia Barcelona Pirineos",
+      "description": null,
+      "geo": {
+        "main": {
+          "lat": 42.2162166,
+          "lng": 1.836896
+        }
+      },
+      "location": {
+        "address": "Huttopia Barcelona Pirineos",
+        "formatted_address": "Huttopia Barcelona Pirineos",
+        "locality": null,
+        "region": null,
+        "postcode": null,
+        "country": "Spain"
+      },
+      "types": [
+        "campground"
+      ],
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJV9UoA6wKpRIRzTLt0H-gbIY",
+          "url": "https://www.google.com/maps/search/?api=1&query=Huttopia%20Barcelona%20Pirineos&query_place_id=ChIJV9UoA6wKpRIRzTLt0H-gbIY",
+          "rating": 4.5
+        }
+      }
+    },
+    {
+      "id": "location_ChIJy6Q0PNDftRIRqsMMmxTvCX0",
+      "name": "Huttopia Fontvieille",
+      "description": null,
+      "geo": {
+        "main": {
+          "lat": 43.7235027,
+          "lng": 4.7182288
+        }
+      },
+      "location": {
+        "address": "Huttopia Fontvieille",
+        "formatted_address": "Huttopia Fontvieille",
+        "locality": null,
+        "region": null,
+        "postcode": null,
+        "country": "France"
+      },
+      "types": [
+        "campground"
+      ],
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJy6Q0PNDftRIRqsMMmxTvCX0",
+          "url": "https://www.google.com/maps/search/?api=1&query=Huttopia%20Fontvieille&query_place_id=ChIJy6Q0PNDftRIRqsMMmxTvCX0",
+          "rating": 4.6
+        }
+      }
+    },
+    {
+      "id": "location_ChIJ2ySt-q7Ak0cRRAYJm2CDOmc",
+      "name": "Huttopia Forêt des Vosges",
+      "description": null,
+      "geo": {
+        "main": {
+          "lat": 48.1239381,
+          "lng": 6.8182774
+        }
+      },
+      "location": {
+        "address": "Huttopia Forêt des Vosges",
+        "formatted_address": "Huttopia Forêt des Vosges",
+        "locality": null,
+        "region": null,
+        "postcode": null,
+        "country": "France"
+      },
+      "types": [
+        "campground"
+      ],
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJ2ySt-q7Ak0cRRAYJm2CDOmc",
+          "url": "https://www.google.com/maps/search/?api=1&query=Huttopia%20For%C3%AAt%20des%20Vosges&query_place_id=ChIJ2ySt-q7Ak0cRRAYJm2CDOmc",
+          "rating": 4.7
+        }
+      }
+    },
+    {
+      "id": "location_ChIJgfuI-MWosxIRqvZ4xLRlvqQ",
+      "name": "Huttopia Gorges du Tarn",
+      "description": null,
+      "geo": {
+        "main": {
+          "lat": 44.2875129,
+          "lng": 3.2330174
+        }
+      },
+      "location": {
+        "address": "Huttopia Gorges du Tarn",
+        "formatted_address": "Huttopia Gorges du Tarn",
+        "locality": null,
+        "region": null,
+        "postcode": null,
+        "country": "France"
+      },
+      "types": [
+        "campground"
+      ],
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJgfuI-MWosxIRqvZ4xLRlvqQ",
+          "url": "https://www.google.com/maps/search/?api=1&query=Huttopia%20Gorges%20du%20Tarn&query_place_id=ChIJgfuI-MWosxIRqvZ4xLRlvqQ",
+          "rating": 4.4
+        }
+      }
+    },
+    {
+      "id": "location_ChIJ4c9h3MH4Uw0RW4f0Yq_rDkk",
+      "name": "Huttopia Landes Sud",
+      "description": null,
+      "geo": {
+        "main": {
+          "lat": 43.8795222,
+          "lng": -1.2363287
+        }
+      },
+      "location": {
+        "address": "Huttopia Landes Sud",
+        "formatted_address": "Huttopia Landes Sud",
+        "locality": null,
+        "region": null,
+        "postcode": null,
+        "country": "France"
+      },
+      "types": [
+        "campground"
+      ],
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJ4c9h3MH4Uw0RW4f0Yq_rDkk",
+          "url": "https://www.google.com/maps/search/?api=1&query=Huttopia%20Landes%20Sud&query_place_id=ChIJ4c9h3MH4Uw0RW4f0Yq_rDkk",
+          "rating": 4.5
+        }
+      }
+    },
+    {
+      "id": "location_ChIJCV9RMUMCEg0R_NJbQ8yjz8c",
+      "name": "Camping Huttopia Parque de Doñana",
+      "description": "Shaded family campground on the edge of Doñana National Park between forest and sea in Andalusia. The official Huttopia site emphasizes fully equipped pitches for vans and motorhomes, two swimming pools including a white-sand pool area, hot shower blocks, bread service, bike hire and easy access to Hinojos, El Rocío and wildlife-rich wetlands.",
+      "geo": {
+        "main": {
+          "lat": 37.2421339,
+          "lng": -6.3825891
+        }
+      },
+      "location": {
+        "address": "Ctra. Hinojos - El Rocío Km. 7, 21740 Hinojos, Huelva, Spain",
+        "formatted_address": "Ctra. Hinojos - El Rocío Km. 7, 21740 Hinojos, Huelva, Spain",
+        "locality": "Hinojos",
+        "region": "Huelva",
+        "postcode": "21740",
+        "country": "Spain"
+      },
+      "types": [
+        "campground"
+      ],
+      "editorial": {
+        "popularity": "known_place",
+        "summary": "Campgrounds / campsite stays | Pine-shaded Doñana base with pools, family facilities and national park access"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJCV9RMUMCEg0R_NJbQ8yjz8c",
+          "url": "https://www.google.com/maps/search/?api=1&query=Camping%20Huttopia%20Parque%20de%20Do%C3%B1ana&query_place_id=ChIJCV9RMUMCEg0R_NJbQ8yjz8c",
+          "rating": 4.2
+        }
+      }
+    },
+    {
+      "id": "location_ChIJrbJSnlIa90cRMhc9Hn5iOX0",
+      "name": "Huttopia Royat",
+      "description": null,
+      "geo": {
+        "main": {
+          "lat": 45.75872,
+          "lng": 3.0543843
+        }
+      },
+      "location": {
+        "address": "Huttopia Royat",
+        "formatted_address": "Huttopia Royat",
+        "locality": null,
+        "region": null,
+        "postcode": null,
+        "country": "France"
+      },
+      "types": [
+        "campground"
+      ],
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJrbJSnlIa90cRMhc9Hn5iOX0",
+          "url": "https://www.google.com/maps/search/?api=1&query=Huttopia%20Royat&query_place_id=ChIJrbJSnlIa90cRMhc9Hn5iOX0",
+          "rating": 4.3
+        }
+      }
+    },
+    {
+      "id": "location_ChIJabFjpsWprBIRcNIpRp1O67w",
+      "name": "Huttopia Sarlat",
+      "description": null,
+      "geo": {
+        "main": {
+          "lat": 44.8936252,
+          "lng": 1.227992
+        }
+      },
+      "location": {
+        "address": "Huttopia Sarlat",
+        "formatted_address": "Huttopia Sarlat",
+        "locality": null,
+        "region": null,
+        "postcode": null,
+        "country": "France"
+      },
+      "types": [
+        "campground"
+      ],
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJabFjpsWprBIRcNIpRp1O67w",
+          "url": "https://www.google.com/maps/search/?api=1&query=Huttopia%20Sarlat&query_place_id=ChIJabFjpsWprBIRcNIpRp1O67w",
+          "rating": 4.2
+        }
+      }
+    },
+    {
+      "id": "location_ChIJq6qqPgro40cRkGBQHZkPa-w",
+      "name": "Huttopia Senonches",
+      "description": "A deep-forest campsite in Senonches that matches the wood-and-canvas, nature-immersion side of your mood board better than a glossy resort model. The note frames it as a strong architecture-and-landscape reference for fa",
+      "geo": {
+        "main": {
+          "lat": 48.553318,
+          "lng": 1.042187
+        }
+      },
+      "location": {
+        "address": "25 Av. de Badouleau, 28250 Senonches, France",
+        "formatted_address": "25 Av. de Badouleau, 28250 Senonches, France",
+        "locality": "25 Av. de Badouleau, 28250 Senonches",
+        "region": "6",
+        "postcode": null,
+        "country": "France"
+      },
+      "types": [
+        "campground"
+      ],
+      "editorial": {
+        "popularity": "hidden_gem",
+        "summary": "Campgrounds / campsite stays | Best return-leg France match, Campground / Nature Stay, campground"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJq6qqPgro40cRkGBQHZkPa-w",
+          "url": "https://www.google.com/maps/search/?api=1&query=Huttopia%20Senonches&query_place_id=ChIJq6qqPgro40cRkGBQHZkPa-w",
+          "rating": 4.5
+        }
+      }
+    },
+    {
+      "id": "location_ChIJXafOsC8OJQ0RNBh14pkD1p8",
+      "name": "Lima Escape Camping & Glamping",
+      "description": "An elevated glamping stay by Peneda-Gerês that was already flagged in your notes for suspended wooden terraces, minimalist platforms and a stronger tree-canopy feeling than a standard campsite. It is one of the better Po",
+      "geo": {
+        "main": {
+          "lat": 41.824395,
+          "lng": -8.318062
+        }
+      },
+      "location": {
+        "address": "Lugar de Igreja, 4980-312 Entre Ambos-os-Rios, Portugal",
+        "formatted_address": "Lugar de Igreja, 4980-312 Entre Ambos-os-Rios, Portugal",
+        "locality": "Lugar de Igreja, 4980-312 Entre Ambos-os-Rios",
+        "region": null,
+        "postcode": null,
+        "country": "Portugal"
+      },
+      "types": [
+        "campground"
+      ],
+      "editorial": {
+        "popularity": "hidden_gem",
+        "summary": "Campgrounds / campsite stays | Campground / Glamping, campground"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJXafOsC8OJQ0RNBh14pkD1p8",
+          "url": "https://www.google.com/maps/search/?api=1&query=Lima%20Escape%20Camping%20%26%20Glamping&query_place_id=ChIJXafOsC8OJQ0RNBh14pkD1p8",
+          "rating": 4.5
+        }
+      }
+    },
+    {
+      "id": "location_ChIJTS4Q2QYCtRIRxaO8Ea3JWV0",
+      "name": "Rives d'Arc - Collection Rivages",
+      "description": "Entry into southern France at the mouth of the Gorges de l'Ardèche. The gorges are kayakable with young kids on the calm sections; the campground sits right on the river.",
+      "geo": {
+        "main": {
+          "lat": 44.3976072,
+          "lng": 4.4001609
+        }
+      },
+      "location": {
+        "address": "1050 Rte des Gorges, 07150 Vallon-Pont-d'Arc, France",
+        "formatted_address": "1050 Rte des Gorges, 07150 Vallon-Pont-d'Arc, France",
+        "locality": "Vallon-Pont-d'Arc",
+        "region": "Auvergne-Rhône-Alpes",
+        "postcode": null,
+        "country": "France"
+      },
+      "types": [
+        "campground"
+      ],
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJTS4Q2QYCtRIRxaO8Ea3JWV0",
+          "url": "https://www.google.com/maps/search/?api=1&query=Rives%20d%27Arc%20-%20Collection%20Rivages&query_place_id=ChIJTS4Q2QYCtRIRxaO8Ea3JWV0",
+          "rating": 4.4
+        }
+      },
+      "editorial": {
+        "summary": "Campgrounds / campsite stays | Riverside campground at the entrance to the Gorges de l'Ardèche."
+      }
+    },
+    {
+      "id": "location_ChIJS_PHgJhhuhIRbPOiOCw77WE",
+      "name": "Rubina Resort",
+      "description": "Resort-style accommodation around Empuriabrava that seems more practical and leisure-oriented than characterful. It makes sense as a functional family stop, but not as a hidden gem.",
+      "geo": {
+        "main": {
+          "lat": 42.253235,
+          "lng": 3.130631
+        }
+      },
+      "location": {
+        "address": "Rubina Resort Empuriabrava Spain",
+        "formatted_address": "Rubina Resort Empuriabrava Spain",
+        "locality": null,
+        "region": null,
+        "postcode": null,
+        "country": "Spain"
+      },
+      "types": [
+        "campground"
+      ],
+      "editorial": {
+        "popularity": "touristic",
+        "summary": "Campgrounds / campsite stays | Resort / Campground"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJS_PHgJhhuhIRbPOiOCw77WE",
+          "url": "https://www.google.com/maps/search/?api=1&query=Rubina%20Resort&query_place_id=ChIJS_PHgJhhuhIRbPOiOCw77WE",
+          "rating": 4.2
+        }
+      }
+    },
+    {
+      "id": "location_ChIJXVP4Kxk2Gw0RZI3U9IfRv7E",
+      "name": "Salema Eco Camp",
+      "description": "SW Algarve, PT",
+      "geo": {
+        "main": {
+          "lat": 37.0750209,
+          "lng": -8.83107
+        }
+      },
+      "location": {
+        "address": "7",
+        "formatted_address": "7",
+        "locality": null,
+        "region": "7",
+        "postcode": null,
+        "country": "Portugal"
+      },
+      "types": [
+        "campground"
+      ],
+      "editorial": {
+        "summary": "Campgrounds / campsite stays | Most values-aligned in Portugal, campground"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJXVP4Kxk2Gw0RZI3U9IfRv7E",
+          "url": "https://www.google.com/maps/search/?api=1&query=Salema%20Eco%20Camp&query_place_id=ChIJXVP4Kxk2Gw0RZI3U9IfRv7E",
+          "rating": 4.3
+        }
+      }
+    },
+    {
+      "id": "location_ChIJ5ZAl-7_oeg0RHvDd2LWSNos",
+      "name": "wecamp Cabo de Gata",
+      "description": "An eco-oriented coastal campground in Cabo de Gata that fits the minimalist, landscape-first style you highlighted in the note: light wood, a softer palette, and a stronger sense of desert-meets-sea atmosphere than a mai",
+      "geo": {
+        "main": {
+          "lat": 36.8726515,
+          "lng": -2.0068761
+        }
+      },
+      "location": {
+        "address": "Cala del Cuervo, s/n, 04116 Las Negras, Almería, Spain",
+        "formatted_address": "Cala del Cuervo, s/n, 04116 Las Negras, Almería, Spain",
+        "locality": "Cala del Cuervo, s/n, 04116 Las Negras, Almería",
+        "region": "3",
+        "postcode": null,
+        "country": "Spain"
+      },
+      "types": [
+        "campground"
+      ],
+      "editorial": {
+        "popularity": "known_place",
+        "summary": "Campgrounds / campsite stays | Campground / Glamping, Desert-meets-sea, most dramatic setting, campground"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJ5ZAl-7_oeg0RHvDd2LWSNos",
+          "url": "https://www.google.com/maps/search/?api=1&query=wecamp%20Cabo%20de%20Gata&query_place_id=ChIJ5ZAl-7_oeg0RHvDd2LWSNos",
+          "rating": 4.1
+        }
+      }
+    },
+    {
+      "id": "location_ChIJixB1TVGfpRIR27uHSRh99TU",
+      "name": "wecamp Pedraforca",
+      "description": "\n\nNote: This site is operated by wecamp under their Pedraforca brand (Google Maps still indexes it under its previous name 'Camping Repòs del Pedraforca'). Bookings: https://wecamp.net/en/locations/pedraforca",
+      "geo": {
+        "main": {
+          "lat": 42.2273165,
+          "lng": 1.759383
+        }
+      },
+      "location": {
+        "address": "wecamp Pedraforca",
+        "formatted_address": "wecamp Pedraforca",
+        "locality": null,
+        "region": null,
+        "postcode": null,
+        "country": "Spain"
+      },
+      "types": [
+        "campground"
+      ],
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJixB1TVGfpRIR27uHSRh99TU",
+          "url": "https://www.google.com/maps/search/?api=1&query=wecamp%20Pedraforca&query_place_id=ChIJixB1TVGfpRIR27uHSRh99TU",
+          "rating": 4.2
+        }
+      },
+      "editorial": {
+        "summary": "Campgrounds / campsite stays | Pyrenean campground operated by wecamp at the foot of Pedraforca peak. Bookable at wecamp.net/en/locations/pedraforca"
+      }
+    },
+    {
+      "id": "location_ChIJl9MGgX7GGw0RTuXPoz_nAVU",
+      "name": "wecamp Reserva Alecrim",
+      "description": "Alentejo, PT",
+      "geo": {
+        "main": {
+          "lat": 38.0752715,
+          "lng": -8.7029726
+        }
+      },
+      "location": {
+        "address": "4",
+        "formatted_address": "4",
+        "locality": null,
+        "region": "4",
+        "postcode": null,
+        "country": "Portugal"
+      },
+      "types": [
+        "campground"
+      ],
+      "editorial": {
+        "summary": "Campgrounds / campsite stays | One of the best overall finds; cleanest design fit in Portugal, campground"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJl9MGgX7GGw0RTuXPoz_nAVU",
+          "url": "https://www.google.com/maps/search/?api=1&query=wecamp%20Reserva%20Alecrim&query_place_id=ChIJl9MGgX7GGw0RTuXPoz_nAVU",
+          "rating": 4.6
+        }
+      }
+    },
+    {
+      "id": "location_ChIJZUpwrXmxUQ0RzZFMSFpSmOY",
+      "name": "wecamp San Sebastián",
+      "description": null,
+      "geo": {
+        "main": {
+          "lat": 43.3047339,
+          "lng": -2.0457953
+        }
+      },
+      "location": {
+        "address": "wecamp San Sebastián",
+        "formatted_address": "wecamp San Sebastián",
+        "locality": null,
+        "region": null,
+        "postcode": null,
+        "country": "Spain"
+      },
+      "types": [
+        "campground"
+      ],
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJZUpwrXmxUQ0RzZFMSFpSmOY",
+          "url": "https://www.google.com/maps/search/?api=1&query=wecamp%20San%20Sebasti%C3%A1n&query_place_id=ChIJZUpwrXmxUQ0RzZFMSFpSmOY",
+          "rating": 3.7
+        }
+      }
+    },
+    {
+      "id": "location_ChIJQRJ60qIGuxIRY96FMDhA_Ls",
+      "name": "wecamp Santa Cristina",
+      "description": "A family-friendly forest campground in the Costa Brava that feels more design-led than conventional resort camping. Your own notes call out the bespoke wood furniture and landscape integration; the site leans into sunris",
+      "geo": {
+        "main": {
+          "lat": 41.8047417,
+          "lng": 3.0092617
+        }
+      },
+      "location": {
+        "address": "Km. 1,6 C-65, 80, 17246 Santa Cristina d’Aro, Girona, Spain",
+        "formatted_address": "Km. 1,6 C-65, 80, 17246 Santa Cristina d’Aro, Girona, Spain",
+        "locality": "Km. 1, 6 C-65, 80, 17246 Santa Cristina d’Aro, Girona",
+        "region": "2",
+        "postcode": null,
+        "country": "Spain"
+      },
+      "types": [
+        "campground"
+      ],
+      "editorial": {
+        "popularity": "known_place",
+        "summary": "Campgrounds / campsite stays | Campground / Glamping, Design benchmark of the trip, campground"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJQRJ60qIGuxIRY96FMDhA_Ls",
+          "url": "https://www.google.com/maps/search/?api=1&query=wecamp%20Santa%20Cristina&query_place_id=ChIJQRJ60qIGuxIRY96FMDhA_Ls",
+          "rating": 4.5
+        }
+      }
+    },
+    {
+      "id": "location_ChIJ3R7kqZ9jsBIRlUYLKTge4qw",
+      "name": "Yelloh! Village Le Brasilia",
+      "description": "Large beachside resort-style campsite in Canet-en-Roussillon with direct beach access and strong family convenience. Useful as a benchmark for amenities and location, though clearly more touristic than the core taste pro",
+      "geo": {
+        "main": {
+          "lat": 42.7092476,
+          "lng": 3.0365909
+        }
+      },
+      "location": {
+        "address": "Yelloh Village Le Brasilia 2 Avenue les Anneaux du Roussillon 66140 Canet-en-Roussillon France",
+        "formatted_address": "Yelloh Village Le Brasilia 2 Avenue les Anneaux du Roussillon 66140 Canet-en-Roussillon France",
+        "locality": null,
+        "region": null,
+        "postcode": null,
+        "country": "France"
+      },
+      "types": [
+        "campground"
+      ],
+      "editorial": {
+        "popularity": "touristic",
+        "summary": "Campgrounds / campsite stays | Campground / resort campsite"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJ3R7kqZ9jsBIRlUYLKTge4qw",
+          "url": "https://www.google.com/maps/search/?api=1&query=Yelloh%21%20Village%20Le%20Brasilia&query_place_id=ChIJ3R7kqZ9jsBIRlUYLKTge4qw",
+          "rating": 4.6
+        }
+      }
+    },
+    {
+      "id": "location_ChIJAQAAAFR0Gg0RM2OskqjgE_c",
+      "name": "Zmar Eco Campo",
+      "description": null,
+      "geo": {
+        "main": {
+          "lat": 37.6062698,
+          "lng": -8.7368564
+        }
+      },
+      "location": {
+        "address": "Zmar Eco Campo",
+        "formatted_address": "Zmar Eco Campo",
+        "locality": null,
+        "region": null,
+        "postcode": null,
+        "country": "Portugal"
+      },
+      "types": [
+        "campground"
+      ],
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJAQAAAFR0Gg0RM2OskqjgE_c",
+          "url": "https://www.google.com/maps/search/?api=1&query=Zmar%20Eco%20Campo&query_place_id=ChIJAQAAAFR0Gg0RM2OskqjgE_c",
+          "rating": 4.2
+        }
+      }
+    },
+    {
+      "id": "location_ChIJxSu6x5pbUQ0R9QlBJJxlop8",
+      "name": "70 Hectares… & l’Océan",
+      "description": "Design hotel in Seignosse between forest, golf, and ocean access. A polished but still fitting reference for the Landes leg, with strong links to nature and surf atmosphere.",
+      "geo": {
+        "main": {
+          "lat": 43.6907157,
+          "lng": -1.4083157
+        }
+      },
+      "location": {
+        "address": "70 Hectares et l'Océan 901 Avenue du Belvédère 40510 Seignosse France",
+        "formatted_address": "70 Hectares et l'Océan 901 Avenue du Belvédère 40510 Seignosse France",
+        "locality": null,
+        "region": null,
+        "postcode": null,
+        "country": "France"
+      },
+      "types": [
+        "hotel"
+      ],
+      "editorial": {
+        "popularity": "known_place",
+        "summary": "Hotels / glamping / non-camping stays | Hotel"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJxSu6x5pbUQ0R9QlBJJxlop8",
+          "url": "https://www.google.com/maps/search/?api=1&query=70%20Hectares%E2%80%A6%20%26%20l%E2%80%99Oc%C3%A9an&query_place_id=ChIJxSu6x5pbUQ0R9QlBJJxlop8",
+          "rating": 4.4
+        }
+      }
+    },
+    {
+      "id": "location_ChIJI9vvG6W5Fw0RMEyJ2bI8UYs",
+      "name": "A Sociedade Rural",
+      "description": "Openhouse spotlights this retreat in São Mamede Natural Park as a design-minded rural escape focused on silence, simplicity, and immersion in the landscape. Built around rural life, untouched nature, and contemporary com",
+      "geo": {
+        "main": {
+          "lat": 39.3864694,
+          "lng": -7.3499183
+        }
+      },
+      "location": {
+        "address": "R. de Baixo, 7330-111 Marvão, Portugal",
+        "formatted_address": "R. de Baixo, 7330-111 Marvão, Portugal",
+        "locality": "Marvão",
+        "region": "Alentejo",
+        "postcode": null,
+        "country": "Portugal"
+      },
+      "types": [
+        "hotel"
+      ],
+      "editorial": {
+        "popularity": "hidden_gem",
+        "summary": "Hotels / glamping / non-camping stays | Rural retreat hotel in Marvão (asociedaderural.pt)."
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJI9vvG6W5Fw0RMEyJ2bI8UYs",
+          "url": "https://www.google.com/maps/search/?api=1&query=A%20Sociedade%20Rural&query_place_id=ChIJI9vvG6W5Fw0RMEyJ2bI8UYs"
+        }
+      }
+    },
+    {
+      "id": "location_ChIJIbJq2F3htRIR4ASX_aUZCAQ",
+      "name": "Alpilles Wine Estates (around Arles / Les Baux)",
+      "description": "The Alpilles and Crau plain near Arles have some of Provence's most interesting smaller AOC wine producers — Les Baux-de-Provence AOP in particular. Many estates offer France Passion stays (park your van in their vineyar",
+      "geo": {
+        "main": {
+          "lat": 43.743887,
+          "lng": 4.795495
+        }
+      },
+      "location": {
+        "address": "Alpilles Wine Estates (around Arles / Les Baux), France",
+        "formatted_address": "Alpilles Wine Estates (around Arles / Les Baux), France",
+        "locality": "Alpilles Wine Estates (around Arles / Les Baux)",
+        "region": null,
+        "postcode": null,
+        "country": "France"
+      },
+      "types": [
+        "hotel"
+      ],
+      "editorial": {
+        "popularity": "hidden_gem",
+        "summary": "Hotels / glamping / non-camping stays | Vineyard / Farm Stay | REVIEW NEEDED: Compound descriptor 'Alpilles Wine Estates (around Arles/Les Baux)' resolved to the locality 'Les Baux-de-Provence' as the best single-place anchor. Not a specific winery."
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJIbJq2F3htRIR4ASX_aUZCAQ",
+          "url": "https://www.google.com/maps/search/?api=1&query=Alpilles%20Wine%20Estates%20%28around%20Arles%20/%20Les%20Baux%29&query_place_id=ChIJIbJq2F3htRIR4ASX_aUZCAQ"
+        }
+      }
+    },
+    {
+      "id": "location_ChIJxeXrtLcTGw0RwbFl4T0pfuI",
+      "name": "Amaria",
+      "description": "Monocle recommends this boutique stay between Odeceixe and Aljezur, in the Algarve stretch by Costa Vicentina Natural Park, for its slow pace, vernacular design, and wild setting. Framed around the untamed character of C",
+      "geo": {
+        "main": {
+          "lat": 37.4168107,
+          "lng": -8.8006627
+        }
+      },
+      "location": {
+        "address": "between Odeceixe and Aljezur — Amaria — between Odeceixe and Aljezur, Portugal",
+        "formatted_address": "between Odeceixe and Aljezur, Portugal",
+        "locality": "between Odeceixe and Aljezur",
+        "region": null,
+        "postcode": null,
+        "country": "Portugal"
+      },
+      "types": [
+        "hotel"
+      ],
+      "editorial": {
+        "popularity": "known_place",
+        "summary": "Hotels / glamping / non-camping stays | Hotel / Retreat"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJxeXrtLcTGw0RwbFl4T0pfuI",
+          "url": "https://www.google.com/maps/search/?api=1&query=Amaria&query_place_id=ChIJxeXrtLcTGw0RwbFl4T0pfuI",
+          "rating": 4.8
+        }
+      }
+    },
+    {
+      "id": "location_ChIJjyp0rKqqGg0RCKjynitTUAw",
+      "name": "Casa Modesta",
+      "description": "Design-led countryside guesthouse in the Ria Formosa area with a quiet, architecture-forward feel that strongly matches your aesthetic references. It works well as a calm Algarve base focused on nature, slow mornings, an",
+      "geo": {
+        "main": {
+          "lat": 37.0419326,
+          "lng": -7.7853824
+        }
+      },
+      "location": {
+        "address": "Casa Modesta Quatrim do Sul 8700-128 Olhão Portugal",
+        "formatted_address": "Casa Modesta Quatrim do Sul 8700-128 Olhão Portugal",
+        "locality": null,
+        "region": null,
+        "postcode": null,
+        "country": "Portugal"
+      },
+      "types": [
+        "hotel"
+      ],
+      "editorial": {
+        "popularity": "known_place",
+        "summary": "Hotels / glamping / non-camping stays | Hotel / Guesthouse"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJjyp0rKqqGg0RCKjynitTUAw",
+          "url": "https://www.google.com/maps/search/?api=1&query=Casa%20Modesta&query_place_id=ChIJjyp0rKqqGg0RCKjynitTUAw",
+          "rating": 4.6
+        }
+      }
+    },
+    {
+      "id": "location_ChIJj_uvAhVvuhIReY8jQ84xpWM",
+      "name": "Casa Nereta",
+      "description": "Design-led hotel in Cadaqués in the former home of painter Joan Ponç, right by the coast and full of atmosphere.",
+      "geo": {
+        "main": {
+          "lat": 42.2904391,
+          "lng": 3.280474
+        }
+      },
+      "location": {
+        "address": "Cadaqués — Casa Nereta — Cadaqués, Spain",
+        "formatted_address": "Cadaqués, Spain",
+        "locality": "Cadaqués",
+        "region": null,
+        "postcode": null,
+        "country": "Spain"
+      },
+      "types": [
+        "hotel"
+      ],
+      "editorial": {
+        "popularity": "hidden_gem",
+        "summary": "Hotels / glamping / non-camping stays | Hotel"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJj_uvAhVvuhIReY8jQ84xpWM",
+          "url": "https://www.google.com/maps/search/?api=1&query=Casa%20Nereta&query_place_id=ChIJj_uvAhVvuhIReY8jQ84xpWM",
+          "rating": 4.1
+        }
+      }
+    },
+    {
+      "id": "location_ChIJ9015YysbEA0R4QiJj94QL20",
+      "name": "Casas da Quinta de Cima",
+      "description": "Boutique rural stay on a large estate in the eastern Algarve, near Vila Nova de Cacela and Tavira. Strong match for a quieter, traditional, nature-connected side of the Algarve with refined but low-key character.",
+      "geo": {
+        "main": {
+          "lat": 37.1634911,
+          "lng": -7.5614273
+        }
+      },
+      "location": {
+        "address": "Casas da Quinta de Cima EM1242 8900-053 Vila Nova de Cacela Portugal",
+        "formatted_address": "Casas da Quinta de Cima EM1242 8900-053 Vila Nova de Cacela Portugal",
+        "locality": null,
+        "region": null,
+        "postcode": null,
+        "country": "Portugal"
+      },
+      "types": [
+        "hotel"
+      ],
+      "editorial": {
+        "popularity": "hidden_gem",
+        "summary": "Hotels / glamping / non-camping stays | Hotel / rural stay"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJ9015YysbEA0R4QiJj94QL20",
+          "url": "https://www.google.com/maps/search/?api=1&query=Casas%20da%20Quinta%20de%20Cima&query_place_id=ChIJ9015YysbEA0R4QiJj94QL20",
+          "rating": 4.7
+        }
+      }
+    },
+    {
+      "id": "location_ChIJe-NyjUJhGQ0RY_Xwgb1aDpc",
+      "name": "Casas na Areia",
+      "description": "Boutique stay near Comporta beach with strong nature connection and a bohemian minimalist feel. A good taste reference for coastal simplicity, design, and family-friendly barefoot atmosphere.",
+      "geo": {
+        "main": {
+          "lat": 38.4029851,
+          "lng": -8.7648606
+        }
+      },
+      "location": {
+        "address": "Casas na Areia Sítio da Carrasqueira 7580-613 Comporta Portugal",
+        "formatted_address": "Casas na Areia Sítio da Carrasqueira 7580-613 Comporta Portugal",
+        "locality": null,
+        "region": null,
+        "postcode": null,
+        "country": "Portugal"
+      },
+      "types": [
+        "hotel"
+      ],
+      "editorial": {
+        "popularity": "known_place",
+        "summary": "Hotels / glamping / non-camping stays | Hotel / house stay"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJe-NyjUJhGQ0RY_Xwgb1aDpc",
+          "url": "https://www.google.com/maps/search/?api=1&query=Casas%20na%20Areia&query_place_id=ChIJe-NyjUJhGQ0RY_Xwgb1aDpc",
+          "rating": 4.7
+        }
+      }
+    },
+    {
+      "id": "location_ChIJwQ4otm6lGw0Rp4peSzNi_6Q",
+      "name": "Herdade da Matinha",
+      "description": "Beyond Ordinary Guides reviewed this 20-room countryside estate as \"a 20 room oasis of calm, bringing simplicity back to the forefront of experience. Perfect for hikers or book lovers.\" Located amongst miles of hiking tr",
+      "geo": {
+        "main": {
+          "lat": 37.8041572,
+          "lng": -8.7167387
+        }
+      },
+      "location": {
+        "address": "between Lisbon and Algarve — Herdade da Matinha — between Lisbon and Algarve, Portugal",
+        "formatted_address": "between Lisbon and Algarve, Portugal",
+        "locality": "between Lisbon and Algarve",
+        "region": null,
+        "postcode": null,
+        "country": "Portugal"
+      },
+      "types": [
+        "hotel"
+      ],
+      "editorial": {
+        "popularity": "hidden_gem",
+        "summary": "Hotels / glamping / non-camping stays | Rural Hotel / Natural Park"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJwQ4otm6lGw0Rp4peSzNi_6Q",
+          "url": "https://www.google.com/maps/search/?api=1&query=Herdade%20da%20Matinha&query_place_id=ChIJwQ4otm6lGw0Rp4peSzNi_6Q",
+          "rating": 4.5
+        }
+      }
+    },
+    {
+      "id": "location_ChIJD3-zFhwbEA0RinCPkhI6NkM",
+      "name": "Hospedaria da Pensão Agrícola",
+      "description": "Hospitality-focused stay in the Tavira area that appears aligned with the same calm, understated style as your other Algarve references. Best treated as a characterful, quieter stay rather than a conventional hotel stop.",
+      "geo": {
+        "main": {
+          "lat": 37.1615882,
+          "lng": -7.6006471
+        }
+      },
+      "location": {
+        "address": "caixa postal 738-S, Sitio da Cumeada, 8800-072 Tavira, Portugal",
+        "formatted_address": "caixa postal 738-S, Sitio da Cumeada, 8800-072 Tavira, Portugal",
+        "locality": "Tavira",
+        "region": "Algarve",
+        "postcode": null,
+        "country": "Portugal"
+      },
+      "types": [
+        "hotel"
+      ],
+      "editorial": {
+        "popularity": "hidden_gem",
+        "summary": "Hotels / glamping / non-camping stays | Boutique hotel near Tavira (4.8 rating). Website: hospedaria.com.pt"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJD3-zFhwbEA0RinCPkhI6NkM",
+          "url": "https://www.google.com/maps/search/?api=1&query=Hospedaria%20da%20Pens%C3%A3o%20Agr%C3%ADcola&query_place_id=ChIJD3-zFhwbEA0RinCPkhI6NkM",
+          "rating": 4.8
+        }
+      }
+    },
+    {
+      "id": "location_ChIJP2GhiMdSBQ0R0rI-WJg3XWQ",
+      "name": "Hotel Dunas Mar",
+      "description": null,
+      "geo": {
+        "main": {
+          "lat": 37.1788411,
+          "lng": -7.4441659
+        }
+      },
+      "location": {
+        "address": "Hotel Dunas Mar",
+        "formatted_address": "Hotel Dunas Mar",
+        "locality": null,
+        "region": null,
+        "postcode": null,
+        "country": "Portugal"
+      },
+      "types": [
+        "hotel"
+      ],
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJP2GhiMdSBQ0R0rI-WJg3XWQ",
+          "url": "https://www.google.com/maps/search/?api=1&query=Hotel%20Dunas%20Mar&query_place_id=ChIJP2GhiMdSBQ0R0rI-WJg3XWQ",
+          "rating": 4.3
+        }
+      }
+    },
+    {
+      "id": "location_ChIJkVX2l1hgUw0R1g8m6PAh17A",
+      "name": "Hôtel des Dunes",
+      "description": "Cap Ferret hotel used as a shoulder-season waterside reference, with direct ocean access and a design-cabin feel. More of a style and taste anchor than a must-stop.",
+      "geo": {
+        "main": {
+          "lat": 44.6457849,
+          "lng": -1.2545665
+        }
+      },
+      "location": {
+        "address": "Hôtel des Dunes 119 Avenue de Bordeaux 33970 Cap Ferret France",
+        "formatted_address": "Hôtel des Dunes 119 Avenue de Bordeaux 33970 Cap Ferret France",
+        "locality": null,
+        "region": null,
+        "postcode": null,
+        "country": "France"
+      },
+      "types": [
+        "hotel"
+      ],
+      "editorial": {
+        "popularity": "known_place",
+        "summary": "Hotels / glamping / non-camping stays | Hotel"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJkVX2l1hgUw0R1g8m6PAh17A",
+          "url": "https://www.google.com/maps/search/?api=1&query=H%C3%B4tel%20des%20Dunes&query_place_id=ChIJkVX2l1hgUw0R1g8m6PAh17A",
+          "rating": 4.5
+        }
+      }
+    },
+    {
+      "id": "location_ChIJAQAUDaUVUQ0R6qsYxy7cBCg",
+      "name": "Hôtel Indarra",
+      "description": "Design-forward Basque stay in the hills near the coast and one of the strongest surf-and-hospitality references in your list. It looks like exactly the kind of place that can shape the tone of the return leg. Renovated B",
+      "geo": {
+        "main": {
+          "lat": 43.4270324,
+          "lng": -1.5486142
+        }
+      },
+      "location": {
+        "address": "Hôtel Indarra 3 route de Saint-Pée 64210 Arbonne France",
+        "formatted_address": "Hôtel Indarra 3 route de Saint-Pée 64210 Arbonne France",
+        "locality": null,
+        "region": null,
+        "postcode": null,
+        "country": "France"
+      },
+      "types": [
+        "hotel"
+      ],
+      "editorial": {
+        "popularity": "hidden_gem",
+        "summary": "Hotels / glamping / non-camping stays | Hotel / Guesthouse"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJAQAUDaUVUQ0R6qsYxy7cBCg",
+          "url": "https://www.google.com/maps/search/?api=1&query=H%C3%B4tel%20Indarra&query_place_id=ChIJAQAUDaUVUQ0R6qsYxy7cBCg",
+          "rating": 4.9
+        }
+      }
+    },
+    {
+      "id": "location_ChIJq6yc240hyhIRKfQFTqnxW4g",
+      "name": "La Ferme Hi Bride",
+      "description": "Monocle's Luberon story specifically stops at this agritourism project north of Aix-en-Provence. A good lead if you want ecological, design-aware countryside hospitality.",
+      "geo": {
+        "main": {
+          "lat": 43.7276023,
+          "lng": 5.4412751
+        }
+      },
+      "location": {
+        "address": "Villelaure (Luberon) — La Ferme Hi Bride — Villelaure (Luberon), France",
+        "formatted_address": "Villelaure (Luberon), France",
+        "locality": "Villelaure (Luberon)",
+        "region": null,
+        "postcode": null,
+        "country": "France"
+      },
+      "types": [
+        "hotel"
+      ],
+      "editorial": {
+        "popularity": "hidden_gem",
+        "summary": "Hotels / glamping / non-camping stays | Farm Stay / Agritourism"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJq6yc240hyhIRKfQFTqnxW4g",
+          "url": "https://www.google.com/maps/search/?api=1&query=La%20Ferme%20Hi%20Bride&query_place_id=ChIJq6yc240hyhIRKfQFTqnxW4g",
+          "rating": 4.8
+        }
+      }
+    },
+    {
+      "id": "location_ChIJWf6hqmobEA0RBKIMWEzXFPs",
+      "name": "Pensão Agrícola",
+      "description": "Quiet rural stay in the eastern Algarve / Barrocal, near Tavira and the Ria Formosa, strongly aligned with a calm, authentic, design-aware taste. A good reference for slower family travel, understated hospitality, and ea",
+      "geo": {
+        "main": {
+          "lat": 37.1609741,
+          "lng": -7.5897676
+        }
+      },
+      "location": {
+        "address": "Pensão Agrícola Sítio do Valongo Conceição de Tavira 8800-072 Tavira Portugal",
+        "formatted_address": "Pensão Agrícola Sítio do Valongo Conceição de Tavira 8800-072 Tavira Portugal",
+        "locality": null,
+        "region": null,
+        "postcode": null,
+        "country": "Portugal"
+      },
+      "types": [
+        "hotel"
+      ],
+      "editorial": {
+        "popularity": "hidden_gem",
+        "summary": "Hotels / glamping / non-camping stays | Hotel / rural stay"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJWf6hqmobEA0RBKIMWEzXFPs",
+          "url": "https://www.google.com/maps/search/?api=1&query=Pens%C3%A3o%20Agr%C3%ADcola&query_place_id=ChIJWf6hqmobEA0RBKIMWEzXFPs",
+          "rating": 4.5
+        }
+      }
+    },
+    {
+      "id": "location_ChIJJ1xptLPtGA0RoDdscfNDQGo",
+      "name": "Quinta do Pinheiro",
+      "description": "Renovated historic farmhouse in the Algarve used here as a slow-travel and rural-hospitality reference. It fits the preference for protected landscapes, calm surroundings, and understated quality.",
+      "geo": {
+        "main": {
+          "lat": 39.272064,
+          "lng": -8.700222
+        }
+      },
+      "location": {
+        "address": "Quinta do Pinheiro Algarve Portugal",
+        "formatted_address": "Quinta do Pinheiro Algarve Portugal",
+        "locality": null,
+        "region": null,
+        "postcode": null,
+        "country": "Portugal"
+      },
+      "types": [
+        "hotel"
+      ],
+      "editorial": {
+        "popularity": "hidden_gem",
+        "summary": "Hotels / glamping / non-camping stays | Hotel / farmhouse stay | REVIEW NEEDED: Lookup returned 'Quinta dos Anjos' near Santarém instead of 'Quinta do Pinheiro'. Possible name-match failure; verify before use."
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJJ1xptLPtGA0RoDdscfNDQGo",
+          "url": "https://www.google.com/maps/search/?api=1&query=Quinta%20do%20Pinheiro&query_place_id=ChIJJ1xptLPtGA0RoDdscfNDQGo",
+          "rating": 4.5
+        }
+      }
+    },
+    {
+      "id": "location_ChIJN_bRzhQ1Fw0R2i_oJBM0xZU",
+      "name": "São Lourenço do Barrocal Estate",
+      "description": "Beyond Ordinary Guides gave this estate 5/5 stars: \"Understated elegance on a 200 year old Alentejo estate... a place where design, landscape, hospitality, and sunshine come together to create a blissful vacation haven.\"",
+      "geo": {
+        "main": {
+          "lat": 38.4443465,
+          "lng": -7.4182693
+        }
+      },
+      "location": {
+        "address": "Mourão, Alentejo — São Lourenço do Barrocal Estate — Mourão, Alentejo, Portugal",
+        "formatted_address": "Mourão, Alentejo, Portugal",
+        "locality": "Mourão, Alentejo",
+        "region": null,
+        "postcode": null,
+        "country": "Portugal"
+      },
+      "types": [
+        "hotel"
+      ],
+      "editorial": {
+        "popularity": "known_place",
+        "summary": "Hotels / glamping / non-camping stays | Estate / Hotel / Winery"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJN_bRzhQ1Fw0R2i_oJBM0xZU",
+          "url": "https://www.google.com/maps/search/?api=1&query=S%C3%A3o%20Louren%C3%A7o%20do%20Barrocal%20Estate&query_place_id=ChIJN_bRzhQ1Fw0R2i_oJBM0xZU",
+          "rating": 4.8
+        }
+      }
+    },
+    {
+      "id": "location_ChIJ78PO-NxHGw0RCEBRNEngtsU",
+      "name": "Sítio Ubuntu",
+      "description": "Rural stay in the Vila do Bispo area that appears aligned with a slower, more nature-based rhythm. It is the kind of stop that could work well when you want a break from more obvious tourist bases.",
+      "geo": {
+        "main": {
+          "lat": 37.1445625,
+          "lng": -8.8614375
+        }
+      },
+      "location": {
+        "address": "Sítio Ubuntu Portugal",
+        "formatted_address": "Sítio Ubuntu Portugal",
+        "locality": null,
+        "region": null,
+        "postcode": null,
+        "country": "Portugal"
+      },
+      "types": [
+        "hotel"
+      ],
+      "editorial": {
+        "popularity": "hidden_gem",
+        "summary": "Hotels / glamping / non-camping stays | Guesthouse / Retreat"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJ78PO-NxHGw0RCEBRNEngtsU",
+          "url": "https://www.google.com/maps/search/?api=1&query=S%C3%ADtio%20Ubuntu&query_place_id=ChIJ78PO-NxHGw0RCEBRNEngtsU",
+          "rating": 4.7
+        }
+      }
+    },
+    {
+      "id": "location_ChIJW9U1_8AiUQ0RopdyLiUUJdA",
+      "name": "Ainhoa",
+      "description": "One of the most beautiful villages in France (officially classified) — a single long main street of perfectly preserved 16th-century Basque farmhouses with half-timbering and red-painted shutters, backed by the green Pyr",
+      "geo": {
+        "main": {
+          "lat": 43.306764,
+          "lng": -1.498918
+        }
+      },
+      "location": {
+        "address": "Ainhoa, France",
+        "formatted_address": "Ainhoa, France",
+        "locality": "Ainhoa",
+        "region": null,
+        "postcode": null,
+        "country": "France"
+      },
+      "types": [
+        "town"
+      ],
+      "editorial": {
+        "popularity": "hidden_gem",
+        "summary": "Towns / cities / neighbourhoods | Small Town"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJW9U1_8AiUQ0RopdyLiUUJdA",
+          "url": "https://www.google.com/maps/search/?api=1&query=Ainhoa&query_place_id=ChIJW9U1_8AiUQ0RopdyLiUUJdA"
+        }
+      }
+    },
+    {
+      "id": "location_ChIJWRK5BKONyRIRo4i2yL5TuVw",
+      "name": "Aix-en-Provence",
+      "description": "Provence's most beautiful city — plane-tree-lined boulevards, natural hot spring fountains, the city of Cézanne. The Saturday morning market on the Cours Mirabeau and Place Richelme is exceptional — local cheese, honey,",
+      "geo": {
+        "main": {
+          "lat": 43.5323032,
+          "lng": 5.4509692
+        }
+      },
+      "location": {
+        "address": "Aix-en-Provence, France",
+        "formatted_address": "Aix-en-Provence, France",
+        "locality": "Aix-en-Provence",
+        "region": null,
+        "postcode": null,
+        "country": "France"
+      },
+      "types": [
+        "city"
+      ],
+      "editorial": {
+        "popularity": "known_place",
+        "summary": "Towns / cities / neighbourhoods | City"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJWRK5BKONyRIRo4i2yL5TuVw",
+          "url": "https://www.google.com/maps/search/?api=1&query=Aix-en-Provence&query_place_id=ChIJWRK5BKONyRIRo4i2yL5TuVw"
+        }
+      }
+    },
+    {
+      "id": "location_ChIJ22OZnyh-uhIREG9nFiGIBwQ",
+      "name": "Banyuls-sur-Mer",
+      "description": "Quieter Côte Vermeille option with coves, wine, and a more local feel than Collioure, though still busy in summer.",
+      "geo": {
+        "main": {
+          "lat": 42.481422,
+          "lng": 3.129416
+        }
+      },
+      "location": {
+        "address": "Banyuls-sur-Mer, France",
+        "formatted_address": "Banyuls-sur-Mer, France",
+        "locality": "Banyuls-sur-Mer",
+        "region": null,
+        "postcode": null,
+        "country": "France"
+      },
+      "types": [
+        "village"
+      ],
+      "editorial": {
+        "popularity": "hidden_gem",
+        "summary": "Towns / cities / neighbourhoods | small town / wine coast village"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJ22OZnyh-uhIREG9nFiGIBwQ",
+          "url": "https://www.google.com/maps/search/?api=1&query=Banyuls-sur-Mer&query_place_id=ChIJ22OZnyh-uhIREG9nFiGIBwQ"
+        }
+      }
+    },
+    {
+      "id": "location_ChIJfTgXNSTatRIRoEZrFiGIBwQ",
+      "name": "Beaucaire",
+      "description": "Useful anchor town near Arles on the edge of the Camargue, especially for nearby oddities, wine history, and unusual heritage stops.",
+      "geo": {
+        "main": {
+          "lat": 43.807235,
+          "lng": 4.644269
+        }
+      },
+      "location": {
+        "address": "Beaucaire, France",
+        "formatted_address": "Beaucaire, France",
+        "locality": "Beaucaire",
+        "region": null,
+        "postcode": null,
+        "country": "France"
+      },
+      "types": [
+        "town"
+      ],
+      "editorial": {
+        "popularity": "known_place",
+        "summary": "Towns / cities / neighbourhoods | Town"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJfTgXNSTatRIRoEZrFiGIBwQ",
+          "url": "https://www.google.com/maps/search/?api=1&query=Beaucaire&query_place_id=ChIJfTgXNSTatRIRoEZrFiGIBwQ"
+        }
+      }
+    },
+    {
+      "id": "location_ChIJuYlLZidOTg0RRaaVHsSsNGU",
+      "name": "Bilbao",
+      "description": "Industrial port city reborn around Frank Gehry's Guggenheim — one of the great urban transformation stories of the past 30 years. The Casco Viejo is the real heart of daily life: pintxos bars, Mercado de la Ribera (Europ",
+      "geo": {
+        "main": {
+          "lat": 43.2633799,
+          "lng": -2.9348121
+        }
+      },
+      "location": {
+        "address": "Bilbao, Spain",
+        "formatted_address": "Bilbao, Spain",
+        "locality": "Bilbao",
+        "region": null,
+        "postcode": null,
+        "country": "Spain"
+      },
+      "types": [
+        "city"
+      ],
+      "editorial": {
+        "popularity": "touristic",
+        "summary": "Towns / cities / neighbourhoods | City"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJuYlLZidOTg0RRaaVHsSsNGU",
+          "url": "https://www.google.com/maps/search/?api=1&query=Bilbao&query_place_id=ChIJuYlLZidOTg0RRaaVHsSsNGU"
+        }
+      }
+    },
+    {
+      "id": "location_ChIJ8bKPp8IdEA0RO1vRO9rGIdM",
+      "name": "Cabanas de Tavira",
+      "description": "Small Algarve town associated by Monocle with excellent seafood and a quieter east-Algarve rhythm than the big resort areas.",
+      "geo": {
+        "main": {
+          "lat": 37.1361657,
+          "lng": -7.596947
+        }
+      },
+      "location": {
+        "address": "Av. Ria Formosa 38, 8800-591 Cabanas, Portugal",
+        "formatted_address": "Av. Ria Formosa 38, 8800-591 Cabanas, Portugal",
+        "locality": "Cabanas de Tavira",
+        "region": "Algarve",
+        "postcode": null,
+        "country": "Portugal"
+      },
+      "types": [
+        "village"
+      ],
+      "editorial": {
+        "popularity": "known_place",
+        "summary": "Towns / cities / neighbourhoods | Small fishing village on the Ria Formosa lagoon, opposite a barrier-island beach."
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJ8bKPp8IdEA0RO1vRO9rGIdM",
+          "url": "https://www.google.com/maps/search/?api=1&query=Cabanas%20de%20Tavira&query_place_id=ChIJ8bKPp8IdEA0RO1vRO9rGIdM",
+          "rating": 4.6
+        }
+      }
+    },
+    {
+      "id": "location_ChIJF6c5p0RTuhIRQI_JnOL6AAo",
+      "name": "Calella de Palafrugell",
+      "description": "The most unspoiled fishing village on the Costa Brava — whitewashed houses, bougainvillea-draped terraces, small fishing boats, no high-rise. The cove of Sant Roc is surrounded by picturesque fishermen's cottages. Famous",
+      "geo": {
+        "main": {
+          "lat": 41.8903804,
+          "lng": 3.1853926
+        }
+      },
+      "location": {
+        "address": "Calella de Palafrugell, Spain",
+        "formatted_address": "Calella de Palafrugell, Spain",
+        "locality": "Calella de Palafrugell",
+        "region": null,
+        "postcode": null,
+        "country": "Spain"
+      },
+      "types": [
+        "village"
+      ],
+      "editorial": {
+        "popularity": "hidden_gem",
+        "summary": "Towns / cities / neighbourhoods | small town / coastal village"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJF6c5p0RTuhIRQI_JnOL6AAo",
+          "url": "https://www.google.com/maps/search/?api=1&query=Calella%20de%20Palafrugell&query_place_id=ChIJF6c5p0RTuhIRQI_JnOL6AAo"
+        }
+      }
+    },
+    {
+      "id": "location_ChIJVRk27CQAuxIRdwaG5LlOIME",
+      "name": "Calonge",
+      "description": "Costa Brava town with a book-town identity and a somewhat calmer profile than the most obvious resort stops. It feels like a nice compromise between character and practicality.",
+      "geo": {
+        "main": {
+          "lat": 41.8610349,
+          "lng": 3.0739772
+        }
+      },
+      "location": {
+        "address": "Calonge Spain",
+        "formatted_address": "Calonge Spain",
+        "locality": null,
+        "region": null,
+        "postcode": null,
+        "country": "Spain"
+      },
+      "types": [
+        "town"
+      ],
+      "editorial": {
+        "popularity": "known_place",
+        "summary": "Towns / cities / neighbourhoods | Town"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJVRk27CQAuxIRdwaG5LlOIME",
+          "url": "https://www.google.com/maps/search/?api=1&query=Calonge&query_place_id=ChIJVRk27CQAuxIRdwaG5LlOIME"
+        }
+      }
+    },
+    {
+      "id": "location_ChIJA5bHIk2VFw0RNwbmAyh8nv8",
+      "name": "Castelo de Vide",
+      "description": "Twin to Marvão (10km apart) — a larger hilltop town with one of the best-preserved medieval Jewish quarters in Portugal. Beautiful whitewashed streets, a natural spring, and excellent local sausage and cheese. Has a more",
+      "geo": {
+        "main": {
+          "lat": 39.4146181,
+          "lng": -7.4540664
+        }
+      },
+      "location": {
+        "address": "Castelo de Vide, Portugal",
+        "formatted_address": "Castelo de Vide, Portugal",
+        "locality": "Castelo de Vide",
+        "region": null,
+        "postcode": null,
+        "country": "Portugal"
+      },
+      "types": [
+        "town"
+      ],
+      "editorial": {
+        "popularity": "known_place",
+        "summary": "Towns / cities / neighbourhoods | Small Town"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJA5bHIk2VFw0RNwbmAyh8nv8",
+          "url": "https://www.google.com/maps/search/?api=1&query=Castelo%20de%20Vide&query_place_id=ChIJA5bHIk2VFw0RNwbmAyh8nv8"
+        }
+      }
+    },
+    {
+      "id": "location_ChIJWbQL06M8UQ0R9T2q_EvXjBU",
+      "name": "Espelette",
+      "description": "A village entirely devoted to the Piment d'Espelette — the only spice in France with AOP (protected origin) designation. In autumn, every house facade is hung with strings of drying red peppers. A small village with a co",
+      "geo": {
+        "main": {
+          "lat": 43.3411775,
+          "lng": -1.4493722
+        }
+      },
+      "location": {
+        "address": "Espelette, France",
+        "formatted_address": "Espelette, France",
+        "locality": "Espelette",
+        "region": "French Basque coast",
+        "postcode": null,
+        "country": "France"
+      },
+      "types": [
+        "town"
+      ],
+      "editorial": {
+        "popularity": "hidden_gem",
+        "summary": "Towns / cities / neighbourhoods | Small Town, town, hidden_gem"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJWbQL06M8UQ0R9T2q_EvXjBU",
+          "url": "https://www.google.com/maps/search/?api=1&query=Espelette&query_place_id=ChIJWbQL06M8UQ0R9T2q_EvXjBU"
+        }
+      }
+    },
+    {
+      "id": "location_ChIJCRcmAqLIUQ0RILKbTAdNcMQ",
+      "name": "Getaria",
+      "description": "A tiny medieval fishing village on a promontory between Zarautz and San Sebastián — birthplace of Cristóbal Balenciaga (the fashion house museum is here and remarkable) and the first circumnavigator Juan Sebastián Elcano",
+      "geo": {
+        "main": {
+          "lat": 43.3028581,
+          "lng": -2.204608
+        }
+      },
+      "location": {
+        "address": "Getaria, Spain",
+        "formatted_address": "Getaria, Spain",
+        "locality": "Getaria",
+        "region": "Basque coast",
+        "postcode": null,
+        "country": "Spain"
+      },
+      "types": [
+        "village"
+      ],
+      "editorial": {
+        "popularity": "hidden_gem",
+        "summary": "Towns / cities / neighbourhoods | fishing town / food village, stay, hidden_gem"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJCRcmAqLIUQ0RILKbTAdNcMQ",
+          "url": "https://www.google.com/maps/search/?api=1&query=Getaria&query_place_id=ChIJCRcmAqLIUQ0RILKbTAdNcMQ"
+        }
+      }
+    },
+    {
+      "id": "location_ChIJo6Z8omhVsBIRlnjTnoD_A0E",
+      "name": "Gruissan",
+      "description": "An ancient circular village built around a salt lake and a watchtower ruin, between the Narbonne Plage and the Aude lagoon. The surrounding area has excellent Corbières and Minervois wine estates — rugged, volcanic soils",
+      "geo": {
+        "main": {
+          "lat": 43.107052,
+          "lng": 3.086181
+        }
+      },
+      "location": {
+        "address": "Gruissan (near Narbonne), France",
+        "formatted_address": "Gruissan (near Narbonne), France",
+        "locality": "Gruissan (near Narbonne)",
+        "region": "Montpellier Area",
+        "postcode": null,
+        "country": "France"
+      },
+      "types": [
+        "town"
+      ],
+      "editorial": {
+        "popularity": "hidden_gem",
+        "summary": "Towns / cities / neighbourhoods | Small Town, town, hidden_gem"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJo6Z8omhVsBIRlnjTnoD_A0E",
+          "url": "https://www.google.com/maps/search/?api=1&query=Gruissan&query_place_id=ChIJo6Z8omhVsBIRlnjTnoD_A0E"
+        }
+      }
+    },
+    {
+      "id": "location_ChIJ5ampCpETUQ0RoKATSBdlBgQ",
+      "name": "Guéthary",
+      "description": "A tiny Basque village between Biarritz and Saint-Jean-de-Luz — traditional red-and-white Basque houses climbing a cliff above the sea, wine served from balconies overlooking the surf. Remains genuinely village-scale and",
+      "geo": {
+        "main": {
+          "lat": 43.421216,
+          "lng": -1.609933
+        }
+      },
+      "location": {
+        "address": "Guéthary, France",
+        "formatted_address": "Guéthary, France",
+        "locality": "Guéthary",
+        "region": "French Basque coast",
+        "postcode": null,
+        "country": "France"
+      },
+      "types": [
+        "town"
+      ],
+      "editorial": {
+        "popularity": "hidden_gem",
+        "summary": "Towns / cities / neighbourhoods | Small Town, town, hidden_gem"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJ5ampCpETUQ0RoKATSBdlBgQ",
+          "url": "https://www.google.com/maps/search/?api=1&query=Gu%C3%A9thary&query_place_id=ChIJ5ampCpETUQ0RoKATSBdlBgQ"
+        }
+      }
+    },
+    {
+      "id": "location_ChIJz6W3I-71tRIRbeHX0dHl1R0",
+      "name": "L'Isle-sur-la-Sorgue",
+      "description": "The \"Venice of Provence\" — a town built on water channels, famous for its extraordinary Sunday antique market (one of the largest in France). Water wheels turn along canals, restaurants serve beside the river. A hub for",
+      "geo": {
+        "main": {
+          "lat": 43.91419,
+          "lng": 5.057106
+        }
+      },
+      "location": {
+        "address": "L'Isle-sur-la-Sorgue, France",
+        "formatted_address": "L'Isle-sur-la-Sorgue, France",
+        "locality": "L'Isle-sur-la-Sorgue",
+        "region": null,
+        "postcode": null,
+        "country": "France"
+      },
+      "types": [
+        "town"
+      ],
+      "editorial": {
+        "popularity": "known_place",
+        "summary": "Towns / cities / neighbourhoods | Small Town"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJz6W3I-71tRIRbeHX0dHl1R0",
+          "url": "https://www.google.com/maps/search/?api=1&query=L%27Isle-sur-la-Sorgue&query_place_id=ChIJz6W3I-71tRIRbeHX0dHl1R0"
+        }
+      }
+    },
+    {
+      "id": "location_ChIJKwfdS9omTg0RE0KyIt8iDfc",
+      "name": "Lekeitio",
+      "description": "Coastal Basque town farther from the main international flow, valued for a more local and less polished seaside feel.",
+      "geo": {
+        "main": {
+          "lat": 43.3638956,
+          "lng": -2.5048951
+        }
+      },
+      "location": {
+        "address": "Lekeitio, Spain",
+        "formatted_address": "Lekeitio, Spain",
+        "locality": "Lekeitio",
+        "region": "Basque coast",
+        "postcode": null,
+        "country": "Spain"
+      },
+      "types": [
+        "village"
+      ],
+      "editorial": {
+        "popularity": "hidden_gem",
+        "summary": "Towns / cities / neighbourhoods | small town / Basque coastal village, town, hidden_gem"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJKwfdS9omTg0RE0KyIt8iDfc",
+          "url": "https://www.google.com/maps/search/?api=1&query=Lekeitio&query_place_id=ChIJKwfdS9omTg0RE0KyIt8iDfc"
+        }
+      }
+    },
+    {
+      "id": "location_ChIJhRMRhe8YyhIR77MVXxVjb8M",
+      "name": "Lourmarin",
+      "description": "Elegant Provençal village with stone streets, a literary connection to Albert Camus, and an old-mill hotel atmosphere that fits a cosy, characterful stop. Recommended routing: go via Lourmarin (least touristic of the Luberon villages) and L'Isle-sur-la-Sorgue on a Sunday for the open-air antique market and food stalls — excellent for picking up local olives, cheese, and charcuterie.",
+      "geo": {
+        "main": {
+          "lat": 43.764113,
+          "lng": 5.36283
+        }
+      },
+      "location": {
+        "address": "Lourmarin, France",
+        "formatted_address": "Lourmarin, France",
+        "locality": "Lourmarin",
+        "region": null,
+        "postcode": null,
+        "country": "France"
+      },
+      "types": [
+        "town"
+      ],
+      "editorial": {
+        "popularity": "known_place",
+        "summary": "Towns / cities / neighbourhoods | Small Town"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJhRMRhe8YyhIR77MVXxVjb8M",
+          "url": "https://www.google.com/maps/search/?api=1&query=Lourmarin&query_place_id=ChIJhRMRhe8YyhIR77MVXxVjb8M"
+        }
+      }
+    },
+    {
+      "id": "location_ChIJT4wkDxW_Fw0R1kDG6Lnwmr4",
+      "name": "Marvão",
+      "description": "A spectacular medieval fortress village on a sheer rocky ridge near the Spanish border — cobbled streets, whitewashed houses, and 360° views across the Alentejo plains and deep into Extremadura. At 800m, with a perfectly",
+      "geo": {
+        "main": {
+          "lat": 39.3940078,
+          "lng": -7.3764477
+        }
+      },
+      "location": {
+        "address": "Marvão, Portugal",
+        "formatted_address": "Marvão, Portugal",
+        "locality": "Marvão",
+        "region": null,
+        "postcode": null,
+        "country": "Portugal"
+      },
+      "types": [
+        "village"
+      ],
+      "editorial": {
+        "popularity": "known_place",
+        "summary": "Towns / cities / neighbourhoods | hilltop village / quiet inland stop"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJT4wkDxW_Fw0R1kDG6Lnwmr4",
+          "url": "https://www.google.com/maps/search/?api=1&query=Marv%C3%A3o&query_place_id=ChIJT4wkDxW_Fw0R1kDG6Lnwmr4"
+        }
+      }
+    },
+    {
+      "id": "location_ChIJBTBhj5E0Fw0Rt6BXYhVQvFc",
+      "name": "Monsaraz",
+      "description": "A tiny walled hilltop village above the Alqueva reservoir (Europe's largest artificial lake and a Dark Sky Reserve) — one main cobbled street, a bullring inside the castle walls, and extraordinary sunset views over the A",
+      "geo": {
+        "main": {
+          "lat": 38.4434733,
+          "lng": -7.3796754
+        }
+      },
+      "location": {
+        "address": "Monsaraz, Portugal",
+        "formatted_address": "Monsaraz, Portugal",
+        "locality": "Monsaraz",
+        "region": null,
+        "postcode": null,
+        "country": "Portugal"
+      },
+      "types": [
+        "village"
+      ],
+      "editorial": {
+        "popularity": "hidden_gem",
+        "summary": "Towns / cities / neighbourhoods | hilltop village / scenic heritage stop"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJBTBhj5E0Fw0Rt6BXYhVQvFc",
+          "url": "https://www.google.com/maps/search/?api=1&query=Monsaraz&query_place_id=ChIJBTBhj5E0Fw0Rt6BXYhVQvFc"
+        }
+      }
+    },
+    {
+      "id": "location_ChIJ27aEGoI-Tg0R2gnrm86kS0o",
+      "name": "Mundaka",
+      "description": "A quiet village at the mouth of the Urdaibai biosphere reserve, home to one of Europe's most legendary river-mouth waves. Off-season it is almost entirely empty.",
+      "geo": {
+        "main": {
+          "lat": 43.408017,
+          "lng": -2.7002508
+        }
+      },
+      "location": {
+        "address": "Mundaka, Spain",
+        "formatted_address": "Mundaka, Spain",
+        "locality": "Mundaka",
+        "region": "Basque coast",
+        "postcode": null,
+        "country": "Spain"
+      },
+      "types": [
+        "town"
+      ],
+      "editorial": {
+        "popularity": "hidden_gem",
+        "summary": "Towns / cities / neighbourhoods | Small Town / Surf, town, hidden_gem"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJ27aEGoI-Tg0R2gnrm86kS0o",
+          "url": "https://www.google.com/maps/search/?api=1&query=Mundaka&query_place_id=ChIJ27aEGoI-Tg0R2gnrm86kS0o"
+        }
+      }
+    },
+    {
+      "id": "location_ChIJq8xkRrt9EA0RmKY7gnJpwCQ",
+      "name": "Mértola",
+      "description": "A remote, beautiful town at the highest navigable point of the Guadiana River — where Moorish Islamic culture survived longest in Portugal after the Reconquista. The church was once a mosque and is the only one in Portug",
+      "geo": {
+        "main": {
+          "lat": 37.6415148,
+          "lng": -7.6606665
+        }
+      },
+      "location": {
+        "address": "Mértola, Portugal",
+        "formatted_address": "Mértola, Portugal",
+        "locality": "Mértola",
+        "region": null,
+        "postcode": null,
+        "country": "Portugal"
+      },
+      "types": [
+        "town"
+      ],
+      "editorial": {
+        "popularity": "hidden_gem",
+        "summary": "Towns / cities / neighbourhoods | small inland town / remote heritage stop"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJq8xkRrt9EA0RmKY7gnJpwCQ",
+          "url": "https://www.google.com/maps/search/?api=1&query=M%C3%A9rtola&query_place_id=ChIJq8xkRrt9EA0RmKY7gnJpwCQ"
+        }
+      }
+    },
+    {
+      "id": "location_ChIJLWYkjuSlUQ0RoAZiNA9L8S8",
+      "name": "Pasai Donibane",
+      "description": "A tiny fishing village accessible only by boat or footpath from Pasaia — wooden fishermen's houses stacked directly above the water channel, reachable via a small ferry crossing. Fishing is still the main industry. A gen",
+      "geo": {
+        "main": {
+          "lat": 43.3241154,
+          "lng": -1.9150745
+        }
+      },
+      "location": {
+        "address": "Pasai Donibane, Spain",
+        "formatted_address": "Pasai Donibane, Spain",
+        "locality": "Pasai Donibane",
+        "region": "Basque",
+        "postcode": null,
+        "country": "Spain"
+      },
+      "types": [
+        "town"
+      ],
+      "editorial": {
+        "popularity": "hidden_gem",
+        "summary": "Towns / cities / neighbourhoods | Small Town, town, hidden_gem"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJLWYkjuSlUQ0RoAZiNA9L8S8",
+          "url": "https://www.google.com/maps/search/?api=1&query=Pasai%20Donibane&query_place_id=ChIJLWYkjuSlUQ0RoAZiNA9L8S8"
+        }
+      }
+    },
+    {
+      "id": "location_ChIJJRVml5j4uhIRYK6Lu-L6AAo",
+      "name": "Peratallada",
+      "description": "A fortified medieval village in the Baix Empordà interior — one of the best preserved in all of Spain. Entirely built from golden sandstone, surrounded by a moat channel, with a 10th-century castle still intact. Excellen",
+      "geo": {
+        "main": {
+          "lat": 41.9754531,
+          "lng": 3.0908105
+        }
+      },
+      "location": {
+        "address": "Peratallada, Spain",
+        "formatted_address": "Peratallada, Spain",
+        "locality": "Peratallada",
+        "region": "Costa Brava",
+        "postcode": null,
+        "country": "Spain"
+      },
+      "types": [
+        "town"
+      ],
+      "editorial": {
+        "popularity": "hidden_gem",
+        "summary": "Towns / cities / neighbourhoods | Small Town, town, hidden_gem"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJJRVml5j4uhIRYK6Lu-L6AAo",
+          "url": "https://www.google.com/maps/search/?api=1&query=Peratallada&query_place_id=ChIJJRVml5j4uhIRYK6Lu-L6AAo"
+        }
+      }
+    },
+    {
+      "id": "location_ChIJT1JJBMRkuhIRxy0rU38ePbQ",
+      "name": "Port de la Selva",
+      "description": "Spain with Emily includes this as an honorable mention on the Costa Brava route — worth keeping on the radar if you want a quieter northern Costa Brava base.",
+      "geo": {
+        "main": {
+          "lat": 42.3190248,
+          "lng": 3.2281983
+        }
+      },
+      "location": {
+        "address": "Port de la Selva, Spain",
+        "formatted_address": "Port de la Selva, Spain",
+        "locality": "Port de la Selva",
+        "region": "Costa Brava",
+        "postcode": null,
+        "country": "Spain"
+      },
+      "types": [
+        "village"
+      ],
+      "editorial": {
+        "popularity": "hidden_gem",
+        "summary": "Towns / cities / neighbourhoods | Small Town / Coastal Village, town, hidden_gem"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJT1JJBMRkuhIRxy0rU38ePbQ",
+          "url": "https://www.google.com/maps/search/?api=1&query=Port%20de%20la%20Selva&query_place_id=ChIJT1JJBMRkuhIRxy0rU38ePbQ"
+        }
+      }
+    },
+    {
+      "id": "location_ChIJPT6UuF8RyhIRwMCP_aUZCAQ",
+      "name": "Roussillon",
+      "description": "A hilltop village built entirely from ochre — the facades range from deep rust to luminous yellow, and the Sentier des Ocres trail through the old quarries is one of the most surreal landscapes in France. Children love t",
+      "geo": {
+        "main": {
+          "lat": 43.902285,
+          "lng": 5.2937715
+        }
+      },
+      "location": {
+        "address": "Roussillon, France",
+        "formatted_address": "Roussillon, France",
+        "locality": "Roussillon",
+        "region": null,
+        "postcode": null,
+        "country": "France"
+      },
+      "types": [
+        "town"
+      ],
+      "editorial": {
+        "popularity": "known_place",
+        "summary": "Towns / cities / neighbourhoods | Small Town"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJPT6UuF8RyhIRwMCP_aUZCAQ",
+          "url": "https://www.google.com/maps/search/?api=1&query=Roussillon&query_place_id=ChIJPT6UuF8RyhIRwMCP_aUZCAQ"
+        }
+      }
+    },
+    {
+      "id": "location_ChIJXc36PhFWqxIRcPQXSBdlBgQ",
+      "name": "Sarlat-la-Canéda",
+      "description": "One of the strongest inland France family stops for medieval streets, food, and access to Dordogne villages and canoeing.",
+      "geo": {
+        "main": {
+          "lat": 44.890891,
+          "lng": 1.217292
+        }
+      },
+      "location": {
+        "address": "Sarlat-la-Canéda, France",
+        "formatted_address": "Sarlat-la-Canéda, France",
+        "locality": "Sarlat-la-Canéda",
+        "region": null,
+        "postcode": null,
+        "country": "France"
+      },
+      "types": [
+        "town"
+      ],
+      "editorial": {
+        "popularity": "known_place",
+        "summary": "Towns / cities / neighbourhoods | small town / family heritage base"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJXc36PhFWqxIRcPQXSBdlBgQ",
+          "url": "https://www.google.com/maps/search/?api=1&query=Sarlat-la-Can%C3%A9da&query_place_id=ChIJXc36PhFWqxIRcPQXSBdlBgQ"
+        }
+      }
+    },
+    {
+      "id": "location_ChIJa8cuUJY1sRIRAmYnNvfhb5o",
+      "name": "Sète",
+      "description": "A port city built on a narrow strip between the sea and the Étang de Thau lagoon — known as the \"Venice of Languedoc.\" Exceptional fresh seafood, especially oysters and tielle (octopus pie) sold in little shops throughou",
+      "geo": {
+        "main": {
+          "lat": 43.4079391,
+          "lng": 3.7007529
+        }
+      },
+      "location": {
+        "address": "Sète, France",
+        "formatted_address": "Sète, France",
+        "locality": "Sète",
+        "region": "Montpellier Area",
+        "postcode": null,
+        "country": "France"
+      },
+      "types": [
+        "city"
+      ],
+      "editorial": {
+        "popularity": "hidden_gem",
+        "summary": "Towns / cities / neighbourhoods | City, town, hidden_gem"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJa8cuUJY1sRIRAmYnNvfhb5o",
+          "url": "https://www.google.com/maps/search/?api=1&query=S%C3%A8te&query_place_id=ChIJa8cuUJY1sRIRAmYnNvfhb5o"
+        }
+      }
+    },
+    {
+      "id": "location_ChIJA-RAEslFDA0RQKSynOKfk8c",
+      "name": "Vejer de la Frontera",
+      "description": "White hill town with strong food, design, and atmosphere appeal; popular, but still more soulful than a typical resort stop.",
+      "geo": {
+        "main": {
+          "lat": 36.252034,
+          "lng": -5.9667359
+        }
+      },
+      "location": {
+        "address": "Vejer de la Frontera, Spain",
+        "formatted_address": "Vejer de la Frontera, Spain",
+        "locality": "Vejer de la Frontera",
+        "region": null,
+        "postcode": null,
+        "country": "Spain"
+      },
+      "types": [
+        "village"
+      ],
+      "editorial": {
+        "popularity": "known_place",
+        "summary": "Towns / cities / neighbourhoods | white village / inland-coastal base"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJA-RAEslFDA0RQKSynOKfk8c",
+          "url": "https://www.google.com/maps/search/?api=1&query=Vejer%20de%20la%20Frontera&query_place_id=ChIJA-RAEslFDA0RQKSynOKfk8c"
+        }
+      }
+    },
+    {
+      "id": "location_ChIJxYQwEXChGw0RgCH890QVU24",
+      "name": "Vila Nova de Milfontes",
+      "description": "A charming coastal town at the mouth of the Mira River — perfectly calm beach on the river side (safe for small children to swim) and wilder ocean beach on the other. Excellent local seafood restaurants, weekly market, a",
+      "geo": {
+        "main": {
+          "lat": 37.7240021,
+          "lng": -8.7817552
+        }
+      },
+      "location": {
+        "address": "Vila Nova de Milfontes, Portugal",
+        "formatted_address": "Vila Nova de Milfontes, Portugal",
+        "locality": "Vila Nova de Milfontes",
+        "region": null,
+        "postcode": null,
+        "country": "Portugal"
+      },
+      "types": [
+        "town"
+      ],
+      "editorial": {
+        "popularity": "known_place",
+        "summary": "Towns / cities / neighbourhoods | small town / Atlantic family base"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJxYQwEXChGw0RgCH890QVU24",
+          "url": "https://www.google.com/maps/search/?api=1&query=Vila%20Nova%20de%20Milfontes&query_place_id=ChIJxYQwEXChGw0RgCH890QVU24"
+        }
+      }
+    },
+    {
+      "id": "location_ChIJ1_HuhdmiGw0RPKPf2rxD_tg",
+      "name": "Aivados Beach",
+      "description": "Quieter Alentejo coast beach with a more stripped-back, nature-first mood than the more built-up resort areas. It looks like the kind of stop that works for a pause, a walk, or a low-key beach day on the drive north or s",
+      "geo": {
+        "main": {
+          "lat": 37.806258,
+          "lng": -8.797292
+        }
+      },
+      "location": {
+        "address": "Aivados Beach Portugal",
+        "formatted_address": "Aivados Beach Portugal",
+        "locality": null,
+        "region": null,
+        "postcode": null,
+        "country": "Portugal"
+      },
+      "types": [
+        "beach"
+      ],
+      "editorial": {
+        "popularity": "hidden_gem",
+        "summary": "Beaches / lakes / nature places | Beach"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJ1_HuhdmiGw0RPKPf2rxD_tg",
+          "url": "https://www.google.com/maps/search/?api=1&query=Aivados%20Beach&query_place_id=ChIJ1_HuhdmiGw0RPKPf2rxD_tg",
+          "rating": 4.5
+        }
+      }
+    },
+    {
+      "id": "location_ChIJ09K5naKgi0cRQLm65CqrCAQ",
+      "name": "Aix-les-Bains",
+      "description": "Calmer lake alternative with more space and less summer pressure than Annecy, while still giving you water and mountain scenery.",
+      "geo": {
+        "main": {
+          "lat": 45.692341,
+          "lng": 5.908998
+        }
+      },
+      "location": {
+        "address": "Aix-les-Bains, France",
+        "formatted_address": "Aix-les-Bains, France",
+        "locality": "Aix-les-Bains",
+        "region": "France outbound",
+        "postcode": null,
+        "country": "France"
+      },
+      "types": [
+        "town"
+      ],
+      "editorial": {
+        "popularity": "hidden_gem",
+        "summary": "Beaches / lakes / nature places | small town / quieter lake base, town, hidden_gem"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJ09K5naKgi0cRQLm65CqrCAQ",
+          "url": "https://www.google.com/maps/search/?api=1&query=Aix-les-Bains&query_place_id=ChIJ09K5naKgi0cRQLm65CqrCAQ"
+        }
+      }
+    },
+    {
+      "id": "location_ChIJnaQfDZUVoBIRgvQFkv5PN7c",
+      "name": "Alcossebre",
+      "description": "Lower-key coast base near Sierra de Irta, good for beach plus short nature outings and a calmer pace than bigger nearby resorts.",
+      "geo": {
+        "main": {
+          "lat": 40.251206,
+          "lng": 0.2811765
+        }
+      },
+      "location": {
+        "address": "Alcossebre, Spain",
+        "formatted_address": "Alcossebre, Spain",
+        "locality": "Alcossebre",
+        "region": "Valencia & Southeast",
+        "postcode": null,
+        "country": "Spain"
+      },
+      "types": [
+        "beach"
+      ],
+      "editorial": {
+        "popularity": "hidden_gem",
+        "summary": "Beaches / lakes / nature places | region, hidden_gem, small town / coastal-nature base"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJnaQfDZUVoBIRgvQFkv5PN7c",
+          "url": "https://www.google.com/maps/search/?api=1&query=Alcossebre&query_place_id=ChIJnaQfDZUVoBIRgvQFkv5PN7c"
+        }
+      }
+    },
+    {
+      "id": "location_ChIJsUyFehB6EQ0RDFHEAy6_OBA",
+      "name": "Aracena",
+      "description": "Green-hill town in the Sierra with a slower rhythm, caves, and local-food appeal; a strong quiet break from the coastal mainstream.",
+      "geo": {
+        "main": {
+          "lat": 37.8935487,
+          "lng": -6.5618884
+        }
+      },
+      "location": {
+        "address": "Aracena, Spain",
+        "formatted_address": "Aracena, Spain",
+        "locality": "Aracena",
+        "region": null,
+        "postcode": null,
+        "country": "Spain"
+      },
+      "types": [
+        "town"
+      ],
+      "editorial": {
+        "popularity": "hidden_gem",
+        "summary": "Beaches / lakes / nature places | small inland town / mountain-food base"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJsUyFehB6EQ0RDFHEAy6_OBA",
+          "url": "https://www.google.com/maps/search/?api=1&query=Aracena&query_place_id=ChIJsUyFehB6EQ0RDFHEAy6_OBA"
+        }
+      }
+    },
+    {
+      "id": "location_ChIJzRRIXQdythIRUAWX_aUZCAQ",
+      "name": "Arles",
+      "description": "Roman city in Provence bordering the Camargue — a UNESCO World Heritage Site layered with two thousand years of history and Van Gogh's most productive period. Beyond Ordinary Guides published a full photo journal (\"Summe",
+      "geo": {
+        "main": {
+          "lat": 43.676647,
+          "lng": 4.6277769
+        }
+      },
+      "location": {
+        "address": "Arles, France",
+        "formatted_address": "Arles, France",
+        "locality": "Arles",
+        "region": "Provence",
+        "postcode": null,
+        "country": "France"
+      },
+      "types": [
+        "park"
+      ],
+      "editorial": {
+        "popularity": "known_place",
+        "summary": "Beaches / lakes / nature places | City, known_place"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJzRRIXQdythIRUAWX_aUZCAQ",
+          "url": "https://www.google.com/maps/search/?api=1&query=Arles&query_place_id=ChIJzRRIXQdythIRUAWX_aUZCAQ"
+        }
+      }
+    },
+    {
+      "id": "location_ChIJQdEQkdhTuhIRQSOL3UIJHDI",
+      "name": "Begur",
+      "description": "A hilltop medieval village overlooking some of the most beautiful coves on the Costa Brava — including Sa Tuna, Aiguablava, and Port d'Esclanyà. Monocle Spain Handbook flags it as one of the \"sleekest beachside\" areas of",
+      "geo": {
+        "main": {
+          "lat": 41.9535354,
+          "lng": 3.2025863
+        }
+      },
+      "location": {
+        "address": "Begur, Spain",
+        "formatted_address": "Begur, Spain",
+        "locality": "Begur",
+        "region": "Costa Brava",
+        "postcode": null,
+        "country": "Spain"
+      },
+      "types": [
+        "town"
+      ],
+      "editorial": {
+        "popularity": "known_place",
+        "summary": "Beaches / lakes / nature places | historic town / cove base, town + nature, known_place"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJQdEQkdhTuhIRQSOL3UIJHDI",
+          "url": "https://www.google.com/maps/search/?api=1&query=Begur&query_place_id=ChIJQdEQkdhTuhIRQSOL3UIJHDI"
+        }
+      }
+    },
+    {
+      "id": "location_ChIJy2vsyp0JUQ0RBzTWargCSaE",
+      "name": "Bidassoa River Beach",
+      "description": "The Bidasoa river estuary between France and Spain — calm, warm water ideal for children's river swimming, surrounded by green hills and vineyards. A genuine local family beach far from tourist infrastructure.",
+      "geo": {
+        "main": {
+          "lat": 43.3792291,
+          "lng": -1.7951659
+        }
+      },
+      "location": {
+        "address": "Hondarribia — Bidassoa River Beach — Hondarribia, Spain",
+        "formatted_address": "Hondarribia, Spain",
+        "locality": "Hondarribia",
+        "region": null,
+        "postcode": null,
+        "country": "Spain"
+      },
+      "types": [
+        "nature_reserve"
+      ],
+      "editorial": {
+        "popularity": "hidden_gem",
+        "summary": "Beaches / lakes / nature places | Beach / Natural Park"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJy2vsyp0JUQ0RBzTWargCSaE",
+          "url": "https://www.google.com/maps/search/?api=1&query=Bidassoa%20River%20Beach&query_place_id=ChIJy2vsyp0JUQ0RBzTWargCSaE",
+          "rating": 4.5
+        }
+      }
+    },
+    {
+      "id": "location_ChIJcdoArG6Neg0RUP0XIHgiQYA",
+      "name": "Cabo de Gata",
+      "description": "Volcanic-desert coastline with wild beaches and natural-park scenery; now well known, but still one of the most striking nature stops on the route.",
+      "geo": {
+        "main": {
+          "lat": 36.7420357,
+          "lng": -2.1284552
+        }
+      },
+      "location": {
+        "address": "Cabo de Gata, Spain",
+        "formatted_address": "Cabo de Gata, Spain",
+        "locality": "Cabo de Gata",
+        "region": "Andalusia coast",
+        "postcode": null,
+        "country": "Spain"
+      },
+      "types": [
+        "nature_reserve"
+      ],
+      "editorial": {
+        "popularity": "known_place",
+        "summary": "Beaches / lakes / nature places | natural park / wild coast, nature, known_place"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJcdoArG6Neg0RUP0XIHgiQYA",
+          "url": "https://www.google.com/maps/search/?api=1&query=Cabo%20de%20Gata&query_place_id=ChIJcdoArG6Neg0RUP0XIHgiQYA",
+          "rating": 4.7
+        }
+      }
+    },
+    {
+      "id": "location_ChIJAQcxA44bEA0RgYtaTNBW71I",
+      "name": "Cacela Velha / Praia de Cacela Velha",
+      "description": "Tiny hilltop hamlet overlooking Ria Formosa — a handful of whitewashed houses, a small church, an old fortress, and a terrace café looking out over the lagoon. One of the most achingly beautiful spots in the Algarve. Alm",
+      "geo": {
+        "main": {
+          "lat": 37.1573048,
+          "lng": -7.5462945
+        }
+      },
+      "location": {
+        "address": "Cacela Velha / Praia de Cacela Velha, Portugal",
+        "formatted_address": "Cacela Velha / Praia de Cacela Velha, Portugal",
+        "locality": "Cacela Velha / Praia de Cacela Velha",
+        "region": "East Algarve",
+        "postcode": null,
+        "country": "Portugal"
+      },
+      "types": [
+        "beach"
+      ],
+      "editorial": {
+        "popularity": "hidden_gem",
+        "summary": "Beaches / lakes / nature places | small village / lagoon lookout, town + nature, hidden_gem"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJAQcxA44bEA0RgYtaTNBW71I",
+          "url": "https://www.google.com/maps/search/?api=1&query=Cacela%20Velha%20/%20Praia%20de%20Cacela%20Velha&query_place_id=ChIJAQcxA44bEA0RgYtaTNBW71I"
+        }
+      }
+    },
+    {
+      "id": "location_ChIJ4-1U5cpTuhIR_-52gURYQVw",
+      "name": "Cala Aigua Blava",
+      "description": "Spain with Emily describes it as beautiful and tiny, worth arriving early for, with gorgeous views over the cove.",
+      "geo": {
+        "main": {
+          "lat": 41.936118,
+          "lng": 3.2162706
+        }
+      },
+      "location": {
+        "address": "Cala Aigua Blava, Spain",
+        "formatted_address": "Cala Aigua Blava, Spain",
+        "locality": "Cala Aigua Blava",
+        "region": "Costa Brava",
+        "postcode": null,
+        "country": "Spain"
+      },
+      "types": [
+        "beach"
+      ],
+      "editorial": {
+        "popularity": "known_place",
+        "summary": "Beaches / lakes / nature places | Cove / Beach, nature, known_place"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJ4-1U5cpTuhIR_-52gURYQVw",
+          "url": "https://www.google.com/maps/search/?api=1&query=Cala%20Aigua%20Blava&query_place_id=ChIJ4-1U5cpTuhIR_-52gURYQVw",
+          "rating": 4.3
+        }
+      }
+    },
+    {
+      "id": "location_ChIJJVOhRdHneg0Rh1Na_TWW8F0",
+      "name": "Cala de San Pedro",
+      "description": "A cove-and-hike stop near Las Negras that captures the wilder side of Cabo de Gata better than the more obvious beach entries. It is a strong addition for the trip if you want a rawer, less built-up day with sea views, w",
+      "geo": {
+        "main": {
+          "lat": 36.9008675,
+          "lng": -1.9825524
+        }
+      },
+      "location": {
+        "address": "Cala de San Pedro, Spain",
+        "formatted_address": "Cala de San Pedro, Spain",
+        "locality": "Cala de San Pedro",
+        "region": "Andalusia coast",
+        "postcode": null,
+        "country": "Spain"
+      },
+      "types": [
+        "hiking_area"
+      ],
+      "editorial": {
+        "popularity": "hidden_gem",
+        "summary": "Beaches / lakes / nature places | Cove / Hiking Destination, nature, hidden_gem"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJJVOhRdHneg0Rh1Na_TWW8F0",
+          "url": "https://www.google.com/maps/search/?api=1&query=Cala%20de%20San%20Pedro&query_place_id=ChIJJVOhRdHneg0Rh1Na_TWW8F0",
+          "rating": 4.2
+        }
+      }
+    },
+    {
+      "id": "location_ChIJGaTo0AMXuxIRROHqMkYwp0k",
+      "name": "Cala Sa Boadella",
+      "description": "Spain with Emily describes this cove as a dream and a gorgeous example of the Costa Brava — worth visiting even while advising against staying in nearby Lloret itself.",
+      "geo": {
+        "main": {
+          "lat": 41.6906778,
+          "lng": 2.8239805
+        }
+      },
+      "location": {
+        "address": "Cala Sa Boadella, Spain",
+        "formatted_address": "Cala Sa Boadella, Spain",
+        "locality": "Cala Sa Boadella",
+        "region": "Costa Brava",
+        "postcode": null,
+        "country": "Spain"
+      },
+      "types": [
+        "beach"
+      ],
+      "editorial": {
+        "popularity": "hidden_gem",
+        "summary": "Beaches / lakes / nature places | Cove / Beach, nature, hidden_gem"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJGaTo0AMXuxIRROHqMkYwp0k",
+          "url": "https://www.google.com/maps/search/?api=1&query=Cala%20Sa%20Boadella&query_place_id=ChIJGaTo0AMXuxIRROHqMkYwp0k",
+          "rating": 4.6
+        }
+      }
+    },
+    {
+      "id": "location_Eh1DYW3DrSBkZSBSb25kYSwgR2lyb25hLCBTcGFpbiIuKiwKFAoSCRXWT4mRALsSEeMBrH5EuE4hEhQKEgnF1pBv4_i6EhHKrbzmKizlvg",
+      "name": "Camí de Ronda",
+      "description": "The classic Costa Brava coastal trail system linking coves, cliffs, and viewpoints. It is well-known, but still a very worthwhile day activity because the landscape experience is the main point.",
+      "geo": {
+        "main": {
+          "lat": 41.8272908,
+          "lng": 3.0840538
+        }
+      },
+      "location": {
+        "address": "Camí de Ronda Costa Brava Spain",
+        "formatted_address": "Camí de Ronda Costa Brava Spain",
+        "locality": null,
+        "region": "Costa Brava",
+        "postcode": null,
+        "country": "Spain"
+      },
+      "types": [
+        "hiking_area"
+      ],
+      "editorial": {
+        "popularity": "known_place",
+        "summary": "Beaches / lakes / nature places | Hiking / Sightseeing, activity, known_place"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "Eh1DYW3DrSBkZSBSb25kYSwgR2lyb25hLCBTcGFpbiIuKiwKFAoSCRXWT4mRALsSEeMBrH5EuE4hEhQKEgnF1pBv4_i6EhHKrbzmKizlvg",
+          "url": "https://www.google.com/maps/search/?api=1&query=Cam%C3%AD%20de%20Ronda&query_place_id=Eh1DYW3DrSBkZSBSb25kYSwgR2lyb25hLCBTcGFpbiIuKiwKFAoSCRXWT4mRALsSEeMBrH5EuE4hEhQKEgnF1pBv4_i6EhHKrbzmKizlvg"
+        }
+      }
+    },
+    {
+      "id": "location_ChIJfxjbd1FZsBIRUCdtFiGIBwQ",
+      "name": "Cap Leucate / Leucate Village",
+      "description": "Wild windswept cap between Narbonne and the Spanish border — kite-surfing capital of France, with a lagoon on one side and the open sea on the other. The old perched village of Leucate is quiet and unspoiled. Great base",
+      "geo": {
+        "main": {
+          "lat": 42.9103039,
+          "lng": 3.028163
+        }
+      },
+      "location": {
+        "address": "Cap Leucate / Leucate Village, France",
+        "formatted_address": "Cap Leucate / Leucate Village, France",
+        "locality": "Cap Leucate / Leucate Village",
+        "region": null,
+        "postcode": null,
+        "country": "France"
+      },
+      "types": [
+        "beach"
+      ],
+      "editorial": {
+        "popularity": "hidden_gem",
+        "summary": "Beaches / lakes / nature places | Small Town / Beach"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJfxjbd1FZsBIRUCdtFiGIBwQ",
+          "url": "https://www.google.com/maps/search/?api=1&query=Cap%20Leucate%20/%20Leucate%20Village&query_place_id=ChIJfxjbd1FZsBIRUCdtFiGIBwQ"
+        }
+      }
+    },
+    {
+      "id": "location_ChIJDzI36oxGGw0RjCD8RixoRME",
+      "name": "Carrapateira",
+      "description": "Quieter surf-and-nature village with raw scenery and beach access, better for a low-key rhythm than for lots of facilities.",
+      "geo": {
+        "main": {
+          "lat": 37.1843354,
+          "lng": -8.8957851
+        }
+      },
+      "location": {
+        "address": "Carrapateira, Portugal",
+        "formatted_address": "Carrapateira, Portugal",
+        "locality": "Carrapateira",
+        "region": null,
+        "postcode": null,
+        "country": "Portugal"
+      },
+      "types": [
+        "village"
+      ],
+      "editorial": {
+        "popularity": "hidden_gem",
+        "summary": "Beaches / lakes / nature places | small village / surf-nature base"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJDzI36oxGGw0RjCD8RixoRME",
+          "url": "https://www.google.com/maps/search/?api=1&query=Carrapateira&query_place_id=ChIJDzI36oxGGw0RjCD8RixoRME"
+        }
+      }
+    },
+    {
+      "id": "location_ChIJt3OIvwgiJQ0R2N_WI9TZCkU",
+      "name": "Cascata do Arado",
+      "description": "One of the most useful natural stops to pair with Lima Escape: a waterfall and short hiking area in Peneda-Gerês with river, views, and a stronger raw-landscape feeling than a formal sightseeing stop. It works especially",
+      "geo": {
+        "main": {
+          "lat": 41.7238344,
+          "lng": -8.129974
+        }
+      },
+      "location": {
+        "address": "Portugal, 4845 Vilar da Veiga, Portugal",
+        "formatted_address": "Portugal, 4845 Vilar da Veiga, Portugal",
+        "locality": "Portugal, 4845 Vilar da Veiga",
+        "region": null,
+        "postcode": null,
+        "country": "Portugal"
+      },
+      "types": [
+        "hiking_area"
+      ],
+      "editorial": {
+        "popularity": "known_place",
+        "summary": "Beaches / lakes / nature places | Waterfall / Natural Attraction"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJt3OIvwgiJQ0R2N_WI9TZCkU",
+          "url": "https://www.google.com/maps/search/?api=1&query=Cascata%20do%20Arado&query_place_id=ChIJt3OIvwgiJQ0R2N_WI9TZCkU",
+          "rating": 4.6
+        }
+      }
+    },
+    {
+      "id": "location_ChIJNeR-a8a6yRIRMASX_aUZCAQ",
+      "name": "Cassis",
+      "description": "Small port town on the edge of the Calanques — whitewashed, sun-bleached, with fishing boats and excellent rosé wine. The Cassis AOC wines are rarely exported — this is the only place you can drink them properly fresh. F",
+      "geo": {
+        "main": {
+          "lat": 43.215134,
+          "lng": 5.53712
+        }
+      },
+      "location": {
+        "address": "Cassis, France",
+        "formatted_address": "Cassis, France",
+        "locality": "Cassis",
+        "region": "Provence",
+        "postcode": null,
+        "country": "France"
+      },
+      "types": [
+        "town"
+      ],
+      "editorial": {
+        "popularity": "known_place",
+        "summary": "Beaches / lakes / nature places | Small Town, town, known_place"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJNeR-a8a6yRIRMASX_aUZCAQ",
+          "url": "https://www.google.com/maps/search/?api=1&query=Cassis&query_place_id=ChIJNeR-a8a6yRIRMASX_aUZCAQ"
+        }
+      }
+    },
+    {
+      "id": "location_ChIJKVLN6nMYEA0REiPiel1uYEM",
+      "name": "Castro Marim & Reserva Natural do Sapal",
+      "description": "Medieval border castle town just north of Monte Gordo with the oldest salt pans in Portugal still in operation. The adjacent Sapal reserve is extraordinary for flamingos and waders — the salt pans attract hundreds of fla",
+      "geo": {
+        "main": {
+          "lat": 37.2301442,
+          "lng": -7.4266586
+        }
+      },
+      "location": {
+        "address": "Castro Marim & Reserva Natural do Sapal, Portugal",
+        "formatted_address": "Castro Marim & Reserva Natural do Sapal, Portugal",
+        "locality": "Castro Marim & Reserva Natural do Sapal",
+        "region": null,
+        "postcode": null,
+        "country": "Portugal"
+      },
+      "types": [
+        "nature_reserve"
+      ],
+      "editorial": {
+        "popularity": "hidden_gem",
+        "summary": "Beaches / lakes / nature places | Small Town / Natural Park"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJKVLN6nMYEA0REiPiel1uYEM",
+          "url": "https://www.google.com/maps/search/?api=1&query=Castro%20Marim%20%26%20Reserva%20Natural%20do%20Sapal&query_place_id=ChIJKVLN6nMYEA0REiPiel1uYEM",
+          "rating": 4.4
+        }
+      }
+    },
+    {
+      "id": "location_ChIJmZ0x6dlhpRIR-XQAp5O7oZ8",
+      "name": "Catalan Pyrenees",
+      "description": "High mountain range forming the border with France. FieldMag documented the hut-to-hut Travessa dels Tres Refugis route — a cross-border traverse through remote valleys and alpine meadows.",
+      "geo": {
+        "main": {
+          "lat": 42.5599057,
+          "lng": 2.2922392
+        }
+      },
+      "location": {
+        "address": "Catalan Pyrenees, Spain",
+        "formatted_address": "Catalan Pyrenees, Spain",
+        "locality": "Catalan Pyrenees",
+        "region": null,
+        "postcode": null,
+        "country": "Spain"
+      },
+      "types": [
+        "nature_reserve"
+      ],
+      "editorial": {
+        "popularity": "known_place",
+        "summary": "Beaches / lakes / nature places | Natural Park / Hiking"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJmZ0x6dlhpRIR-XQAp5O7oZ8",
+          "url": "https://www.google.com/maps/search/?api=1&query=Catalan%20Pyrenees&query_place_id=ChIJmZ0x6dlhpRIR-XQAp5O7oZ8",
+          "rating": 4.6
+        }
+      }
+    },
+    {
+      "id": "location_ChIJjd4fKZV_sBIRIHQxZUJt9ZE",
+      "name": "Collioure",
+      "description": "A tiny Vermillion Coast fishing port right on the French-Spanish border, with a castle, anchovy industry, and the same light that drew Matisse and Derain here in 1905. Compact and colorful former fishing town with beache",
+      "geo": {
+        "main": {
+          "lat": 42.526752,
+          "lng": 3.084631
+        }
+      },
+      "location": {
+        "address": "Collioure, France",
+        "formatted_address": "Collioure, France",
+        "locality": "Collioure",
+        "region": "Montpellier Area",
+        "postcode": null,
+        "country": "France"
+      },
+      "types": [
+        "beach"
+      ],
+      "editorial": {
+        "popularity": "known_place",
+        "summary": "Beaches / lakes / nature places | small town / coastal village, town, known_place"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJjd4fKZV_sBIRIHQxZUJt9ZE",
+          "url": "https://www.google.com/maps/search/?api=1&query=Collioure&query_place_id=ChIJjd4fKZV_sBIRIHQxZUJt9ZE"
+        }
+      }
+    },
+    {
+      "id": "location_ChIJZyRjTjsTGw0Rf3JQt6XwMSE",
+      "name": "Costa Vicentina Natural Park",
+      "description": "Monocle presents this natural park as the core draw of the area: sea, pines, olive trees and a more untamed Algarve landscape. A 100km stretch of the most protected and unspoiled coastline in western Europe — dark basalt",
+      "geo": {
+        "main": {
+          "lat": 37.4575578,
+          "lng": -8.7970853
+        }
+      },
+      "location": {
+        "address": "Costa Vicentina Natural Park, Portugal",
+        "formatted_address": "Costa Vicentina Natural Park, Portugal",
+        "locality": "Costa Vicentina Natural Park",
+        "region": null,
+        "postcode": null,
+        "country": "Portugal"
+      },
+      "types": [
+        "nature_reserve"
+      ],
+      "editorial": {
+        "popularity": "known_place",
+        "summary": "Beaches / lakes / nature places | Natural Park / Coastal Region"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJZyRjTjsTGw0Rf3JQt6XwMSE",
+          "url": "https://www.google.com/maps/search/?api=1&query=Costa%20Vicentina%20Natural%20Park&query_place_id=ChIJZyRjTjsTGw0Rf3JQt6XwMSE",
+          "rating": 4.7
+        }
+      }
+    },
+    {
+      "id": "location_ChIJ-z4u8y0AEA0RNxfbKLt05HE",
+      "name": "Fuseta",
+      "description": "Smaller and more local-feeling than Tavira, tied closely to the lagoon and beach-island rhythm of the eastern Algarve.",
+      "geo": {
+        "main": {
+          "lat": 37.0535504,
+          "lng": -7.7456231
+        }
+      },
+      "location": {
+        "address": "Fuseta, Portugal",
+        "formatted_address": "Fuseta, Portugal",
+        "locality": "Fuseta",
+        "region": null,
+        "postcode": null,
+        "country": "Portugal"
+      },
+      "types": [
+        "beach"
+      ],
+      "editorial": {
+        "popularity": "hidden_gem",
+        "summary": "Beaches / lakes / nature places | small town / lagoon village"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJ-z4u8y0AEA0RNxfbKLt05HE",
+          "url": "https://www.google.com/maps/search/?api=1&query=Fuseta&query_place_id=ChIJ-z4u8y0AEA0RNxfbKLt05HE"
+        }
+      }
+    },
+    {
+      "id": "location_ChIJPY8zaNHLuhIRDSarG09b3C0",
+      "name": "Garrotxa Volcanic Zone",
+      "description": "Unusual forested volcanic landscape in inland Catalonia, with beech forests, craters, and medieval stone villages. Undervisited and quiet.",
+      "geo": {
+        "main": {
+          "lat": 42.1419334,
+          "lng": 2.5531691
+        }
+      },
+      "location": {
+        "address": "Garrotxa Volcanic Zone, Spain",
+        "formatted_address": "Garrotxa Volcanic Zone, Spain",
+        "locality": "Garrotxa Volcanic Zone",
+        "region": "Costa Brava",
+        "postcode": null,
+        "country": "Spain"
+      },
+      "types": [
+        "nature_reserve"
+      ],
+      "editorial": {
+        "popularity": "hidden_gem",
+        "summary": "Beaches / lakes / nature places | Natural Park, nature, hidden_gem"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJPY8zaNHLuhIRDSarG09b3C0",
+          "url": "https://www.google.com/maps/search/?api=1&query=Garrotxa%20Volcanic%20Zone&query_place_id=ChIJPY8zaNHLuhIRDSarG09b3C0",
+          "rating": 4.6
+        }
+      }
+    },
+    {
+      "id": "location_ChIJ1fDSOHsbGA0Rkc6xYuyeK44",
+      "name": "Gavião Nature Village",
+      "description": null,
+      "geo": {
+        "main": {
+          "lat": 39.4813957,
+          "lng": -7.9570984
+        }
+      },
+      "location": {
+        "address": "Gavião Nature Village",
+        "formatted_address": "Gavião Nature Village",
+        "locality": null,
+        "region": null,
+        "postcode": null,
+        "country": "Portugal"
+      },
+      "types": [
+        "town"
+      ],
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJ1fDSOHsbGA0Rkc6xYuyeK44",
+          "url": "https://www.google.com/maps/search/?api=1&query=Gavi%C3%A3o%20Nature%20Village&query_place_id=ChIJ1fDSOHsbGA0Rkc6xYuyeK44",
+          "rating": 4.7
+        }
+      }
+    },
+    {
+      "id": "location_ChIJdaoq0SsHtRIRZin4VIpGhOE",
+      "name": "Gorges de l'Ardèche",
+      "description": "Most dramatic entry into southern France. Kayakable with kids on calm sections.",
+      "geo": {
+        "main": {
+          "lat": 44.3649796,
+          "lng": 4.4439365
+        }
+      },
+      "location": {
+        "address": "France outbound",
+        "formatted_address": "France outbound",
+        "locality": null,
+        "region": "France outbound",
+        "postcode": null,
+        "country": "France"
+      },
+      "types": [
+        "park"
+      ],
+      "editorial": {
+        "popularity": "known_place",
+        "summary": "Beaches / lakes / nature places"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJdaoq0SsHtRIRZin4VIpGhOE",
+          "url": "https://www.google.com/maps/search/?api=1&query=Gorges%20de%20l%27Ard%C3%A8che&query_place_id=ChIJdaoq0SsHtRIRZin4VIpGhOE",
+          "rating": 4.8
+        }
+      }
+    },
+    {
+      "id": "location_ChIJVRfk-ZdbUQ0RsT1kMVaJZM4",
+      "name": "Hossegor",
+      "description": "Europe's surf capital — a low-key town of 1920s Basque-Landaise villas under maritime pines, with the world's best beach break (La Gravière, hosts the WSL Championship Tour each October) and a chic, unhurried French coas",
+      "geo": {
+        "main": {
+          "lat": 43.6646192,
+          "lng": -1.3976871
+        }
+      },
+      "location": {
+        "address": "Hossegor, France",
+        "formatted_address": "Hossegor, France",
+        "locality": "Hossegor",
+        "region": "Atlantic finish",
+        "postcode": null,
+        "country": "France"
+      },
+      "types": [
+        "town",
+        "beach"
+      ],
+      "editorial": {
+        "popularity": "touristic",
+        "summary": "Beaches / lakes / nature places | region, known_place, surf town / active coastal base"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJVRfk-ZdbUQ0RsT1kMVaJZM4",
+          "url": "https://www.google.com/maps/search/?api=1&query=Hossegor&query_place_id=ChIJVRfk-ZdbUQ0RsT1kMVaJZM4"
+        }
+      }
+    },
+    {
+      "id": "location_ChIJv1XMm7OJyhIRpRuzd4fh_wo",
+      "name": "L'Oree de Provence",
+      "description": "Provence, FR",
+      "geo": {
+        "main": {
+          "lat": 44.3031254,
+          "lng": 5.2734309
+        }
+      },
+      "location": {
+        "address": "11",
+        "formatted_address": "11",
+        "locality": null,
+        "region": "11",
+        "postcode": null,
+        "country": "France"
+      },
+      "types": [
+        "park"
+      ],
+      "editorial": {
+        "summary": "Beaches / lakes / nature places | Best Provence nature addition"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJv1XMm7OJyhIRpRuzd4fh_wo",
+          "url": "https://www.google.com/maps/search/?api=1&query=L%27Oree%20de%20Provence&query_place_id=ChIJv1XMm7OJyhIRpRuzd4fh_wo",
+          "rating": 4.7
+        }
+      }
+    },
+    {
+      "id": "location_ChIJKUPVGZJVVA0RYL5SxI7TDfc",
+      "name": "Les Landes",
+      "description": "The largest forest in Western Europe (1 million hectares of maritime pine), stretching from Bordeaux to the Basque border — an extraordinary cycling landscape with hundreds of kilometres of flat trails through the trees.",
+      "geo": {
+        "main": {
+          "lat": 44.3224498,
+          "lng": -0.5257823
+        }
+      },
+      "location": {
+        "address": "Parc Naturel Régional — Les Landes — Parc Naturel Régional, France",
+        "formatted_address": "Parc Naturel Régional, France",
+        "locality": "Parc Naturel Régional",
+        "region": null,
+        "postcode": null,
+        "country": "France"
+      },
+      "types": [
+        "nature_reserve"
+      ],
+      "editorial": {
+        "popularity": "hidden_gem",
+        "summary": "Beaches / lakes / nature places | Natural Park"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJKUPVGZJVVA0RYL5SxI7TDfc",
+          "url": "https://www.google.com/maps/search/?api=1&query=Les%20Landes&query_place_id=ChIJKUPVGZJVVA0RYL5SxI7TDfc",
+          "rating": 4.4
+        }
+      }
+    },
+    {
+      "id": "location_ChIJQyI2fRZauhIRkFDab-Ld9Yw",
+      "name": "L’Estartit",
+      "description": "Family-friendly beach base with boat access to the Medes area and strong holiday infrastructure; one of the more mainstream practical bases.",
+      "geo": {
+        "main": {
+          "lat": 42.0512834,
+          "lng": 3.1905192
+        }
+      },
+      "location": {
+        "address": "L’Estartit, Spain",
+        "formatted_address": "L’Estartit, Spain",
+        "locality": "L’Estartit",
+        "region": null,
+        "postcode": null,
+        "country": "Spain"
+      },
+      "types": [
+        "beach"
+      ],
+      "editorial": {
+        "popularity": "touristic",
+        "summary": "Beaches / lakes / nature places | family beach resort / snorkeling base"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJQyI2fRZauhIRkFDab-Ld9Yw",
+          "url": "https://www.google.com/maps/search/?api=1&query=L%E2%80%99Estartit&query_place_id=ChIJQyI2fRZauhIRkFDab-Ld9Yw"
+        }
+      }
+    },
+    {
+      "id": "location_ChIJGcmG4JFWuhIR9rUDdyIUdZ0",
+      "name": "Pals",
+      "description": "A medieval walled town on a hill overlooking rice paddies and the sea — surreal and utterly gorgeous. The Empordà plain below grows rice and produces a remarkable local wine under the Empordà DO. Excellent artisan shops",
+      "geo": {
+        "main": {
+          "lat": 41.9709213,
+          "lng": 3.1488297
+        }
+      },
+      "location": {
+        "address": "Pals Girona Spain",
+        "formatted_address": "Pals Girona Spain",
+        "locality": null,
+        "region": "Costa Brava",
+        "postcode": null,
+        "country": "Spain"
+      },
+      "types": [
+        "town"
+      ],
+      "editorial": {
+        "popularity": "known_place",
+        "summary": "Beaches / lakes / nature places | Small Town, town, known_place"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJGcmG4JFWuhIR9rUDdyIUdZ0",
+          "url": "https://www.google.com/maps/search/?api=1&query=Pals&query_place_id=ChIJGcmG4JFWuhIR9rUDdyIUdZ0"
+        }
+      }
+    },
+    {
+      "id": "location_ChIJY75xAm-XpBIRBabTQhapEDE",
+      "name": "Parc Nacional des Calanques / Parc de Collserola",
+      "description": "The vast forested hill rising directly above Barcelona — 8,000 hectares of Mediterranean scrubland and pine forest that most tourists never set foot in. You can hike from the city into wild nature in 20 minutes by FGC tr",
+      "geo": {
+        "main": {
+          "lat": 41.4425504,
+          "lng": 2.1016603
+        }
+      },
+      "location": {
+        "address": "Parc Nacional des Calanques / Parc de Collserola, Spain",
+        "formatted_address": "Parc Nacional des Calanques / Parc de Collserola, Spain",
+        "locality": "Parc Nacional des Calanques / Parc de Collserola",
+        "region": null,
+        "postcode": null,
+        "country": "Spain"
+      },
+      "types": [
+        "nature_reserve"
+      ],
+      "editorial": {
+        "popularity": "hidden_gem",
+        "summary": "Beaches / lakes / nature places | Natural Park"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJY75xAm-XpBIRBabTQhapEDE",
+          "url": "https://www.google.com/maps/search/?api=1&query=Parc%20Nacional%20des%20Calanques%20/%20Parc%20de%20Collserola&query_place_id=ChIJY75xAm-XpBIRBabTQhapEDE",
+          "rating": 4.5
+        }
+      }
+    },
+    {
+      "id": "location_ChIJySHEzzW4yRIRniAPBwmntxo",
+      "name": "Parc National des Calanques",
+      "description": "One of Europe's most spectacular coastal parks — razor-edge limestone cliffs dropping into turquoise sea, reachable only on foot or by kayak. Calanques de Sormiou and Morgiou are the most accessible with young children (",
+      "geo": {
+        "main": {
+          "lat": 43.2178391,
+          "lng": 5.4430178
+        }
+      },
+      "location": {
+        "address": "Parc National des Calanques, France",
+        "formatted_address": "Parc National des Calanques, France",
+        "locality": "Parc National des Calanques",
+        "region": null,
+        "postcode": null,
+        "country": "France"
+      },
+      "types": [
+        "nature_reserve"
+      ],
+      "editorial": {
+        "popularity": "known_place",
+        "summary": "Beaches / lakes / nature places | Natural Park"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJySHEzzW4yRIRniAPBwmntxo",
+          "url": "https://www.google.com/maps/search/?api=1&query=Parc%20National%20des%20Calanques&query_place_id=ChIJySHEzzW4yRIRniAPBwmntxo",
+          "rating": 4.7
+        }
+      }
+    },
+    {
+      "id": "location_ChIJ2YDN4Q5ithIROevrl-OPDHs",
+      "name": "Parc Ornithologique de Pont-de-Gau (Camargue)",
+      "description": "A 150-acre bird park in the Camargue wetlands, with flamingos, herons, storks, birds of prey, and open-air habitats — right outside Saintes-Maries. Boardwalk trails through marshland; extraordinary for kids, animals, and",
+      "geo": {
+        "main": {
+          "lat": 43.4889447,
+          "lng": 4.4041711
+        }
+      },
+      "location": {
+        "address": "Parc Ornithologique de Pont-de-Gau (Camargue), France",
+        "formatted_address": "Parc Ornithologique de Pont-de-Gau (Camargue), France",
+        "locality": "Parc Ornithologique de Pont-de-Gau (Camargue)",
+        "region": null,
+        "postcode": null,
+        "country": "France"
+      },
+      "types": [
+        "nature_reserve"
+      ],
+      "editorial": {
+        "popularity": "hidden_gem",
+        "summary": "Beaches / lakes / nature places | Natural Park / Bird Sanctuary"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJ2YDN4Q5ithIROevrl-OPDHs",
+          "url": "https://www.google.com/maps/search/?api=1&query=Parc%20Ornithologique%20de%20Pont-de-Gau%20%28Camargue%29&query_place_id=ChIJ2YDN4Q5ithIROevrl-OPDHs",
+          "rating": 4.6
+        }
+      }
+    },
+    {
+      "id": "location_ChIJY861avqTthIRwVXg4XSrlF4",
+      "name": "Plage de l'Espiguette (Le Grau-du-Roi)",
+      "description": "One of the longest, wildest and most unspoiled beaches in France — enormous dunes, no development whatsoever, where the Camargue meets the Mediterranean. The water is shallow and very safe for small children. Famous amon",
+      "geo": {
+        "main": {
+          "lat": 43.5023119,
+          "lng": 4.1220421
+        }
+      },
+      "location": {
+        "address": "Plage de l'Espiguette (Le Grau-du-Roi), France",
+        "formatted_address": "Plage de l'Espiguette (Le Grau-du-Roi), France",
+        "locality": "Plage de l'Espiguette (Le Grau-du-Roi)",
+        "region": "Montpellier Area",
+        "postcode": null,
+        "country": "France"
+      },
+      "types": [
+        "beach"
+      ],
+      "editorial": {
+        "popularity": "hidden_gem",
+        "summary": "Beaches / lakes / nature places | Beach, nature, hidden_gem"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJY861avqTthIRwVXg4XSrlF4",
+          "url": "https://www.google.com/maps/search/?api=1&query=Plage%20de%20l%27Espiguette%20%28Le%20Grau-du-Roi%29&query_place_id=ChIJY861avqTthIRwVXg4XSrlF4",
+          "rating": 4.4
+        }
+      }
+    },
+    {
+      "id": "location_ChIJPSKOPDlPGw0Rb6qFqWSfxoY",
+      "name": "Praia da Cordoama",
+      "description": "Dramatic Atlantic beach in the west Algarve with a wild and open landscape that suits a surf-oriented or scenic day stop. It feels more elemental and less built-up than the eastern Algarve beaches.",
+      "geo": {
+        "main": {
+          "lat": 37.109104,
+          "lng": -8.9379888
+        }
+      },
+      "location": {
+        "address": "Praia da Cordoama Portugal",
+        "formatted_address": "Praia da Cordoama Portugal",
+        "locality": null,
+        "region": null,
+        "postcode": null,
+        "country": "Portugal"
+      },
+      "types": [
+        "beach"
+      ],
+      "editorial": {
+        "popularity": "known_place",
+        "summary": "Beaches / lakes / nature places | Beach"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJPSKOPDlPGw0Rb6qFqWSfxoY",
+          "url": "https://www.google.com/maps/search/?api=1&query=Praia%20da%20Cordoama&query_place_id=ChIJPSKOPDlPGw0Rb6qFqWSfxoY",
+          "rating": 4.8
+        }
+      }
+    },
+    {
+      "id": "location_ChIJ-YG0010ZEA0Rbixu_nXK4No",
+      "name": "Praia de Manta Rota",
+      "description": "A quiet, family-oriented beach near the Spanish border with calm, shallow water — ideal for small children. Surrounded by low-rise traditional buildings. Local fish restaurants right on the sand.",
+      "geo": {
+        "main": {
+          "lat": 37.163189,
+          "lng": -7.518811
+        }
+      },
+      "location": {
+        "address": "Praia de Manta Rota, Portugal",
+        "formatted_address": "Praia de Manta Rota, Portugal",
+        "locality": "Praia de Manta Rota",
+        "region": null,
+        "postcode": null,
+        "country": "Portugal"
+      },
+      "types": [
+        "beach"
+      ],
+      "editorial": {
+        "popularity": "hidden_gem",
+        "summary": "Beaches / lakes / nature places | Beach"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJ-YG0010ZEA0Rbixu_nXK4No",
+          "url": "https://www.google.com/maps/search/?api=1&query=Praia%20de%20Manta%20Rota&query_place_id=ChIJ-YG0010ZEA0Rbixu_nXK4No",
+          "rating": 4.5
+        }
+      }
+    },
+    {
+      "id": "location_ChIJTZZPUjtTBQ0RxT4ZM8p_RdA",
+      "name": "Ria Formosa Natural Park",
+      "description": "A 60km lagoon and barrier island system along the eastern Algarve coast — flamingos, seahorses, the rare Purple Swamphen, and extraordinary birdlife. Accessible by boat from Olhão or Tavira. The islands (Ilha da Culatra,",
+      "geo": {
+        "main": {
+          "lat": 36.9897571,
+          "lng": -7.9210214
+        }
+      },
+      "location": {
+        "address": "Ria Formosa Natural Park, Portugal",
+        "formatted_address": "Ria Formosa Natural Park, Portugal",
+        "locality": "Ria Formosa Natural Park",
+        "region": null,
+        "postcode": null,
+        "country": "Portugal"
+      },
+      "types": [
+        "nature_reserve"
+      ],
+      "editorial": {
+        "popularity": "known_place",
+        "summary": "Beaches / lakes / nature places | Natural Park"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJTZZPUjtTBQ0RxT4ZM8p_RdA",
+          "url": "https://www.google.com/maps/search/?api=1&query=Ria%20Formosa%20Natural%20Park&query_place_id=ChIJTZZPUjtTBQ0RxT4ZM8p_RdA",
+          "rating": 4.5
+        }
+      }
+    },
+    {
+      "id": "location_ChIJgYQwSIWQthIRoSSGvpo6GFw",
+      "name": "Salin d'Aigues-Mortes",
+      "description": "Pink salt flats, medieval walled town. The salt co-op sells directly.",
+      "geo": {
+        "main": {
+          "lat": 43.5570593,
+          "lng": 4.1828007
+        }
+      },
+      "location": {
+        "address": "Provence",
+        "formatted_address": "Provence",
+        "locality": null,
+        "region": "Provence",
+        "postcode": null,
+        "country": "France"
+      },
+      "types": [
+        "town"
+      ],
+      "editorial": {
+        "popularity": "known_place",
+        "summary": "Beaches / lakes / nature places"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJgYQwSIWQthIRoSSGvpo6GFw",
+          "url": "https://www.google.com/maps/search/?api=1&query=Salin%20d%27Aigues-Mortes&query_place_id=ChIJgYQwSIWQthIRoSSGvpo6GFw",
+          "rating": 3.9
+        }
+      }
+    },
+    {
+      "id": "location_ChIJiQHeDOCNcg0RWzgoKuqQVHc",
+      "name": "Torcal de Antequera",
+      "description": "Extraordinary karst landscape that feels almost unreal — one of the strongest nature detours on the southern leg if you want scenery that looks untouched by humans.",
+      "geo": {
+        "main": {
+          "lat": 36.9521507,
+          "lng": -4.5422786
+        }
+      },
+      "location": {
+        "address": "Torcal de Antequera, Spain",
+        "formatted_address": "Torcal de Antequera, Spain",
+        "locality": "Torcal de Antequera",
+        "region": null,
+        "postcode": null,
+        "country": "Spain"
+      },
+      "types": [
+        "nature_reserve"
+      ],
+      "editorial": {
+        "popularity": "hidden_gem",
+        "summary": "Beaches / lakes / nature places | Natural Park"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJiQHeDOCNcg0RWzgoKuqQVHc",
+          "url": "https://www.google.com/maps/search/?api=1&query=Torcal%20de%20Antequera&query_place_id=ChIJiQHeDOCNcg0RWzgoKuqQVHc",
+          "rating": 4.8
+        }
+      }
+    },
+    {
+      "id": "location_ChIJv2BfF0TIUQ0RLOsSIl7uXB4",
+      "name": "Zarautz",
+      "description": "A quiet Basque surfing town between Bilbao and San Sebastián — a 2.5km beach with gentle summer waves ideal for beginners and children. Much less busy than San Sebastián, with excellent pintxos bars and a relaxed local s",
+      "geo": {
+        "main": {
+          "lat": 43.2848444,
+          "lng": -2.171136
+        }
+      },
+      "location": {
+        "address": "Zarautz, Spain",
+        "formatted_address": "Zarautz, Spain",
+        "locality": "Zarautz",
+        "region": "Basque coast",
+        "postcode": null,
+        "country": "Spain"
+      },
+      "types": [
+        "town",
+        "beach"
+      ],
+      "editorial": {
+        "popularity": "hidden_gem",
+        "summary": "Beaches / lakes / nature places | surf town / family beach base, town, known_place"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJv2BfF0TIUQ0RLOsSIl7uXB4",
+          "url": "https://www.google.com/maps/search/?api=1&query=Zarautz&query_place_id=ChIJv2BfF0TIUQ0RLOsSIl7uXB4"
+        }
+      }
+    },
+    {
+      "id": "location_ChIJNwwgoCPbtRIRi5yEtp6wOBU",
+      "name": "Abbaye Troglodytique de Saint-Roman",
+      "description": "A troglodyte monastery carved entirely into a limestone cliff above the Rhône, with panoramic views across the Camargue and the river delta. Ancient graves carved into the rock are still visible. Atlas Obscura describes",
+      "geo": {
+        "main": {
+          "lat": 43.835362,
+          "lng": 4.611382
+        }
+      },
+      "location": {
+        "address": "near Beaucaire — Abbaye Troglodytique de Saint-Roman — near Beaucaire, France",
+        "formatted_address": "near Beaucaire, France",
+        "locality": "near Beaucaire",
+        "region": null,
+        "postcode": null,
+        "country": "France"
+      },
+      "types": [
+        "historical_landmark"
+      ],
+      "editorial": {
+        "popularity": "hidden_gem",
+        "summary": "Landmarks / museums / architecture / activities | Monastery / Landmark"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJNwwgoCPbtRIRi5yEtp6wOBU",
+          "url": "https://www.google.com/maps/search/?api=1&query=Abbaye%20Troglodytique%20de%20Saint-Roman&query_place_id=ChIJNwwgoCPbtRIRi5yEtp6wOBU",
+          "rating": 4.4
+        }
+      }
+    },
+    {
+      "id": "location_ChIJT0BYT6hfaQ0RP5BH9OyHabY",
+      "name": "Almagro",
+      "description": "Calmer Castilian stop built around its plaza and theater heritage, more about slow inland atmosphere than major sightseeing volume.",
+      "geo": {
+        "main": {
+          "lat": 38.8884312,
+          "lng": -3.7117806
+        }
+      },
+      "location": {
+        "address": "Almagro, Spain",
+        "formatted_address": "Almagro, Spain",
+        "locality": "Almagro",
+        "region": null,
+        "postcode": null,
+        "country": "Spain"
+      },
+      "types": [
+        "landmark"
+      ],
+      "editorial": {
+        "popularity": "hidden_gem",
+        "summary": "Landmarks / museums / architecture / activities | small town / cultural inland stop"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJT0BYT6hfaQ0RP5BH9OyHabY",
+          "url": "https://www.google.com/maps/search/?api=1&query=Almagro&query_place_id=ChIJT0BYT6hfaQ0RP5BH9OyHabY"
+        }
+      }
+    },
+    {
+      "id": "location_ChIJm_5EHFcxrhIRMQDOx2RwoI8",
+      "name": "Canal du Midi",
+      "description": "17th-century UNESCO canal stretching from the Atlantic to the Mediterranean, lined with plane trees. Best explored by barge or bicycle.",
+      "geo": {
+        "main": {
+          "lat": 43.2328161,
+          "lng": 2.2302045
+        }
+      },
+      "location": {
+        "address": "Canal du Midi, France",
+        "formatted_address": "Canal du Midi, France",
+        "locality": "Canal du Midi",
+        "region": null,
+        "postcode": null,
+        "country": "France"
+      },
+      "types": [
+        "landmark"
+      ],
+      "editorial": {
+        "popularity": "known_place",
+        "summary": "Landmarks / museums / architecture / activities | Landmark / Waterway"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJm_5EHFcxrhIRMQDOx2RwoI8",
+          "url": "https://www.google.com/maps/search/?api=1&query=Canal%20du%20Midi&query_place_id=ChIJm_5EHFcxrhIRMQDOx2RwoI8",
+          "rating": 4.4
+        }
+      }
+    },
+    {
+      "id": "location_ChIJr8Tm1DOwUQ0RiuJDb68a9-w",
+      "name": "Chillida Leku",
+      "description": "Cereal has a dedicated article on Chillida Leku, the Basque sculpture museum and landscape of artist Eduardo Chillida. One art-and-landscape stop near San Sebastián worth the detour.",
+      "geo": {
+        "main": {
+          "lat": 43.2782542,
+          "lng": -2.0007043
+        }
+      },
+      "location": {
+        "address": "near San Sebastián — Chillida Leku — near San Sebastián, Spain",
+        "formatted_address": "near San Sebastián, Spain",
+        "locality": "near San Sebastián",
+        "region": "Basque",
+        "postcode": null,
+        "country": "Spain"
+      },
+      "types": [
+        "cultural_landmark"
+      ],
+      "editorial": {
+        "popularity": "hidden_gem",
+        "summary": "Landmarks / museums / architecture / activities | Museum / Sculpture Park, nature, hidden_gem"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJr8Tm1DOwUQ0RiuJDb68a9-w",
+          "url": "https://www.google.com/maps/search/?api=1&query=Chillida%20Leku&query_place_id=ChIJr8Tm1DOwUQ0RiuJDb68a9-w",
+          "rating": 4.7
+        }
+      }
+    },
+    {
+      "id": "location_ChIJFZv_M7_AyRIRfr31NFtB3RA",
+      "name": "Château d'If",
+      "description": "Atlas Obscura flags this island prison as one of Marseille's signature unusual sights, tied to The Count of Monte Cristo mythology.",
+      "geo": {
+        "main": {
+          "lat": 43.2798587,
+          "lng": 5.325165
+        }
+      },
+      "location": {
+        "address": "Château d'If, France",
+        "formatted_address": "Château d'If, France",
+        "locality": "Château d'If",
+        "region": null,
+        "postcode": null,
+        "country": "France"
+      },
+      "types": [
+        "landmark"
+      ],
+      "editorial": {
+        "popularity": "touristic",
+        "summary": "Landmarks / museums / architecture / activities | Landmark / island fortress"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJFZv_M7_AyRIRfr31NFtB3RA",
+          "url": "https://www.google.com/maps/search/?api=1&query=Ch%C3%A2teau%20d%27If&query_place_id=ChIJFZv_M7_AyRIRfr31NFtB3RA",
+          "rating": 4.6
+        }
+      }
+    },
+    {
+      "id": "location_ChIJHx4cru6Pcg0RnprvyTOl8K0",
+      "name": "Dolmens of Antequera",
+      "description": "Prehistoric megalithic tombs — a meaningful ancient site that is not a standard tourist-city visit.",
+      "geo": {
+        "main": {
+          "lat": 37.0237538,
+          "lng": -4.5463791
+        }
+      },
+      "location": {
+        "address": "Dolmens of Antequera, Spain",
+        "formatted_address": "Dolmens of Antequera, Spain",
+        "locality": "Dolmens of Antequera",
+        "region": null,
+        "postcode": null,
+        "country": "Spain"
+      },
+      "types": [
+        "landmark"
+      ],
+      "editorial": {
+        "popularity": "known_place",
+        "summary": "Landmarks / museums / architecture / activities | Archaeological Site"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJHx4cru6Pcg0RnprvyTOl8K0",
+          "url": "https://www.google.com/maps/search/?api=1&query=Dolmens%20of%20Antequera&query_place_id=ChIJHx4cru6Pcg0RnprvyTOl8K0",
+          "rating": 4.5
+        }
+      }
+    },
+    {
+      "id": "location_ChIJ_-STBT6KuhIRuMT_Hu5C_Vc",
+      "name": "Ecomuseu-Farinera de Castelló d'Empúries",
+      "description": "A working ecological flour mill-museum in one of the most beautiful medieval towns of the Empordà plain — demonstrations of traditional milling and local craft heritage. Excellent for older small children with hands-on e",
+      "geo": {
+        "main": {
+          "lat": 42.2587997,
+          "lng": 3.0769648
+        }
+      },
+      "location": {
+        "address": "Ecomuseu-Farinera de Castelló d'Empúries, Spain",
+        "formatted_address": "Ecomuseu-Farinera de Castelló d'Empúries, Spain",
+        "locality": "Ecomuseu-Farinera de Castelló d'Empúries",
+        "region": null,
+        "postcode": null,
+        "country": "Spain"
+      },
+      "types": [
+        "cultural_landmark"
+      ],
+      "editorial": {
+        "popularity": "hidden_gem",
+        "summary": "Landmarks / museums / architecture / activities | Landmark / Museum"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJ_-STBT6KuhIRuMT_Hu5C_Vc",
+          "url": "https://www.google.com/maps/search/?api=1&query=Ecomuseu-Farinera%20de%20Castell%C3%B3%20d%27Emp%C3%BAries&query_place_id=ChIJ_-STBT6KuhIRuMT_Hu5C_Vc",
+          "rating": 4.4
+        }
+      }
+    },
+    {
+      "id": "location_ChIJrdRo6RVTuhIRJZgMayaQsLY",
+      "name": "El Far de Sant Sebastià",
+      "description": "A lighthouse perched on a clifftop headland above a sweeping bay — the views encompass the entire southern Costa Brava. The Camí de Ronda walking trail connects from here southward through pine-covered cliffs and hidden",
+      "geo": {
+        "main": {
+          "lat": 41.8960919,
+          "lng": 3.2024684
+        }
+      },
+      "location": {
+        "address": "El Far de Sant Sebastià (near Begur), Spain",
+        "formatted_address": "El Far de Sant Sebastià (near Begur), Spain",
+        "locality": "El Far de Sant Sebastià (near Begur)",
+        "region": "Costa Brava",
+        "postcode": null,
+        "country": "Spain"
+      },
+      "types": [
+        "hiking_area"
+      ],
+      "editorial": {
+        "popularity": "hidden_gem",
+        "summary": "Landmarks / museums / architecture / activities | Landmark, landmark, hidden_gem"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJrdRo6RVTuhIRJZgMayaQsLY",
+          "url": "https://www.google.com/maps/search/?api=1&query=El%20Far%20de%20Sant%20Sebasti%C3%A0&query_place_id=ChIJrdRo6RVTuhIRJZgMayaQsLY",
+          "rating": 4.6
+        }
+      }
+    },
+    {
+      "id": "location_ChIJFUYMexVfuhIROxlVKsjxlUQ",
+      "name": "Empúries Archaeological Site (L'Escala)",
+      "description": "The ruins of the only place in the Iberian Peninsula where a Greek and Roman city coexist — one of Spain's most important archaeological sites, on a cliff above a beautiful beach. L'Escala is also famous for its anchovie",
+      "geo": {
+        "main": {
+          "lat": 42.1348507,
+          "lng": 3.1206939
+        }
+      },
+      "location": {
+        "address": "Empúries Archaeological Site (L'Escala), Spain",
+        "formatted_address": "Empúries Archaeological Site (L'Escala), Spain",
+        "locality": "Empúries Archaeological Site (L'Escala)",
+        "region": null,
+        "postcode": null,
+        "country": "Spain"
+      },
+      "types": [
+        "historical_landmark"
+      ],
+      "editorial": {
+        "popularity": "known_place",
+        "summary": "Landmarks / museums / architecture / activities | Landmark / Beach"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJFUYMexVfuhIROxlVKsjxlUQ",
+          "url": "https://www.google.com/maps/search/?api=1&query=Emp%C3%BAries%20Archaeological%20Site%20%28L%27Escala%29&query_place_id=ChIJFUYMexVfuhIROxlVKsjxlUQ",
+          "rating": 4.6
+        }
+      }
+    },
+    {
+      "id": "location_ChIJ93uXEgArbg0RAEKPklWov9c",
+      "name": "Guadix",
+      "description": "Known for cave-house neighborhoods and unusual badlands scenery, making it a memorable inland stop rather than a beach one.",
+      "geo": {
+        "main": {
+          "lat": 37.3008155,
+          "lng": -3.1404188
+        }
+      },
+      "location": {
+        "address": "18500 Guadix, Granada, Spain",
+        "formatted_address": "18500 Guadix, Granada, Spain",
+        "locality": "Guadix",
+        "region": "Andalusia",
+        "postcode": null,
+        "country": "Spain"
+      },
+      "types": [
+        "town"
+      ],
+      "editorial": {
+        "popularity": "hidden_gem",
+        "summary": "Towns / cities / neighbourhoods | Inland Andalusian town famous for its cave houses."
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJ93uXEgArbg0RAEKPklWov9c",
+          "url": "https://www.google.com/maps/search/?api=1&query=Guadix&query_place_id=ChIJ93uXEgArbg0RAEKPklWov9c"
+        }
+      }
+    },
+    {
+      "id": "location_ChIJAxnyhxQ6Tg0RhkBHEn_dZEI",
+      "name": "Guernica (Gernika-Lumo)",
+      "description": "The historic political and spiritual capital of the Basque people — where the ancient assembly tree stands (the Tree of Gernika, under which Basque laws were sworn). The town was devastated in a Nazi bombing in 1937, ins",
+      "geo": {
+        "main": {
+          "lat": 43.311373,
+          "lng": -2.6808403
+        }
+      },
+      "location": {
+        "address": "Guernica (Gernika-Lumo), Spain",
+        "formatted_address": "Guernica (Gernika-Lumo), Spain",
+        "locality": "Guernica (Gernika-Lumo)",
+        "region": "Basque coast",
+        "postcode": null,
+        "country": "Spain"
+      },
+      "types": [
+        "landmark"
+      ],
+      "editorial": {
+        "popularity": "known_place",
+        "summary": "Landmarks / museums / architecture / activities | Small Town / Landmark, town, known_place"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJAxnyhxQ6Tg0RhkBHEn_dZEI",
+          "url": "https://www.google.com/maps/search/?api=1&query=Guernica%20%28Gernika-Lumo%29&query_place_id=ChIJAxnyhxQ6Tg0RhkBHEn_dZEI"
+        }
+      }
+    },
+    {
+      "id": "location_ChIJtTFg3t5PTg0RrW2vzbeTiFA",
+      "name": "Guggenheim Museum Bilbao",
+      "description": "Gehry's titanium landmark on the Nervión river. The building that proved architecture could revive a city — still compelling two decades on.",
+      "geo": {
+        "main": {
+          "lat": 43.2686712,
+          "lng": -2.9340118
+        }
+      },
+      "location": {
+        "address": "Guggenheim Museum Bilbao, Spain",
+        "formatted_address": "Guggenheim Museum Bilbao, Spain",
+        "locality": "Guggenheim Museum Bilbao",
+        "region": null,
+        "postcode": null,
+        "country": "Spain"
+      },
+      "types": [
+        "cultural_landmark"
+      ],
+      "editorial": {
+        "popularity": "touristic",
+        "summary": "Landmarks / museums / architecture / activities | Museum / Landmark"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJtTFg3t5PTg0RrW2vzbeTiFA",
+          "url": "https://www.google.com/maps/search/?api=1&query=Guggenheim%20Museum%20Bilbao&query_place_id=ChIJtTFg3t5PTg0RrW2vzbeTiFA",
+          "rating": 4.5
+        }
+      }
+    },
+    {
+      "id": "location_ChIJWfMAHNxPTg0RUhZPRovdnd4",
+      "name": "Jeff Koons' Puppy",
+      "description": "Atlas Obscura includes the giant topiary dog outside the Guggenheim among Bilbao's signature unusual attractions.",
+      "geo": {
+        "main": {
+          "lat": 43.2677226,
+          "lng": -2.9344979
+        }
+      },
+      "location": {
+        "address": "Jeff Koons' Puppy, Spain",
+        "formatted_address": "Jeff Koons' Puppy, Spain",
+        "locality": "Jeff Koons' Puppy",
+        "region": null,
+        "postcode": null,
+        "country": "Spain"
+      },
+      "types": [
+        "landmark"
+      ],
+      "editorial": {
+        "popularity": "touristic",
+        "summary": "Landmarks / museums / architecture / activities | Public Art / Landmark"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJWfMAHNxPTg0RUhZPRovdnd4",
+          "url": "https://www.google.com/maps/search/?api=1&query=Jeff%20Koons%27%20Puppy&query_place_id=ChIJWfMAHNxPTg0RUhZPRovdnd4",
+          "rating": 4.7
+        }
+      }
+    },
+    {
+      "id": "location_ChIJsTVlqBu_Fw0RbMFiUTs19KE",
+      "name": "Porto Roque Border Post",
+      "description": "Atlas Obscura highlights this abandoned anti-smuggling station on the Portugal-Spain border as one of the more unusual stops around Marvão. An atmospheric abandoned anti-smuggling station — a strong oddball detour for pl",
+      "geo": {
+        "main": {
+          "lat": 39.3836403,
+          "lng": -7.3812773
+        }
+      },
+      "location": {
+        "address": "Marvão area — Porto Roque Border Post — Marvão area, Portugal",
+        "formatted_address": "Marvão area, Portugal",
+        "locality": "Marvão area",
+        "region": null,
+        "postcode": null,
+        "country": "Portugal"
+      },
+      "types": [
+        "landmark"
+      ],
+      "editorial": {
+        "popularity": "hidden_gem",
+        "summary": "Landmarks / museums / architecture / activities | Border Site / Ruin | REVIEW NEEDED: Query 'Porto Roque Border Post, Marvão' returned 'Ponte Quinhentista da Portagem' (a 16th-century bridge at Portagem). May or may not be the 'Porto Roque' border post; verify."
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJsTVlqBu_Fw0RbMFiUTs19KE",
+          "url": "https://www.google.com/maps/search/?api=1&query=Porto%20Roque%20Border%20Post&query_place_id=ChIJsTVlqBu_Fw0RbMFiUTs19KE",
+          "rating": 4.6
+        }
+      }
+    },
+    {
+      "id": "location_ChIJ6wApfWpvuhIR2iPnmueCNf0",
+      "name": "The Palm Tree House",
+      "description": "Carefully renovated cluster of old fishermen's homes in Cadaqués, notable for preserving local coastal building character.",
+      "geo": {
+        "main": {
+          "lat": 42.2931577,
+          "lng": 3.2757711
+        }
+      },
+      "location": {
+        "address": "Cadaqués — The Palm Tree House — Cadaqués, Spain",
+        "formatted_address": "Cadaqués, Spain",
+        "locality": "Cadaqués",
+        "region": null,
+        "postcode": null,
+        "country": "Spain"
+      },
+      "types": [
+        "landmark"
+      ],
+      "editorial": {
+        "popularity": "hidden_gem",
+        "summary": "Landmarks / museums / architecture / activities | Architecture | REVIEW NEEDED: Lookup returned 'Animas Cadaqués' (a travel agency entry with only 1 review). 'The Palm Tree House' may be a private residence; verify or replace."
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJ6wApfWpvuhIR2iPnmueCNf0",
+          "url": "https://www.google.com/maps/search/?api=1&query=The%20Palm%20Tree%20House&query_place_id=ChIJ6wApfWpvuhIR2iPnmueCNf0",
+          "rating": 5.0
+        }
+      }
+    },
+    {
+      "id": "location_ChIJdWeeWfirFw0RfWdkhlda_zk",
+      "name": "The World's Shortest International Bridge",
+      "description": "A tiny bridge at the Portugal-Spain border that makes for a playful family stop and a memorable micro-detour.",
+      "geo": {
+        "main": {
+          "lat": 39.1808577,
+          "lng": -7.1698126
+        }
+      },
+      "location": {
+        "address": "Marvão area — The World's Shortest International Bridge — Marvão area, Portugal",
+        "formatted_address": "Marvão area, Portugal",
+        "locality": "Marvão area",
+        "region": null,
+        "postcode": null,
+        "country": "Portugal"
+      },
+      "types": [
+        "landmark"
+      ],
+      "editorial": {
+        "popularity": "hidden_gem",
+        "summary": "Landmarks / museums / architecture / activities | Landmark"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJdWeeWfirFw0RfWdkhlda_zk",
+          "url": "https://www.google.com/maps/search/?api=1&query=The%20World%27s%20Shortest%20International%20Bridge&query_place_id=ChIJdWeeWfirFw0RfWdkhlda_zk",
+          "rating": 4.6
+        }
+      }
+    },
+    {
+      "id": "location_ChIJdR-gyMEGuxIR_GLL4IWLPjM",
+      "name": "Via Ferrata Cala del Molí",
+      "description": "A dramatic sea-cliff via ferrata above the Costa Brava, worth keeping in the sourcebook as a stronger adventure anchor than a generic viewpoint. It is not for every family setup, but it is a compelling fit for the scenic",
+      "geo": {
+        "main": {
+          "lat": 41.7791842,
+          "lng": 3.041884
+        }
+      },
+      "location": {
+        "address": "Carrer de Sicília, 17220 Sant Feliu de Guíxols, Girona, Spain",
+        "formatted_address": "Carrer de Sicília, 17220 Sant Feliu de Guíxols, Girona, Spain",
+        "locality": "Carrer de Sicília, 17220 Sant Feliu de Guíxols, Girona",
+        "region": null,
+        "postcode": null,
+        "country": "Spain"
+      },
+      "types": [
+        "viewpoint"
+      ],
+      "editorial": {
+        "popularity": "known_place",
+        "summary": "Landmarks / museums / architecture / activities | Adventure / Coastal Activity"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJdR-gyMEGuxIR_GLL4IWLPjM",
+          "url": "https://www.google.com/maps/search/?api=1&query=Via%20Ferrata%20Cala%20del%20Mol%C3%AD&query_place_id=ChIJdR-gyMEGuxIR_GLL4IWLPjM",
+          "rating": 4.8
+        }
+      }
+    },
+    {
+      "id": "location_ChIJkajsEdEm_0cRIEP7V458BVE",
+      "name": "Dordogne / Périgord Noir",
+      "description": "A broader region rather than one town, but very good for slow family travel built around villages, food, river activities, and short drives.",
+      "geo": {
+        "main": {
+          "lat": 45.5520912,
+          "lng": 1.0077818
+        }
+      },
+      "location": {
+        "address": "Dordogne / Périgord Noir, France",
+        "formatted_address": "Dordogne / Périgord Noir, France",
+        "locality": "Dordogne / Périgord Noir",
+        "region": null,
+        "postcode": null,
+        "country": "France"
+      },
+      "types": [
+        "region"
+      ],
+      "editorial": {
+        "popularity": "known_place",
+        "summary": "Regions / route areas | region / family countryside route"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJkajsEdEm_0cRIEP7V458BVE",
+          "url": "https://www.google.com/maps/search/?api=1&query=Dordogne%20/%20P%C3%A9rigord%20Noir&query_place_id=ChIJkajsEdEm_0cRIEP7V458BVE",
+          "rating": 4.9
+        }
+      }
+    },
+    {
+      "id": "location_ChIJibJPyfk8yhIRx0STUA3YXD8",
+      "name": "Luberon",
+      "description": "Provence's inland region highlighted by Monocle as one of the area's lesser-known treasures, with rugged hilltop villages, forests, hiking, cycling, lavender, olive groves, and a slower rhythm away from the coast. Still",
+      "geo": {
+        "main": {
+          "lat": 43.8754097,
+          "lng": 5.3976138
+        }
+      },
+      "location": {
+        "address": "Luberon, France",
+        "formatted_address": "Luberon, France",
+        "locality": "Luberon",
+        "region": "Provence",
+        "postcode": null,
+        "country": "France"
+      },
+      "types": [
+        "region"
+      ],
+      "editorial": {
+        "popularity": "hidden_gem",
+        "summary": "Regions / route areas | Region, hidden_gem"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJibJPyfk8yhIRx0STUA3YXD8",
+          "url": "https://www.google.com/maps/search/?api=1&query=Luberon&query_place_id=ChIJibJPyfk8yhIRx0STUA3YXD8",
+          "rating": 4.5
+        }
+      }
+    },
+    {
+      "id": "location_ChIJZxr8zmBBGw0RbZY7fFMDD-c",
+      "name": "Soul Farm Algarve",
+      "description": null,
+      "geo": {
+        "main": {
+          "lat": 37.2887504,
+          "lng": -8.848227
+        }
+      },
+      "location": {
+        "address": "Soul Farm Algarve",
+        "formatted_address": "Soul Farm Algarve",
+        "locality": null,
+        "region": null,
+        "postcode": null,
+        "country": "Portugal"
+      },
+      "types": [
+        "region"
+      ],
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJZxr8zmBBGw0RbZY7fFMDD-c",
+          "url": "https://www.google.com/maps/search/?api=1&query=Soul%20Farm%20Algarve&query_place_id=ChIJZxr8zmBBGw0RbZY7fFMDD-c",
+          "rating": 4.9
+        }
+      }
+    },
+    {
+      "id": "location_ChIJy2k3nFHteg0RB0VWk0n2CCo",
+      "name": "Kampaoh Los Escullos",
+      "description": null,
+      "geo": {
+        "main": {
+          "lat": 36.8029389,
+          "lng": -2.0780675
+        }
+      },
+      "location": {
+        "address": "Kampaoh Los Escullos",
+        "formatted_address": "Kampaoh Los Escullos",
+        "locality": null,
+        "region": null,
+        "postcode": null,
+        "country": "Spain"
+      },
+      "types": [
+        "landmark"
+      ],
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJy2k3nFHteg0RB0VWk0n2CCo",
+          "url": "https://www.google.com/maps/search/?api=1&query=Kampaoh%20Los%20Escullos&query_place_id=ChIJy2k3nFHteg0RB0VWk0n2CCo",
+          "rating": 4.1
+        }
+      }
+    },
+    {
+      "id": "location_ChIJZYl6EJP4tRIRknQ0ymricw8",
+      "name": "La Vallée Heureuse",
+      "description": null,
+      "geo": {
+        "main": {
+          "lat": 43.7827447,
+          "lng": 5.0411634
+        }
+      },
+      "location": {
+        "address": "La Vallée Heureuse",
+        "formatted_address": "La Vallée Heureuse",
+        "locality": null,
+        "region": null,
+        "postcode": null,
+        "country": "France"
+      },
+      "types": [
+        "landmark"
+      ],
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJZYl6EJP4tRIRknQ0ymricw8",
+          "url": "https://www.google.com/maps/search/?api=1&query=La%20Vall%C3%A9e%20Heureuse&query_place_id=ChIJZYl6EJP4tRIRknQ0ymricw8",
+          "rating": 4.4
+        }
+      }
+    },
+    {
+      "id": "location_ChIJ37rm3HJZUQ0R7PgZ5is0a24",
+      "name": "Les Maritimes / Collection Rivages",
+      "description": null,
+      "geo": {
+        "main": {
+          "lat": 43.7235632,
+          "lng": -1.4124456
+        }
+      },
+      "location": {
+        "address": "Les Maritimes / Collection Rivages",
+        "formatted_address": "Les Maritimes / Collection Rivages",
+        "locality": null,
+        "region": null,
+        "postcode": null,
+        "country": "France"
+      },
+      "types": [
+        "campground"
+      ],
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJ37rm3HJZUQ0R7PgZ5is0a24",
+          "url": "https://www.google.com/maps/search/?api=1&query=Les%20Maritimes%20/%20Collection%20Rivages&query_place_id=ChIJ37rm3HJZUQ0R7PgZ5is0a24",
+          "rating": 4.1
+        }
+      }
+    },
+    {
+      "id": "location_ChIJpSUh0Sp5thIRv9L_rSJ66AI",
+      "name": "Manade Familiale (Camargue Ranches)",
+      "description": "Traditional Camargue \"manades\" (ranches) where white horses and black bulls are raised in the wild wetlands. Some are open for visits — horseback rides through lagoons and encounters with semi-wild herds. Extraordinary f",
+      "geo": {
+        "main": {
+          "lat": 43.660219,
+          "lng": 4.476706
+        }
+      },
+      "location": {
+        "address": "Manade Familiale (Camargue Ranches), France",
+        "formatted_address": "Manade Familiale (Camargue Ranches), France",
+        "locality": "Manade Familiale (Camargue Ranches)",
+        "region": null,
+        "postcode": null,
+        "country": "France"
+      },
+      "types": [
+        "landmark"
+      ],
+      "editorial": {
+        "popularity": "hidden_gem",
+        "summary": "Other | Farm / Animals"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJpSUh0Sp5thIRv9L_rSJ66AI",
+          "url": "https://www.google.com/maps/search/?api=1&query=Manade%20Familiale%20%28Camargue%20Ranches%29&query_place_id=ChIJpSUh0Sp5thIRv9L_rSJ66AI",
+          "rating": 4.5
+        }
+      }
+    },
+    {
+      "id": "location_ChIJTyp3srAVGw0RjuWXGL3oJSI",
+      "name": "Vale Palheiro Earth Resort",
+      "description": "Sustainable countryside retreat in Costa Vicentina built with rammed-earth construction and designed to sit quietly in the landscape.",
+      "geo": {
+        "main": {
+          "lat": 37.3184073,
+          "lng": -8.8109393
+        }
+      },
+      "location": {
+        "address": "Costa Vicentina — Vale Palheiro Earth Resort — Costa Vicentina, Portugal",
+        "formatted_address": "Costa Vicentina, Portugal",
+        "locality": "Costa Vicentina",
+        "region": null,
+        "postcode": null,
+        "country": "Portugal"
+      },
+      "types": [
+        "hotel"
+      ],
+      "editorial": {
+        "popularity": "hidden_gem",
+        "summary": "Other | Eco Stay"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJTyp3srAVGw0RjuWXGL3oJSI",
+          "url": "https://www.google.com/maps/search/?api=1&query=Vale%20Palheiro%20Earth%20Resort&query_place_id=ChIJTyp3srAVGw0RjuWXGL3oJSI",
+          "rating": 4.7
+        }
+      }
+    },
+    {
+      "id": "location_ChIJV7fsPjJvuhIRMCq-AvfGqdQ",
+      "name": "Cap de Creus Natural Park",
+      "description": "THE defining village of the Costa Brava — white cubic houses climbing a steep hillside above a horseshoe bay of pebble beaches, accessible only by a winding mountain road (which effectively preserves its character). Dalí Whitewashed, car-light village surrounded by a protected cape. Dalí's house at Portlligat a short walk away. One of the most architecturally and atmospherically distinctive towns on the Costa Brava — resists mass-tourism",
+      "geo": {
+        "main": {
+          "lat": 42.302194,
+          "lng": 3.2848709
+        }
+      },
+      "location": {
+        "address": "Cap de Creus, Girona, Spain",
+        "formatted_address": "Cap de Creus Natural Park, Catalonia, Spain",
+        "locality": null,
+        "region": "Costa Brava",
+        "postcode": null,
+        "country": "Spain"
+      },
+      "types": [
+        "nature_reserve"
+      ],
+      "editorial": {
+        "popularity": "known_place",
+        "summary": "Beaches / lakes / nature places | Natural Park / Coastal Region"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJV7fsPjJvuhIRMCq-AvfGqdQ",
+          "url": "https://www.google.com/maps/search/?api=1&query=Cap%20de%20Creus%20Natural%20Park&query_place_id=ChIJV7fsPjJvuhIRMCq-AvfGqdQ",
+          "rating": 3.1
+        }
+      }
+    },
+    {
+      "id": "location_ChIJGb19ZQAZyhIRZjqiZDBggkE",
+      "name": "Au Panem",
+      "description": "Artisan bakery in the heart of Lourmarin known for naturally leavened bread, organic flour and strong everyday provisioning for pastries, sandwiches and focaccia. Independent references consistently describe it as a reliable village stop for baked goods and quick picnic supplies.",
+      "geo": {
+        "main": {
+          "lat": 43.764221899999995,
+          "lng": 5.362470999999999
+        }
+      },
+      "location": {
+        "address": "26 Bis Rue du Temple, 84160 Lourmarin, France",
+        "formatted_address": "26 Bis Rue du Temple, 84160 Lourmarin, France",
+        "locality": "Lourmarin",
+        "region": "Vaucluse",
+        "postcode": "84160",
+        "country": "France"
+      },
+      "types": [
+        "bakery"
+      ],
+      "editorial": {
+        "popularity": "known_place",
+        "summary": "Bakeries / food provisioning | Organic sourdough bakery in central Lourmarin"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJGb19ZQAZyhIRZjqiZDBggkE",
+          "url": "https://www.google.com/maps/search/?api=1&query=Au%20Panem&query_place_id=ChIJGb19ZQAZyhIRZjqiZDBggkE",
+          "rating": 4.6
+        }
+      }
+    },
+    {
+      "id": "location_ChIJ9TcrmpsGi0cRuYVdR8TaPKk",
+      "name": "Huttopia Lac d'Aiguebelette",
+      "description": "Lakeside Huttopia campsite in Savoie, set a short walk from the turquoise waters of Lac d'Aiguebelette. The official site highlights van- and motorhome-friendly pitches, two pools, renovated shower blocks, beach access, bike hire, bread service and a strong family focus with easy access to swimming, paddling and Chartreuse nature outings.",
+      "geo": {
+        "main": {
+          "lat": 45.556126899999995,
+          "lng": 5.7912783999999995
+        }
+      },
+      "location": {
+        "address": "231 Rte du Sougey, 73610 Saint-Alban-de-Montbel, France",
+        "formatted_address": "231 Rte du Sougey, 73610 Saint-Alban-de-Montbel, France",
+        "locality": "Saint-Alban-de-Montbel",
+        "region": "Savoie",
+        "postcode": "73610",
+        "country": "France"
+      },
+      "types": [
+        "campground"
+      ],
+      "editorial": {
+        "popularity": "known_place",
+        "summary": "Campgrounds / campsite stays | Lakeside family campground with pool, beach access and watersports"
+      },
+      "provider_refs": {
+        "google_maps": {
+          "place_id": "ChIJ9TcrmpsGi0cRuYVdR8TaPKk",
+          "url": "https://www.google.com/maps/search/?api=1&query=Huttopia%20Lac%20d%27Aiguebelette&query_place_id=ChIJ9TcrmpsGi0cRuYVdR8TaPKk",
+          "rating": 4.2
+        }
+      }
+    }
+  ]
+}

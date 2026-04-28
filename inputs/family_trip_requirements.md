@@ -1,0 +1,85 @@
+# Family Trip Requirements
+
+## Traveler Information
+
+- Luis, 40
+- Sibylle, 40
+- Len, 5
+- Ida, 1
+
+## Vehicle Information
+
+Model: ID.Buzz GTX Long wheel base
+Sleeping setup: Thule Approach Size Large Rooftop tent 
+Height: 2.4 meters
+
+## Family needs, ordered top-down by priority
+
+1. All overnight stays should be suitable campsites for sleeping in a van with a rooftop tent (except for overnight stays already written in "Confirmed Decisions" section)
+2. Campsites must accept campers/vans
+3. Campsites must provide **hot showers** and **clean toilets**
+4. Favor quality over pace, with fewer base changes and more meaningful stays.
+5. Choose campsites in locations with worthwhile places to visit and family-friendly things to do nearby within walking distance or by bike.
+6. Campsites must be safe for small children, clean, quiet after **22:00**, and free of major hygiene or traffic-safety concerns.
+7. Plan campsite base stays for at least **2 nights**, and prefer longer stays when the location is strong enough to justify them.
+8. Favor fresh, local, seasonal food throughout the trip, especially seafood, strong produce access, artisan bakeries, local coffee roasters, micro local breweries and authentic regional restaurants.
+
+## Campsite locations wishlist, ordered top-down by priority
+
+- swimming pool,
+- playground or safe play space
+- soft-surface pitches
+- shaded areas with trees
+- and a family atmosphere with other young children around
+- bike rental on-site or nearby
+- charging infrastructure for EVs
+- nearby supermarket, grocery store or local food market
+- nearby bakery or market with fresh bread and baguette (specially in france)
+- nearby beach, park or town where we can walk and plan easy going activities during the day
+- kids club with entertainment activities for children
+- yoga classes for adults
+- Prefer private farm with animals, vineyard, or agritourism stays when they function as true campsite alternatives
+- nearby surfable beach break
+- nearby snorkeling or other water related activities
+- nearby trail access
+
+## Itinerary planning constraints
+
+- Every day must specify the exact sleep location
+- Every day must state whether its a drive day (we drive to a new sleep location) or a base day (we sleep in the same location)
+- Every drive day must include:
+  - Multiple lunch stop options
+  - Multiple family rest options
+  - Multiple EV charging options (ideally combining lunch and rest)
+  - Multiple interesting waypoints along the route to stop, visit, do and see
+  - Find suggestions whenever possible where we can buy fresh food ingredients from local food producer or markets along the route
+  - fast route option
+  - scenic route option
+- Every base day must include:
+  - interesting things to visit, do and see so we can discover the area like for example: going to the beach, doing a small kids-friendly trail, going to visit the local town, etc
+  - grocery, local market, local bakery or local restaurant suggestions reachable on foot or by bike without moving the vehicle
+
+## Driving preferences
+
+- Offer both a **fast route option** and a **scenic route option** for every drive day, plus a **no-highway option** when feasible.
+- Favor scenic and low-stress routing when it does not create a meaningful downside.
+- Avoid stressful city-center driving and prefer park-and-walk approaches for city visits.
+- Prefer to keep most drive days at or below **400 km**.
+- Allow a longer drive day only when:
+  - there is no high-value stop in between,
+  - and the extra distance buys at least one additional stationary night at a better base.
+
+## What to Avoid
+
+- Fast food, chains, and heavily processed food.
+- Single-night campsite stops without a strong reason.
+- Campsites with poor hygiene, poor safety reviews, or a loud late-night atmosphere.
+
+### Confirmed Decisions
+
+- Return to Zurich by **2026-07-10 to 2026-07-12**  
+- Departure is ideally **2026-06-04 to 2026-06-06** 
+- **Monte Gordo fixed anchor:** Hotel Dunas Mar, **2026-06-22 to 2026-06-29**, pre-booked and outside the camping itinerary.
+- **Barcelona fixed anchor** is a family visit for **1 night** and does not need campsite planning.
+- Return routing should differ from the outbound route
+- **Douro Valley** is intentionally excluded from this trip.

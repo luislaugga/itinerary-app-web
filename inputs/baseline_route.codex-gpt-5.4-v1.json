@@ -1,0 +1,1467 @@
+{
+    "route_id": "summer_2026_family_loop_baseline_google_grounded_v1",
+    "source": "google_maps_composio",
+    "generated_at": "2026-04-21T21:29:28Z",
+    "route_summary": {
+        "route_shape": "loop",
+        "start_anchor_id": "anchor_home_zurich",
+        "end_anchor_id": "anchor_home_zurich",
+        "ordered_anchor_ids": [
+            "anchor_home_zurich",
+            "anchor_aix_les_bains",
+            "anchor_valence",
+            "anchor_provence",
+            "anchor_camargue",
+            "anchor_costa_brava",
+            "anchor_barcelona",
+            "anchor_valencia",
+            "anchor_cartagena",
+            "anchor_west_andalusia",
+            "anchor_monte_gordo",
+            "anchor_aljezur",
+            "anchor_evora",
+            "anchor_salamanca",
+            "anchor_basque",
+            "anchor_landes",
+            "anchor_clermont",
+            "anchor_home_zurich"
+        ],
+        "outbound_anchor_ids": [
+            "anchor_home_zurich",
+            "anchor_aix_les_bains",
+            "anchor_valence",
+            "anchor_provence",
+            "anchor_camargue",
+            "anchor_costa_brava",
+            "anchor_barcelona",
+            "anchor_valencia",
+            "anchor_cartagena",
+            "anchor_west_andalusia",
+            "anchor_monte_gordo"
+        ],
+        "return_anchor_ids": [
+            "anchor_monte_gordo",
+            "anchor_aljezur",
+            "anchor_evora",
+            "anchor_salamanca",
+            "anchor_basque",
+            "anchor_landes",
+            "anchor_clermont",
+            "anchor_home_zurich"
+        ],
+        "total_distance_km": 4986.4,
+        "total_duration_minutes": 3397,
+        "route_strategy_summary": "Mediterranean outbound arc via Provence, Costa Brava, Barcelona, Valencia, and southeast Spain into Monte Gordo, then a different Atlantic/inland return via Costa Vicentina, Alentejo, Salamanca, the Basque coast, Landes, and central France."
+    },
+    "anchors": [
+        {
+            "id": "anchor_home_zurich",
+            "label": "Zurich",
+            "anchor_type": "home",
+            "sequence": 1,
+            "anchor_query": "Zurich, Switzerland",
+            "geolocation": {
+                "query": "Zurich, Switzerland",
+                "formatted_address": "Zürich, Switzerland",
+                "latitude": 47.3768866,
+                "longitude": 8.541694,
+                "google_place_id": "ChIJGaK-SZcLkEcRA9wf5_GNbuY"
+            }
+        },
+        {
+            "id": "anchor_aix_les_bains",
+            "label": "Aix-les-Bains",
+            "anchor_type": "flexible_anchor",
+            "sequence": 2,
+            "anchor_query": "Aix-les-Bains, France",
+            "geolocation": {
+                "query": "Aix-les-Bains, France",
+                "formatted_address": "Aix-les-Bains, France",
+                "latitude": 45.692341,
+                "longitude": 5.908998,
+                "google_place_id": "ChIJ09K5naKgi0cRQLm65CqrCAQ"
+            }
+        },
+        {
+            "id": "anchor_valence",
+            "label": "Valence",
+            "anchor_type": "flexible_anchor",
+            "sequence": 3,
+            "anchor_query": "Valence, France",
+            "geolocation": {
+                "query": "Valence, France",
+                "formatted_address": "26000 Valence, France",
+                "latitude": 44.9336953,
+                "longitude": 4.8967142,
+                "google_place_id": "ChIJxyEyxplX9UcRgLW_5CqrCAQ"
+            }
+        },
+        {
+            "id": "anchor_provence",
+            "label": "Provence / Marseille",
+            "anchor_type": "required_region",
+            "sequence": 4,
+            "anchor_query": "Marseille, France",
+            "geolocation": {
+                "query": "Marseille, France",
+                "formatted_address": "Marseille, France",
+                "latitude": 43.302574199999995,
+                "longitude": 5.369074299999999,
+                "google_place_id": "ChIJM1PaREO_yRIRIAKX_aUZCAQ"
+            }
+        },
+        {
+            "id": "anchor_camargue",
+            "label": "Camargue / Montpellier",
+            "anchor_type": "required_region",
+            "sequence": 5,
+            "anchor_query": "Montpellier, France",
+            "geolocation": {
+                "query": "Montpellier, France",
+                "formatted_address": "Montpellier, France",
+                "latitude": 43.6108535,
+                "longitude": 3.8761323,
+                "google_place_id": "ChIJsZ3dJQevthIRAuiUKHRWh60"
+            }
+        },
+        {
+            "id": "anchor_costa_brava",
+            "label": "Costa Brava",
+            "anchor_type": "required_region",
+            "sequence": 6,
+            "anchor_query": "Santa Cristina d'Aro, Spain",
+            "geolocation": {
+                "query": "Santa Cristina d'Aro, Spain",
+                "formatted_address": "17246 Santa Cristina d'Aro, Girona, Spain",
+                "latitude": 41.813777699999996,
+                "longitude": 2.9972985999999997,
+                "google_place_id": "ChIJPxOCfZEDuxIRu1ofkiE7eNs"
+            }
+        },
+        {
+            "id": "anchor_barcelona",
+            "label": "Barcelona",
+            "anchor_type": "family_visit",
+            "sequence": 7,
+            "anchor_query": "Barcelona, Spain",
+            "geolocation": {
+                "query": "Barcelona, Spain",
+                "formatted_address": "Barcelona, Spain",
+                "latitude": 41.387437399999996,
+                "longitude": 2.1686495999999997,
+                "google_place_id": "ChIJ5TCOcRaYpBIRCmZHTz37sEQ"
+            }
+        },
+        {
+            "id": "anchor_valencia",
+            "label": "Valencia",
+            "anchor_type": "flexible_anchor",
+            "sequence": 8,
+            "anchor_query": "Valencia, Spain",
+            "geolocation": {
+                "query": "Valencia, Spain",
+                "formatted_address": "València, Valencia, Spain",
+                "latitude": 39.4738338,
+                "longitude": -0.3756348,
+                "google_place_id": "ChIJb7Dv8ExPYA0ROR1_HwFRo7Q"
+            }
+        },
+        {
+            "id": "anchor_cartagena",
+            "label": "Cartagena / Cabo de Gata Corridor",
+            "anchor_type": "flexible_anchor",
+            "sequence": 9,
+            "anchor_query": "Cartagena, Murcia, Spain",
+            "geolocation": {
+                "query": "Cartagena, Murcia, Spain",
+                "formatted_address": "Cartagena, Murcia, Spain",
+                "latitude": 37.6253022,
+                "longitude": -0.9972219,
+                "google_place_id": "ChIJbbU6pCJCYw0R__n2_s6Q10c"
+            }
+        },
+        {
+            "id": "anchor_west_andalusia",
+            "label": "Sevilla / Western Andalusia",
+            "anchor_type": "flexible_anchor",
+            "sequence": 10,
+            "anchor_query": "Seville, Spain",
+            "geolocation": {
+                "query": "Seville, Spain",
+                "formatted_address": "Seville, Spain",
+                "latitude": 37.389092399999996,
+                "longitude": -5.9844589,
+                "google_place_id": "ChIJkWK-FBFsEg0RSFb-HGIY8DQ"
+            }
+        },
+        {
+            "id": "anchor_monte_gordo",
+            "label": "Monte Gordo",
+            "anchor_type": "fixed_anchor",
+            "sequence": 11,
+            "anchor_query": "Hotel Dunas Mar, Monte Gordo, Portugal",
+            "geolocation": {
+                "query": "Hotel Dunas Mar, Monte Gordo, Portugal",
+                "formatted_address": "Av. Infante Dom Henrique, 8900-413 Monte Gordo, Portugal",
+                "latitude": 37.1788411,
+                "longitude": -7.444165899999999,
+                "google_place_id": "ChIJP2GhiMdSBQ0R0rI-WJg3XWQ"
+            }
+        },
+        {
+            "id": "anchor_aljezur",
+            "label": "Aljezur / Costa Vicentina",
+            "anchor_type": "return_region",
+            "sequence": 12,
+            "anchor_query": "Aljezur, Portugal",
+            "geolocation": {
+                "query": "Aljezur, Portugal",
+                "formatted_address": "8670 Aljezur, Portugal",
+                "latitude": 37.31657,
+                "longitude": -8.7992645,
+                "google_place_id": "ChIJw4QJoFMVGw0Rxg_DN39zeBA"
+            }
+        },
+        {
+            "id": "anchor_evora",
+            "label": "Evora / Alentejo",
+            "anchor_type": "return_region",
+            "sequence": 13,
+            "anchor_query": "Evora, Portugal",
+            "geolocation": {
+                "query": "Evora, Portugal",
+                "formatted_address": "Evora, Portugal",
+                "latitude": 38.571431,
+                "longitude": -7.913501999999999,
+                "google_place_id": "ChIJnRODON_kGQ0RbO-9wzGKraY"
+            }
+        },
+        {
+            "id": "anchor_salamanca",
+            "label": "Salamanca",
+            "anchor_type": "flexible_anchor",
+            "sequence": 14,
+            "anchor_query": "Salamanca, Spain",
+            "geolocation": {
+                "query": "Salamanca, Spain",
+                "formatted_address": "Salamanca, Spain",
+                "latitude": 40.9701039,
+                "longitude": -5.663539699999999,
+                "google_place_id": "ChIJRXzdx10mPw0Rqqm_C9Dkei8"
+            }
+        },
+        {
+            "id": "anchor_basque",
+            "label": "Basque Coast",
+            "anchor_type": "return_region",
+            "sequence": 15,
+            "anchor_query": "Getaria, Gipuzkoa, Spain",
+            "geolocation": {
+                "query": "Getaria, Gipuzkoa, Spain",
+                "formatted_address": "Getaria, Gipuzkoa, Spain",
+                "latitude": 43.3028581,
+                "longitude": -2.204608,
+                "google_place_id": "ChIJCRcmAqLIUQ0RILKbTAdNcMQ"
+            }
+        },
+        {
+            "id": "anchor_landes",
+            "label": "Landes",
+            "anchor_type": "return_region",
+            "sequence": 16,
+            "anchor_query": "Soorts-Hossegor, France",
+            "geolocation": {
+                "query": "Soorts-Hossegor, France",
+                "formatted_address": "Soorts, 40150 Soorts-Hossegor, France",
+                "latitude": 43.664733,
+                "longitude": -1.3962210000000002,
+                "google_place_id": "ChIJSUDTy_laUQ0RkM8yzLT3CiI"
+            }
+        },
+        {
+            "id": "anchor_clermont",
+            "label": "Clermont-Ferrand",
+            "anchor_type": "flexible_anchor",
+            "sequence": 17,
+            "anchor_query": "Clermont-Ferrand, France",
+            "geolocation": {
+                "query": "Clermont-Ferrand, France",
+                "formatted_address": "Clermont-Ferrand, France",
+                "latitude": 45.793516,
+                "longitude": 3.0794951,
+                "google_place_id": "ChIJB4Uuf90b90cRIm-gOGAwlDk"
+            }
+        }
+    ],
+    "legs": [
+        {
+            "id": "leg_01",
+            "sequence": 1,
+            "leg_group": "outbound",
+            "from_anchor_id": "anchor_home_zurich",
+            "to_anchor_id": "anchor_aix_les_bains",
+            "selected_option_id": "leg_01_fast",
+            "route_options": [
+                {
+                    "style": "fast",
+                    "maps_url": "https://www.google.com/maps/dir/?api=1&origin=Zurich%2C+Switzerland&destination=Aix-les-Bains%2C+France&travelmode=driving",
+                    "total_km": 346.1,
+                    "duration_minutes": 221,
+                    "major_roads": [
+                        "A1",
+                        "A1H"
+                    ],
+                    "steps": [
+                        "Slight right to stay on Sihlquai (signs for A1/A3/A4/Bern/Basel/Route 1)"
+                    ],
+                    "corridor_waypoint_labels": [
+                        "Lausanne",
+                        "Geneva",
+                        "Annecy"
+                    ]
+                },
+                {
+                    "style": "scenic",
+                    "maps_url": "https://www.google.com/maps/dir/?api=1&origin=Zurich%2C+Switzerland&destination=Aix-les-Bains%2C+France&travelmode=driving&waypoints=Lausanne%2C+Switzerland%7CGeneva%2C+Switzerland%7CAnnecy%2C+France",
+                    "total_km": 369.0,
+                    "duration_minutes": 272,
+                    "major_roads": [
+                        "A1",
+                        "A1H"
+                    ],
+                    "steps": [
+                        "Slight right to stay on Sihlquai (signs for A1/A3/A4/Bern/Basel/Route 1)"
+                    ],
+                    "corridor_waypoint_labels": [
+                        "Lausanne",
+                        "Geneva",
+                        "Annecy"
+                    ]
+                },
+                {
+                    "style": "no_highways",
+                    "maps_url": "https://www.google.com/maps/dir/?api=1&origin=Zurich%2C+Switzerland&destination=Aix-les-Bains%2C+France&travelmode=driving&waypoints=Lausanne%2C+Switzerland%7CNyon%2C+Switzerland%7CAnnecy%2C+France",
+                    "total_km": 350.2,
+                    "duration_minutes": 409,
+                    "major_roads": [
+                        "A1",
+                        "A3"
+                    ],
+                    "steps": [
+                        "Slight right to stay on Sihlquai (signs for A1/A3/A4/Bern/Basel/Route 1)"
+                    ],
+                    "corridor_waypoint_labels": [
+                        "Lausanne",
+                        "Nyon",
+                        "Annecy"
+                    ]
+                }
+            ],
+            "corridor_search_hints": [
+                "Lausanne",
+                "Geneva",
+                "Annecy"
+            ]
+        },
+        {
+            "id": "leg_02",
+            "sequence": 2,
+            "leg_group": "outbound",
+            "from_anchor_id": "anchor_aix_les_bains",
+            "to_anchor_id": "anchor_valence",
+            "selected_option_id": "leg_02_fast",
+            "route_options": [
+                {
+                    "style": "fast",
+                    "maps_url": "https://www.google.com/maps/dir/?api=1&origin=Aix-les-Bains%2C+France&destination=Valence%2C+France&travelmode=driving",
+                    "total_km": 171.8,
+                    "duration_minutes": 117,
+                    "major_roads": [
+                        "D991",
+                        "D1201"
+                    ],
+                    "steps": [
+                        "Head south on Av. Alsace Lorraine/D991"
+                    ],
+                    "corridor_waypoint_labels": [
+                        "Chambery",
+                        "Grenoble outskirts",
+                        "Romans-sur-Isere"
+                    ]
+                },
+                {
+                    "style": "scenic",
+                    "maps_url": "https://www.google.com/maps/dir/?api=1&origin=Aix-les-Bains%2C+France&destination=Valence%2C+France&travelmode=driving&waypoints=Chambery%2C+France%7CGrenoble%2C+France%7CRomans-sur-Isere%2C+France",
+                    "total_km": 172.9,
+                    "duration_minutes": 145,
+                    "major_roads": [
+                        "D991",
+                        "D1201"
+                    ],
+                    "steps": [
+                        "Head south on Av. Alsace Lorraine/D991"
+                    ],
+                    "corridor_waypoint_labels": [
+                        "Chambery",
+                        "Grenoble",
+                        "Romans-sur-Isere"
+                    ]
+                },
+                {
+                    "style": "no_highways",
+                    "maps_url": "https://www.google.com/maps/dir/?api=1&origin=Aix-les-Bains%2C+France&destination=Valence%2C+France&travelmode=driving&waypoints=Chambery%2C+France%7CVoiron%2C+France%7CRomans-sur-Isere%2C+France",
+                    "total_km": 163.5,
+                    "duration_minutes": 192,
+                    "major_roads": [
+                        "D991",
+                        "D127"
+                    ],
+                    "steps": [
+                        "Head south on Av. Alsace Lorraine/D991"
+                    ],
+                    "corridor_waypoint_labels": [
+                        "Chambery",
+                        "Voiron",
+                        "Romans-sur-Isere"
+                    ]
+                }
+            ],
+            "corridor_search_hints": [
+                "Chambery",
+                "Grenoble outskirts",
+                "Romans-sur-Isere"
+            ]
+        },
+        {
+            "id": "leg_03",
+            "sequence": 3,
+            "leg_group": "outbound",
+            "from_anchor_id": "anchor_valence",
+            "to_anchor_id": "anchor_provence",
+            "selected_option_id": "leg_03_fast",
+            "route_options": [
+                {
+                    "style": "fast",
+                    "maps_url": "https://www.google.com/maps/dir/?api=1&origin=Valence%2C+France&destination=Marseille%2C+France&travelmode=driving",
+                    "total_km": 212.5,
+                    "duration_minutes": 143,
+                    "major_roads": [
+                        "D2007N",
+                        "E713"
+                    ],
+                    "steps": [
+                        "Continue onto Av. de Provence/D2007N"
+                    ],
+                    "corridor_waypoint_labels": [
+                        "Montelimar",
+                        "Avignon",
+                        "Luberon / Aix-en-Provence"
+                    ]
+                },
+                {
+                    "style": "scenic",
+                    "maps_url": "https://www.google.com/maps/dir/?api=1&origin=Valence%2C+France&destination=Marseille%2C+France&travelmode=driving&waypoints=Montelimar%2C+France%7CAvignon%2C+France%7CLourmarin%2C+France%7CAix-en-Provence%2C+France",
+                    "total_km": 268.0,
+                    "duration_minutes": 236,
+                    "major_roads": [
+                        "D2007N",
+                        "E713"
+                    ],
+                    "steps": [
+                        "Continue onto Av. de Provence/D2007N"
+                    ],
+                    "corridor_waypoint_labels": [
+                        "Montelimar",
+                        "Avignon",
+                        "Lourmarin"
+                    ]
+                },
+                {
+                    "style": "no_highways",
+                    "maps_url": "https://www.google.com/maps/dir/?api=1&origin=Valence%2C+France&destination=Marseille%2C+France&travelmode=driving&waypoints=Montelimar%2C+France%7COrange%2C+France%7CSalon-de-Provence%2C+France",
+                    "total_km": 227.2,
+                    "duration_minutes": 250,
+                    "major_roads": [
+                        "D2007N",
+                        "N7"
+                    ],
+                    "steps": [
+                        "Continue onto Av. de Provence/D2007N"
+                    ],
+                    "corridor_waypoint_labels": [
+                        "Montelimar",
+                        "Orange",
+                        "Salon-de-Provence"
+                    ]
+                }
+            ],
+            "corridor_search_hints": [
+                "Montelimar",
+                "Avignon",
+                "Luberon / Aix-en-Provence"
+            ]
+        },
+        {
+            "id": "leg_04",
+            "sequence": 4,
+            "leg_group": "outbound",
+            "from_anchor_id": "anchor_provence",
+            "to_anchor_id": "anchor_camargue",
+            "selected_option_id": "leg_04_fast",
+            "route_options": [
+                {
+                    "style": "fast",
+                    "maps_url": "https://www.google.com/maps/dir/?api=1&origin=Marseille%2C+France&destination=Montpellier%2C+France&travelmode=driving",
+                    "total_km": 168.5,
+                    "duration_minutes": 119,
+                    "major_roads": [
+                        "A55",
+                        "A7"
+                    ],
+                    "steps": [
+                        "Slight left to merge onto A55 toward Fos/Martigues/Aéroport Marignane/Aix en PCE/Lyon/L'Estaque/Les Arnavaux"
+                    ],
+                    "corridor_waypoint_labels": [
+                        "Arles",
+                        "Camargue wetlands belt",
+                        "Aigues-Mortes"
+                    ]
+                },
+                {
+                    "style": "scenic",
+                    "maps_url": "https://www.google.com/maps/dir/?api=1&origin=Marseille%2C+France&destination=Montpellier%2C+France&travelmode=driving&waypoints=Arles%2C+France%7CSaintes-Maries-de-la-Mer%2C+France%7CAigues-Mortes%2C+France",
+                    "total_km": 194.2,
+                    "duration_minutes": 167,
+                    "major_roads": [
+                        "A55",
+                        "E714"
+                    ],
+                    "steps": [
+                        "Slight left onto the A55 ramp to Fos/Martigues/Aéroport Marignane/Aix en PCE/Lyon/L'Estaque/Les Arnavaux"
+                    ],
+                    "corridor_waypoint_labels": [
+                        "Arles",
+                        "Saintes-Maries-de-la-Mer",
+                        "Aigues-Mortes"
+                    ]
+                },
+                {
+                    "style": "no_highways",
+                    "maps_url": "https://www.google.com/maps/dir/?api=1&origin=Marseille%2C+France&destination=Montpellier%2C+France&travelmode=driving&waypoints=Arles%2C+France%7CAigues-Mortes%2C+France%7CLa+Grande-Motte%2C+France",
+                    "total_km": 176.3,
+                    "duration_minutes": 189,
+                    "major_roads": [
+                        "D5",
+                        "D5A"
+                    ],
+                    "steps": [
+                        "Slight left onto Rue du Cargo Rhin Fidelity/D5"
+                    ],
+                    "corridor_waypoint_labels": [
+                        "Arles",
+                        "Aigues-Mortes",
+                        "La Grande-Motte"
+                    ]
+                }
+            ],
+            "corridor_search_hints": [
+                "Arles",
+                "Camargue wetlands belt",
+                "Aigues-Mortes"
+            ]
+        },
+        {
+            "id": "leg_05",
+            "sequence": 5,
+            "leg_group": "outbound",
+            "from_anchor_id": "anchor_camargue",
+            "to_anchor_id": "anchor_costa_brava",
+            "selected_option_id": "leg_05_fast",
+            "route_options": [
+                {
+                    "style": "fast",
+                    "maps_url": "https://www.google.com/maps/dir/?api=1&origin=Montpellier%2C+France&destination=Santa+Cristina+d%27Aro%2C+Spain&travelmode=driving",
+                    "total_km": 277.1,
+                    "duration_minutes": 193,
+                    "major_roads": [
+                        "M65",
+                        "M613"
+                    ],
+                    "steps": [
+                        "Continue onto Av. de la Récambale/M65 Continue to follow M65"
+                    ],
+                    "corridor_waypoint_labels": [
+                        "Sete",
+                        "Collioure",
+                        "Girona"
+                    ]
+                },
+                {
+                    "style": "scenic",
+                    "maps_url": "https://www.google.com/maps/dir/?api=1&origin=Montpellier%2C+France&destination=Santa+Cristina+d%27Aro%2C+Spain&travelmode=driving&waypoints=Sete%2C+France%7CCollioure%2C+France%7CPortbou%2C+Spain%7CGirona%2C+Spain",
+                    "total_km": 344.5,
+                    "duration_minutes": 314,
+                    "major_roads": [
+                        "M65",
+                        "M613"
+                    ],
+                    "steps": [
+                        "Continue onto Av. de la Récambale/M65 Continue to follow M65"
+                    ],
+                    "corridor_waypoint_labels": [
+                        "Sete",
+                        "Collioure",
+                        "Portbou"
+                    ]
+                },
+                {
+                    "style": "no_highways",
+                    "maps_url": "https://www.google.com/maps/dir/?api=1&origin=Montpellier%2C+France&destination=Santa+Cristina+d%27Aro%2C+Spain&travelmode=driving&waypoints=Narbonne%2C+France%7CPerpignan%2C+France%7CFigueres%2C+Spain%7CGirona%2C+Spain",
+                    "total_km": 300.7,
+                    "duration_minutes": 327,
+                    "major_roads": [
+                        "M5",
+                        "D5"
+                    ],
+                    "steps": [
+                        "At the roundabout, take the 3rd exit onto M5"
+                    ],
+                    "corridor_waypoint_labels": [
+                        "Narbonne",
+                        "Perpignan",
+                        "Figueres"
+                    ]
+                }
+            ],
+            "corridor_search_hints": [
+                "Sete",
+                "Collioure",
+                "Girona"
+            ]
+        },
+        {
+            "id": "leg_06",
+            "sequence": 6,
+            "leg_group": "outbound",
+            "from_anchor_id": "anchor_costa_brava",
+            "to_anchor_id": "anchor_barcelona",
+            "selected_option_id": "leg_06_fast",
+            "route_options": [
+                {
+                    "style": "fast",
+                    "maps_url": "https://www.google.com/maps/dir/?api=1&origin=Santa+Cristina+d%27Aro%2C+Spain&destination=Barcelona%2C+Spain&travelmode=driving",
+                    "total_km": 100.8,
+                    "duration_minutes": 75,
+                    "major_roads": [
+                        "C-65",
+                        "C-35"
+                    ],
+                    "steps": [
+                        "At the roundabout, take the 1st exit onto the C-65 ramp to AP-7/Girona/Barcelona"
+                    ],
+                    "corridor_waypoint_labels": [
+                        "Tossa de Mar",
+                        "Maresme coast",
+                        "Barcelona family-visit arrival zone"
+                    ]
+                },
+                {
+                    "style": "scenic",
+                    "maps_url": "https://www.google.com/maps/dir/?api=1&origin=Santa+Cristina+d%27Aro%2C+Spain&destination=Barcelona%2C+Spain&travelmode=driving&waypoints=Tossa+de+Mar%2C+Spain%7CMataro%2C+Spain",
+                    "total_km": 117.4,
+                    "duration_minutes": 118,
+                    "major_roads": [
+                        "C-65",
+                        "C-35"
+                    ],
+                    "steps": [
+                        "At the roundabout, take the 1st exit onto the C-65 ramp to AP-7/Girona/Barcelona"
+                    ],
+                    "corridor_waypoint_labels": [
+                        "Tossa de Mar",
+                        "Mataro"
+                    ]
+                },
+                {
+                    "style": "no_highways",
+                    "maps_url": "https://www.google.com/maps/dir/?api=1&origin=Santa+Cristina+d%27Aro%2C+Spain&destination=Barcelona%2C+Spain&travelmode=driving&waypoints=Lloret+de+Mar%2C+Spain%7CMataro%2C+Spain",
+                    "total_km": 138.0,
+                    "duration_minutes": 191,
+                    "major_roads": [
+                        "GIV-6612",
+                        "B-682"
+                    ],
+                    "steps": [
+                        "Turn left onto GIV-6612"
+                    ],
+                    "corridor_waypoint_labels": [
+                        "Lloret de Mar",
+                        "Mataro"
+                    ]
+                }
+            ],
+            "corridor_search_hints": [
+                "Tossa de Mar",
+                "Maresme coast",
+                "Barcelona family-visit arrival zone"
+            ]
+        },
+        {
+            "id": "leg_07",
+            "sequence": 7,
+            "leg_group": "outbound",
+            "from_anchor_id": "anchor_barcelona",
+            "to_anchor_id": "anchor_valencia",
+            "selected_option_id": "leg_07_fast",
+            "route_options": [
+                {
+                    "style": "fast",
+                    "maps_url": "https://www.google.com/maps/dir/?api=1&origin=Barcelona%2C+Spain&destination=Valencia%2C+Spain&travelmode=driving",
+                    "total_km": 348.3,
+                    "duration_minutes": 229,
+                    "major_roads": [
+                        "C-31",
+                        "A-2"
+                    ],
+                    "steps": [
+                        "At Pl. d'Espanya, take the 4th exit onto Gran Via de les Corts Catalanes/C-31 Continue to follow C-31"
+                    ],
+                    "corridor_waypoint_labels": [
+                        "Sitges",
+                        "Delta de l'Ebre",
+                        "Peniscola / Alcossebre"
+                    ]
+                },
+                {
+                    "style": "scenic",
+                    "maps_url": "https://www.google.com/maps/dir/?api=1&origin=Barcelona%2C+Spain&destination=Valencia%2C+Spain&travelmode=driving&waypoints=Sitges%2C+Spain%7CPeniscola%2C+Spain%7CAlcossebre%2C+Spain",
+                    "total_km": 371.2,
+                    "duration_minutes": 266,
+                    "major_roads": [
+                        "C-31",
+                        "A-2"
+                    ],
+                    "steps": [
+                        "At Pl. d'Espanya, take the 4th exit onto Gran Via de les Corts Catalanes/C-31"
+                    ],
+                    "corridor_waypoint_labels": [
+                        "Sitges",
+                        "Peniscola",
+                        "Alcossebre"
+                    ]
+                },
+                {
+                    "style": "no_highways",
+                    "maps_url": "https://www.google.com/maps/dir/?api=1&origin=Barcelona%2C+Spain&destination=Valencia%2C+Spain&travelmode=driving&waypoints=Tarragona%2C+Spain%7CAmposta%2C+Spain%7CPeniscola%2C+Spain",
+                    "total_km": 386.7,
+                    "duration_minutes": 382,
+                    "major_roads": [
+                        "C-31",
+                        "B-250"
+                    ],
+                    "steps": [
+                        "At Pl. d'Espanya, take the 4th exit onto Gran Via de les Corts Catalanes/C-31"
+                    ],
+                    "corridor_waypoint_labels": [
+                        "Tarragona",
+                        "Amposta",
+                        "Peniscola"
+                    ]
+                }
+            ],
+            "corridor_search_hints": [
+                "Sitges",
+                "Delta de l'Ebre",
+                "Peniscola / Alcossebre"
+            ]
+        },
+        {
+            "id": "leg_08",
+            "sequence": 8,
+            "leg_group": "outbound",
+            "from_anchor_id": "anchor_valencia",
+            "to_anchor_id": "anchor_cartagena",
+            "selected_option_id": "leg_08_fast",
+            "route_options": [
+                {
+                    "style": "fast",
+                    "maps_url": "https://www.google.com/maps/dir/?api=1&origin=Valencia%2C+Spain&destination=Cartagena%2C+Murcia%2C+Spain&travelmode=driving",
+                    "total_km": 262.3,
+                    "duration_minutes": 172,
+                    "major_roads": [
+                        "A-7",
+                        "A-35"
+                    ],
+                    "steps": [
+                        "At the roundabout, take the 2nd exit onto Av. d'Ausiàs March/Pista de Silla/V-31 Continue to follow Pista de Silla/V-31"
+                    ],
+                    "corridor_waypoint_labels": [
+                        "Altea",
+                        "Alicante",
+                        "Cabo de Palos"
+                    ]
+                },
+                {
+                    "style": "scenic",
+                    "maps_url": "https://www.google.com/maps/dir/?api=1&origin=Valencia%2C+Spain&destination=Cartagena%2C+Murcia%2C+Spain&travelmode=driving&waypoints=Altea%2C+Spain%7CAlicante%2C+Spain%7CCabo+de+Palos%2C+Spain",
+                    "total_km": 356.5,
+                    "duration_minutes": 240,
+                    "major_roads": [
+                        "E-15",
+                        "N-332"
+                    ],
+                    "steps": [
+                        "Exit the roundabout onto Av. d'Ausiàs March/Pista de Silla/V-31 Continue to follow Pista de Silla/V-31"
+                    ],
+                    "corridor_waypoint_labels": [
+                        "Altea",
+                        "Alicante",
+                        "Cabo de Palos"
+                    ]
+                },
+                {
+                    "style": "no_highways",
+                    "maps_url": "https://www.google.com/maps/dir/?api=1&origin=Valencia%2C+Spain&destination=Cartagena%2C+Murcia%2C+Spain&travelmode=driving&waypoints=Cullera%2C+Spain%7CDenia%2C+Spain%7CAlicante%2C+Spain%7CTorrevieja%2C+Spain",
+                    "total_km": 303.1,
+                    "duration_minutes": 336,
+                    "major_roads": [
+                        "N-332",
+                        "E-15"
+                    ],
+                    "steps": [
+                        "Exit the roundabout onto Carretera Nazaret Oliva/CV-502 Continue to follow CV-502"
+                    ],
+                    "corridor_waypoint_labels": [
+                        "Cullera",
+                        "Denia",
+                        "Alicante"
+                    ]
+                }
+            ],
+            "corridor_search_hints": [
+                "Altea",
+                "Alicante",
+                "Cabo de Palos"
+            ]
+        },
+        {
+            "id": "leg_09",
+            "sequence": 9,
+            "leg_group": "outbound",
+            "from_anchor_id": "anchor_cartagena",
+            "to_anchor_id": "anchor_west_andalusia",
+            "selected_option_id": "leg_09_fast",
+            "route_options": [
+                {
+                    "style": "fast",
+                    "maps_url": "https://www.google.com/maps/dir/?api=1&origin=Cartagena%2C+Murcia%2C+Spain&destination=Seville%2C+Spain&travelmode=driving",
+                    "total_km": 540.0,
+                    "duration_minutes": 350,
+                    "major_roads": [
+                        "A-30",
+                        "A-7"
+                    ],
+                    "steps": [
+                        "At the roundabout, take the 2nd exit onto the A-30 ramp to Murcia"
+                    ],
+                    "corridor_waypoint_labels": [
+                        "Cabo de Gata / Las Negras",
+                        "Guadix / Granada corridor",
+                        "Antequera"
+                    ]
+                },
+                {
+                    "style": "scenic",
+                    "maps_url": "https://www.google.com/maps/dir/?api=1&origin=Cartagena%2C+Murcia%2C+Spain&destination=Seville%2C+Spain&travelmode=driving&waypoints=Cabo+de+Gata%2C+Spain%7CGuadix%2C+Spain%7CAntequera%2C+Spain",
+                    "total_km": 626.2,
+                    "duration_minutes": 431,
+                    "major_roads": [
+                        "N-332",
+                        "E-15"
+                    ],
+                    "steps": [
+                        "At the roundabout, take the 4th exit toward RM-36/N-332/Almería/Mazarrón/Ronda Transversal"
+                    ],
+                    "corridor_waypoint_labels": [
+                        "Cabo de Gata",
+                        "Guadix",
+                        "Antequera"
+                    ]
+                },
+                {
+                    "style": "no_highways",
+                    "maps_url": "https://www.google.com/maps/dir/?api=1&origin=Cartagena%2C+Murcia%2C+Spain&destination=Seville%2C+Spain&travelmode=driving&waypoints=Lorca%2C+Spain%7CVelez-Rubio%2C+Spain%7CAntequera%2C+Spain%7COsuna%2C+Spain",
+                    "total_km": 703.9,
+                    "duration_minutes": 689,
+                    "major_roads": [
+                        "E11",
+                        "E27"
+                    ],
+                    "steps": [
+                        "Exit the roundabout onto RM-602"
+                    ],
+                    "corridor_waypoint_labels": [
+                        "Lorca",
+                        "Velez-Rubio",
+                        "Antequera"
+                    ]
+                }
+            ],
+            "corridor_search_hints": [
+                "Cabo de Gata / Las Negras",
+                "Guadix / Granada corridor",
+                "Antequera"
+            ]
+        },
+        {
+            "id": "leg_10",
+            "sequence": 10,
+            "leg_group": "outbound",
+            "from_anchor_id": "anchor_west_andalusia",
+            "to_anchor_id": "anchor_monte_gordo",
+            "selected_option_id": "leg_10_fast",
+            "route_options": [
+                {
+                    "style": "fast",
+                    "maps_url": "https://www.google.com/maps/dir/?api=1&origin=Seville%2C+Spain&destination=Hotel+Dunas+Mar%2C+Monte+Gordo%2C+Portugal&travelmode=driving",
+                    "total_km": 150.2,
+                    "duration_minutes": 103,
+                    "major_roads": [
+                        "E-1",
+                        "A22"
+                    ],
+                    "steps": [
+                        "Continue onto E-1/A-49 (signs for Camas/Huelva/Puerto)"
+                    ],
+                    "corridor_waypoint_labels": [
+                        "El Rocio",
+                        "Huelva coast",
+                        "Ayamonte / Tavira border belt"
+                    ]
+                },
+                {
+                    "style": "scenic",
+                    "maps_url": "https://www.google.com/maps/dir/?api=1&origin=Seville%2C+Spain&destination=Hotel+Dunas+Mar%2C+Monte+Gordo%2C+Portugal&travelmode=driving&waypoints=El+Rocio%2C+Spain%7CHuelva%2C+Spain%7CAyamonte%2C+Spain",
+                    "total_km": 217.1,
+                    "duration_minutes": 183,
+                    "major_roads": [
+                        "E-1",
+                        "A-483"
+                    ],
+                    "steps": [
+                        "Continue onto E-1/A-49 (signs for Camas/Huelva/Puerto)"
+                    ],
+                    "corridor_waypoint_labels": [
+                        "El Rocio",
+                        "Huelva",
+                        "Ayamonte"
+                    ]
+                },
+                {
+                    "style": "no_highways",
+                    "maps_url": "https://www.google.com/maps/dir/?api=1&origin=Seville%2C+Spain&destination=Hotel+Dunas+Mar%2C+Monte+Gordo%2C+Portugal&travelmode=driving&waypoints=Huelva%2C+Spain%7CAyamonte%2C+Spain",
+                    "total_km": 312.8,
+                    "duration_minutes": 296,
+                    "major_roads": [
+                        "A-8083",
+                        "E-1"
+                    ],
+                    "steps": [
+                        "At the roundabout, take the 4th exit onto Puente del Alamillo/Ronda Urbana Nte/A-8083"
+                    ],
+                    "corridor_waypoint_labels": [
+                        "Huelva",
+                        "Ayamonte"
+                    ]
+                }
+            ],
+            "corridor_search_hints": [
+                "El Rocio",
+                "Huelva coast",
+                "Ayamonte / Tavira border belt"
+            ]
+        },
+        {
+            "id": "leg_11",
+            "sequence": 11,
+            "leg_group": "return",
+            "from_anchor_id": "anchor_monte_gordo",
+            "to_anchor_id": "anchor_aljezur",
+            "selected_option_id": "leg_11_fast",
+            "route_options": [
+                {
+                    "style": "fast",
+                    "maps_url": "https://www.google.com/maps/dir/?api=1&origin=Hotel+Dunas+Mar%2C+Monte+Gordo%2C+Portugal&destination=Aljezur%2C+Portugal&travelmode=driving",
+                    "total_km": 153.0,
+                    "duration_minutes": 99,
+                    "major_roads": [
+                        "N125",
+                        "A22"
+                    ],
+                    "steps": [
+                        "At the roundabout, take the 1st exit onto N125-7"
+                    ],
+                    "corridor_waypoint_labels": [
+                        "Tavira",
+                        "Lagos",
+                        "Costa Vicentina arrival belt"
+                    ]
+                },
+                {
+                    "style": "scenic",
+                    "maps_url": "https://www.google.com/maps/dir/?api=1&origin=Hotel+Dunas+Mar%2C+Monte+Gordo%2C+Portugal&destination=Aljezur%2C+Portugal&travelmode=driving&waypoints=Tavira%2C+Portugal%7COlhao%2C+Portugal%7CLagos%2C+Portugal",
+                    "total_km": 180.3,
+                    "duration_minutes": 152,
+                    "major_roads": [
+                        "N125",
+                        "N270"
+                    ],
+                    "steps": [
+                        "At the roundabout, take the 1st exit onto N125-7"
+                    ],
+                    "corridor_waypoint_labels": [
+                        "Tavira",
+                        "Olhao",
+                        "Lagos"
+                    ]
+                },
+                {
+                    "style": "no_highways",
+                    "maps_url": "https://www.google.com/maps/dir/?api=1&origin=Hotel+Dunas+Mar%2C+Monte+Gordo%2C+Portugal&destination=Aljezur%2C+Portugal&travelmode=driving&waypoints=Tavira%2C+Portugal%7CAlbufeira%2C+Portugal%7CPortimao%2C+Portugal",
+                    "total_km": 163.0,
+                    "duration_minutes": 178,
+                    "major_roads": [
+                        "N125",
+                        "N270"
+                    ],
+                    "steps": [
+                        "At the roundabout, take the 1st exit onto N125-7"
+                    ],
+                    "corridor_waypoint_labels": [
+                        "Tavira",
+                        "Albufeira",
+                        "Portimao"
+                    ]
+                }
+            ],
+            "corridor_search_hints": [
+                "Tavira",
+                "Lagos",
+                "Costa Vicentina arrival belt"
+            ]
+        },
+        {
+            "id": "leg_12",
+            "sequence": 12,
+            "leg_group": "return",
+            "from_anchor_id": "anchor_aljezur",
+            "to_anchor_id": "anchor_evora",
+            "selected_option_id": "leg_12_fast",
+            "route_options": [
+                {
+                    "style": "fast",
+                    "maps_url": "https://www.google.com/maps/dir/?api=1&origin=Aljezur%2C+Portugal&destination=Evora%2C+Portugal&travelmode=driving",
+                    "total_km": 204.5,
+                    "duration_minutes": 181,
+                    "major_roads": [
+                        "N267",
+                        "N120"
+                    ],
+                    "steps": [
+                        "Head east toward R. Cap. Salgueiro Maia/N267"
+                    ],
+                    "corridor_waypoint_labels": [
+                        "Odemira",
+                        "Vila Nova de Milfontes",
+                        "Alcacer do Sal"
+                    ]
+                },
+                {
+                    "style": "scenic",
+                    "maps_url": "https://www.google.com/maps/dir/?api=1&origin=Aljezur%2C+Portugal&destination=Evora%2C+Portugal&travelmode=driving&waypoints=Odemira%2C+Portugal%7CVila+Nova+de+Milfontes%2C+Portugal%7CAlcacer+do+Sal%2C+Portugal",
+                    "total_km": 292.2,
+                    "duration_minutes": 247,
+                    "major_roads": [
+                        "N267",
+                        "N120"
+                    ],
+                    "steps": [
+                        "Head east toward R. Cap. Salgueiro Maia/N267"
+                    ],
+                    "corridor_waypoint_labels": [
+                        "Odemira",
+                        "Vila Nova de Milfontes",
+                        "Alcacer do Sal"
+                    ]
+                },
+                {
+                    "style": "no_highways",
+                    "maps_url": "https://www.google.com/maps/dir/?api=1&origin=Aljezur%2C+Portugal&destination=Evora%2C+Portugal&travelmode=driving&waypoints=Odemira%2C+Portugal%7CGrandola%2C+Portugal%7CViana+do+Alentejo%2C+Portugal",
+                    "total_km": 245.7,
+                    "duration_minutes": 219,
+                    "major_roads": [
+                        "N267",
+                        "N120"
+                    ],
+                    "steps": [
+                        "Head east toward R. Cap. Salgueiro Maia/N267"
+                    ],
+                    "corridor_waypoint_labels": [
+                        "Odemira",
+                        "Grandola",
+                        "Viana do Alentejo"
+                    ]
+                }
+            ],
+            "corridor_search_hints": [
+                "Odemira",
+                "Vila Nova de Milfontes",
+                "Alcacer do Sal"
+            ]
+        },
+        {
+            "id": "leg_13",
+            "sequence": 13,
+            "leg_group": "return",
+            "from_anchor_id": "anchor_evora",
+            "to_anchor_id": "anchor_salamanca",
+            "selected_option_id": "leg_13_fast",
+            "route_options": [
+                {
+                    "style": "fast",
+                    "maps_url": "https://www.google.com/maps/dir/?api=1&origin=Evora%2C+Portugal&destination=Salamanca%2C+Spain&travelmode=driving",
+                    "total_km": 391.3,
+                    "duration_minutes": 271,
+                    "major_roads": [
+                        "IP2",
+                        "E802"
+                    ],
+                    "steps": [
+                        "Turn right onto Av. de Lisboa/IP2"
+                    ],
+                    "corridor_waypoint_labels": [
+                        "Monsaraz",
+                        "Merida",
+                        "Caceres"
+                    ]
+                },
+                {
+                    "style": "scenic",
+                    "maps_url": "https://www.google.com/maps/dir/?api=1&origin=Evora%2C+Portugal&destination=Salamanca%2C+Spain&travelmode=driving&waypoints=Monsaraz%2C+Portugal%7CMerida%2C+Spain%7CCaceres%2C+Spain",
+                    "total_km": 470.9,
+                    "duration_minutes": 344,
+                    "major_roads": [
+                        "IP2",
+                        "N18"
+                    ],
+                    "steps": [
+                        "Turn left onto Av. Dom Nuno Álvares Pereira/IP2"
+                    ],
+                    "corridor_waypoint_labels": [
+                        "Monsaraz",
+                        "Merida",
+                        "Caceres"
+                    ]
+                },
+                {
+                    "style": "no_highways",
+                    "maps_url": "https://www.google.com/maps/dir/?api=1&origin=Evora%2C+Portugal&destination=Salamanca%2C+Spain&travelmode=driving&waypoints=Elvas%2C+Portugal%7CMerida%2C+Spain%7CCaceres%2C+Spain",
+                    "total_km": 475.6,
+                    "duration_minutes": 408,
+                    "major_roads": [
+                        "IP2",
+                        "E802"
+                    ],
+                    "steps": [
+                        "Turn right onto Av. de Lisboa/IP2"
+                    ],
+                    "corridor_waypoint_labels": [
+                        "Elvas",
+                        "Merida",
+                        "Caceres"
+                    ]
+                }
+            ],
+            "corridor_search_hints": [
+                "Monsaraz",
+                "Merida",
+                "Caceres"
+            ]
+        },
+        {
+            "id": "leg_14",
+            "sequence": 14,
+            "leg_group": "return",
+            "from_anchor_id": "anchor_salamanca",
+            "to_anchor_id": "anchor_basque",
+            "selected_option_id": "leg_14_fast",
+            "route_options": [
+                {
+                    "style": "fast",
+                    "maps_url": "https://www.google.com/maps/dir/?api=1&origin=Salamanca%2C+Spain&destination=Getaria%2C+Gipuzkoa%2C+Spain&travelmode=driving",
+                    "total_km": 432.4,
+                    "duration_minutes": 285,
+                    "major_roads": [
+                        "N-620",
+                        "N-630"
+                    ],
+                    "steps": [
+                        "Head south on Prta de Zamora toward P.º de Carmelitas/Av. Ruta de la Plata/N-620/N-630"
+                    ],
+                    "corridor_waypoint_labels": [
+                        "Burgos",
+                        "Vitoria-Gasteiz",
+                        "Zarautz / Getaria"
+                    ]
+                },
+                {
+                    "style": "scenic",
+                    "maps_url": "https://www.google.com/maps/dir/?api=1&origin=Salamanca%2C+Spain&destination=Getaria%2C+Gipuzkoa%2C+Spain&travelmode=driving&waypoints=Burgos%2C+Spain%7CVitoria-Gasteiz%2C+Spain%7CZarautz%2C+Spain",
+                    "total_km": 452.3,
+                    "duration_minutes": 311,
+                    "major_roads": [
+                        "N-620",
+                        "N-630"
+                    ],
+                    "steps": [
+                        "Head south on Prta de Zamora toward P.º de Carmelitas/Av. Ruta de la Plata/N-620/N-630"
+                    ],
+                    "corridor_waypoint_labels": [
+                        "Burgos",
+                        "Vitoria-Gasteiz",
+                        "Zarautz"
+                    ]
+                },
+                {
+                    "style": "no_highways",
+                    "maps_url": "https://www.google.com/maps/dir/?api=1&origin=Salamanca%2C+Spain&destination=Getaria%2C+Gipuzkoa%2C+Spain&travelmode=driving&waypoints=Valladolid%2C+Spain%7CBurgos%2C+Spain%7CVitoria-Gasteiz%2C+Spain%7CEibar%2C+Spain",
+                    "total_km": 474.2,
+                    "duration_minutes": 449,
+                    "major_roads": [
+                        "N-620",
+                        "N-122"
+                    ],
+                    "steps": [
+                        "Head south on Prta de Zamora toward P.º de Carmelitas/Av. Ruta de la Plata/N-620/N-630"
+                    ],
+                    "corridor_waypoint_labels": [
+                        "Valladolid",
+                        "Burgos",
+                        "Vitoria-Gasteiz"
+                    ]
+                }
+            ],
+            "corridor_search_hints": [
+                "Burgos",
+                "Vitoria-Gasteiz",
+                "Zarautz / Getaria"
+            ]
+        },
+        {
+            "id": "leg_15",
+            "sequence": 15,
+            "leg_group": "return",
+            "from_anchor_id": "anchor_basque",
+            "to_anchor_id": "anchor_landes",
+            "selected_option_id": "leg_15_fast",
+            "route_options": [
+                {
+                    "style": "fast",
+                    "maps_url": "https://www.google.com/maps/dir/?api=1&origin=Getaria%2C+Gipuzkoa%2C+Spain&destination=Soorts-Hossegor%2C+France&travelmode=driving",
+                    "total_km": 100.5,
+                    "duration_minutes": 81,
+                    "major_roads": [
+                        "N-634",
+                        "AP-8"
+                    ],
+                    "steps": [
+                        "Head southeast on Gudarien Enparantza Plaza/N-634 toward Aldamar Parkea Parkea Continue to follow N-634"
+                    ],
+                    "corridor_waypoint_labels": [
+                        "Hondarribia",
+                        "Saint-Jean-de-Luz / Biarritz",
+                        "Hossegor arrival belt"
+                    ]
+                },
+                {
+                    "style": "scenic",
+                    "maps_url": "https://www.google.com/maps/dir/?api=1&origin=Getaria%2C+Gipuzkoa%2C+Spain&destination=Soorts-Hossegor%2C+France&travelmode=driving&waypoints=Hondarribia%2C+Spain%7CSaint-Jean-de-Luz%2C+France%7CBiarritz%2C+France",
+                    "total_km": 124.7,
+                    "duration_minutes": 128,
+                    "major_roads": [
+                        "N-634",
+                        "AP-8"
+                    ],
+                    "steps": [
+                        "Head southeast on Gudarien Enparantza Plaza/N-634 toward Aldamar Parkea Parkea Continue to follow N-634"
+                    ],
+                    "corridor_waypoint_labels": [
+                        "Hondarribia",
+                        "Saint-Jean-de-Luz",
+                        "Biarritz"
+                    ]
+                },
+                {
+                    "style": "no_highways",
+                    "maps_url": "https://www.google.com/maps/dir/?api=1&origin=Getaria%2C+Gipuzkoa%2C+Spain&destination=Soorts-Hossegor%2C+France&travelmode=driving&waypoints=Hendaye%2C+France%7CSaint-Jean-de-Luz%2C+France%7CBayonne%2C+France",
+                    "total_km": 114.1,
+                    "duration_minutes": 152,
+                    "major_roads": [
+                        "N-634",
+                        "N-121"
+                    ],
+                    "steps": [
+                        "Head southeast on Gudarien Enparantza Plaza/N-634 toward Aldamar Parkea Parkea Continue to follow N-634"
+                    ],
+                    "corridor_waypoint_labels": [
+                        "Hendaye",
+                        "Saint-Jean-de-Luz",
+                        "Bayonne"
+                    ]
+                }
+            ],
+            "corridor_search_hints": [
+                "Hondarribia",
+                "Saint-Jean-de-Luz / Biarritz",
+                "Hossegor arrival belt"
+            ]
+        },
+        {
+            "id": "leg_16",
+            "sequence": 16,
+            "leg_group": "return",
+            "from_anchor_id": "anchor_landes",
+            "to_anchor_id": "anchor_clermont",
+            "selected_option_id": "leg_16_fast",
+            "route_options": [
+                {
+                    "style": "fast",
+                    "maps_url": "https://www.google.com/maps/dir/?api=1&origin=Soorts-Hossegor%2C+France&destination=Clermont-Ferrand%2C+France&travelmode=driving",
+                    "total_km": 540.1,
+                    "duration_minutes": 368,
+                    "major_roads": [
+                        "D652",
+                        "D418"
+                    ],
+                    "steps": [
+                        "Head east on Av. de Bordeaux/D652 toward Rue de la Forêt Continue to follow D652"
+                    ],
+                    "corridor_waypoint_labels": [
+                        "Dax",
+                        "Perigord / Bergerac corridor",
+                        "Brive-la-Gaillarde"
+                    ]
+                },
+                {
+                    "style": "scenic",
+                    "maps_url": "https://www.google.com/maps/dir/?api=1&origin=Soorts-Hossegor%2C+France&destination=Clermont-Ferrand%2C+France&travelmode=driving&waypoints=Dax%2C+France%7CPerigueux%2C+France%7CBrive-la-Gaillarde%2C+France",
+                    "total_km": 572.0,
+                    "duration_minutes": 416,
+                    "major_roads": [
+                        "D652",
+                        "D418"
+                    ],
+                    "steps": [
+                        "Head east on Av. de Bordeaux/D652 toward Rue de la Forêt Continue to follow D652"
+                    ],
+                    "corridor_waypoint_labels": [
+                        "Dax",
+                        "Perigueux",
+                        "Brive-la-Gaillarde"
+                    ]
+                },
+                {
+                    "style": "no_highways",
+                    "maps_url": "https://www.google.com/maps/dir/?api=1&origin=Soorts-Hossegor%2C+France&destination=Clermont-Ferrand%2C+France&travelmode=driving&waypoints=Dax%2C+France%7CBergerac%2C+France%7CBrive-la-Gaillarde%2C+France",
+                    "total_km": 528.4,
+                    "duration_minutes": 512,
+                    "major_roads": [
+                        "D652",
+                        "D33"
+                    ],
+                    "steps": [
+                        "Head east on Av. de Bordeaux/D652 toward Rue de la Forêt Continue to follow D652"
+                    ],
+                    "corridor_waypoint_labels": [
+                        "Dax",
+                        "Bergerac",
+                        "Brive-la-Gaillarde"
+                    ]
+                }
+            ],
+            "corridor_search_hints": [
+                "Dax",
+                "Perigord / Bergerac corridor",
+                "Brive-la-Gaillarde"
+            ]
+        },
+        {
+            "id": "leg_17",
+            "sequence": 17,
+            "leg_group": "return",
+            "from_anchor_id": "anchor_clermont",
+            "to_anchor_id": "anchor_home_zurich",
+            "selected_option_id": "leg_17_fast",
+            "route_options": [
+                {
+                    "style": "fast",
+                    "maps_url": "https://www.google.com/maps/dir/?api=1&origin=Clermont-Ferrand%2C+France&destination=Zurich%2C+Switzerland&travelmode=driving",
+                    "total_km": 587.0,
+                    "duration_minutes": 390,
+                    "major_roads": [
+                        "M69",
+                        "N89"
+                    ],
+                    "steps": [
+                        "Turn left at the 1st cross street onto Bd Daniel Mayer/M69"
+                    ],
+                    "corridor_waypoint_labels": [
+                        "Annecy",
+                        "Lausanne",
+                        "Bern"
+                    ]
+                },
+                {
+                    "style": "scenic",
+                    "maps_url": "https://www.google.com/maps/dir/?api=1&origin=Clermont-Ferrand%2C+France&destination=Zurich%2C+Switzerland&travelmode=driving&waypoints=Annecy%2C+France%7CLausanne%2C+Switzerland",
+                    "total_km": 642.5,
+                    "duration_minutes": 478,
+                    "major_roads": [
+                        "M69",
+                        "N89"
+                    ],
+                    "steps": [
+                        "Turn left onto Bd Daniel Mayer/M69"
+                    ],
+                    "corridor_waypoint_labels": [
+                        "Annecy",
+                        "Lausanne"
+                    ]
+                },
+                {
+                    "style": "no_highways",
+                    "maps_url": "https://www.google.com/maps/dir/?api=1&origin=Clermont-Ferrand%2C+France&destination=Zurich%2C+Switzerland&travelmode=driving&waypoints=Besancon%2C+France%7CPontarlier%2C+France%7CLausanne%2C+Switzerland",
+                    "total_km": 670.3,
+                    "duration_minutes": 732,
+                    "major_roads": [
+                        "M69",
+                        "N89"
+                    ],
+                    "steps": [
+                        "Turn left onto Bd Daniel Mayer/M69"
+                    ],
+                    "corridor_waypoint_labels": [
+                        "Besancon",
+                        "Pontarlier",
+                        "Lausanne"
+                    ]
+                }
+            ],
+            "corridor_search_hints": [
+                "Annecy",
+                "Lausanne",
+                "Bern"
+            ]
+        }
+    ]
+}

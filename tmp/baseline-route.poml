@@ -1,0 +1,1830 @@
+<!-- Rendered by scripts/render-baseline-route-prompt.mjs -->
+<!-- rendered_at: 2026-04-22T13:23:09.518Z -->
+<prompt>
+  <role>
+    You are a route-baseline planner for a family EV road trip with a rooftop
+    tent. Your job is to compute the real Google-grounded route skeleton only.
+  </role>
+
+  <task>
+    Return exactly one document:
+    1. baseline_route.json
+  </task>
+
+  <method>
+    <item>Start from trip_requirements.yaml. Treat it as the durable source of truth for fixed dates, required anchors, routing preferences, and hard constraints.</item>
+    <item>Use route_guide.md as route-shaping guidance and selective inspiration. It helps choose anchor regions, route variants, and meaningful corridor towns, but it is not a mandatory checklist.</item>
+    <item>Use Google Maps grounding whenever available. Normalize anchors, compute viable leg order, and generate real route options with real Google Maps directions links.</item>
+    <item>Plan only the baseline corridor. Do not choose exact campsites, exact restaurants, or full day-by-day activities.</item>
+    <item>The output must be rich enough for step 2 to search for stays and activities around each leg and anchor.</item>
+  </method>
+
+  <rules>
+    <item>Return only baseline_route.json.</item>
+    <item>Build the route shape implied by trip_requirements.yaml. If the trip starts and ends in the same place, emit a loop. If not, emit a one_way or open_jaw route shape as appropriate.</item>
+    <item>Respect fixed anchors and fixed timing requirements, especially Monte Gordo and Barcelona for this trip.</item>
+    <item>If the requirements call for a different return route, encode that explicitly with outbound and return anchor groups. Otherwise those groups may be omitted.</item>
+    <item>Prefer anchor sequences and leg lengths that make later campsite planning realistic for a family with a rooftop tent.</item>
+    <item>Do not treat a leg as a full drive day by default. Step 1 should emit corridor legs with enough granularity for step 2 to combine them into actual drive days.</item>
+    <item>Prefer shorter legs between meaningful anchors, typically around 50 to 100 km when that is practical. Use longer legs only when there is no worthwhile intermediate anchor or corridor split.</item>
+    <item>Every anchor must be geolocatable. Include an anchor_query and grounded geolocation fields for each anchor whenever available.</item>
+    <item>For every drive leg, include at least two route options: fast and scenic. Add no_highways when feasible.</item>
+    <item>Every route option must include a valid Google Maps directions link when Google Maps grounding was used.</item>
+    <item>Every route option must include concrete road names or road numbers, ordered steps, and enough route detail that step 2 can understand the corridor.</item>
+    <item>Every leg must include corridor hints for later stay/activity discovery, such as intermediate towns, regions, or arrival areas worth searching in step 2.</item>
+    <item>Do not invent Google Maps links, durations, or roads. If a route fact is unknown, set it to null and explain briefly in notes.</item>
+  </rules>
+
+  <validation_checks>
+    <item>The route start and end align with trip_requirements.yaml.</item>
+    <item>Monte Gordo appears as a fixed anchor when required by the trip requirements.</item>
+    <item>Barcelona appears as a fixed anchor or explicit family-visit anchor when required by the trip requirements.</item>
+    <item>Every leg has at least 2 route options.</item>
+    <item>Every fast or scenic route option has maps_url when Google-grounded.</item>
+    <item>No maps_url may be a placeholder token or fabricated dummy string.</item>
+    <item>Every route option has major_roads and steps.</item>
+    <item>Every leg has corridor_search_hints that step 2 can use.</item>
+    <item>Every anchor has anchor_query and geolocation fields.</item>
+    <item>No preferred_drive_day_split field is emitted; step 2 decides how legs combine into actual drive days.</item>
+  </validation_checks>
+
+  <document title="Trip Requirements" syntax="yaml">
+    Family Trip Requirements:
+  Traveler Information:
+  - Luis, 40
+  - Sibylle, 40
+  - Len, 5
+  - Ida, 1
+  Vehicle Information:
+    Model: ID.Buzz GTX Long wheel base
+    Sleeping setup: Thule Approach Size Large Rooftop tent
+    Height: 2.4 meters
+    Real-world range: ~350-400 km in summer with load
+  Family needs, ordered top-down by priority:
+  - All overnight stays should be suitable campsites for sleeping in a van with a rooftop tent (except for overnight stays already written in "Confirmed Decisions" section)
+  - Campsites must have pitches for a van or camper
+  - Campsites must provide **hot showers** and **clean toilets**
+  - Favor quality over pace, with fewer base changes and more meaningful stays.
+  - Choose campsites in locations with worthwhile places to visit and family-friendly things to do nearby within walking distance or by bike.
+  - Campsites must be safe for small children, clean, quiet after **22:00**, and free of major hygiene or traffic-safety concerns.
+  - Plan campsite base stays for at least **2 nights**, and prefer longer stays when the location is strong enough to justify them.
+  - Favor fresh, local, seasonal food throughout the trip, especially seafood, strong produce access, artisan bakeries, local coffee roasters, micro local breweries and authentic regional restaurants.
+  Campsite locations wishlist, ordered top-down by priority:
+  - swimming pool,
+  - playground or safe play space
+  - soft-surface pitches
+  - shaded areas with trees
+  - and a family atmosphere with other young children around
+  - bike rental on-site or nearby
+  - charging infrastructure for EVs
+  - nearby supermarket, grocery store or local food market
+  - nearby bakery or market with fresh bread and baguette (specially in france)
+  - nearby beach, park or town where we can walk and plan easy going activities during the day
+  - kids club with entertainment activities for children
+  - yoga classes for adults
+  - Prefer private farm with animals, vineyard, or agritourism stays when they function as true campsite alternatives
+  - nearby surfable beach break
+  - nearby snorkeling or other water related activities
+  - nearby trail access
+  Itinerary planning constraints:
+    General:
+    - Every day must specify the exact sleep location
+    - Every day must state whether its a drive day (we drive to a new sleep location) or a base day (we sleep in the same location)
+    Every drive day must include:
+    - Multiple lunch stop options
+    - Multiple family rest options
+    - Multiple EV charging options (ideally combining lunch and rest)
+    - Multiple interesting waypoints along the route to stop, visit, do and see
+    - Find suggestions whenever possible where we can buy fresh food ingredients from local food producer or markets along the route
+    - fast route option
+    - scenic route option
+    Every base day must include:
+    - 'interesting things to visit, do and see so we can discover the area like for example: going to the beach, doing a small kids-friendly trail, going to visit the local town, etc'
+    - grocery, local market, local bakery or local restaurant suggestions reachable on foot or by bike without moving the vehicle
+  Driving preferences:
+    General:
+    - Offer both a **fast route option** and a **scenic route option** for every drive day, plus a **no-highway option** when feasible.
+    - Favor scenic and low-stress routing when it does not create a meaningful downside.
+    - Avoid stressful city-center driving and prefer park-and-walk approaches for city visits.
+    - Prefer to keep most drive days at or below **400 km**.
+    Allow a longer drive day only when:
+    - there is no high-value stop in between,
+    - and the extra distance buys at least one additional stationary night at a better base.
+  What to Avoid:
+  - Fast food, chains, and heavily processed food.
+  - Single-night campsite stops without a strong reason.
+  - Campsites with poor hygiene, poor safety reviews, or a loud late-night atmosphere.
+  Confirmed Decisions:
+  - Return to Zurich by **2026-07-10**.
+  - Departure is ideally **2026-06-04**, with **2026-06-05** still acceptable if needed.
+  - '**Monte Gordo fixed anchor:** Hotel Dunas Mar, **2026-06-22 to 2026-06-29**, pre-booked and outside the camping itinerary.'
+  - '**Barcelona fixed anchor** is a family visit for **1 to 2 nights** and does not need campsite planning.'
+  - Return routing should differ from the outbound route
+  - '**Douro Valley** is intentionally excluded from this trip.'
+  </document>
+
+  <document title="Route Guide" syntax="markdown">
+    # 🗺️ Mediterranean Loop — Trip Planning Guide
+
+---
+
+## 1. Route Backbone
+
+### Route Options & Trade-offs
+
+Two versions of the loop were mapped. Both share the same core arc; the only difference is whether you extend into southeast Spain via Cartagena.
+
+**Option A — Main Mediterranean Arc (full loop)**
+
+> Zurich → Marseille → Montpellier → Santa Cristina d'Aro → Barcelona → Valencia → **Cartagena** → Sevilla → Monte Gordo → Aljezur → Salamanca → Getaria → Hossegor → Biarritz → Clermont-Ferrand → Zurich
+
+Google Maps total driving time: **~2 days 6 hours**
+
+**Option B — Shorter Inland-Cut Version**
+
+> Zurich → Marseille → Montpellier → Santa Cristina d'Aro → Barcelona → Valencia → Sevilla → Monte Gordo → Aljezur → Salamanca → Getaria → Hossegor → Biarritz → Clermont-Ferrand → Zurich
+
+Google Maps total driving time: **~2 days 4 hours**
+
+**Trade-off:** The Cartagena version only adds about 2 hours of total driving time. That makes it viable if you prioritise the southeast coast experience — the volcanic Cabo de Gata landscape and the raw Cala de San Pedro cove — over minimising drive time.
+
+---
+
+### Driving Legs — Distances & Times
+
+| Leg | km | Drive time |
+|---|---|---|
+| Zurich → Marseille | 733 | 7h 12m |
+| Marseille → Montpellier | 169 | 1h 55m |
+| Montpellier → Costa Brava / Girona | 254 | 2h 52m |
+| Costa Brava → Barcelona | 102 | 1h 25m |
+| Barcelona → Valencia | 348 | 3h 44m |
+| Valencia → Cartagena | 262 | 2h 50m |
+| Cartagena → Sevilla | 540 | 5h 23m |
+| Sevilla → Lagos / Algarve | 276 | 2h 52m |
+| Lagos → Montegordo | 135 | 1h 23m |
+| Montegordo → Salamanca | 606 | 5h 48m |
+| Salamanca → Bilbao | 397 | 4h 00m |
+| Bilbao → Hossegor | 177 | 2h 01m |
+| Hossegor → Biarritz | 40 | 0h 37m |
+| Biarritz → Zurich | 1,167 | 11h 38m *(split 2 days)* |
+| **Total** | **~5,208 km** | **~54h driving** |
+
+Plan for **8–10 driving days**. At 8h/day that's ~7 days of pure transit; the rest is stops, camps, and wandering.
+
+---
+
+### Driving Legs & Waypoints
+
+#### 🏔️ Zurich → Ardèche → Provence
+
+- **Gorges de l'Ardèche + Rives d'Arc campground** — Entry into southern France. The gorges are kayakable with young kids on the calm sections; the campground sits right on the river.
+- **Aix-les-Bains** — Quieter alpine lake town; good market. Works well as an overnight stop before the Ardèche.
+
+#### 🌿 Provence & Marseille
+
+- **Cassis** — Small fishing port; Calanques entry for families. Walk to Calanque de Port-Miou.
+- **Luberon / Lourmarin** — Go via Lourmarin (least touristic of the Luberon villages) and L'Isle-sur-la-Sorgue on a Sunday for the open-air antique market and food stalls.
+- **Salin d'Aigues-Mortes** — Pink salt flats; medieval walled town; salt co-op sells directly.
+- **Parc Ornithologique de Pont-de-Gau (Camargue)** — Flamingos at eye level, wooden walkways, no hiking required. Right next to Saintes-Maries-de-la-Mer.
+- **Marseille** — Keep it short: focus on Le Panier + MuCEM. Station Uvale du Palais for a hidden food stop.
+
+#### 🦩 Montpellier Area
+
+- **Sète** — Genuine fishing port; excellent seafood market. Buy fresh fish here for camp cooking.
+- **Plage de l'Espiguette (Le Grau-du-Roi)** — One of the last wild, undeveloped beaches on the French Mediterranean.
+- **Gruissan** — Salt lagoon village near Narbonne. Circular layout, old tower, salt marsh. Good food market.
+- **Collioure** — Coloured harbour town right at the French-Spanish border. Matisse and Derain painted here. Good last stop before crossing into Spain.
+
+#### 🏖️ Costa Brava
+
+- **Peratallada** — Most intact medieval village in Spain that most people haven't heard of. Carved from stone, no traffic.
+- **Begur + Cala Aigua Blava** — Architectural anchor of the Costa Brava; Cuban colonial mansions and cliff coves.
+- **El Far de Sant Sebastià** — Lighthouse above the cliffs near Begur. Dramatic views, much less visited than the main Begur coves.
+- **Cala Sa Boadella** — Hidden beach closest to the curated campgrounds; less visited, no facilities.
+- **Camí de Ronda** — Coastal path stitching the whole Costa Brava together. Best section: Calella de Palafrugell to Llafranc.
+- **Garrotxa Volcanic Zone** — Approachable volcanic landscape inland; beech forests over ancient craters, short loops.
+- **Via Ferrata Cala del Molí** — Activity near wecamp Santa Cristina.
+
+#### 🌆 Barcelona
+
+- **Mercat de Santa Caterina** — Best market for buying food. Fewer tourists than La Boqueria.
+- **Poblenou** — Authentic Barcelona without Gothic Quarter density. Els Pescadors is the local restaurant standout.
+- **La Caseta del Migdia** — Open-air bar on the back side of Montjuïc with sunset sea views.
+- **Mies van der Rohe Pavilion** — Most important building on the trip for architecture.
+- **Nømad Coffee** — Most respected specialty coffee in the city.
+
+#### 🌊 Valencia & Sierra Nevada Area
+
+- **Alcossebre** — Between Valencia and Barcelona; small coves, pine forest to the sea, genuinely uncrowded. Good overnight stretch-break.
+- **Cala de San Pedro, Cabo de Gata** — Only reachable on foot from Las Negras (30-min trail). Raw cove, wild, most out-of-time place on the whole trip.
+
+#### 🌿 Portugal / Algarve
+
+- **Costa Vicentina Natural Park + Carrapateira** — No development by law. Carrapateira is the village anchor: one bakery, one surf shop, one restaurant.
+  - **Pont'a Pé** — Food stop in Carrapateira.
+  - **Moagem in Aljezur** — Coffee stop.
+- **Lima Escape Camping & Glamping** — Northern Portugal / Minho. Pair with Cascata do Arado in Peneda-Gerês for a waterfall family hike.
+
+#### 🏜️ Montegordo → Salamanca
+
+This is the longest single leg on the trip at **606km / 5h48m**, and the only one that genuinely needs to be planned as a two-day crossing rather than a single drive. From the eastern Algarve you're heading northeast across the full width of the Iberian Peninsula through some of its least-populated terrain.
+
+**Route trade-off:** Two main lines exist here.
+
+- **Via the west (direct)** — Cross into Spain at Badajoz and drive north through Extremadura to Salamanca. Flat, fast, not particularly scenic. Works if you're short on time and want to reach Salamanca cleanly.
+- **Via the east (Albarracín detour)** — Cross into Spain further east, arc up through Andalusia toward Murcia, then cut northeast through the Iberian highlands via Albarracín before descending to Salamanca. Adds distance but the Albarracín stop earns it.
+
+**Waypoint stop:**
+- **Albarracín** — Medieval pink-stone village in the Iberian highlands, built into a canyon wall above the Guadalaviar river. It looks assembled rather than constructed — pink and terracotta rock, tight lanes, no straight lines anywhere. Almost entirely car-free within the walls. One of the most architecturally distinctive small towns in Spain and almost nobody outside Spain knows it. If splitting the leg over two nights, this is the obvious overnight.
+
+**Practical note:** Whichever line you take, plan for an overnight somewhere along this crossing. Driving it straight through in one day wastes both the evening and the landscape.
+
+#### 🎣 Basque Country
+
+- **Getaria** — Best txakoli wine village. Grilled fish on open embers directly at the harbour.
+- **Mundaka** — Surf village at the mouth of the Urdaibai estuary (UNESCO biosphere). Pairs with Guernica nearby.
+- **Guernica (Gernika-Lumo)** — The most historically resonant town on the whole trip. The oak tree, the Basque parliament, the market town — and the weight of what happened here. 15 minutes from Mundaka; the reason to go is the town itself, not just a drive-by.
+- **Chillida Leku** — Sculpture park in a forest. Eduardo Chillida's large steel and stone works. Don't skip.
+- **Pasai Donibane** — Tiny boat-accessed fishing village 15 minutes from San Sebastián.
+- **Hondarribia** — Most beautiful walled town in the Basque Country. Market sells excellent cheese and charcuterie.
+- **Lukas Gourmet Shop, San Sebastián** — Best deli in the city; conservas, local txakoli, aged cheeses. Buy provisions for the Landes stretch.
+
+#### 🌲 Landes & Hossegor
+
+- **Capbreton** — Working fishing port next to Hossegor. Buy fish directly at the quay.
+- **Lac d'Hossegor** — Tidal lake behind the beach; calm water, pine shade, kayakable. Better for small kids than open Atlantic.
+
+#### 🏔️ Return Leg — Biarritz → Zurich
+
+This is the longest single drive on the route at **1,167km / 11h38m** and must be split over at least two days. Three meaningful route variants exist, each pairing with a different campground for the overnight stop.
+
+**Option 1 — Via Dordogne / Périgord Noir** *(most scenic, slowest)*
+> Biarritz → Bayonne → Bordeaux → Sarlat-la-Canéda → Clermont-Ferrand → Lyon → Zurich
+- Takes you through the Dordogne valley, one of France's most beautiful inland regions — limestone cliffs, kayak rivers, medieval villages.
+- Overnight camp: **Huttopia Sarlat**, 800m from medieval Sarlat on foot.
+- Best for: if you want one more genuinely beautiful French stop and don't mind a slower pace.
+
+**Option 2 — Via Auvergne / Chaîne des Puys** *(best landscape, moderate pace)*
+> Biarritz → Bayonne → Toulouse → Clermont-Ferrand → Lyon → Zurich
+- Passes through the Massif Central with the ancient Puy de Dôme volcanic chain as the backdrop. Strange, quiet, very un-touristy France.
+- Overnight camp: **Huttopia Royat**, 10 minutes from Clermont-Ferrand, at the foot of the Chaîne des Puys.
+- Best for: a final night in an unusual landscape that feels completely different from the coastal arc of the rest of the trip.
+
+**Option 3 — Via Alsace / Vosges** *(fastest, cleanest approach to Zurich)*
+> Biarritz → Bordeaux → Paris (bypass) → Strasbourg → Zurich
+- The most direct northern arc back to Switzerland. The Vosges forest is 45km off the motorway.
+- Overnight camp: **Huttopia Forêt des Vosges**, the highest-rated Huttopia in France. Deep Vosges fir forest, forest-only spa, Cahutte wood-and-canvas structures.
+- Best for: if you want to close the trip with a genuinely immersive forest night before crossing back into Switzerland.
+
+---
+
+## 2. Towns and Regions
+
+### Priority Places
+
+The places ranked as truly unmissable: **Pont-de-Gau bird park**, **Sète market**, **Peratallada**, **Chillida Leku**, **Cala de San Pedro**, and **Capbreton** for fresh fish. These are the ones hardest to replicate anywhere else on the route.
+
+### Worth Elevating in the Shortlist
+
+- **Arles** — One of the strongest Provence towns for your style: market life, food, history, and easy family value. More than a secondary Provence stop; a very good anchor for the whole Camargue / Luberon stretch.
+- **Cacela Velha / Praia de Cacela Velha** — One of the most selective Algarve choices in the file, and especially aligned with the quieter, low-development preference. Exactly the kind of place that distinguishes this trip from a more generic Algarve route.
+
+| Area | Place | Why it matters | Label |
+|---|---|---|---|
+| Provence | Luberon | One of the clearest matches to the brief: slower Provence, villages, groves, hiking, less mass-tourism, strong hidden-gem energy. | hidden_gem |
+| Provence | Arles | Probably the strongest Provence town for this style: market life, food, history, and easy family value. Good for buying produce too. More than a secondary stop — a strong anchor for the whole Camargue / Luberon stretch. | known_place |
+| Provence | Camargue | Very strong with kids: flamingos, horses, wetlands, dawn/dusk nature, big sense of landscape. | nature, known_place |
+| Provence | Cassis | Better entry to the Calanques for families. Small fishing port, excellent local rosé (Cassis AOC), sea urchins at the market. | town, known_place |
+| Provence | Salin d'Aigues-Mortes | Pink salt flats, medieval walled town. The salt co-op sells directly. | town, known_place |
+| Provence | Station Uvale du Palais, Marseille | Historic grape-vine research station with a small shop. Unusual and very Marseillais. | food, hidden_gem |
+| Provence / city stop | Marseille | Important stop for architecture, port life, food, and urban contrast. Focus on Le Panier + MuCEM. | known_place |
+| Montpellier Area | Sète | The most important stop between Marseille and Spain that most people skip. Genuine fishing port, strong Italian heritage. | town, hidden_gem |
+| Montpellier Area | Plage de l'Espiguette (Le Grau-du-Roi) | One of the last wild, undeveloped beaches on the French Mediterranean. No buildings, dunes, wind. | nature, hidden_gem |
+| Montpellier Area | Gruissan | Salt lagoon village near Narbonne. Circular layout, old tower, salt marsh. Quietly strange and very photogenic. | town, hidden_gem |
+| Montpellier Area | Collioure | Coloured harbour town right at the French-Spanish border. Matisse and Derain painted here. The last meaningful French stop before crossing into Spain. | town, known_place |
+| Costa Brava | Begur | One of the strongest Costa Brava entries: architecture, coves, food, refined rather than mass-market. | town + nature, known_place |
+| Costa Brava | Cala Aigua Blava | Stunning turquoise inlet below Begur; short walk from parking. | nature, known_place |
+| Costa Brava | El Far de Sant Sebastià | Lighthouse above the cliffs near Begur. Dramatic views, much less visited than the main Begur coves. | landmark, hidden_gem |
+| Costa Brava | Peratallada | The most intact medieval village in Spain that most people haven't heard of. Carved from stone, no traffic. | town, hidden_gem |
+| Costa Brava | Cala Sa Boadella | Hidden beach closest to the curated campgrounds — less visited, no facilities. | nature, hidden_gem |
+| Costa Brava | Garrotxa Volcanic Zone | Approachable volcanic landscape inland from the coast. Beech forests over ancient craters, short loops. | nature, hidden_gem |
+| Costa Brava | Camí de Ronda | Coastal path stitching the whole Costa Brava together. | activity, known_place |
+| Costa Brava | Pals | Excellent inland counterpoint to the beach. Medieval, rice fields, local wine, calmer rhythm. | town, known_place |
+| Costa Brava | Cadaqués & Cap de Creus | Whitewashed, car-light village surrounded by a protected cape. Dalí's house at Portlligat a short walk away. One of the most architecturally and atmospherically distinctive towns on the Costa Brava — resists mass-tourism better than almost anywhere else on this coast. Worth a dedicated overnight if the schedule allows. | town, known_place |
+| Costa Brava | Port de la Selva | Smaller, quieter alternative to Cadaqués on the same cape. More local, less visited, easier to find accommodation. | town, hidden_gem |
+| Costa Brava | Figueres | Dalí Theatre-Museum — the artist's own designed retrospective. Worth a quick stop when passing through. | town, known_place |
+| Costa Brava / city | Girona | Very strong family stop: walkable, beautiful. Mercat del Lleó for fresh produce. | city, known_place |
+| Barcelona | Mercat de Santa Caterina | Best market for actually buying food. Fewer tourists than La Boqueria, wave roof by Miralles. | shop, known_place |
+| Barcelona | Nømad Coffee | Most respected specialty coffee in the city. | coffee, hidden_gem |
+| Barcelona | La Caseta del Migdia | Open-air bar on the back side of Montjuïc with sunset sea views. Very local, good for kids. | food, hidden_gem |
+| Barcelona | Mies van der Rohe Pavilion | Most important building on the trip for architecture. | landmark, known_place |
+| Barcelona | Poblenou | Authentic Barcelona without Gothic Quarter density. Els Pescadors is the restaurant standout. | town, known_place |
+| Barcelona | Sant Antoni | Strongest Barcelona entry for food; more of an urban food stop than a route-shaping place. | food, known_place |
+| Valencia & Southeast | Alcossebre | Between Valencia and Barcelona; small coves, pine forest to the sea, genuinely uncrowded. | region, hidden_gem |
+| Andalusia coast | Cabo de Gata | One of the most route-defining nature stops in the whole list: raw, volcanic, dry, scenic, less built-up. | nature, known_place |
+| Andalusia coast | Cala de San Pedro | Only reachable on foot from Las Negras (30-min trail). Raw cove, most out-of-time place on the trip. | nature, hidden_gem |
+| Inland Andalusia | Guadix | One of the more unusual and memorable inland picks: cave houses, badlands, different from the coastal stretch. | town, hidden_gem |
+| East Algarve | Tavira | One of the best overall bases: calmer than Lagos, strong food, easy beaches, family-friendly. | town, known_place |
+| East Algarve | Cacela Velha / Praia de Cacela Velha | One of the most selective Algarve choices. Quiet, beautiful, low-development, and especially aligned with the calmer brief. Exactly the kind of place that distinguishes this trip from a more generic Algarve route. | town + nature, hidden_gem |
+| West Algarve | Aljezur area | Strong design-and-landscape stop on the west Algarve side. Atmosphere, materiality, and calm. | town + nature, hidden_gem |
+| West Algarve | Costa Vicentina Natural Park + Carrapateira | No development by law. One bakery, one surf shop, one restaurant in Carrapateira. | nature + stay, known_place + hidden_gem |
+| Portugal / Algarve | Pont'a Pé, Carrapateira | Local food stop on the Costa Vicentina. | food, hidden_gem |
+| Portugal / Algarve | Moagem, Aljezur | Local coffee stop. | coffee, hidden_gem |
+| Basque coast | Getaria | One of the best small Basque picks: intimate, food-driven, coastal. Best txakoli wine made here. | stay, hidden_gem |
+| Basque coast | Zarautz | Better with small kids than many flashier Basque stops: long beach, easier rhythm, good food. | town, known_place |
+| Basque coast | Mundaka | Surf village at the mouth of the Urdaibai estuary (UNESCO biosphere). Very local. Pairs with Guernica. | town, hidden_gem |
+| Basque coast | Guernica (Gernika-Lumo) | The most historically resonant town on the whole trip. The oak tree, the Basque parliament, the market town — and the weight of what happened here. 15 minutes from Mundaka; easy to combine as a half-day stop. The reason to go is the town itself, not just a drive-by. | town, known_place |
+| Basque | Chillida Leku | Sculpture park in a forest. One of the best outdoor art experiences in Europe. Accessible for kids. | nature, hidden_gem |
+| Basque | Pasai Donibane | Tiny boat-accessed fishing village 15 minutes from San Sebastián that almost nobody visits. | town, hidden_gem |
+| Basque | Hondarribia | Most beautiful walled town in the Basque Country. Market sells excellent cheese and charcuterie. | town, known_place |
+| Basque coast | Lekeitio | Small fishing town east of Bilbao, very local. Quiet alternative to the more visited Basque coast stops. | town, hidden_gem |
+| Basque | Lukas Gourmet Shop, San Sebastián | Best deli in the city: conservas, txakoli, aged cheeses. | shop, known_place |
+| French Basque coast | Guéthary | Small-scale, stylish, surf-town charm, still village-like and uncommercialised. | town, hidden_gem |
+| French Basque coast | Espelette | A short detour off the D918 between San Sebastián and Biarritz. The Espelette pepper cooperative sells directly — a tin of piment d'Espelette is one of the most useful camp-cooking buys on the whole trip. The village turns red in late summer when peppers hang to dry from every façade. Worth 45 minutes. | town, hidden_gem |
+| Basque / Landes return | Saint-Jean-de-Luz | Safest family pick on that coast: sheltered beach, market, pastry, harbour-town feel. | town, known_place |
+| Landes & Hossegor | Capbreton | More real than Hossegor — working fishing port. Buy fish directly at the quay. | town, hidden_gem |
+| Landes & Hossegor | Lac d'Hossegor | Tidal lake behind the beach; calm water, pine shade, kayakable. Better for small kids. | nature, known_place |
+| Atlantic finish | Hossegor | Important as a region/base. Value the lake more than the surf core with small kids. | region, known_place |
+| France outbound | Aix-les-Bains | Quieter alpine lake town; often skipped for Annecy (which is overrun). Good market, overnight stop. | town, hidden_gem |
+| France outbound | Gorges de l'Ardèche | Most dramatic entry into southern France. Kayakable with kids on calm sections. | nature, known_place |
+| Inland Spain crossing | Salamanca | City crossing point. Good market and provisioning. | city, known_place |
+| Inland Spain crossing | Monte Gordo | Practical rather than atmospheric; functional stop near the Portuguese border. | town, known_place |
+
+### Other Towns — On the Route but Lower Priority
+
+These are useful or appealing stops but less aligned with the hidden-gem, quieter preference:
+
+- **Aix-en-Provence** — Strong market town, very practical, but more polished/classic than the most distinctive picks.
+- **Roussillon** — Beautiful and family-friendly, but more of a scenic add-on than a core anchor.
+- **Tossa de Mar** — Very appealing, but more exposed to classic Costa Brava traffic and seasonality.
+- **Monte Gordo** — Practical, but the file itself treats it as functional rather than atmospheric.
+- **Lagos** — Lively and useful, but less aligned with the quieter preference than Tavira, Cacela Velha, or Aljezur.
+- **Biarritz / Bilbao** — Important cities, but not the strongest fit for a hidden-gem bias.
+- **Peñíscola** — Scenic and easy, but clearly more touristic than selective.
+
+---
+
+## 3. Campground Guide — Curated by Region
+
+### Introduction
+
+The Snow Peak philosophy — natural materials, intentional design, community spaces, car-free or nature-first ethos, no arcade-resort energy — maps to a specific set of European campgrounds. This guide is tightened around the Snow Peak / Basecamps / wecamp sensibility: wood, landscape-first, calmer design, family-usable, and not animation-heavy resort camping.
+
+The strongest existing references are **Basecamps Cerdanya, wecamp Santa Cristina, wecamp Cabo de Gata, Huttopia Senonches, Lima Escape, Camping & Bungalows Itxaspe, and wecamp Reserva Alecrim** — the clearest matches to this style, with **Cala Pola / Giverola** as a scenic wildcard. **Camping & Bungalows Itxaspe** deserves to stay near the top of the Basque shortlist because it is one of the best new discoveries in the file and closer to your brief than the larger coast parks. **wecamp Reserva Alecrim** deserves equal prominence if Portugal is a major focus: it is one of the best overall finds and one of the cleanest design fits in Portugal. The 12 strongest overall candidates for this specific loop are: Basecamps Cerdanya, wecamp Santa Cristina, wecamp Cabo de Gata, wecamp Reserva Alecrim, Camping & Bungalows Itxaspe, Huttopia Senonches, Salema Eco Camp, Camping Bachoc à la Ferme Pays Basque, Naturéo Éco Resort, Camping Lou P'tit Poun, L'Oree de Provence, and Camping El Burro Blanco.
+
+Campgrounds to demote (more mainstream / resort-heavy / less aligned): Yelloh! Village Le Brasilia, Camping Playa Brava, Rubina Resort, El Delfín Verde, Sandaya / Siblu / Capfun style parks, Turiscampo (unless a pure facilities play is needed).
+
+---
+
+### 🇫🇷 France — Outbound Leg (Ardèche / Camargue / Alpilles)
+
+**Rives d'Arc** *(Ardèche)*
+- **Description:** Right on the river at the entrance to the Gorges de l'Ardèche. Canoe rental on-site. Classic French riverside camp with good facilities.
+- **Type:** Classic riverside campground
+- **Pitches for van:** true
+- **Why it fits:** Pairs with the gorges as a first-night natural landmark. Genuinely wild for a place this accessible. Good stepping-stone from Zurich.
+
+**Huttopia Fontvieille** *(Alpilles — ~20km from route)*
+- **Description:** Pine and olive forest camp at the heart of the Alpilles, gateway to the Camargue. Toile & Bois wood-canvas tents and gypsy caravans blend into garrigue-scented pine forest. Central Lodge with locally sourced food. Rating: 4.6.
+- **Type:** Wood-canvas tent / van / motorhome pitches; also gypsy caravans
+- **Pitches for van:** true
+- **Why it fits:** 10 minutes from Arles, Les Baux, and the Camargue. Heated pool surrounded by pines, playground, pétanque, summer activity programme for kids.
+
+**Mas de la Fouque** *(Camargue — ~15km from route)*
+- **Description:** Camarguaise farmhouse retreat on the étangs. Three signature gypsy roulottes sitting directly above the lagoon — terraces face flamingos and Camargue horses. Rooms combine contemporary design with antique local furniture, wood, linen, and reed-lined cabinetry. Geothermal and solar powered. NUXE spa in the wetland. Rating: 4.2.
+- **Type:** Boutique glamping / roulottes
+- **Pitches for van:** false
+- **Why it fits:** Unique Camargue experience with flamingos and white horses directly from your terrace. Pairs perfectly with the Parc Ornithologique de Pont-de-Gau stop.
+
+---
+
+### 🇫🇷 France — South of France / Provence / Montpellier Side
+
+**L'Oree de Provence** *(Provence)*
+- **Description:** Smaller-scale inland camp with nature setting. Rating: 4.7.
+- **Type:** Nature campground
+- **Pitches for van:** true
+- **Why it fits:** Best Provence addition from Maps. Smaller-scale feel, inland nature setting, less resort language than the bigger Mediterranean campgrounds.
+
+**Camping Les Hautes Prairies** *(Lourmarin)*
+- **Description:** Campground anchored in the Luberon village landscape. Rating: 4.4.
+- **Type:** Village-adjacent campground
+- **Pitches for van:** true
+- **Why it fits:** Good if you want to anchor around Luberon villages. More practical than editorial, but the location is strong.
+
+**La Vallée Heureuse** *(Orgon)*
+- **Description:** Landscape-oriented family stop between Provence and the western swing. Rating: 4.4.
+- **Type:** Family campground
+- **Pitches for van:** true
+- **Why it fits:** Sensible stop between Provence and the western swing, more landscape-oriented than beach-club style.
+
+---
+
+### 🇫🇷 France — Cévennes Variation (Massif Central)
+
+**Huttopia Gorges du Tarn** *(Cévennes)*
+- **Description:** Direct access to a calm stretch of the Tarn, ideal for swimming and canoeing, on the edge of the Cévennes National Park. Wooden-structure accommodation, low-key programming, no arcade energy.
+- **Type:** Wood-structure eco-camp / van / motorhome
+- **Pitches for van:** true
+- **Why it fits:** More remote and genuinely wild-feeling than most Huttopia. Works as a variation on the way south if you go via the Massif Central.
+
+---
+
+### 🇫🇷 France — Return Leg (Dordogne)
+
+**Huttopia Sarlat** *(Dordogne — ~30km from route)*
+- **Description:** 13ha woodland camp 800m from medieval Sarlat. Rental stone cottages typical of Périgord Noir architecture; Toile & Bois tents under century-old lime trees; car-free zone at the top of the terraced site. Rating: 4.2.
+- **Type:** Van / tent / motorhome — terraced wooded pitches
+- **Pitches for van:** true
+- **Why it fits:** Indoor + outdoor heated pools, playground, kids activities, evening entertainment in summer. Walking distance from one of France's most beautiful medieval towns.
+
+---
+
+### 🇫🇷 France — Return Leg (Auvergne)
+
+**Huttopia Royat** *(Auvergne — ~15–20km from route)*
+- **Description:** Forested camp at the foot of the Puy de Dôme volcanic park. Signature Canadienne canvas-and-wood tents nestled among dense deciduous woodland. Rating: 4.3.
+- **Type:** Van / tent / motorhome — spacious wooded pitches
+- **Pitches for van:** true
+- **Why it fits:** 10 minutes from Clermont-Ferrand; direct access to the Chaîne des Puys volcanic trails. Heated pool, children's playground, summer activity programme, bike hire.
+
+---
+
+### 🇫🇷 France — Return Leg (Central France)
+
+**Huttopia Senonches** *(Central France)*
+- **Description:** Deep forest immersion with wood/canvas lodging. Cahutte hybrid structures, massive wooden decks, focus on forest light and wood textures. Rating: 4.3.
+- **Type:** Wood-canvas Cahutte / van / motorhome
+- **Pitches for van:** true
+- **Why it fits:** The cleanest return-leg match for this style: forest, wood-and-canvas sensibility, slower family rhythm.
+
+---
+
+### 🇫🇷 France — Return Leg (Alsace / Vosges)
+
+**Huttopia Forêt des Vosges** *(Vosges — ~45–50km from route)*
+- **Description:** Year-round deep forest camp in the Vosges firs. Signature Cahutte hybrid — solid wood chalet base topped with canvas sleeping tent, placing guests between floor and canopy. Dedicated forest spa accessible only on foot through the firs. Architecture calibrated to the Vosges' filtered light. Rating: 4.7.
+- **Type:** Van / tent / motorhome — forest floor pitches; also Cahutte rentals
+- **Pitches for van:** true
+- **Why it fits:** The highest-rated Huttopia in France. Little Trappers kids programme (hiking, hut-building, land art), archery, tree-climbing. Indoor heated pool + outdoor pool, forest spa.
+
+---
+
+### 🇫🇷 France — Landes / Return Leg (Atlantic)
+
+**Huttopia Landes Sud** *(Landes)*
+- **Description:** Pine forest camp near the beaches of the Landes coast, close to Hossegor. Nature-forward design.
+- **Type:** Forest pine camp
+- **Pitches for van:** true
+- **Why it fits:** Good for the northern return leg. Pine forest setting, close to the surf coast.
+
+**Camping Lou P'tit Poun** *(Landes)*
+- **Description:** Small, local, in the forest. The curated list's own pick for the Landes area. More intimate than Huttopia.
+- **Type:** Small local forest campground
+- **Pitches for van:** true
+- **Why it fits:** Still one of the best practical Atlantic return-leg choices: calm, green, family-fit, well placed for Basque / Landes / Hossegor.
+
+**Naturéo Éco Resort** *(Seignosse, Landes)*
+- **Description:** More eco/design-leaning than the giant surf camps. Rating: 4.3.
+- **Type:** Eco resort
+- **Pitches for van:** false
+- **Why it fits:** Best Landes-area addition. More eco/design-leaning than the giant surf camps.
+
+**Les Maritimes / Collection Rivages** *(Landes)*
+- **Description:** More polished resort edge, but more tasteful than the louder alternatives. Rating: 4.1.
+- **Type:** Resort campground
+- **Pitches for van:** true
+- **Why it fits:** More tasteful than the louder surf-camp alternatives on this stretch.
+
+---
+
+### 🇪🇸 Spain — Costa Brava / Catalonia
+
+**wecamp Santa Cristina** *(Costa Brava — ~25–30km from Barcelona)*
+- **Description:** The most carefully designed campground on the route. Wooden structures by Lagranja Design in pine forest directly above the Costa Brava sea. Green/brown palette integrated with cork oaks; Tematic Arquitectura site planning; wood-panelled common areas opening directly onto the forest. Rating: 4.4–4.5.
+- **Type:** Design eco-camp / van / tent; car-free zone
+- **Pitches for van:** true
+- **Why it fits:** The design benchmark for the trip. The closest thing to Snow Peak in Spain. Eco-friendly accommodations in complete harmony with nature. Pool, summer activities, kids programme. Also flags the Via Ferrata Cala del Molí as a nearby activity.
+
+**Cala Pola / Giverola** *(Costa Brava)*
+- **Description:** More scenic than polished. Strong if you want a cove-and-trail stop that feels more hidden.
+- **Type:** Scenic cove campground
+- **Pitches for van:** true
+- **Why it fits:** Very strong if you want a hidden cove-and-trail stop rather than one of the larger Costa Brava campgrounds.
+
+**Basecamps Girona** *(Girona mountains)*
+- **Description:** Essentialist wood cabins in the mountains. Minimalist timber modules, floor-to-ceiling glass, emphasis on geometric simplicity. Rating: 4.5.
+- **Type:** Design wood cabins
+- **Pitches for van:** true
+- **Why it fits:** Architectural wooden structures with a strong materials focus.
+
+---
+
+### 🇪🇸 Spain — Catalan Pyrenees (~80km off route)
+
+**Basecamps Cerdanya** *(Catalan Pyrenees)*
+- **Description:** The Pyrenees equivalent of Snow Peak. Architectural wooden structures, famous fire kitchen where communal cooking is the point.
+- **Type:** Architecture + fire kitchen; design camp
+- **Pitches for van:** true
+- **Why it fits:** The most Snow Peak-adjacent concept in Spain. Closest match to the Basecamps / Snow Peak feeling: timber, clean lines, mountain air, strong materials, calmer mood. Worth a dedicated detour if you want a mountain night.
+
+**wecamp Pedraforca** *(Catalan Pyrenees — ~90km detour off route)*
+- **Description:** Pyrenean glamping beneath the iconic twin peaks of Pedraforca. Transparent bubble domes with unobstructed views of Pedraforca's distinctive forked silhouette — pellet stove, private bathroom, loft bed within the dome. Located at the threshold of Cadí-Moixeró Natural Park. Rating: 4.2–4.3.
+- **Type:** Bubble domes glamping
+- **Pitches for van:** true
+- **Why it fits:** Design philosophy orients accommodations to natural light cycles and seasonal mountain rhythms. Wood cabin vocabulary harmonises with the pre-Pyrenean landscape.
+
+**Huttopia Barcelona Pirineos** *(Catalan Pyrenees — ~80km detour)*
+- **Description:** Mountain camp perched at 890m inside Cadí-Moixeró Natural Park. Regional Catalan stone-built Central Lodge; Bois Chalet rental units in the traditional mountain style. Dramatic backdrop of the Pyrenean cliffs. Rating: 4.5.
+- **Type:** Van / tent / motorhome — large shaded forest pitches
+- **Pitches for van:** true
+- **Why it fits:** Pool with mountain views, children's club, pétanque, multi-sport field, artisan pizza evenings. Organised hikes directly from the campsite.
+
+---
+
+### 🇪🇸 Spain — Andalusia / Cabo de Gata
+
+**wecamp Cabo de Gata** *(Andalusia, Cabo de Gata National Park)*
+- **Description:** Eco-resort in a volcanic desert valley within the Cabo de Gata volcanic national park. Bamboo and light wood architecture, Ibiza-style minimalist bathhouses, minimal environmental footprint. Rating: 4.5.
+- **Type:** Volcanic park eco-camp
+- **Pitches for van:** true
+- **Why it fits:** One of the best matches in the entire route: desert-meets-sea, minimalist feel, lighter palette, better atmosphere than mainstream family parks. Pairs with the Cala de San Pedro hike nearby. Good stop between Valencia and Sevilla.
+
+**Camping & Bungalows Los Escullos** *(Cabo de Gata)*
+- **Description:** More established and less selective, in the same Cabo de Gata landscape. Rating: 4.3.
+- **Type:** Family campground
+- **Pitches for van:** true
+- **Why it fits:** Strong family fallback in the same extraordinary landscape.
+
+**Kampaoh Los Escullos** *(Cabo de Gata)*
+- **Description:** Softer glamping layer in the Cabo de Gata area. Rating: 4.1.
+- **Type:** Glamping
+- **Pitches for van:** false
+- **Why it fits:** Worth noting if you want a softer glamping layer rather than full campsite roughness.
+
+---
+
+### 🇪🇸 Spain — Andalusia / Near Seville
+
+**Huttopia Parque de Doñana** *(Doñana — ~65km from route)*
+- **Description:** Pine forest camp completely embedded in Europe's largest protected wetland. Wildlife soundtrack at all times. Huttopia's wood-and-canvas aesthetic in a uniquely dramatic Andalusian setting. Rating: 4.2.
+- **Type:** Van / tent / motorhome — shaded pine-tree pitches with electricity
+- **Pitches for van:** true
+- **Why it fits:** Two pools (one with a sandy beach + paddling pool), playground, Little Trappers programme, football pitch, table tennis. Flamingos and wild horses at nearby El Rocío lagoon.
+
+---
+
+### 🇪🇸 Spain — Inland Spain (Salamanca / Sierra de Francia)
+
+**Camping El Burro Blanco** *(Sierra de Francia area)*
+- **Description:** Smaller, more characterful inland Spain camp. Rating: 4.8.
+- **Type:** Rural inland campground
+- **Pitches for van:** true
+- **Why it fits:** Best inland-Spain fit from Maps. Smaller, more characterful, better hidden-gem feel.
+
+**Camping Vega de Francia** *(Sierra de Francia)*
+- **Description:** Good nature base in the Sierra de Francia zone. Rating: 4.5.
+- **Type:** Nature campground
+- **Pitches for van:** true
+- **Why it fits:** Stronger than a city-edge campground for this stretch of inland Spain.
+
+**Camping Arribes del Duero** *(Duero valley)*
+- **Description:** Landscape-oriented camp in the Arribes del Duero natural park. Rating: 4.9.
+- **Type:** Nature campground
+- **Pitches for van:** true
+- **Why it fits:** Strong if you want more landscape and less urban Salamanca.
+
+---
+
+### 🇪🇸 Spain — Basque Country
+
+**wecamp San Sebastián** *(Basque Country — directly on route)*
+- **Description:** Eco-conscious hillside camp 4km from Donostia. Accommodations designed to reflect local Basque architectural tradition with minimal environmental footprint. Terraced forested hillside between mountains and sea. Direct bus to La Concha every 20 minutes. Rating: 3.7 ⚠️ lower rating — worth noting.
+- **Type:** Van / tent / motorhome — hedged pitches with Atlantic views
+- **Pitches for van:** true
+- **Why it fits:** Best used as a city gateway base rather than a pure nature immersion. Rating is primarily impacted by cramped pitch sizes and off-season service gaps; the location and setting remain genuinely strong. Pool, restaurant with Basque specialities.
+
+**Camping & Bungalows Itxaspe** *(Basque coast)*
+- **Description:** One of the best new discoveries. Dramatic Basque coast setting. Rating: 4.7.
+- **Type:** Basque coast campground
+- **Pitches for van:** true
+- **Why it fits:** One of the best finds in the whole Basque section. Dramatic coast setting, much closer to the brief than the larger coast parks, and deserving of a place near the very top of any tightened campground shortlist.
+
+**Camping Bachoc à la Ferme Pays Basque** *(Basque Country)*
+- **Description:** Farm-based, quieter, more personal, less polished-touristic. Rating: 4.8.
+- **Type:** Farm campground
+- **Pitches for van:** true
+- **Why it fits:** Very strong hidden-gem energy. Farm-based, quieter, more personal — much less polished-touristic than the alternatives.
+
+---
+
+### 🇵🇹 Portugal — Alentejo Coast / Costa Vicentina
+
+**Zmar Eco Campo** *(Costa Vicentina, near Odemira — ~35km from route)*
+- **Description:** Award-winning timber eco-resort on 81 hectares of Costa Vicentina. Entire built environment uses locally harvested timber and recycled materials. Clean-cut modernist main complex with infinity pool terrace. Set within the Rota Vicentina walking trails, 20 minutes from Zambujeira do Mar beach. Rating: 4.2.
+- **Type:** Van / tent / motorhome — 132 pitches with 90m² plots + electricity; also timber bungalows
+- **Pitches for van:** true
+- **Why it fits:** 100m outdoor pool + indoor wave pool (waves every hour, kids love it), enormous adventure playground, kids club (Kidz' House), pedagogical farm, bike hire across the estate. Go in June or September to avoid peak crowds.
+
+**Camping Villa Park Zambujeira do Mar** *(Alentejo coast)*
+- **Description:** Just 1km from the beach and 500m from the village of Zambujeira do Mar. Big eucalyptus trees, directly on the wild Atlantic. Large swimming pool, restaurant, small supermarket, plenty of shady trees.
+- **Type:** Shaded beach camp
+- **Pitches for van:** true
+- **Why it fits:** Simpler than Zmar but more characterful. The village beach is one of the most beautiful on the entire trip.
+
+**wecamp Reserva Alecrim** *(Alentejo)*
+- **Description:** Very aligned with the aesthetic of the trip: Alentejo landscape, cleaner design, calmer tone, more selective than classic Algarve camping. Rating: 4.6.
+- **Type:** Design eco-camp
+- **Pitches for van:** false
+- **Why it fits:** One of the best overall finds and one of the strongest Portugal candidates. Cleaner design, calmer tone, and more selective than classic Algarve camping — stronger than a backup option if Portugal is a major focus.
+
+**Camping Puro Alentejo** *(Alentejo)*
+- **Description:** Excellent inland Alentejo candidate. Feels quieter and more personal. Rating: 4.9.
+- **Type:** Inland nature camp
+- **Pitches for van:** true
+- **Why it fits:** Quieter and more personal than the larger Alentejo options.
+
+**Vale Palheiro Earth Resort** *(Costa Vicentina — ~30km from route)*
+- **Description:** Rammed-earth resort on a 60ha Costa Vicentina hillside. 13 villas and casitas built with traditional taipa (rammed earth) — thick terracotta walls compressed layer by layer, now virtually a lost technique. Schist dry-stone, local clay brick roofs, ceramic floors. Designed by owner-architect Madalena Rutkowski with Lisbon's Arkstudio. Opened 2024. Rating: 4.7. ⭐ New
+- **Type:** Boutique rammed-earth resort
+- **Pitches for van:** false
+- **Why it fits:** Featured by Wallpaper* and Monocle. Each casa named after the local land (rosemary, sweet potato, construction heritage). Deeply rooted in traditional materiality, completely different from the glamping norm.
+
+**Sublime Comporta** *(Alentejo — ~25km from route)*
+- **Description:** Fisherman cabana villas in Atlantic pinewood. Cabana villas by architect José Alberto Charrua from the local palhota typology — cork walls, pine beams, polished concrete, driftwood furniture. Bio Pool Suites extend onto one of Europe's largest biological swimming pools. 17ha of umbrella pines, cork oaks, and wild dunes. Rating: 4.5–4.6.
+- **Type:** Boutique eco resort / architect-designed cabanas
+- **Pitches for van:** false
+- **Why it fits:** Deeply grounded in vernacular Portuguese architecture and natural materials. Completely car-free feel.
+
+**Areias do Seixo** *(Silver Coast — ~75km west of route)*
+- **Description:** Clifftop eco retreat embedded in Silver Coast dunes. Designed by architect Vasco Vieira using regional stone, glass, driftwood, and polished concrete. Glamping Shelter tent in the pines with copper bathtub and skylight — no wifi, no AC by design. Upcycled storm-felled pines integrated throughout. Circle of Fire bonfire ceremony on the cliff edge each evening. Rating: 4.6–4.7.
+- **Type:** Architect-designed eco retreat / glamping
+- **Pitches for van:** false
+- **Why it fits:** One of the most materials-conscious places on the route. The Circle of Fire bonfire ceremony and no-wifi Shelter tent make it distinctly different.
+
+**Gavião Nature Village** *(Alentejo — ~45km from route)*
+- **Description:** Alentejo riverside cork village. 10 cork-clad shelters built entirely from indigenous materials — cork provides both cladding and natural insulation. All bathrooms cork-lined. Panoramic restaurant terrace facing Belver Castle. Direct access to the Tejo river and Alamal beach. Rating: 4.4–4.7.
+- **Type:** Cork shelter village / glamping
+- **Pitches for van:** unconfirmed
+- **Why it fits:** A genuinely unique material and landscape combination. The Tejo river access and medieval castle backdrop make it memorable.
+
+---
+
+### 🇵🇹 Portugal — Algarve
+
+**Salema Eco Camp** *(SW Algarve, near Sagres)*
+- **Description:** Nestled in the hills near Salema Beach. Solar power, natural materials, sea views. Operators value renewable energy, avoid plastic, source from small local producers. Small, intentional, genuinely eco rather than resort-greenwashing. Rating: 4.3.
+- **Type:** Small solar eco-camp
+- **Pitches for van:** true
+- **Why it fits:** The most philosophically aligned camp with the trip's values in the Algarve. Excellent base for the Sagres / Costa Vicentina stretch.
+
+**Soul Farm Algarve** *(Algarve)*
+- **Description:** More hybrid than classic campground, but aesthetically close to what this trip is after. Rating: 4.9.
+- **Type:** Farm-hybrid glamping
+- **Pitches for van:** true
+- **Why it fits:** Aesthetically very close to the preferred style. Good for a slower reset stop.
+
+---
+
+### 🇵🇹 Portugal — Northern Portugal / Minho
+
+**Lima Escape** *(Minho, northern Portugal)*
+- **Description:** Elevated glamping in a National Park. River-set, wooden structures, glamping. Suspended wooden terraces, minimalist river-view platforms, deep integration with the canopy. Rating: 4.6.
+- **Type:** River glamping / wooden platforms
+- **Pitches for van:** true
+- **Why it fits:** The most architecturally curated camp in northern Portugal. Pairs with Cascata do Arado in Peneda-Gerês for a waterfall family hike. Worth the route through the Minho if doing the Salamanca → Bilbao leg via Portugal's northwest coast.
+
+---
+
+### 🏆 Top 12 — Best Overall Ranking
+
+| # | Campground | Region | Why |
+|---|---|---|---|
+| 1 | **Basecamps Cerdanya** | Catalan Pyrenees, ES | Closest Snow Peak equivalent in Europe |
+| 2 | **wecamp Santa Cristina** | Costa Brava, ES | Design benchmark of the trip |
+| 3 | **wecamp Cabo de Gata** | Andalusia, ES | Desert-meets-sea, most dramatic setting |
+| 4 | **wecamp Reserva Alecrim** | Alentejo, PT | One of the best overall finds; cleanest design fit in Portugal |
+| 5 | **Camping & Bungalows Itxaspe** | Basque Coast, ES | Best Basque discovery; closer to your brief than the larger coast parks |
+| 6 | **Huttopia Senonches** | Central France, FR | Best return-leg France match |
+| 7 | **Salema Eco Camp** | SW Algarve, PT | Most values-aligned in Portugal |
+| 8 | **Camping Bachoc à la Ferme Pays Basque** | Basque Country, ES | Hidden-gem farm energy |
+| 9 | **Naturéo Éco Resort** | Landes, FR | Best eco/design Landes option |
+| 10 | **Camping Lou P'tit Poun** | Landes, FR | Intimate forest classic |
+| 11 | **L'Oree de Provence** | Provence, FR | Best Provence nature addition |
+| 12 | **Camping El Burro Blanco** | Sierra de Francia, ES | Best inland Spain find |
+  </document>
+
+  <document title="Baseline Route Schema" syntax="yaml">
+    schema_name: BaselineRoute
+description: Route-only handoff from step 1 to step 2.
+file_format: JSON
+required:
+  - route_id
+  - source
+  - generated_at
+  - route_summary
+  - anchors
+  - legs
+properties:
+  route_id: { type: string }
+  source: { type: string }
+  generated_at: { type: string }
+  notes: { type: string }
+  route_summary:
+    type: object
+    required:
+      - route_shape
+      - start_anchor_id
+      - end_anchor_id
+      - ordered_anchor_ids
+    properties:
+      route_shape:
+        type: string
+        enum: [loop, one_way, open_jaw, out_and_back, custom]
+      start_anchor_id: { type: string }
+      end_anchor_id: { type: string }
+      ordered_anchor_ids:
+        type: array
+        items: { type: string }
+      ordered_anchor_labels:
+        type: array
+        items: { type: string }
+      outbound_anchor_ids:
+        type: array
+        items: { type: string }
+      return_anchor_ids:
+        type: array
+        items: { type: string }
+      total_distance_km: { type: [number, "null"] }
+      total_duration_minutes: { type: [integer, "null"] }
+      maps_url: { type: [string, "null"] }
+      route_strategy_summary: { type: string }
+  anchors:
+    type: array
+    items:
+      type: object
+      required:
+        - id
+        - label
+        - anchor_type
+        - sequence
+        - anchor_query
+        - geolocation
+      properties:
+        id: { type: string }
+        label: { type: string }
+        anchor_type:
+          type: string
+          enum: [home, required_region, fixed_anchor, family_visit, return_region, flexible_anchor, custom]
+        sequence: { type: integer }
+        anchor_query: { type: string }
+        geolocation:
+          type: object
+          required: [query, latitude, longitude]
+          properties:
+            query: { type: string }
+            formatted_address: { type: [string, "null"] }
+            latitude: { type: [number, "null"] }
+            longitude: { type: [number, "null"] }
+            google_place_id: { type: [string, "null"] }
+        notes: { type: string }
+  legs:
+    type: array
+    items:
+      type: object
+      required:
+        - id
+        - sequence
+        - from_anchor_id
+        - to_anchor_id
+        - from_label
+        - to_label
+        - route_options
+        - corridor_search_hints
+      properties:
+        id: { type: string }
+        sequence: { type: integer }
+        leg_group:
+          type: string
+          enum: [main, outbound, return, connector, custom]
+        from_anchor_id: { type: string }
+        to_anchor_id: { type: string }
+        from_label: { type: string }
+        to_label: { type: string }
+        from_query: { type: string }
+        to_query: { type: string }
+        selected_option_id: { type: [string, "null"] }
+        route_options:
+          type: array
+          items:
+            type: object
+            required:
+              - id
+              - style
+              - maps_url
+              - total_km
+              - duration_minutes
+              - major_roads
+              - steps
+            properties:
+              id: { type: string }
+              style:
+                type: string
+                enum: [fast, scenic, no_highways, balanced, custom]
+              maps_url: { type: [string, "null"] }
+              total_km: { type: [number, "null"] }
+              duration_minutes: { type: [integer, "null"] }
+              major_roads:
+                type: array
+                items: { type: string }
+              steps:
+                type: array
+                items:
+                  type: object
+                  required: [sequence, road, instruction]
+                  properties:
+                    sequence: { type: integer }
+                    road: { type: string }
+                    instruction: { type: string }
+                    direction_sign: { type: string }
+                    km: { type: [number, "null"] }
+                    notes: { type: string }
+              route_character: { type: string }
+              corridor_waypoint_labels:
+                type: array
+                items: { type: string }
+              notes: { type: string }
+        corridor_search_hints:
+          type: array
+          items:
+            type: object
+            required: [label, hint_type, position]
+            properties:
+              label: { type: string }
+              hint_type:
+                type: string
+                enum: [town, region, coast, inland_area, arrival_area, split_candidate, market_town, nature_area, custom]
+              position:
+                type: string
+                enum: [start, en_route, arrival, split_overnight, detour_optional]
+              reason: { type: string }
+              search_priority:
+                type: string
+                enum: [high, medium, low]
+cross_file_rules:
+  - route_summary.start_anchor_id and route_summary.end_anchor_id must exist in anchors.
+  - route_summary.ordered_anchor_ids must reference anchors in travel order.
+  - Every leg must have at least fast and scenic route options.
+  - route_options maps_url values must be real Google Maps links when Google-grounded.
+  </document>
+
+  <document title="Baseline Route Example" syntax="json">
+    {
+  "route_id": "summer_2026_family_loop_baseline_a",
+  "source": "google_maps",
+  "generated_at": "2026-04-21T00:00:00Z",
+  "notes": "Illustrative granular example. This sample expands the outbound corridor through Barcelona in detail; real outputs should continue the same anchor-to-anchor pattern across the rest of the route.",
+  "route_summary": {
+    "route_shape": "loop",
+    "start_anchor_id": "anchor_home_zurich",
+    "end_anchor_id": "anchor_home_zurich",
+    "ordered_anchor_ids": [
+      "anchor_home_zurich",
+      "anchor_bern",
+      "anchor_lausanne",
+      "anchor_aix_les_bains",
+      "anchor_valence",
+      "anchor_avignon",
+      "anchor_provence",
+      "anchor_camargue",
+      "anchor_costa_brava",
+      "anchor_barcelona",
+      "anchor_valencia",
+      "anchor_sevilla",
+      "anchor_monte_gordo",
+      "anchor_salamanca",
+      "anchor_basque",
+      "anchor_landes",
+      "anchor_clermont",
+      "anchor_home_zurich"
+    ],
+    "ordered_anchor_labels": [
+      "Zurich",
+      "Bern",
+      "Lausanne",
+      "Aix-les-Bains",
+      "Valence",
+      "Avignon",
+      "Provence",
+      "Camargue / Montpellier",
+      "Costa Brava",
+      "Barcelona",
+      "Valencia",
+      "Sevilla",
+      "Monte Gordo",
+      "Salamanca",
+      "Basque Coast",
+      "Landes",
+      "Clermont-Ferrand",
+      "Zurich"
+    ],
+    "outbound_anchor_ids": [
+      "anchor_home_zurich",
+      "anchor_bern",
+      "anchor_lausanne",
+      "anchor_aix_les_bains",
+      "anchor_valence",
+      "anchor_avignon",
+      "anchor_provence",
+      "anchor_camargue",
+      "anchor_costa_brava",
+      "anchor_barcelona",
+      "anchor_valencia",
+      "anchor_sevilla",
+      "anchor_monte_gordo"
+    ],
+    "return_anchor_ids": [
+      "anchor_monte_gordo",
+      "anchor_salamanca",
+      "anchor_basque",
+      "anchor_landes",
+      "anchor_clermont",
+      "anchor_home_zurich"
+    ],
+    "total_distance_km": null,
+    "total_duration_minutes": null,
+    "maps_url": null,
+    "route_strategy_summary": "Granular anchor-to-anchor baseline with a Mediterranean outbound arc and a different inland/Atlantic return."
+  },
+  "anchors": [
+    {
+      "id": "anchor_home_zurich",
+      "label": "Zurich",
+      "anchor_type": "home",
+      "sequence": 1,
+      "anchor_query": "Zurich, Switzerland",
+      "geolocation": {
+        "query": "Zurich, Switzerland",
+        "formatted_address": "Zurich, Switzerland",
+        "latitude": 47.3769,
+        "longitude": 8.5417,
+        "google_place_id": null
+      },
+      "notes": "Trip starts and ends here."
+    },
+    {
+      "id": "anchor_bern",
+      "label": "Bern",
+      "anchor_type": "flexible_anchor",
+      "sequence": 2,
+      "anchor_query": "Bern, Switzerland",
+      "geolocation": {
+        "query": "Bern, Switzerland",
+        "formatted_address": "Bern, Switzerland",
+        "latitude": 46.9480,
+        "longitude": 7.4474,
+        "google_place_id": null
+      },
+      "notes": "Early Swiss corridor anchor used to keep the route granular."
+    },
+    {
+      "id": "anchor_lausanne",
+      "label": "Lausanne",
+      "anchor_type": "flexible_anchor",
+      "sequence": 3,
+      "anchor_query": "Lausanne, Switzerland",
+      "geolocation": {
+        "query": "Lausanne, Switzerland",
+        "formatted_address": "Lausanne, Switzerland",
+        "latitude": 46.5197,
+        "longitude": 6.6323,
+        "google_place_id": null
+      },
+      "notes": "Lake Geneva corridor anchor."
+    },
+    {
+      "id": "anchor_aix_les_bains",
+      "label": "Aix-les-Bains",
+      "anchor_type": "flexible_anchor",
+      "sequence": 4,
+      "anchor_query": "Aix-les-Bains, France",
+      "geolocation": {
+        "query": "Aix-les-Bains, France",
+        "formatted_address": "Aix-les-Bains, France",
+        "latitude": 45.6927,
+        "longitude": 5.9086,
+        "google_place_id": null
+      },
+      "notes": "Useful lake-town corridor split and market stop."
+    },
+    {
+      "id": "anchor_valence",
+      "label": "Valence",
+      "anchor_type": "flexible_anchor",
+      "sequence": 5,
+      "anchor_query": "Valence, France",
+      "geolocation": {
+        "query": "Valence, France",
+        "formatted_address": "Valence, France",
+        "latitude": 44.9334,
+        "longitude": 4.8924,
+        "google_place_id": null
+      },
+      "notes": "Rhone corridor anchor."
+    },
+    {
+      "id": "anchor_avignon",
+      "label": "Avignon",
+      "anchor_type": "flexible_anchor",
+      "sequence": 6,
+      "anchor_query": "Avignon, France",
+      "geolocation": {
+        "query": "Avignon, France",
+        "formatted_address": "Avignon, France",
+        "latitude": 43.9493,
+        "longitude": 4.8055,
+        "google_place_id": null
+      },
+      "notes": "Provence gateway anchor."
+    },
+    {
+      "id": "anchor_provence",
+      "label": "Provence",
+      "anchor_type": "required_region",
+      "sequence": 7,
+      "anchor_query": "Marseille, France",
+      "geolocation": {
+        "query": "Marseille, France",
+        "formatted_address": "Marseille, France",
+        "latitude": 43.2965,
+        "longitude": 5.3698,
+        "google_place_id": null
+      },
+      "notes": "Outbound south-of-France anchor."
+    },
+    {
+      "id": "anchor_camargue",
+      "label": "Camargue / Montpellier",
+      "anchor_type": "required_region",
+      "sequence": 8,
+      "anchor_query": "Montpellier, France",
+      "geolocation": {
+        "query": "Montpellier, France",
+        "formatted_address": "Montpellier, France",
+        "latitude": 43.6108,
+        "longitude": 3.8767,
+        "google_place_id": null
+      },
+      "notes": "Camargue and Montpellier belt anchor."
+    },
+    {
+      "id": "anchor_costa_brava",
+      "label": "Costa Brava",
+      "anchor_type": "required_region",
+      "sequence": 9,
+      "anchor_query": "Santa Cristina d'Aro, Spain",
+      "geolocation": {
+        "query": "Santa Cristina d'Aro, Spain",
+        "formatted_address": "Santa Cristina d'Aro, Girona, Spain",
+        "latitude": 41.8156,
+        "longitude": 3.0029,
+        "google_place_id": null
+      },
+      "notes": "Costa Brava anchor around the Santa Cristina corridor."
+    },
+    {
+      "id": "anchor_barcelona",
+      "label": "Barcelona",
+      "anchor_type": "family_visit",
+      "sequence": 10,
+      "anchor_query": "Barcelona, Spain",
+      "geolocation": {
+        "query": "Barcelona, Spain",
+        "formatted_address": "Barcelona, Spain",
+        "latitude": 41.3874,
+        "longitude": 2.1686,
+        "google_place_id": null
+      },
+      "notes": "Family stop, 1 to 2 nights."
+    },
+    {
+      "id": "anchor_valencia",
+      "label": "Valencia",
+      "anchor_type": "flexible_anchor",
+      "sequence": 11,
+      "anchor_query": "Valencia, Spain",
+      "geolocation": {
+        "query": "Valencia, Spain",
+        "formatted_address": "Valencia, Spain",
+        "latitude": 39.4699,
+        "longitude": -0.3763,
+        "google_place_id": null
+      },
+      "notes": "Southeast coast bridge anchor."
+    },
+    {
+      "id": "anchor_sevilla",
+      "label": "Sevilla",
+      "anchor_type": "flexible_anchor",
+      "sequence": 12,
+      "anchor_query": "Seville, Spain",
+      "geolocation": {
+        "query": "Seville, Spain",
+        "formatted_address": "Seville, Spain",
+        "latitude": 37.3891,
+        "longitude": -5.9845,
+        "google_place_id": null
+      },
+      "notes": "Andalusia corridor anchor on the approach to Portugal."
+    },
+    {
+      "id": "anchor_monte_gordo",
+      "label": "Monte Gordo",
+      "anchor_type": "fixed_anchor",
+      "sequence": 13,
+      "anchor_query": "Monte Gordo, Portugal",
+      "geolocation": {
+        "query": "Monte Gordo, Portugal",
+        "formatted_address": "Monte Gordo, Portugal",
+        "latitude": 37.1819,
+        "longitude": -7.4528,
+        "google_place_id": null
+      },
+      "notes": "Hotel Dunas Mar fixed stay."
+    },
+    {
+      "id": "anchor_salamanca",
+      "label": "Salamanca",
+      "anchor_type": "flexible_anchor",
+      "sequence": 14,
+      "anchor_query": "Salamanca, Spain",
+      "geolocation": {
+        "query": "Salamanca, Spain",
+        "formatted_address": "Salamanca, Spain",
+        "latitude": 40.9701,
+        "longitude": -5.6635,
+        "google_place_id": null
+      },
+      "notes": "Useful inland return anchor."
+    },
+    {
+      "id": "anchor_basque",
+      "label": "Basque Coast",
+      "anchor_type": "return_region",
+      "sequence": 15,
+      "anchor_query": "Getaria, Spain",
+      "geolocation": {
+        "query": "Getaria, Spain",
+        "formatted_address": "Getaria, Gipuzkoa, Spain",
+        "latitude": 43.3035,
+        "longitude": -2.2044,
+        "google_place_id": null
+      },
+      "notes": "Return arc coastal Basque anchor."
+    },
+    {
+      "id": "anchor_landes",
+      "label": "Landes",
+      "anchor_type": "return_region",
+      "sequence": 16,
+      "anchor_query": "Hossegor, France",
+      "geolocation": {
+        "query": "Hossegor, France",
+        "formatted_address": "Hossegor, France",
+        "latitude": 43.6646,
+        "longitude": -1.4285,
+        "google_place_id": null
+      },
+      "notes": "Landes return anchor before the inland French finish."
+    },
+    {
+      "id": "anchor_clermont",
+      "label": "Clermont-Ferrand",
+      "anchor_type": "flexible_anchor",
+      "sequence": 17,
+      "anchor_query": "Clermont-Ferrand, France",
+      "geolocation": {
+        "query": "Clermont-Ferrand, France",
+        "formatted_address": "Clermont-Ferrand, France",
+        "latitude": 45.7772,
+        "longitude": 3.0870,
+        "google_place_id": null
+      },
+      "notes": "Inland French return anchor."
+    }
+  ],
+  "legs": [
+    {
+      "id": "leg_01",
+      "sequence": 1,
+      "leg_group": "outbound",
+      "from_anchor_id": "anchor_home_zurich",
+      "to_anchor_id": "anchor_bern",
+      "from_label": "Zurich",
+      "to_label": "Bern",
+      "from_query": "Zurich, Switzerland",
+      "to_query": "Bern, Switzerland",
+      "selected_option_id": "leg_01_fast",
+      "route_options": [
+        {
+          "id": "leg_01_fast",
+          "style": "fast",
+          "maps_url": null,
+          "total_km": 126,
+          "duration_minutes": 95,
+          "major_roads": ["A1"],
+          "steps": [
+            {
+              "sequence": 1,
+              "road": "A1",
+              "instruction": "Follow the A1 southwest from Zurich toward Bern.",
+              "direction_sign": "Bern",
+              "km": 126,
+              "notes": ""
+            }
+          ],
+          "route_character": "Direct Swiss plateau motorway leg.",
+          "corridor_waypoint_labels": ["Aarau"],
+          "notes": "Populate with a real Google Maps URL when grounded."
+        },
+        {
+          "id": "leg_01_scenic",
+          "style": "scenic",
+          "maps_url": null,
+          "total_km": 140,
+          "duration_minutes": 120,
+          "major_roads": ["A3", "A1", "local roads"],
+          "steps": [
+            {
+              "sequence": 1,
+              "road": "A1 and local roads",
+              "instruction": "Use a slower Swiss plateau route with local detours where practical.",
+              "direction_sign": "Bern",
+              "km": 140,
+              "notes": ""
+            }
+          ],
+          "route_character": "Softer first leg with optional local detours.",
+          "corridor_waypoint_labels": ["Aarau", "rural Swiss plateau"],
+          "notes": "Populate with a real Google Maps URL when grounded."
+        }
+      ],
+      "corridor_search_hints": [
+        {
+          "label": "Bern",
+          "hint_type": "town",
+          "position": "arrival",
+          "reason": "Useful early connector anchor if step 2 needs to merge or skip short opening legs.",
+          "search_priority": "medium"
+        }
+      ]
+    },
+    {
+      "id": "leg_02",
+      "sequence": 2,
+      "leg_group": "outbound",
+      "from_anchor_id": "anchor_bern",
+      "to_anchor_id": "anchor_lausanne",
+      "from_label": "Bern",
+      "to_label": "Lausanne",
+      "from_query": "Bern, Switzerland",
+      "to_query": "Lausanne, Switzerland",
+      "selected_option_id": "leg_02_fast",
+      "route_options": [
+        {
+          "id": "leg_02_fast",
+          "style": "fast",
+          "maps_url": null,
+          "total_km": 106,
+          "duration_minutes": 75,
+          "major_roads": ["A12"],
+          "steps": [
+            {
+              "sequence": 1,
+              "road": "A12",
+              "instruction": "Continue southwest from Bern to Lausanne.",
+              "direction_sign": "Lausanne",
+              "km": 106,
+              "notes": ""
+            }
+          ],
+          "route_character": "Straight Swiss connector leg.",
+          "corridor_waypoint_labels": ["Fribourg"],
+          "notes": "Populate with a real Google Maps URL when grounded."
+        },
+        {
+          "id": "leg_02_scenic",
+          "style": "scenic",
+          "maps_url": null,
+          "total_km": 118,
+          "duration_minutes": 95,
+          "major_roads": ["A12", "lake-adjacent local roads"],
+          "steps": [
+            {
+              "sequence": 1,
+              "road": "A12 and local roads",
+              "instruction": "Approach Lausanne with gentler local-road detours where they improve the lake transition.",
+              "direction_sign": "Lausanne",
+              "km": 118,
+              "notes": ""
+            }
+          ],
+          "route_character": "Slightly slower approach with more landscape value.",
+          "corridor_waypoint_labels": ["Fribourg", "Lavaux approach"],
+          "notes": "Populate with a real Google Maps URL when grounded."
+        }
+      ],
+      "corridor_search_hints": [
+        {
+          "label": "Lausanne",
+          "hint_type": "town",
+          "position": "arrival",
+          "reason": "Useful connector anchor before crossing into France.",
+          "search_priority": "medium"
+        }
+      ]
+    },
+    {
+      "id": "leg_03",
+      "sequence": 3,
+      "leg_group": "outbound",
+      "from_anchor_id": "anchor_lausanne",
+      "to_anchor_id": "anchor_aix_les_bains",
+      "from_label": "Lausanne",
+      "to_label": "Aix-les-Bains",
+      "from_query": "Lausanne, Switzerland",
+      "to_query": "Aix-les-Bains, France",
+      "selected_option_id": "leg_03_fast",
+      "route_options": [
+        {
+          "id": "leg_03_fast",
+          "style": "fast",
+          "maps_url": null,
+          "total_km": 129,
+          "duration_minutes": 100,
+          "major_roads": ["A1", "A41"],
+          "steps": [
+            {
+              "sequence": 1,
+              "road": "A1",
+              "instruction": "Head east of Lake Geneva and continue toward the French border.",
+              "direction_sign": "Geneve / Annecy",
+              "km": 67,
+              "notes": ""
+            },
+            {
+              "sequence": 2,
+              "road": "A41",
+              "instruction": "Cross into France and continue toward Aix-les-Bains.",
+              "direction_sign": "Annecy / Chambery / Aix-les-Bains",
+              "km": 62,
+              "notes": ""
+            }
+          ],
+          "route_character": "Fast Swiss-to-French transition leg.",
+          "corridor_waypoint_labels": ["Geneva corridor", "Annecy approach"],
+          "notes": "Populate with a real Google Maps URL when grounded."
+        },
+        {
+          "id": "leg_03_scenic",
+          "style": "scenic",
+          "maps_url": null,
+          "total_km": 145,
+          "duration_minutes": 125,
+          "major_roads": ["lake roads", "A41"],
+          "steps": [
+            {
+              "sequence": 1,
+              "road": "Lake Geneva roads",
+              "instruction": "Use a slower lakeside and foothill approach before joining the French motorway corridor.",
+              "direction_sign": "Geneve / Annecy",
+              "km": 145,
+              "notes": ""
+            }
+          ],
+          "route_character": "More scenic lake transition before the Savoy corridor.",
+          "corridor_waypoint_labels": ["Lavaux", "Geneva lakeside", "Annecy"],
+          "notes": "Populate with a real Google Maps URL when grounded."
+        }
+      ],
+      "corridor_search_hints": [
+        {
+          "label": "Aix-les-Bains",
+          "hint_type": "split_candidate",
+          "position": "arrival",
+          "reason": "Good lake-town connector and useful market stop.",
+          "search_priority": "high"
+        }
+      ]
+    },
+    {
+      "id": "leg_04",
+      "sequence": 4,
+      "leg_group": "outbound",
+      "from_anchor_id": "anchor_aix_les_bains",
+      "to_anchor_id": "anchor_valence",
+      "from_label": "Aix-les-Bains",
+      "to_label": "Valence",
+      "from_query": "Aix-les-Bains, France",
+      "to_query": "Valence, France",
+      "selected_option_id": "leg_04_fast",
+      "route_options": [
+        {
+          "id": "leg_04_fast",
+          "style": "fast",
+          "maps_url": null,
+          "total_km": 146,
+          "duration_minutes": 105,
+          "major_roads": ["A43", "A48", "A49"],
+          "steps": [
+            {
+              "sequence": 1,
+              "road": "A43",
+              "instruction": "Leave Aix-les-Bains toward Chambery and the Rhone corridor.",
+              "direction_sign": "Chambery / Grenoble",
+              "km": 38,
+              "notes": ""
+            },
+            {
+              "sequence": 2,
+              "road": "A48 / A49",
+              "instruction": "Continue south toward Valence.",
+              "direction_sign": "Grenoble / Valence",
+              "km": 108,
+              "notes": ""
+            }
+          ],
+          "route_character": "Fast connector into the Rhone valley approach.",
+          "corridor_waypoint_labels": ["Chambery", "Grenoble bypass"],
+          "notes": "Populate with a real Google Maps URL when grounded."
+        },
+        {
+          "id": "leg_04_scenic",
+          "style": "scenic",
+          "maps_url": null,
+          "total_km": 165,
+          "duration_minutes": 135,
+          "major_roads": ["A43", "local roads", "A49"],
+          "steps": [
+            {
+              "sequence": 1,
+              "road": "Savoy and Isere local roads",
+              "instruction": "Use slower connector roads where they improve mountain-edge scenery before rejoining the southbound corridor.",
+              "direction_sign": "Grenoble / Valence",
+              "km": 165,
+              "notes": ""
+            }
+          ],
+          "route_character": "Slightly slower connector with more foothill landscape.",
+          "corridor_waypoint_labels": ["Chambery", "Isere foothills"],
+          "notes": "Populate with a real Google Maps URL when grounded."
+        }
+      ],
+      "corridor_search_hints": [
+        {
+          "label": "Valence",
+          "hint_type": "town",
+          "position": "arrival",
+          "reason": "Key Rhone corridor anchor before Provence.",
+          "search_priority": "medium"
+        }
+      ]
+    },
+    {
+      "id": "leg_05",
+      "sequence": 5,
+      "leg_group": "outbound",
+      "from_anchor_id": "anchor_valence",
+      "to_anchor_id": "anchor_avignon",
+      "from_label": "Valence",
+      "to_label": "Avignon",
+      "from_query": "Valence, France",
+      "to_query": "Avignon, France",
+      "selected_option_id": "leg_05_fast",
+      "route_options": [
+        {
+          "id": "leg_05_fast",
+          "style": "fast",
+          "maps_url": null,
+          "total_km": 122,
+          "duration_minutes": 80,
+          "major_roads": ["A7"],
+          "steps": [
+            {
+              "sequence": 1,
+              "road": "A7",
+              "instruction": "Follow the Rhone motorway south toward Avignon.",
+              "direction_sign": "Montelimar / Orange / Avignon",
+              "km": 122,
+              "notes": ""
+            }
+          ],
+          "route_character": "Straight Rhone-axis connector.",
+          "corridor_waypoint_labels": ["Montelimar", "Orange"],
+          "notes": "Populate with a real Google Maps URL when grounded."
+        },
+        {
+          "id": "leg_05_scenic",
+          "style": "scenic",
+          "maps_url": null,
+          "total_km": 136,
+          "duration_minutes": 105,
+          "major_roads": ["D86", "D7N", "local Rhone roads"],
+          "steps": [
+            {
+              "sequence": 1,
+              "road": "Rhone west-bank local roads",
+              "instruction": "Use slower Rhone-side roads and market-town connectors toward Avignon.",
+              "direction_sign": "Avignon",
+              "km": 136,
+              "notes": ""
+            }
+          ],
+          "route_character": "More town-and-river oriented than the motorway option.",
+          "corridor_waypoint_labels": ["Montelimar", "Orange", "smaller Rhone towns"],
+          "notes": "Populate with a real Google Maps URL when grounded."
+        }
+      ],
+      "corridor_search_hints": [
+        {
+          "label": "Orange",
+          "hint_type": "market_town",
+          "position": "en_route",
+          "reason": "Useful provisioning or coffee stop on a granular Rhone descent.",
+          "search_priority": "medium"
+        }
+      ]
+    },
+    {
+      "id": "leg_06",
+      "sequence": 6,
+      "leg_group": "outbound",
+      "from_anchor_id": "anchor_avignon",
+      "to_anchor_id": "anchor_provence",
+      "from_label": "Avignon",
+      "to_label": "Provence",
+      "from_query": "Avignon, France",
+      "to_query": "Marseille, France",
+      "selected_option_id": "leg_06_fast",
+      "route_options": [
+        {
+          "id": "leg_06_fast",
+          "style": "fast",
+          "maps_url": null,
+          "total_km": 103,
+          "duration_minutes": 75,
+          "major_roads": ["A7"],
+          "steps": [
+            {
+              "sequence": 1,
+              "road": "A7",
+              "instruction": "Continue south toward Marseille and the Provence arrival belt.",
+              "direction_sign": "Salon-de-Provence / Marseille",
+              "km": 103,
+              "notes": ""
+            }
+          ],
+          "route_character": "Fast final connector into Provence.",
+          "corridor_waypoint_labels": ["Salon-de-Provence"],
+          "notes": "Populate with a real Google Maps URL when grounded."
+        },
+        {
+          "id": "leg_06_scenic",
+          "style": "scenic",
+          "maps_url": null,
+          "total_km": 118,
+          "duration_minutes": 95,
+          "major_roads": ["local Provence roads", "A54", "A7"],
+          "steps": [
+            {
+              "sequence": 1,
+              "road": "Local Provence connectors",
+              "instruction": "Use a slower Provençal approach through smaller towns before Marseille.",
+              "direction_sign": "Arles / Salon / Marseille",
+              "km": 118,
+              "notes": ""
+            }
+          ],
+          "route_character": "More atmospheric Provence entry.",
+          "corridor_waypoint_labels": ["Arles", "Salon-de-Provence"],
+          "notes": "Populate with a real Google Maps URL when grounded."
+        }
+      ],
+      "corridor_search_hints": [
+        {
+          "label": "Marseille / Provence arrival belt",
+          "hint_type": "arrival_area",
+          "position": "arrival",
+          "reason": "Step 2 should search nearby for the first true southern-France base.",
+          "search_priority": "high"
+        }
+      ]
+    },
+    {
+      "id": "leg_07",
+      "sequence": 7,
+      "leg_group": "outbound",
+      "from_anchor_id": "anchor_provence",
+      "to_anchor_id": "anchor_camargue",
+      "from_label": "Provence",
+      "to_label": "Camargue / Montpellier",
+      "from_query": "Marseille, France",
+      "to_query": "Montpellier, France",
+      "selected_option_id": "leg_07_fast",
+      "route_options": [
+        {
+          "id": "leg_07_fast",
+          "style": "fast",
+          "maps_url": null,
+          "total_km": 169,
+          "duration_minutes": 115,
+          "major_roads": ["A54", "A9"],
+          "steps": [
+            {
+              "sequence": 1,
+              "road": "A54 / A9",
+              "instruction": "Cross west from Marseille toward Montpellier.",
+              "direction_sign": "Nimes / Montpellier",
+              "km": 169,
+              "notes": ""
+            }
+          ],
+          "route_character": "Fast cross-Camargue connector.",
+          "corridor_waypoint_labels": ["Arles", "Nimes"],
+          "notes": "Populate with a real Google Maps URL when grounded."
+        },
+        {
+          "id": "leg_07_scenic",
+          "style": "scenic",
+          "maps_url": null,
+          "total_km": 186,
+          "duration_minutes": 145,
+          "major_roads": ["Camargue local roads", "A9"],
+          "steps": [
+            {
+              "sequence": 1,
+              "road": "Camargue local roads",
+              "instruction": "Use a slower Camargue-oriented line before reconnecting toward Montpellier.",
+              "direction_sign": "Aigues-Mortes / Montpellier",
+              "km": 186,
+              "notes": ""
+            }
+          ],
+          "route_character": "Wetlands and lagoon oriented westbound option.",
+          "corridor_waypoint_labels": ["Salin d'Aigues-Mortes", "Pont-de-Gau", "Aigues-Mortes"],
+          "notes": "Populate with a real Google Maps URL when grounded."
+        }
+      ],
+      "corridor_search_hints": [
+        {
+          "label": "Camargue wetlands belt",
+          "hint_type": "nature_area",
+          "position": "en_route",
+          "reason": "High-value corridor for family stops and future base searches.",
+          "search_priority": "high"
+        }
+      ]
+    },
+    {
+      "id": "leg_08",
+      "sequence": 8,
+      "leg_group": "outbound",
+      "from_anchor_id": "anchor_camargue",
+      "to_anchor_id": "anchor_costa_brava",
+      "from_label": "Camargue / Montpellier",
+      "to_label": "Costa Brava",
+      "from_query": "Montpellier, France",
+      "to_query": "Santa Cristina d'Aro, Spain",
+      "selected_option_id": "leg_08_fast",
+      "route_options": [
+        {
+          "id": "leg_08_fast",
+          "style": "fast",
+          "maps_url": null,
+          "total_km": 254,
+          "duration_minutes": 172,
+          "major_roads": ["A9", "AP-7", "C-65"],
+          "steps": [
+            {
+              "sequence": 1,
+              "road": "A9 / AP-7",
+              "instruction": "Follow the Mediterranean corridor south and cross into Spain.",
+              "direction_sign": "Perpignan / Girona",
+              "km": 224,
+              "notes": ""
+            },
+            {
+              "sequence": 2,
+              "road": "C-65",
+              "instruction": "Leave the motorway for the Costa Brava interior access.",
+              "direction_sign": "Santa Cristina d'Aro",
+              "km": 30,
+              "notes": ""
+            }
+          ],
+          "route_character": "Fast cross-border Mediterranean connector.",
+          "corridor_waypoint_labels": ["Perpignan", "Girona"],
+          "notes": "Populate with a real Google Maps URL when grounded."
+        },
+        {
+          "id": "leg_08_scenic",
+          "style": "scenic",
+          "maps_url": null,
+          "total_km": 285,
+          "duration_minutes": 220,
+          "major_roads": ["A9", "coastal/local roads", "C-65"],
+          "steps": [
+            {
+              "sequence": 1,
+              "road": "A9 and coastal connectors",
+              "instruction": "Take a slower border approach via selective French-Spanish coastal towns before entering the Costa Brava interior.",
+              "direction_sign": "Collioure / Portbou / Girona",
+              "km": 285,
+              "notes": ""
+            }
+          ],
+          "route_character": "Border-coast scenic option.",
+          "corridor_waypoint_labels": ["Collioure", "Portbou", "Girona"],
+          "notes": "Populate with a real Google Maps URL when grounded."
+        }
+      ],
+      "corridor_search_hints": [
+        {
+          "label": "Girona",
+          "hint_type": "town",
+          "position": "en_route",
+          "reason": "Strong family city stop and provisioning anchor before the coast.",
+          "search_priority": "high"
+        }
+      ]
+    },
+    {
+      "id": "leg_09",
+      "sequence": 9,
+      "leg_group": "outbound",
+      "from_anchor_id": "anchor_costa_brava",
+      "to_anchor_id": "anchor_barcelona",
+      "from_label": "Costa Brava",
+      "to_label": "Barcelona",
+      "from_query": "Santa Cristina d'Aro, Spain",
+      "to_query": "Barcelona, Spain",
+      "selected_option_id": "leg_09_fast",
+      "route_options": [
+        {
+          "id": "leg_09_fast",
+          "style": "fast",
+          "maps_url": null,
+          "total_km": 102,
+          "duration_minutes": 85,
+          "major_roads": ["C-65", "AP-7", "B-10"],
+          "steps": [
+            {
+              "sequence": 1,
+              "road": "C-65 / AP-7 / B-10",
+              "instruction": "Approach Barcelona from the northeast with the main motorway line.",
+              "direction_sign": "Barcelona",
+              "km": 102,
+              "notes": ""
+            }
+          ],
+          "route_character": "Fast city-approach connector.",
+          "corridor_waypoint_labels": ["Mataro corridor"],
+          "notes": "Populate with a real Google Maps URL when grounded."
+        },
+        {
+          "id": "leg_09_scenic",
+          "style": "scenic",
+          "maps_url": null,
+          "total_km": 126,
+          "duration_minutes": 110,
+          "major_roads": ["C-31", "coastal roads", "Barcelona connectors"],
+          "steps": [
+            {
+              "sequence": 1,
+              "road": "Costa Brava coastal connectors",
+              "instruction": "Use a slower coast-oriented approach before joining the Barcelona entry roads.",
+              "direction_sign": "Barcelona",
+              "km": 126,
+              "notes": ""
+            }
+          ],
+          "route_character": "Scenic coastal descent toward Barcelona.",
+          "corridor_waypoint_labels": ["Calella de Palafrugell", "Maresme coast"],
+          "notes": "Populate with a real Google Maps URL when grounded."
+        }
+      ],
+      "corridor_search_hints": [
+        {
+          "label": "Barcelona family-visit arrival zone",
+          "hint_type": "arrival_area",
+          "position": "arrival",
+          "reason": "Step 2 should treat this as the city-family anchor rather than a campsite search zone.",
+          "search_priority": "high"
+        }
+      ]
+    }
+  ]
+}
+  </document>
+</prompt>

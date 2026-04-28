@@ -1,0 +1,433 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/schemas/location.schema.json",
+  "title": "Location",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "name", "geo", "types"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "description": {
+      "type": ["string", "null"]
+    },
+    "geo": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["main"],
+      "properties": {
+        "main": {
+          "$ref": "#/$defs/latLng"
+        },
+        "bounds": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["northeast", "southwest"],
+          "properties": {
+            "northeast": {
+              "$ref": "#/$defs/latLng"
+            },
+            "southwest": {
+              "$ref": "#/$defs/latLng"
+            }
+          }
+        }
+      }
+    },
+    "location": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "address": {
+          "type": ["string", "null"]
+        },
+        "formatted_address": {
+          "type": ["string", "null"]
+        },
+        "locality": {
+          "type": ["string", "null"]
+        },
+        "region": {
+          "type": ["string", "null"]
+        },
+        "postcode": {
+          "type": ["string", "null"]
+        },
+        "country": {
+          "type": ["string", "null"]
+        }
+      }
+    },
+    "types": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "$ref": "#/$defs/locationType"
+      }
+    },
+    "editorial": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "summary": {
+          "type": ["string", "null"]
+        },
+        "popularity": {
+          "type": ["string", "null"],
+          "enum": ["hidden_gem", "known_place", "touristic", null]
+        }
+      }
+    },
+    "photo": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["url"],
+      "properties": {
+        "url": {
+          "type": "string",
+          "minLength": 1
+        },
+        "alt": {
+          "type": ["string", "null"]
+        },
+        "source": {
+          "type": ["string", "null"]
+        }
+      }
+    },
+    "provider_refs": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "google_maps": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["place_id", "url"],
+          "properties": {
+            "place_id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "url": {
+              "type": "string",
+              "format": "uri"
+            },
+            "rating": {
+              "type": ["number", "null"],
+              "minimum": 0
+            }
+          }
+        },
+        "foursquare": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["fsq_id"],
+          "properties": {
+            "fsq_id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "url": {
+              "type": ["string", "null"],
+              "format": "uri"
+            }
+          }
+        },
+        "apple_maps": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["place_id"],
+          "properties": {
+            "place_id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "url": {
+              "type": ["string", "null"],
+              "format": "uri"
+            }
+          }
+        }
+      }
+    },
+    "location_details": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "parking": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "available": {
+              "type": ["boolean", "null"]
+            },
+            "options": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "$ref": "#/$defs/parkingOption"
+              }
+            },
+            "notes": {
+              "type": ["string", "null"]
+            }
+          }
+        },
+        "campground": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["camping_styles", "surface", "shade"],
+          "properties": {
+            "camping_styles": {
+              "type": "array",
+              "minItems": 1,
+              "uniqueItems": true,
+              "items": {
+                "$ref": "#/$defs/campingStyle"
+              }
+            },
+            "surface": {
+              "$ref": "#/$defs/campgroundSurface"
+            },
+            "shade": {
+              "$ref": "#/$defs/campgroundShade"
+            },
+            "sanitary": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "hot_showers": {
+                  "type": ["boolean", "null"]
+                },
+                "clean_toilets": {
+                  "type": ["boolean", "null"]
+                }
+              }
+            },
+            "quiet_hours": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "enforced": {
+                  "type": ["boolean", "null"]
+                },
+                "starts_at": {
+                  "type": ["string", "null"],
+                  "pattern": "^([01]\\d|2[0-3]):[0-5]\\d$"
+                }
+              }
+            },
+            "amenities": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "$ref": "#/$defs/campgroundAmenity"
+              }
+            },
+            "notes": {
+              "type": ["string", "null"]
+            }
+          }
+        },
+        "food_drinks": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "service_types": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "$ref": "#/$defs/foodDrinkServiceType"
+              }
+            },
+            "cuisines": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "uniqueItems": true
+            },
+            "dietary_options": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "$ref": "#/$defs/dietaryOption"
+              }
+            },
+            "price_level": {
+              "type": ["string", "null"],
+              "enum": ["budget", "moderate", "upscale", null]
+            },
+            "notes": {
+              "type": ["string", "null"]
+            }
+          }
+        },
+        "family": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "good_for_children": {
+              "type": ["boolean", "null"]
+            },
+            "amenities": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "$ref": "#/$defs/familyAmenity"
+              }
+            },
+            "notes": {
+              "type": ["string", "null"]
+            }
+          }
+        },
+        "electric_vehicle_charging": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "network": {
+              "type": ["string", "null"]
+            },
+            "charger_types": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "$ref": "#/$defs/chargerType"
+              }
+            },
+            "power_kw": {
+              "type": ["number", "null"],
+              "minimum": 0
+            },
+            "notes": {
+              "type": ["string", "null"]
+            }
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "latLng": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["lat", "lng"],
+      "properties": {
+        "lat": {
+          "type": "number",
+          "minimum": -90,
+          "maximum": 90
+        },
+        "lng": {
+          "type": "number",
+          "minimum": -180,
+          "maximum": 180
+        }
+      }
+    },
+    "locationType": {
+      "type": "string",
+      "enum": [
+        "restaurant",
+        "ice_cream_shop",
+        "bakery",
+        "coffee_shop",
+        "bar",
+        "supermarket",
+        "grocery_store",
+        "store",
+        "market",
+        "hotel",
+        "campground",
+        "beach",
+        "park",
+        "nature_reserve",
+        "hiking_area",
+        "landmark",
+        "historical_landmark",
+        "cultural_landmark",
+        "viewpoint",
+        "visitor_center",
+        "wildlife_refuge",
+        "city",
+        "town",
+        "village",
+        "region",
+        "locality",
+        "neighborhood",
+        "address",
+        "route",
+        "electric_vehicle_charging_station",
+        "parking"
+      ]
+    },
+    "parkingOption": {
+      "type": "string",
+      "enum": ["on_site", "free", "paid", "street", "garage", "valet"]
+    },
+    "campingStyle": {
+      "type": "string",
+      "enum": ["tent", "campervan", "motorhome", "caravan", "glamping"]
+    },
+    "campgroundSurface": {
+      "type": "string",
+      "enum": ["soft_pitch", "hard_pitch", "mixed", "unknown"]
+    },
+    "campgroundShade": {
+      "type": "string",
+      "enum": ["none", "partial", "good", "unknown"]
+    },
+    "campgroundAmenity": {
+      "type": "string",
+      "enum": [
+        "playground",
+        "pool",
+        "laundry",
+        "bike_rental",
+        "wifi",
+        "camp_store",
+        "restaurant",
+        "ev_charging"
+      ]
+    },
+    "foodDrinkServiceType": {
+      "type": "string",
+      "enum": [
+        "breakfast",
+        "brunch",
+        "lunch",
+        "dinner",
+        "coffee",
+        "snacks",
+        "drinks"
+      ]
+    },
+    "dietaryOption": {
+      "type": "string",
+      "enum": ["vegetarian", "vegan", "gluten_free"]
+    },
+    "familyAmenity": {
+      "type": "string",
+      "enum": [
+        "playground",
+        "kids_menu",
+        "baby_changing",
+        "family_restrooms",
+        "babysitting"
+      ]
+    },
+    "chargerType": {
+      "type": "string",
+      "enum": ["supercharger", "ccs", "type2", "chademo"]
+    }
+  }
+}

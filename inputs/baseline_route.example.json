@@ -1,0 +1,946 @@
+{
+  "route_id": "summer_2026_family_loop_baseline_a",
+  "source": "google_maps",
+  "generated_at": "2026-04-21T00:00:00Z",
+  "notes": "Illustrative granular example. This sample expands the outbound corridor through Barcelona in detail; real outputs should continue the same anchor-to-anchor pattern across the rest of the route.",
+  "route_summary": {
+    "route_shape": "loop",
+    "start_anchor_id": "anchor_home_zurich",
+    "end_anchor_id": "anchor_home_zurich",
+    "ordered_anchor_ids": [
+      "anchor_home_zurich",
+      "anchor_bern",
+      "anchor_lausanne",
+      "anchor_aix_les_bains",
+      "anchor_valence",
+      "anchor_avignon",
+      "anchor_provence",
+      "anchor_camargue",
+      "anchor_costa_brava",
+      "anchor_barcelona",
+      "anchor_valencia",
+      "anchor_sevilla",
+      "anchor_monte_gordo",
+      "anchor_salamanca",
+      "anchor_basque",
+      "anchor_landes",
+      "anchor_clermont",
+      "anchor_home_zurich"
+    ],
+    "ordered_anchor_labels": [
+      "Zurich",
+      "Bern",
+      "Lausanne",
+      "Aix-les-Bains",
+      "Valence",
+      "Avignon",
+      "Provence",
+      "Camargue / Montpellier",
+      "Costa Brava",
+      "Barcelona",
+      "Valencia",
+      "Sevilla",
+      "Monte Gordo",
+      "Salamanca",
+      "Basque Coast",
+      "Landes",
+      "Clermont-Ferrand",
+      "Zurich"
+    ],
+    "outbound_anchor_ids": [
+      "anchor_home_zurich",
+      "anchor_bern",
+      "anchor_lausanne",
+      "anchor_aix_les_bains",
+      "anchor_valence",
+      "anchor_avignon",
+      "anchor_provence",
+      "anchor_camargue",
+      "anchor_costa_brava",
+      "anchor_barcelona",
+      "anchor_valencia",
+      "anchor_sevilla",
+      "anchor_monte_gordo"
+    ],
+    "return_anchor_ids": [
+      "anchor_monte_gordo",
+      "anchor_salamanca",
+      "anchor_basque",
+      "anchor_landes",
+      "anchor_clermont",
+      "anchor_home_zurich"
+    ],
+    "total_distance_km": null,
+    "total_duration_minutes": null,
+    "maps_url": null,
+    "route_strategy_summary": "Granular anchor-to-anchor baseline with a Mediterranean outbound arc and a different inland/Atlantic return."
+  },
+  "anchors": [
+    {
+      "id": "anchor_home_zurich",
+      "label": "Zurich",
+      "anchor_type": "home",
+      "sequence": 1,
+      "anchor_query": "Zurich, Switzerland",
+      "geolocation": {
+        "query": "Zurich, Switzerland",
+        "formatted_address": "Zurich, Switzerland",
+        "latitude": 47.3769,
+        "longitude": 8.5417,
+        "google_place_id": null
+      },
+      "notes": "Trip starts and ends here."
+    },
+    {
+      "id": "anchor_bern",
+      "label": "Bern",
+      "anchor_type": "flexible_anchor",
+      "sequence": 2,
+      "anchor_query": "Bern, Switzerland",
+      "geolocation": {
+        "query": "Bern, Switzerland",
+        "formatted_address": "Bern, Switzerland",
+        "latitude": 46.9480,
+        "longitude": 7.4474,
+        "google_place_id": null
+      },
+      "notes": "Early Swiss corridor anchor used to keep the route granular."
+    },
+    {
+      "id": "anchor_lausanne",
+      "label": "Lausanne",
+      "anchor_type": "flexible_anchor",
+      "sequence": 3,
+      "anchor_query": "Lausanne, Switzerland",
+      "geolocation": {
+        "query": "Lausanne, Switzerland",
+        "formatted_address": "Lausanne, Switzerland",
+        "latitude": 46.5197,
+        "longitude": 6.6323,
+        "google_place_id": null
+      },
+      "notes": "Lake Geneva corridor anchor."
+    },
+    {
+      "id": "anchor_aix_les_bains",
+      "label": "Aix-les-Bains",
+      "anchor_type": "flexible_anchor",
+      "sequence": 4,
+      "anchor_query": "Aix-les-Bains, France",
+      "geolocation": {
+        "query": "Aix-les-Bains, France",
+        "formatted_address": "Aix-les-Bains, France",
+        "latitude": 45.6927,
+        "longitude": 5.9086,
+        "google_place_id": null
+      },
+      "notes": "Useful lake-town corridor split and market stop."
+    },
+    {
+      "id": "anchor_valence",
+      "label": "Valence",
+      "anchor_type": "flexible_anchor",
+      "sequence": 5,
+      "anchor_query": "Valence, France",
+      "geolocation": {
+        "query": "Valence, France",
+        "formatted_address": "Valence, France",
+        "latitude": 44.9334,
+        "longitude": 4.8924,
+        "google_place_id": null
+      },
+      "notes": "Rhone corridor anchor."
+    },
+    {
+      "id": "anchor_avignon",
+      "label": "Avignon",
+      "anchor_type": "flexible_anchor",
+      "sequence": 6,
+      "anchor_query": "Avignon, France",
+      "geolocation": {
+        "query": "Avignon, France",
+        "formatted_address": "Avignon, France",
+        "latitude": 43.9493,
+        "longitude": 4.8055,
+        "google_place_id": null
+      },
+      "notes": "Provence gateway anchor."
+    },
+    {
+      "id": "anchor_provence",
+      "label": "Provence",
+      "anchor_type": "required_region",
+      "sequence": 7,
+      "anchor_query": "Marseille, France",
+      "geolocation": {
+        "query": "Marseille, France",
+        "formatted_address": "Marseille, France",
+        "latitude": 43.2965,
+        "longitude": 5.3698,
+        "google_place_id": null
+      },
+      "notes": "Outbound south-of-France anchor."
+    },
+    {
+      "id": "anchor_camargue",
+      "label": "Camargue / Montpellier",
+      "anchor_type": "required_region",
+      "sequence": 8,
+      "anchor_query": "Montpellier, France",
+      "geolocation": {
+        "query": "Montpellier, France",
+        "formatted_address": "Montpellier, France",
+        "latitude": 43.6108,
+        "longitude": 3.8767,
+        "google_place_id": null
+      },
+      "notes": "Camargue and Montpellier belt anchor."
+    },
+    {
+      "id": "anchor_costa_brava",
+      "label": "Costa Brava",
+      "anchor_type": "required_region",
+      "sequence": 9,
+      "anchor_query": "Santa Cristina d'Aro, Spain",
+      "geolocation": {
+        "query": "Santa Cristina d'Aro, Spain",
+        "formatted_address": "Santa Cristina d'Aro, Girona, Spain",
+        "latitude": 41.8156,
+        "longitude": 3.0029,
+        "google_place_id": null
+      },
+      "notes": "Costa Brava anchor around the Santa Cristina corridor."
+    },
+    {
+      "id": "anchor_barcelona",
+      "label": "Barcelona",
+      "anchor_type": "family_visit",
+      "sequence": 10,
+      "anchor_query": "Barcelona, Spain",
+      "geolocation": {
+        "query": "Barcelona, Spain",
+        "formatted_address": "Barcelona, Spain",
+        "latitude": 41.3874,
+        "longitude": 2.1686,
+        "google_place_id": null
+      },
+      "notes": "Family stop, 1 to 2 nights."
+    },
+    {
+      "id": "anchor_valencia",
+      "label": "Valencia",
+      "anchor_type": "flexible_anchor",
+      "sequence": 11,
+      "anchor_query": "Valencia, Spain",
+      "geolocation": {
+        "query": "Valencia, Spain",
+        "formatted_address": "Valencia, Spain",
+        "latitude": 39.4699,
+        "longitude": -0.3763,
+        "google_place_id": null
+      },
+      "notes": "Southeast coast bridge anchor."
+    },
+    {
+      "id": "anchor_sevilla",
+      "label": "Sevilla",
+      "anchor_type": "flexible_anchor",
+      "sequence": 12,
+      "anchor_query": "Seville, Spain",
+      "geolocation": {
+        "query": "Seville, Spain",
+        "formatted_address": "Seville, Spain",
+        "latitude": 37.3891,
+        "longitude": -5.9845,
+        "google_place_id": null
+      },
+      "notes": "Andalusia corridor anchor on the approach to Portugal."
+    },
+    {
+      "id": "anchor_monte_gordo",
+      "label": "Monte Gordo",
+      "anchor_type": "fixed_anchor",
+      "sequence": 13,
+      "anchor_query": "Monte Gordo, Portugal",
+      "geolocation": {
+        "query": "Monte Gordo, Portugal",
+        "formatted_address": "Monte Gordo, Portugal",
+        "latitude": 37.1819,
+        "longitude": -7.4528,
+        "google_place_id": null
+      },
+      "notes": "Hotel Dunas Mar fixed stay."
+    },
+    {
+      "id": "anchor_salamanca",
+      "label": "Salamanca",
+      "anchor_type": "flexible_anchor",
+      "sequence": 14,
+      "anchor_query": "Salamanca, Spain",
+      "geolocation": {
+        "query": "Salamanca, Spain",
+        "formatted_address": "Salamanca, Spain",
+        "latitude": 40.9701,
+        "longitude": -5.6635,
+        "google_place_id": null
+      },
+      "notes": "Useful inland return anchor."
+    },
+    {
+      "id": "anchor_basque",
+      "label": "Basque Coast",
+      "anchor_type": "return_region",
+      "sequence": 15,
+      "anchor_query": "Getaria, Spain",
+      "geolocation": {
+        "query": "Getaria, Spain",
+        "formatted_address": "Getaria, Gipuzkoa, Spain",
+        "latitude": 43.3035,
+        "longitude": -2.2044,
+        "google_place_id": null
+      },
+      "notes": "Return arc coastal Basque anchor."
+    },
+    {
+      "id": "anchor_landes",
+      "label": "Landes",
+      "anchor_type": "return_region",
+      "sequence": 16,
+      "anchor_query": "Hossegor, France",
+      "geolocation": {
+        "query": "Hossegor, France",
+        "formatted_address": "Hossegor, France",
+        "latitude": 43.6646,
+        "longitude": -1.4285,
+        "google_place_id": null
+      },
+      "notes": "Landes return anchor before the inland French finish."
+    },
+    {
+      "id": "anchor_clermont",
+      "label": "Clermont-Ferrand",
+      "anchor_type": "flexible_anchor",
+      "sequence": 17,
+      "anchor_query": "Clermont-Ferrand, France",
+      "geolocation": {
+        "query": "Clermont-Ferrand, France",
+        "formatted_address": "Clermont-Ferrand, France",
+        "latitude": 45.7772,
+        "longitude": 3.0870,
+        "google_place_id": null
+      },
+      "notes": "Inland French return anchor."
+    }
+  ],
+  "legs": [
+    {
+      "id": "leg_01",
+      "sequence": 1,
+      "leg_group": "outbound",
+      "from_anchor_id": "anchor_home_zurich",
+      "to_anchor_id": "anchor_bern",
+      "from_label": "Zurich",
+      "to_label": "Bern",
+      "from_query": "Zurich, Switzerland",
+      "to_query": "Bern, Switzerland",
+      "selected_option_id": "leg_01_fast",
+      "route_options": [
+        {
+          "id": "leg_01_fast",
+          "style": "fast",
+          "maps_url": null,
+          "total_km": 126,
+          "duration_minutes": 95,
+          "major_roads": ["A1"],
+          "steps": [
+            {
+              "sequence": 1,
+              "road": "A1",
+              "instruction": "Follow the A1 southwest from Zurich toward Bern.",
+              "direction_sign": "Bern",
+              "km": 126,
+              "notes": ""
+            }
+          ],
+          "route_character": "Direct Swiss plateau motorway leg.",
+          "corridor_waypoint_labels": ["Aarau"],
+          "notes": "Populate with a real Google Maps URL when grounded."
+        },
+        {
+          "id": "leg_01_scenic",
+          "style": "scenic",
+          "maps_url": null,
+          "total_km": 140,
+          "duration_minutes": 120,
+          "major_roads": ["A3", "A1", "local roads"],
+          "steps": [
+            {
+              "sequence": 1,
+              "road": "A1 and local roads",
+              "instruction": "Use a slower Swiss plateau route with local detours where practical.",
+              "direction_sign": "Bern",
+              "km": 140,
+              "notes": ""
+            }
+          ],
+          "route_character": "Softer first leg with optional local detours.",
+          "corridor_waypoint_labels": ["Aarau", "rural Swiss plateau"],
+          "notes": "Populate with a real Google Maps URL when grounded."
+        }
+      ],
+      "corridor_search_hints": [
+        {
+          "label": "Bern",
+          "hint_type": "town",
+          "position": "arrival",
+          "reason": "Useful early connector anchor if step 2 needs to merge or skip short opening legs.",
+          "search_priority": "medium"
+        }
+      ]
+    },
+    {
+      "id": "leg_02",
+      "sequence": 2,
+      "leg_group": "outbound",
+      "from_anchor_id": "anchor_bern",
+      "to_anchor_id": "anchor_lausanne",
+      "from_label": "Bern",
+      "to_label": "Lausanne",
+      "from_query": "Bern, Switzerland",
+      "to_query": "Lausanne, Switzerland",
+      "selected_option_id": "leg_02_fast",
+      "route_options": [
+        {
+          "id": "leg_02_fast",
+          "style": "fast",
+          "maps_url": null,
+          "total_km": 106,
+          "duration_minutes": 75,
+          "major_roads": ["A12"],
+          "steps": [
+            {
+              "sequence": 1,
+              "road": "A12",
+              "instruction": "Continue southwest from Bern to Lausanne.",
+              "direction_sign": "Lausanne",
+              "km": 106,
+              "notes": ""
+            }
+          ],
+          "route_character": "Straight Swiss connector leg.",
+          "corridor_waypoint_labels": ["Fribourg"],
+          "notes": "Populate with a real Google Maps URL when grounded."
+        },
+        {
+          "id": "leg_02_scenic",
+          "style": "scenic",
+          "maps_url": null,
+          "total_km": 118,
+          "duration_minutes": 95,
+          "major_roads": ["A12", "lake-adjacent local roads"],
+          "steps": [
+            {
+              "sequence": 1,
+              "road": "A12 and local roads",
+              "instruction": "Approach Lausanne with gentler local-road detours where they improve the lake transition.",
+              "direction_sign": "Lausanne",
+              "km": 118,
+              "notes": ""
+            }
+          ],
+          "route_character": "Slightly slower approach with more landscape value.",
+          "corridor_waypoint_labels": ["Fribourg", "Lavaux approach"],
+          "notes": "Populate with a real Google Maps URL when grounded."
+        }
+      ],
+      "corridor_search_hints": [
+        {
+          "label": "Lausanne",
+          "hint_type": "town",
+          "position": "arrival",
+          "reason": "Useful connector anchor before crossing into France.",
+          "search_priority": "medium"
+        }
+      ]
+    },
+    {
+      "id": "leg_03",
+      "sequence": 3,
+      "leg_group": "outbound",
+      "from_anchor_id": "anchor_lausanne",
+      "to_anchor_id": "anchor_aix_les_bains",
+      "from_label": "Lausanne",
+      "to_label": "Aix-les-Bains",
+      "from_query": "Lausanne, Switzerland",
+      "to_query": "Aix-les-Bains, France",
+      "selected_option_id": "leg_03_fast",
+      "route_options": [
+        {
+          "id": "leg_03_fast",
+          "style": "fast",
+          "maps_url": null,
+          "total_km": 129,
+          "duration_minutes": 100,
+          "major_roads": ["A1", "A41"],
+          "steps": [
+            {
+              "sequence": 1,
+              "road": "A1",
+              "instruction": "Head east of Lake Geneva and continue toward the French border.",
+              "direction_sign": "Geneve / Annecy",
+              "km": 67,
+              "notes": ""
+            },
+            {
+              "sequence": 2,
+              "road": "A41",
+              "instruction": "Cross into France and continue toward Aix-les-Bains.",
+              "direction_sign": "Annecy / Chambery / Aix-les-Bains",
+              "km": 62,
+              "notes": ""
+            }
+          ],
+          "route_character": "Fast Swiss-to-French transition leg.",
+          "corridor_waypoint_labels": ["Geneva corridor", "Annecy approach"],
+          "notes": "Populate with a real Google Maps URL when grounded."
+        },
+        {
+          "id": "leg_03_scenic",
+          "style": "scenic",
+          "maps_url": null,
+          "total_km": 145,
+          "duration_minutes": 125,
+          "major_roads": ["lake roads", "A41"],
+          "steps": [
+            {
+              "sequence": 1,
+              "road": "Lake Geneva roads",
+              "instruction": "Use a slower lakeside and foothill approach before joining the French motorway corridor.",
+              "direction_sign": "Geneve / Annecy",
+              "km": 145,
+              "notes": ""
+            }
+          ],
+          "route_character": "More scenic lake transition before the Savoy corridor.",
+          "corridor_waypoint_labels": ["Lavaux", "Geneva lakeside", "Annecy"],
+          "notes": "Populate with a real Google Maps URL when grounded."
+        }
+      ],
+      "corridor_search_hints": [
+        {
+          "label": "Aix-les-Bains",
+          "hint_type": "split_candidate",
+          "position": "arrival",
+          "reason": "Good lake-town connector and useful market stop.",
+          "search_priority": "high"
+        }
+      ]
+    },
+    {
+      "id": "leg_04",
+      "sequence": 4,
+      "leg_group": "outbound",
+      "from_anchor_id": "anchor_aix_les_bains",
+      "to_anchor_id": "anchor_valence",
+      "from_label": "Aix-les-Bains",
+      "to_label": "Valence",
+      "from_query": "Aix-les-Bains, France",
+      "to_query": "Valence, France",
+      "selected_option_id": "leg_04_fast",
+      "route_options": [
+        {
+          "id": "leg_04_fast",
+          "style": "fast",
+          "maps_url": null,
+          "total_km": 146,
+          "duration_minutes": 105,
+          "major_roads": ["A43", "A48", "A49"],
+          "steps": [
+            {
+              "sequence": 1,
+              "road": "A43",
+              "instruction": "Leave Aix-les-Bains toward Chambery and the Rhone corridor.",
+              "direction_sign": "Chambery / Grenoble",
+              "km": 38,
+              "notes": ""
+            },
+            {
+              "sequence": 2,
+              "road": "A48 / A49",
+              "instruction": "Continue south toward Valence.",
+              "direction_sign": "Grenoble / Valence",
+              "km": 108,
+              "notes": ""
+            }
+          ],
+          "route_character": "Fast connector into the Rhone valley approach.",
+          "corridor_waypoint_labels": ["Chambery", "Grenoble bypass"],
+          "notes": "Populate with a real Google Maps URL when grounded."
+        },
+        {
+          "id": "leg_04_scenic",
+          "style": "scenic",
+          "maps_url": null,
+          "total_km": 165,
+          "duration_minutes": 135,
+          "major_roads": ["A43", "local roads", "A49"],
+          "steps": [
+            {
+              "sequence": 1,
+              "road": "Savoy and Isere local roads",
+              "instruction": "Use slower connector roads where they improve mountain-edge scenery before rejoining the southbound corridor.",
+              "direction_sign": "Grenoble / Valence",
+              "km": 165,
+              "notes": ""
+            }
+          ],
+          "route_character": "Slightly slower connector with more foothill landscape.",
+          "corridor_waypoint_labels": ["Chambery", "Isere foothills"],
+          "notes": "Populate with a real Google Maps URL when grounded."
+        }
+      ],
+      "corridor_search_hints": [
+        {
+          "label": "Valence",
+          "hint_type": "town",
+          "position": "arrival",
+          "reason": "Key Rhone corridor anchor before Provence.",
+          "search_priority": "medium"
+        }
+      ]
+    },
+    {
+      "id": "leg_05",
+      "sequence": 5,
+      "leg_group": "outbound",
+      "from_anchor_id": "anchor_valence",
+      "to_anchor_id": "anchor_avignon",
+      "from_label": "Valence",
+      "to_label": "Avignon",
+      "from_query": "Valence, France",
+      "to_query": "Avignon, France",
+      "selected_option_id": "leg_05_fast",
+      "route_options": [
+        {
+          "id": "leg_05_fast",
+          "style": "fast",
+          "maps_url": null,
+          "total_km": 122,
+          "duration_minutes": 80,
+          "major_roads": ["A7"],
+          "steps": [
+            {
+              "sequence": 1,
+              "road": "A7",
+              "instruction": "Follow the Rhone motorway south toward Avignon.",
+              "direction_sign": "Montelimar / Orange / Avignon",
+              "km": 122,
+              "notes": ""
+            }
+          ],
+          "route_character": "Straight Rhone-axis connector.",
+          "corridor_waypoint_labels": ["Montelimar", "Orange"],
+          "notes": "Populate with a real Google Maps URL when grounded."
+        },
+        {
+          "id": "leg_05_scenic",
+          "style": "scenic",
+          "maps_url": null,
+          "total_km": 136,
+          "duration_minutes": 105,
+          "major_roads": ["D86", "D7N", "local Rhone roads"],
+          "steps": [
+            {
+              "sequence": 1,
+              "road": "Rhone west-bank local roads",
+              "instruction": "Use slower Rhone-side roads and market-town connectors toward Avignon.",
+              "direction_sign": "Avignon",
+              "km": 136,
+              "notes": ""
+            }
+          ],
+          "route_character": "More town-and-river oriented than the motorway option.",
+          "corridor_waypoint_labels": ["Montelimar", "Orange", "smaller Rhone towns"],
+          "notes": "Populate with a real Google Maps URL when grounded."
+        }
+      ],
+      "corridor_search_hints": [
+        {
+          "label": "Orange",
+          "hint_type": "market_town",
+          "position": "en_route",
+          "reason": "Useful provisioning or coffee stop on a granular Rhone descent.",
+          "search_priority": "medium"
+        }
+      ]
+    },
+    {
+      "id": "leg_06",
+      "sequence": 6,
+      "leg_group": "outbound",
+      "from_anchor_id": "anchor_avignon",
+      "to_anchor_id": "anchor_provence",
+      "from_label": "Avignon",
+      "to_label": "Provence",
+      "from_query": "Avignon, France",
+      "to_query": "Marseille, France",
+      "selected_option_id": "leg_06_fast",
+      "route_options": [
+        {
+          "id": "leg_06_fast",
+          "style": "fast",
+          "maps_url": null,
+          "total_km": 103,
+          "duration_minutes": 75,
+          "major_roads": ["A7"],
+          "steps": [
+            {
+              "sequence": 1,
+              "road": "A7",
+              "instruction": "Continue south toward Marseille and the Provence arrival belt.",
+              "direction_sign": "Salon-de-Provence / Marseille",
+              "km": 103,
+              "notes": ""
+            }
+          ],
+          "route_character": "Fast final connector into Provence.",
+          "corridor_waypoint_labels": ["Salon-de-Provence"],
+          "notes": "Populate with a real Google Maps URL when grounded."
+        },
+        {
+          "id": "leg_06_scenic",
+          "style": "scenic",
+          "maps_url": null,
+          "total_km": 118,
+          "duration_minutes": 95,
+          "major_roads": ["local Provence roads", "A54", "A7"],
+          "steps": [
+            {
+              "sequence": 1,
+              "road": "Local Provence connectors",
+              "instruction": "Use a slower Provençal approach through smaller towns before Marseille.",
+              "direction_sign": "Arles / Salon / Marseille",
+              "km": 118,
+              "notes": ""
+            }
+          ],
+          "route_character": "More atmospheric Provence entry.",
+          "corridor_waypoint_labels": ["Arles", "Salon-de-Provence"],
+          "notes": "Populate with a real Google Maps URL when grounded."
+        }
+      ],
+      "corridor_search_hints": [
+        {
+          "label": "Marseille / Provence arrival belt",
+          "hint_type": "arrival_area",
+          "position": "arrival",
+          "reason": "Step 2 should search nearby for the first true southern-France base.",
+          "search_priority": "high"
+        }
+      ]
+    },
+    {
+      "id": "leg_07",
+      "sequence": 7,
+      "leg_group": "outbound",
+      "from_anchor_id": "anchor_provence",
+      "to_anchor_id": "anchor_camargue",
+      "from_label": "Provence",
+      "to_label": "Camargue / Montpellier",
+      "from_query": "Marseille, France",
+      "to_query": "Montpellier, France",
+      "selected_option_id": "leg_07_fast",
+      "route_options": [
+        {
+          "id": "leg_07_fast",
+          "style": "fast",
+          "maps_url": null,
+          "total_km": 169,
+          "duration_minutes": 115,
+          "major_roads": ["A54", "A9"],
+          "steps": [
+            {
+              "sequence": 1,
+              "road": "A54 / A9",
+              "instruction": "Cross west from Marseille toward Montpellier.",
+              "direction_sign": "Nimes / Montpellier",
+              "km": 169,
+              "notes": ""
+            }
+          ],
+          "route_character": "Fast cross-Camargue connector.",
+          "corridor_waypoint_labels": ["Arles", "Nimes"],
+          "notes": "Populate with a real Google Maps URL when grounded."
+        },
+        {
+          "id": "leg_07_scenic",
+          "style": "scenic",
+          "maps_url": null,
+          "total_km": 186,
+          "duration_minutes": 145,
+          "major_roads": ["Camargue local roads", "A9"],
+          "steps": [
+            {
+              "sequence": 1,
+              "road": "Camargue local roads",
+              "instruction": "Use a slower Camargue-oriented line before reconnecting toward Montpellier.",
+              "direction_sign": "Aigues-Mortes / Montpellier",
+              "km": 186,
+              "notes": ""
+            }
+          ],
+          "route_character": "Wetlands and lagoon oriented westbound option.",
+          "corridor_waypoint_labels": ["Salin d'Aigues-Mortes", "Pont-de-Gau", "Aigues-Mortes"],
+          "notes": "Populate with a real Google Maps URL when grounded."
+        }
+      ],
+      "corridor_search_hints": [
+        {
+          "label": "Camargue wetlands belt",
+          "hint_type": "nature_area",
+          "position": "en_route",
+          "reason": "High-value corridor for family stops and future base searches.",
+          "search_priority": "high"
+        }
+      ]
+    },
+    {
+      "id": "leg_08",
+      "sequence": 8,
+      "leg_group": "outbound",
+      "from_anchor_id": "anchor_camargue",
+      "to_anchor_id": "anchor_costa_brava",
+      "from_label": "Camargue / Montpellier",
+      "to_label": "Costa Brava",
+      "from_query": "Montpellier, France",
+      "to_query": "Santa Cristina d'Aro, Spain",
+      "selected_option_id": "leg_08_fast",
+      "route_options": [
+        {
+          "id": "leg_08_fast",
+          "style": "fast",
+          "maps_url": null,
+          "total_km": 254,
+          "duration_minutes": 172,
+          "major_roads": ["A9", "AP-7", "C-65"],
+          "steps": [
+            {
+              "sequence": 1,
+              "road": "A9 / AP-7",
+              "instruction": "Follow the Mediterranean corridor south and cross into Spain.",
+              "direction_sign": "Perpignan / Girona",
+              "km": 224,
+              "notes": ""
+            },
+            {
+              "sequence": 2,
+              "road": "C-65",
+              "instruction": "Leave the motorway for the Costa Brava interior access.",
+              "direction_sign": "Santa Cristina d'Aro",
+              "km": 30,
+              "notes": ""
+            }
+          ],
+          "route_character": "Fast cross-border Mediterranean connector.",
+          "corridor_waypoint_labels": ["Perpignan", "Girona"],
+          "notes": "Populate with a real Google Maps URL when grounded."
+        },
+        {
+          "id": "leg_08_scenic",
+          "style": "scenic",
+          "maps_url": null,
+          "total_km": 285,
+          "duration_minutes": 220,
+          "major_roads": ["A9", "coastal/local roads", "C-65"],
+          "steps": [
+            {
+              "sequence": 1,
+              "road": "A9 and coastal connectors",
+              "instruction": "Take a slower border approach via selective French-Spanish coastal towns before entering the Costa Brava interior.",
+              "direction_sign": "Collioure / Portbou / Girona",
+              "km": 285,
+              "notes": ""
+            }
+          ],
+          "route_character": "Border-coast scenic option.",
+          "corridor_waypoint_labels": ["Collioure", "Portbou", "Girona"],
+          "notes": "Populate with a real Google Maps URL when grounded."
+        }
+      ],
+      "corridor_search_hints": [
+        {
+          "label": "Girona",
+          "hint_type": "town",
+          "position": "en_route",
+          "reason": "Strong family city stop and provisioning anchor before the coast.",
+          "search_priority": "high"
+        }
+      ]
+    },
+    {
+      "id": "leg_09",
+      "sequence": 9,
+      "leg_group": "outbound",
+      "from_anchor_id": "anchor_costa_brava",
+      "to_anchor_id": "anchor_barcelona",
+      "from_label": "Costa Brava",
+      "to_label": "Barcelona",
+      "from_query": "Santa Cristina d'Aro, Spain",
+      "to_query": "Barcelona, Spain",
+      "selected_option_id": "leg_09_fast",
+      "route_options": [
+        {
+          "id": "leg_09_fast",
+          "style": "fast",
+          "maps_url": null,
+          "total_km": 102,
+          "duration_minutes": 85,
+          "major_roads": ["C-65", "AP-7", "B-10"],
+          "steps": [
+            {
+              "sequence": 1,
+              "road": "C-65 / AP-7 / B-10",
+              "instruction": "Approach Barcelona from the northeast with the main motorway line.",
+              "direction_sign": "Barcelona",
+              "km": 102,
+              "notes": ""
+            }
+          ],
+          "route_character": "Fast city-approach connector.",
+          "corridor_waypoint_labels": ["Mataro corridor"],
+          "notes": "Populate with a real Google Maps URL when grounded."
+        },
+        {
+          "id": "leg_09_scenic",
+          "style": "scenic",
+          "maps_url": null,
+          "total_km": 126,
+          "duration_minutes": 110,
+          "major_roads": ["C-31", "coastal roads", "Barcelona connectors"],
+          "steps": [
+            {
+              "sequence": 1,
+              "road": "Costa Brava coastal connectors",
+              "instruction": "Use a slower coast-oriented approach before joining the Barcelona entry roads.",
+              "direction_sign": "Barcelona",
+              "km": 126,
+              "notes": ""
+            }
+          ],
+          "route_character": "Scenic coastal descent toward Barcelona.",
+          "corridor_waypoint_labels": ["Calella de Palafrugell", "Maresme coast"],
+          "notes": "Populate with a real Google Maps URL when grounded."
+        }
+      ],
+      "corridor_search_hints": [
+        {
+          "label": "Barcelona family-visit arrival zone",
+          "hint_type": "arrival_area",
+          "position": "arrival",
+          "reason": "Step 2 should treat this as the city-family anchor rather than a campsite search zone.",
+          "search_priority": "high"
+        }
+      ]
+    }
+  ]
+}
